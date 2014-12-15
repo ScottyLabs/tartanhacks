@@ -1,6 +1,6 @@
 /* =============================================================================
-   HTML5 CSS Reset Minified - Eric Meyer
-   ========================================================================== */
+HTML5 CSS Reset Minified - Eric Meyer
+========================================================================== */
 
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
 body{line-height:1}
@@ -34,11 +34,11 @@ html,body {
 h1 {
     text-transform: uppercase;
     font-family: Roboto Slab, serif;
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 hr {
-    margin: 3em auto;
+    margin: 3rem auto;
     width: 50%;
 }
 
@@ -60,6 +60,18 @@ hr {
     background: #bd2c39;
 }
 
+#splash-info > h1 {
+    display: inline-block;
+    margin: 0.5rem 0;
+    font-size: 2rem;
+}
+
+@media (min-width: 400px) {
+    #splash-info > h1 {
+        font-size: 3rem;
+    }
+}
+
 #splash-bg {
     width: 100%;
     height: 100%;
@@ -67,17 +79,17 @@ hr {
 
 /* remove canvas default margin */
 canvas{
-	display:block;
-	vertical-align:bottom;
+    display:block;
+    vertical-align:bottom;
 }
 
 .logo {
-    padding: 2em 0;
+    margin: 2rem 0;
     width: 100%;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 400px) {
     .logo {
-        width: 500px;
+        width: 400px;
     }
 }

@@ -5,7 +5,7 @@ particlesJS('splash-bg', {
     opacity: 1,
     size: 2,
     size_random: false,
-    nb: 350,
+    nb: screen.width / 5,
     line_linked: {
       enable_auto: true,
       distance: 100,
