@@ -42,6 +42,15 @@ hr {
     width: 50%;
 }
 
+a {
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
 /* splash page */
 #splash, #splash-bg {
     width: 100%;
@@ -57,12 +66,12 @@ hr {
 }
 
 #splash-info > * {
-    background: #bd2c39;
+    margin-bottom: 1rem;
 }
 
 #splash-info > h1 {
     display: inline-block;
-    margin: 0.5rem 0;
+    margin: 1rem 0;
     font-size: 2rem;
 }
 
@@ -84,7 +93,9 @@ canvas{
 }
 
 .logo {
-    margin: 2rem 0;
+    background: #bd2c39;
+    display: block;
+    margin: 2rem auto;
     width: 90%;
 }
 
