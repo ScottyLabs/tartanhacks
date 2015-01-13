@@ -1,0 +1,19 @@
+{
+  "name": "TartanHacks2015",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oscar Bezi (oscar@bezi.io)",
+  "license": "MIT",
+  "dependencies": {
+    "morgan": "~1.5.1",
+    "express": "~4.10.7",
+    "body-parser": "~1.10.1",
+    "mongoose": "~3.8.21",
+    "express-session": "~1.10.0",
+    "googleapis": "~1.0.22"
+  }
+}

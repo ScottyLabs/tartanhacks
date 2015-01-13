@@ -1,0 +1,29 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+(function() {
+ var po = document.createElement('script');
+ po.type = 'text/javascript'; po.async = true;
+ po.src = 'https://apis.google.com/js/client:plusone.js?onload=render';
+ var s = document.getElementsByTagName('script')[0];
+ s.parentNode.insertBefore(po, s);
+ })();
+
+function render() {
+    gapi.signin.render('customBtn', {
+            'callback': 'signinCallback',
+            'clientid': '70162173884-17kl5i9qdhkj5qbrj3ds4bpg573dg5h0.apps.googleusercontent.com',
+            'cookiepolicy': 'single_host_origin',
+            'scope': 'profile',
+            'hd': 'andrew.cmu.edu'
+            });
+}
+function signinCallback(authResult) {
+    $.post('/api/login', { singleUseToken: authResult.code }, function (res) { 
+            $.get('/api/me', null, function (data) { console.log(data); })
+        })
+}
+</script>
+<div id="customBtn" class="customGPlusSignIn">
+    <span class="icon"></span>
+    <span class="buttonText">Google</span>
+</div>

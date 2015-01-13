@@ -1,0 +1,268 @@
+/* =============================================================================
+HTML5 CSS Reset Minified - Eric Meyer
+========================================================================== */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video
+*{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+/* @file main.css
+ * @brief Main styles for the TartanHacks 2014 website.
+ * @author Oscar Bezi, oscar@bezi.io
+ * @since 23 November 2014
+ */
+html,body {
+    font-family: Montserrat, Arial, sans-serif;
+    text-align: center;
+    background: #bd2c39;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+body > div {
+    padding: 1rem 0;
+    width: 100%;
+}
+body > *:nth-child(even) {
+    background: white;
+    color: #bd2c39;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    font-family: Roboto Slab, serif;
+}
+
+hr {
+    margin: 3rem auto;
+    width: 50%;
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+body > *:nth-child(even) a {
+    color: #bd2c39;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+table {
+    margin: auto;
+    border: 1px solid white;
+}
+
+body > div:nth-child(even) table {
+    border: 1px solid #bd2c39;
+}
+
+td {
+    padding: 0.5rem;
+}
+
+thead, tr:nth-child(even) {
+    background: white;
+    color: #bd2c39;
+}
+
+body > div:nth-child(even) thead, body > div:nth-child(even) tr:nth-child(even) {
+    background: #bd2c39;
+    color: white;
+}
+
+@media (min-width: 400px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* splash page */
+#splash {
+    position: relative;
+}
+
+#splash-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+#splash-info {
+    position: relative;
+    z-index: 1;
+}
+#splash-info > * {
+    margin: 0 auto 1rem auto;
+}
+
+#splash-info > h1 {
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+/* registration */
+
+input[type=text], input[type=email] {
+    width: 100%;
+    display: block;
+    margin: 0.25rem 0 1rem 0;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.5rem;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+}
+
+input[type=checkbox] {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+}
+
+input[type=submit] {
+    margin: 1rem auto;
+    color: inherit;
+    background: inherit;
+    font-family: inherit;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+body > div:nth-child(even) input[type=submit] {
+    border: 2px solid #bd2c39;
+}
+
+form {
+    margin: 0;
+    text-align: left;
+    padding: 0 5%;
+}
+
+#registration > p {
+    margin: 1rem 5%;
+}
+
+@media (min-width: 400px) {
+    #registration > p {
+        margin: 1rem auto;
+        width: 400px;
+    }
+
+    input[type=text], input[type=email] {
+        width: 400px;
+    }
+
+    form {
+        padding: 0;
+        width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* remove canvas default margin */
+canvas{
+    display:block;
+    vertical-align:bottom;
+}
+
+.logo {
+    background: #bd2c39;
+    display: block;
+    margin: 2rem auto;
+    width: 90%;
+}
+
+@media (min-width: 400px) {
+    .logo {
+        width: 400px;
+    }
+}
+
+/* schedule */
+@media (min-width: 650px) {
+    .schedule-holder {
+        width: 40%;
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+/* announcements */
+#announcements > p {
+    padding: 1rem 0;
+}
+
+.announcement {
+    text-align: left;
+    margin: 1rem auto;
+    height: 100px;
+    width: 90%;
+    padding: 0;
+    background: white;
+    color: #bd2c39;
+}
+
+body > div:nth-child(even) .announcement {
+    background: #bd2c39;
+    color: white;
+}
+
+.announcement > img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    float: left;
+}
+
+.announcement > p {
+    margin-left: 100px;
+    margin-right: 50px;
+    padding-top: 20px;
+}
+
+.announcement > .timestamp {
+    opacity: 0.8;
+    font-size: 0.75em;
+}
+
+@media (min-width: 400px) {
+    .announcement {
+        width: 70%;
+        margin: 1rem auto;
+    }
+}
+
+footer {
+    font-size: 0.75rem;
+    padding: 0.125rem 0;
+}
