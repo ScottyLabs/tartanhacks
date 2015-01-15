@@ -148,27 +148,11 @@
                 </table>
             </div>
         </div>
-        <!-- <div id="announcements"></div> -->
         <footer>
             <p>TartanHacks is brought to you by Scottylabs.  Found a bug?  Email us at <a href="mailto:help@scottylabs.org">help@scottylabs.org</a>.</p>
         </footer>
-        <script id="announcements-template" type="text/x-handlebars-template">
-            <h1>Announcements</h1>
-            {{#each announcements}}
-               <div class="announcement">
-                   <img src="http://scottylabs.org/img/team/{{toLowerCase name}}.jpg" alt="{{name}}" />
-                   <p>{{name}}: {{content}}</p>
-                   <span class="timestamp">{{timestamp}}</span>
-               </div>
-            {{else}}
-                <p>No announcements yet, but stay tuned!</p>
-            {{/each}}
-        </script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
         <script src="assets/js/particles.min.js"></script>
         <script src="assets/js/app.js"></script>
-        <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
     </body>
 </html>
