@@ -11,7 +11,7 @@ particlesJS('splash-bg', {
       distance: 100,
       color: '#fff',
       opacity: 0.9,
-      widapp: 1,
+      width: 1,
       condensed_mode: {
         enable: false,
         rotateX: 600,

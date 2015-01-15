@@ -251,51 +251,6 @@ canvas{
     }
 }
 
-/* announcements */
-#announcements > p {
-    padding: 1rem 0;
-}
-
-.announcement {
-    text-align: left;
-    margin: 1rem auto;
-    height: 100px;
-    width: 90%;
-    padding: 0;
-    background: white;
-    color: #bd2c39;
-}
-
-body > div:nth-child(even) .announcement {
-    background: #bd2c39;
-    color: white;
-}
-
-.announcement > img {
-    width: 80px;
-    height: 80px;
-    margin: 10px;
-    float: left;
-}
-
-.announcement > p {
-    margin-left: 100px;
-    margin-right: 50px;
-    padding-top: 20px;
-}
-
-.announcement > .timestamp {
-    opacity: 0.8;
-    font-size: 0.75em;
-}
-
-@media (min-width: 400px) {
-    .announcement {
-        width: 70%;
-        margin: 1rem auto;
-    }
-}
-
 footer {
     font-size: 0.75rem;
     padding: 0.125rem 0;
