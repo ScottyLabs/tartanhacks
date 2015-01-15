@@ -30,7 +30,7 @@ html,body {
 }
 
 body > div {
-    padding: 1rem 0;
+    padding: 3rem 0;
     width: 100%;
 }
 body > *:nth-child(even) {
@@ -148,6 +148,7 @@ body > div:nth-child(even) tr {
     position: relative;
     z-index: 1;
 }
+
 #splash-info > * {
     margin: 0 auto 1rem auto;
 }
@@ -158,7 +159,6 @@ body > div:nth-child(even) tr {
 }
 
 /* faq */
-
 .question:nth-child(2) {
     padding: 2em 0 0 0;
 }
@@ -172,58 +172,7 @@ body > div:nth-child(even) tr {
     font-family: Roboto Slab, serif;
 }
 
-/* registration */
-
-input[type=text], input[type=email] {
-    width: 100%;
-    display: block;
-    margin: 0.25rem 0 1rem 0;
-    height: 40px;
-    line-height: 40px;
-    font-size: 1.5rem;
-    border: 1px solid #bbb;
-    border-radius: 10px;
-}
-
-input[type=checkbox] {
-    width: 2rem;
-    height: 2rem;
-    line-height: 2rem;
-}
-
-input[type=submit] {
-    margin: 1rem auto;
-    color: inherit;
-    background: inherit;
-    font-family: inherit;
-    border: 2px solid white;
-    border-radius: 10px;
-    font-size: 1.5rem;
-}
-
-body > div:nth-child(even) input[type=submit] {
-    border: 2px solid #bd2c39;
-}
-
-form {
-    margin: 0;
-    text-align: left;
-    padding: 0 5%;
-}
-
-@media (min-width: 400px) {
-    input[type=text], input[type=email] {
-        width: 400px;
-    }
-
-    form {
-        padding: 0;
-        width: 400px;
-        margin: 0 auto;
-    }
-}
-
-/* remove canvas default margin */
+/* splash */
 canvas{
     display:block;
     vertical-align:bottom;
