@@ -1,11 +1,11 @@
 particlesJS('splash-bg', {
   particles: {
     color: '#fff',
-    shape: 'triangle', // "circle", "edge" or "triangle"
+    shape: 'triangle',
     opacity: 1,
     size: 2,
     size_random: false,
-    nb: screen.width / 5,
+    nb: $(window).width() / 5,
     line_linked: {
       enable_auto: true,
       distance: 100,
@@ -26,6 +26,5 @@ particlesJS('splash-bg', {
   interactivity: {
     enable: false
   },
-  /* Retina Display Support */
   retina_detect: true
 });
