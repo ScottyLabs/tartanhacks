@@ -131,8 +131,23 @@ body > div:nth-child(even) tr {
     }
 }
 
+/* utility classes for centering something vertically */
+.vcenter:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.vcenter-target {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 /* splash page */
 #splash {
+    height: 100%;
+    padding: 0;
     position: relative;
 }
 
@@ -182,7 +197,7 @@ canvas{
     background: #bd2c39;
     display: block;
     margin: 2rem auto;
-    width: 90%;
+    width: 200px;
 }
 
 @media (min-width: 400px) {
