@@ -1,0 +1,23 @@
+# @file nginx-config
+# @brief The nginx server configration for the TartanHacks 2016 server
+# application.
+#
+# @author Oscar Bezi (bezi@scottylabs)
+#===============================================================================
+
+# TartanHacks API backend.
+upstream api {
+    server localhost:5010;
+}
+
+# TartanHacks app.
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /home/bezi/github/tartanhacks/static/dest;
+
+    location /api/ {
+        proxy_pass http://api/;
+    }
+}

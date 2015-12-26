@@ -1,0 +1,20 @@
+{
+    "node": true,
+    "curly": true,
+    "eqeqeq": true,
+    "esnext": true,
+    "forin": true,
+    "freeze": true,
+    "funcscope": true,
+    "latedef": true,
+    "maxdepth": 4,
+    "maxparams": 4,
+    "noarg": true,
+    "nocomma": true,
+    "nonew": true,
+    "shadow": "outer",
+    "strict": true,
+    "singleGroups": true,
+    "undef": true,
+    "unused": true
+}

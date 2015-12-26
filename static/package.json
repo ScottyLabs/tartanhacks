@@ -1,0 +1,39 @@
+{
+  "name": "th-static",
+  "version": "0.0.1",
+  "description": "Rebuilds the TartanHacks static files.",
+  "readme": "Rebuilds the TartanHacks static files.",
+  "author": "Oscar Bezi (oscar@bezi.io)",
+  "license": "",
+  "dependencies": {
+    "babel-preset-es2015": "^6.1.2",
+    "babel-preset-react": "^6.1.2",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "dateformat": "^1.0.12",
+    "datetime": "0.0.3",
+    "gulp": "^3.9.0",
+    "gulp-batch": "^1.0.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.4.2",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "jquery": "^2.1.4",
+    "jshint": "^2.8.0",
+    "lodash.assign": "^3.2.0",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "reactify": "^1.1.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.6.0"
+  },
+  "scripts": {
+    "watch": "watchify src/js/index.js -d -t [reactify --es6] -o bundles.js -v"
+  }
+}
