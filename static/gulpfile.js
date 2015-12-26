@@ -21,43 +21,46 @@ var assign = require('lodash.assign');
 
 var jshint = require('gulp-jshint');
 
+var plumber = require('gulp-plumber');
+
 var browserifyErr = (err) => {
   util.log(util.colors.red(`Browserify Error: ${err.message}`));
 };
 
 var mkjs = function (fname) {
-  var js = {};
-
-  js.customOpts = {
+  var customOpts = {
     entries: [`./src/js/${ fname }`],
     debug: true,
   };
 
-  js.opts = assign({}, watchify.args, js.customOpts);
-  js.browserify = watchify(browserify(js.opts));
-  js.browserify.transform('babelify', {presets: ['es2015', 'react']});
+  var opts = assign({}, watchify.args, customOpts);
+  var b = watchify(browserify(opts));
+  b.transform('reactify', {es6: true});
 
   var bundle = () => {
-    return js.browserify.bundle()
+    return b.bundle()
+    .on('error', browserifyErr)
     .pipe(source(fname))
     .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./dest/js/'));
+    // .pipe(sourcemaps.init({loadMaps: true}))
+    // .pipe(uglify())
+    // .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('./build/js/'));
   };
 
-  js.browserify.on('update', bundle);
-  js.browserify.on('error', browserifyErr);
-  js.browserify.on('time', (time) => {
+  b.on('update', bundle);
+  b.on('time', (time) => {
     util.log(util.colors.green('Browserify'), fname, util.colors.blue(`in ${time} ms.`));
   });
 
   return bundle;
 };
 
-gulp.task('admin-js', ['lint'], mkjs('admin.js'));
-gulp.task('index-js', ['lint'], mkjs('index.js'));
+// var jsFiles = ['admin.js', 'index.js'];
+var jsFiles = ['index.js'];
+jsFiles.forEach((fname) => {
+  gulp.task(fname, ['lint'], mkjs(fname));
+});
 
 gulp.task('lint', function () {
   // return gulp.src('src/**/*.js')
@@ -65,7 +68,7 @@ gulp.task('lint', function () {
   // .pipe(jshint.reporter('default'));
 });
 
-gulp.task('js', ['admin-js', 'index-js']);
+gulp.task('js', jsFiles);
 
 gulp.task('watch', ['build'], function () {
   gulp.watch(['src/**/*.js'], ['js']);
@@ -75,12 +78,12 @@ gulp.task('watch', ['build'], function () {
 
 gulp.task('css', function () {
   return gulp.src('src/**/*.css')
-  .pipe(gulp.dest('./dest/'));
+  .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('html', function () {
   return gulp.src('src/**/*.html')
-  .pipe(gulp.dest('./dest/'));
+  .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('build', ['js', 'css', 'html']);

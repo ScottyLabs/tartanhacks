@@ -21,15 +21,19 @@ var cache = function (getter, timeout) {
   var time = timeout * MS_PER_SEC - 10;
   var val = null;
 
-  // Guaranteed invalid date.
-  var lastInvocation = Date.now() - time - 1;
+  var lastInvocation;
 
   // A mediocre mutex, required to prevent cache hits while the request is
   // in-flight.
   var wait = false;
   var waiting = [];
 
-  var queryCache = function () {
+  var invalidate = function () {
+    // Guaranteed invalid date.
+    lastInvocation = Date.now() - time - 1;
+  };
+
+  var query= function () {
     if (wait) {
       return new Promise((resolve, reject) => {
         waiting.push({
@@ -81,7 +85,12 @@ var cache = function (getter, timeout) {
     }
   };
 
-  return queryCache;
+  invalidate();
+
+  return {
+    query: query,
+    invalidate: invalidate,
+  };
 };
 
 module.exports = cache;

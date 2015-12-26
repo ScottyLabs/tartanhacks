@@ -40,7 +40,7 @@ var post = function (url, data) {
   return new Promise((resolve, reject) => {
     $.post(url, data)
     .done(resolve)
-    .fail($.errorWrap(reject));
+    .fail(errorWrap(reject));
   });
 };
 
@@ -54,7 +54,7 @@ var put = function (url, data) {
       method: 'PUT',
     })
     .done(resolve)
-    .fail($.errorWrap(reject));
+    .fail(errorWrap(reject));
   });
 };
 
@@ -65,7 +65,7 @@ var del = function (url) {
       method: 'DELETE',
     })
     .done(resolve)
-    .fail($.errorWrap(reject));
+    .fail(errorWrap(reject));
   });
 };
 
