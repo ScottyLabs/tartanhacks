@@ -215,7 +215,7 @@ class AnnouncementList extends React.Component {
           style={[this.style.textarea]}
           ref="input"
           onChange={this.onChange}
-          placeholder=`New announcement (max ${api.maxLength} characters).`
+          placeholder={`New announcement (max ${api.maxLength} characters).`}
           bsStyle={this.validationState()}
           value={this.state.value}/>
         </form>
