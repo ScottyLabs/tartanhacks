@@ -6,6 +6,10 @@
 'use strict';
 
 module.exports = {
+  colors: {
+    textHilight: '#668DE5',
+  },
+
   /* @brief Generic React error handler.
    *
    * Resets the controller to a default initial state.
