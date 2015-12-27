@@ -1,6 +1,6 @@
 /* @file config.js
- * @brief Configuration details for the BreatheWise back-end.
- * @author Oscar Bezi (oscar@bezi.io)
+ * @brief Configuration details for the TartanHacks back-end.
+ * @author Oscar Bezi (bezi@scottylabs.org)
  */
 
 module.exports = {

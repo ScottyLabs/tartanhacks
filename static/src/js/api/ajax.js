@@ -2,6 +2,9 @@
  * @brief Sets up jquery to enable authenticating endpoints and a little error
  * wrapper, then exposes a small ajax library.
  *
+ * TODO: get rid of the jquery requirement by swapping this out for raw
+ * XMLHttpRequests requests.
+ *
  * @author Oscar Bezi (bezi@scottylabs)
  */
 'use strict';
@@ -17,10 +20,7 @@ $.ajaxSetup({
 /* @brief Wraps the jQuery AJAX error into a standard form. */
 var errorWrap = function (callback) {
   return function (err) {
-    callback({
-      message: err.responseText,
-      code: err.status,
-    });
+    callback(new Error(err.responseText));
   };
 };
 

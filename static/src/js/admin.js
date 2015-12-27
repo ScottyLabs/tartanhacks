@@ -1,3 +1,8 @@
+/* @file admin.js
+ * @brief Application logic for the TartanHacks administration panel.
+ *
+ * @author Oscar Bezi (bezi@scottylabs)
+ */
 'use strict';
 
 var React = require('react');

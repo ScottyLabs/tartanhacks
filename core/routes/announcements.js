@@ -13,7 +13,7 @@ var db;
 var handlers = {};
 
 //==============================================================================
-// GET/PUT/DELETE /announcements
+// GET/POST/DELETE /announcements
 //==============================================================================
 
 /* @brief Return every announcement. */
@@ -54,6 +54,7 @@ handlers.post = function (req, res) {
 
 /* @brief Delete the announcement with the given id. */
 handlers.delete = function (req, res) {
+  // TODO: mark inactive instead.
   var query = 'DELETE FROM announcements WHERE announcement_id = ?';
   db.query(query, [req.params.id])
   .then(() => {

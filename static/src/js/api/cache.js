@@ -1,5 +1,5 @@
 /* @file cache.js
- * @brief Exposes a function to cache GETters for a certain amount of time.
+ * @brief Exposes an object to cache GETters for a certain amount of time.
  * Useful to prevent data from being pinged repeatedly unnecessarily.
  *
  * @author Oscar Bezi (bezi@scottylabs)

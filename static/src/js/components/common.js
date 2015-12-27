@@ -1,23 +1,11 @@
 /* @file common.js
- * @brief Common styling constants shared among all components, such as color
- * schemes.
+ * @brief Things that all components may find useful.
  *
  * @author Oscar Bezi (bezi@scottylabs)
  */
 'use strict';
 
 module.exports = {
-  colors: {
-    foreground: '#FFDC89',
-    text: '#252525',
-    textHilight: '#668DE5',
-  },
-
-  breakpoints: {
-    mobile: 720,
-    largest: 1080,
-  },
-
   /* @brief Generic React error handler.
    *
    * Resets the controller to a default initial state.
@@ -26,8 +14,12 @@ module.exports = {
    * @return The error handler function, now properly bound.
    */
   err: function (toBind) {
-    console.assert(toBind !== null && toBind !== undefined);
-    console.assert(toBind.setState !== null && toBind.setState !== undefined);
+    // Help catch binding bugs in components.
+    console.assert(toBind !== null && toBind !== undefined, 'Null component.');
+    console.assert(
+      toBind.setState !== null && toBind.setState !== undefined,
+      'Attempting to bind to something that isn\'t a React component.');
+
     return (function (err) {
       if (this.defaultState) {
         this.setState(this.defaultState());

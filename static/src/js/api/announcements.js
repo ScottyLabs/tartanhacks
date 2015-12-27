@@ -13,6 +13,9 @@ var announcements = {};
 /* @brief How often the announcement cache will preserve the announcements. */
 announcements.updateRate = 5 * 1000; // Milliseconds.
 
+/* @brief The maximum length of an announcement. */
+announcements.maxLength = 500;
+
 var cache = cache(function () {
   return ajax.get('/api/announcements');
 }, announcements.updateRate / 1000);
@@ -23,7 +26,11 @@ announcements.getAll = cache.query;
 /* @brief Makes a new announcement with the given text. */
 announcements.create = function (text) {
   if (text === '') {
-    return Promise.resolve('Empty text');
+    return Promise.reject(new Error('Empty announcement.'));
+  }
+
+  if (text.length > announcements.maxLength) {
+    return Promise.reject(new Error('Announcement too long.'));
   }
 
   cache.invalidate();

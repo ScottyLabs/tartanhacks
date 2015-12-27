@@ -50,7 +50,6 @@ mysql.createConnection({
   return app.listen(config.port);
 }).then(() => {
   console.log(`TartanHacks back-end listening on port ${ config.port }.`);
-})
-// .catch((err) => {
-//   console.log(err);
-// });
+});
+
+// Don't catch errors, we want the server to crash on error.

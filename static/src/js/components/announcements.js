@@ -17,6 +17,7 @@ var ListGroup = require('react-bootstrap').ListGroup;
 var Well = require('react-bootstrap').Well;
 var Glyphicon = require('react-bootstrap').Glyphicon;
 var Button = require('react-bootstrap').Button;
+
 //==============================================================================
 // Announcement
 //==============================================================================
@@ -198,7 +199,7 @@ class AnnouncementList extends React.Component {
 
   validationState() {
     if (this.state.value === '') return;
-    return (this.state.value.length < 500) ? 'success' : 'error';
+    return (this.state.value.length <= api.maxLength) ? 'success' : 'error';
   }
 
   /* @brief Rerenders the element. */
@@ -214,7 +215,7 @@ class AnnouncementList extends React.Component {
           style={[this.style.textarea]}
           ref="input"
           onChange={this.onChange}
-          placeholder="New announcement (max 500 characters)."
+          placeholder=`New announcement (max ${api.maxLength} characters).`
           bsStyle={this.validationState()}
           value={this.state.value}/>
         </form>
