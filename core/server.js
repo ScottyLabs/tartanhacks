@@ -40,9 +40,6 @@ mysql.createConnection({
   console.log("Successfully connected to the SQL database.");
   var db = conn;
 
-  // Authentication library and routes.
-  var auth = require('./routes/auth')(app, db);
-
   // Miscellaneous routes.
   require('./routes/announcements')(app, db);
 
