@@ -56,8 +56,7 @@ var mkjs = function (fname) {
   return bundle;
 };
 
-// var jsFiles = ['admin.js', 'index.js'];
-var jsFiles = ['index.js'];
+var jsFiles = ['admin.js', 'index.js'];
 jsFiles.forEach((fname) => {
   gulp.task(fname, ['lint'], mkjs(fname));
 });

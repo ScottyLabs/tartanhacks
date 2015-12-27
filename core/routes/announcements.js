@@ -22,10 +22,7 @@ handlers.get = function (req, res) {
   db.query(query, [])
   .then((rows) => {
     res.status(200);
-    res.json(rows.map((row) => {
-      row.timestamp
-      return row;
-    }));
+    res.json(rows);
   }).catch((err) => {
     res.status(500);
     res.end(`${ err }\n`);

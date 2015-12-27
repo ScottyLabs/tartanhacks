@@ -8,10 +8,15 @@
 
 var React = require('react');
 var Radium = require('radium');
-var fmt = require('dateformat');
+var moment = require('moment');
 var common = require('./common.js');
 var api = require('../api/announcements');
 
+var Input = require('react-bootstrap').Input;
+var ListGroup = require('react-bootstrap').ListGroup;
+var Well = require('react-bootstrap').Well;
+var Glyphicon = require('react-bootstrap').Glyphicon;
+var Button = require('react-bootstrap').Button;
 //==============================================================================
 // Announcement
 //==============================================================================
@@ -24,26 +29,33 @@ class Announcement extends React.Component {
     super(props);
 
     this.style = {
-      span: {
-        color: common.colors.textHilight,
-        fontSize: '0.8em',
-        fontStyle: 'italic',
-      },
       li: {
-        padding: '3px',
-        margin: '3px',
-        borderRadius: '3px',
-        background: common.colors.foreground,
+        position: 'relative',
+        padding: '0.7em 36px 0.7em 1em',
       },
-      p: {
-        margin: '0',
-        color: common.colors.text,
+      btn: {
+        background: 'none',
+        borderStyle: 'none none none solid',
+        borderWidth: '1px',
+        height: '100%',
+        width: 'auto',
+        position: 'absolute',
+        right: '0',
+        top: '0',
+      },
+      timeSpan : {
+        position: 'absolute',
+        bottom: '0.2em',
+        left: '4em',
+        color: common.colors.textHilight,
+        fontSize: '0.5em',
+        fontStyle: 'italic',
       },
     };
 
-    // Bind handlers.
-    this.onClick = this.onClick.bind(this);
-  }
+  // Bind handlers.
+  this.onClick = this.onClick.bind(this);
+}
 
   /* @brief Handles clicking the delete button. */
   onClick() {
@@ -53,18 +65,23 @@ class Announcement extends React.Component {
   /* @brief Rerenders the element. */
   render() {
     // Timestamp.
-    var timeStr = fmt(new Date(this.props.data.timestamp));
-    var time = (<span style={[this.style.span]}>({timeStr})</span>);
+    var t = moment(new Date(this.props.data.timestamp));
+    var timeStr = `${t.fromNow()} (${t.calendar()})`;
+    var time = (<span style={[this.style.timeSpan]}>{timeStr}</span>);
 
     // Deletion button.
     var btn = '';
     if (this.props.admin) {
-      btn = (<button onClick={ this.onClick.bind(this) }>(x)</button>);
+      btn = (
+        <button style={[this.style.btn]} onClick={this.onClick}>
+          <Glyphicon glyph="trash" />
+        </button>
+      );
     }
 
     return (
-      <li style={[this.style.li]}>
-      <p style={[this.style.p]}> {this.props.data.text} {time} </p>{btn}
+      <li className="list-group-item" style={[this.style.li]}>
+      <span>{this.props.data.text}</span>{time}{btn}
       </li>
     );
   }
@@ -91,39 +108,43 @@ Announcement = Radium(Announcement);
 //==============================================================================
 // AnnouncementList
 //==============================================================================
-var AnnouncementList_style = {
-  ul: {
-    listStyle: 'none',
-    padding: '0',
-    margin: '0 10px',
-  },
-  h2: {
-    textAlign: 'center',
-  },
-};
-
 class AnnouncementList extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.defaultState();
 
+    this.style = {
+      h2: {
+        textAlign: 'center',
+      },
+      textarea: {
+        width: '100%',
+        height: '100%',
+        border: 'none',
+      }
+    };
+
     // Bind handlers.
     this.makeAnnouncement = this.makeAnnouncement.bind(this);
     this.deleteAnnouncement = this.deleteAnnouncement.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
   /* @brief The state to revert to when we have no data. */
   defaultState() {
-    return { announcements: [], };
+    return { announcements: [], value: '',};
   }
-
 
   /* @brief Gets clean data from the server. */
   getData() {
     api.getAll()
     .then((data) => {
+      data.sort((a, b) => {
+        return (new Date(b.timestamp)) - (new Date(a.timestamp));
+      });
       this.setState({
         announcements: data,
+        value: this.state.value,
       });
     }).catch(common.err(this));
   }
@@ -147,50 +168,79 @@ class AnnouncementList extends React.Component {
     var a = this.state.announcements.filter((a) => !(a.announcement_id === id));
     this.setState({
       announcements: a,
+      value: this.state.value,
     });
   }
 
   /* @brief Handles form submission. */
   makeAnnouncement(e) {
     e.preventDefault();
-    if (this.refs.input.value !== '') {
-      api.create(this.refs.input.value)
+    if (this.state.value !== '') {
+      api.create(this.state.value)
       .then(() => {
-        this.refs.input.value = '';
+        this.setState({
+          announcements: this.state.announcements,
+          value: '',
+        });
         this.getData();
       })
       .catch(common.err(this));
     }
   }
 
+  /* @brief Handles keypresses. */
+  onChange() {
+    this.setState({
+      announcements: this.state.announcements,
+      value: this.refs.input.getValue(),
+    });
+  }
+
+  validationState() {
+    if (this.state.value === '') return;
+    return (this.state.value.length < 500) ? 'success' : 'error';
+  }
+
   /* @brief Rerenders the element. */
   render() {
+    var form = '';
+    if (this.props.admin) {
+        var button = (<Button type="submit"><Glyphicon glyph="upload" /></Button>);
+      form = (
+        <form onSubmit={this.makeAnnouncement}>
+        <Input
+          type="text"
+          buttonAfter={button}
+          style={[this.style.textarea]}
+          ref="input"
+          onChange={this.onChange}
+          placeholder="New announcement (max 500 characters)."
+          bsStyle={this.validationState()}
+          value={this.state.value}/>
+        </form>
+      );
+    }
+
     var list = this.state.announcements.map((a) => (
-      <Announcement key={a.announcement_id} data={a} admin={this.props.admin} delete={this.deleteAnnouncement}/>
+      <Announcement
+        key={a.announcement_id}
+        data={a}
+        admin={this.props.admin}
+        delete={this.deleteAnnouncement} />
     ));
 
-    list = (<ul style={[AnnouncementList_style.ul]}>{list}</ul>);
+    list = (<ListGroup componentClass="ul">{list}</ListGroup>);
 
     if (this.state.announcements.length === 0) {
       list = (<p>No announcements yet.  Stay tuned!</p>);
     }
 
-    var form = '';
-    if (this.props.admin) {
-      form = (
-        <form onSubmit={this.makeAnnouncement}>
-        <textarea ref="input" placeholder="New announcement." />
-        <button type="submit">Submit</button>
-        </form>
-      );
-    }
-
     return (
-      <div>
-      <h2 style={[AnnouncementList_style.h2]}>Announcements</h2>
+      <Well bsSize="small">
+      <h2 style={[this.style.h2]}>Announcements</h2>
       {list}
       {form}
-      </div>
+      </Well>
     );
   }
 }
