@@ -43,7 +43,7 @@ var mkjs = function (fname) {
     .pipe(source(fname))
     .pipe(buffer())
     // .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
+    // .pipe(uglify())
     // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./build/js/'));
   };
@@ -56,7 +56,8 @@ var mkjs = function (fname) {
   return bundle;
 };
 
-var jsFiles = ['admin.js', 'index.js'];
+// var jsFiles = ['admin.js', 'index.js'];
+var jsFiles = ['index.js'];
 jsFiles.forEach((fname) => {
   gulp.task(fname, ['lint'], mkjs(fname));
 });
