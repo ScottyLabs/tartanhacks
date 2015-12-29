@@ -21,6 +21,15 @@ handlers.get = function (req, res) {
   var query = 'SELECT * FROM announcements';
   db.query(query, [])
   .then((rows) => {
+    var data = {};
+    rows = rows.map((row) => {
+      row.id = row.announcement_id;
+      delete row.announcement_id;
+
+      data[row.id] = row;
+      return row;
+    });
+
     res.status(200);
     res.json(rows);
   }).catch((err) => {
@@ -43,9 +52,9 @@ handlers.post = function (req, res) {
 
   var query = 'INSERT INTO announcements (text) VALUES (?)';
   db.query(query, [req.body.text])
-  .then(() => {
+  .then((data) => {
     res.status(200);
-    res.end(`Sucessfully added announcement.\n`);
+    res.json(data.insertId);
   }).catch((err) => {
     res.status(400);
     res.end(`${ err }\n`);

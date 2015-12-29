@@ -1,0 +1,28 @@
+/* @component Announcement
+ * @brief An announcement is a li that contains some text, a timestamp, and an
+ * optional delete button.  The timestamp and delete button are absolutely
+ * positioned inside the li.
+ */
+.Announcement {
+    position: relative;
+    padding: 0.7em 36px 0.7em 1em; /* the 36px is eyeballed to prevent overlap. */
+}
+
+.Announcement > .timestamp {
+    position: absolute;
+    bottom: 0.2em;
+    left: 4em;
+    color: #668DE5;
+    font-size: 0.5em;
+    font-style: italic;
+}
+
+.Announcement > button {
+    background: none;
+    border-style: none none none solid;
+    border-width: 1px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

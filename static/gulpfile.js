@@ -31,6 +31,7 @@ var mkjs = function (fname) {
   var customOpts = {
     entries: [`./src/js/${ fname }`],
     debug: true,
+    // noparse: ['jquery', 'react', 'react-dom','react-bootstrap', 'moment', 'scriptjs'],
   };
 
   var opts = assign({}, watchify.args, customOpts);

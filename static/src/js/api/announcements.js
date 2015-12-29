@@ -6,25 +6,24 @@
 'use strict';
 
 var ajax = require('./ajax');
-var cache = require('./cache');
 
 var announcements = {};
-
-/* @brief How often the announcement cache will preserve the announcements. */
-announcements.updateRate = 5 * 1000; // Milliseconds.
 
 /* @brief The maximum length of an announcement. */
 announcements.maxLength = 500;
 
-var cache = cache(function () {
-  return ajax.get('/api/announcements');
-}, announcements.updateRate / 1000);
-
 /* @brief Returns a promise that resolves into a list of all announcements. */
-announcements.getAll = cache.query;
+announcements.getAll = function () {
+  return ajax.get('/api/announcements');
+};
 
-/* @brief Makes a new announcement with the given text. */
-announcements.create = function (text) {
+/* @brief Makes a new announcement with the given data.
+ *
+ * @param {string} text The text of the announcement.
+ * @param {string} timestamp The timestamp of the announcement, as an ISO
+ * string.
+ */
+announcements.create = function (text, timestamp) {
   if (text === '') {
     return Promise.reject(new Error('Empty announcement.'));
   }
@@ -33,14 +32,12 @@ announcements.create = function (text) {
     return Promise.reject(new Error('Announcement too long.'));
   }
 
-  cache.invalidate();
   return ajax.post('api/announcements', { text: text, });
 };
 
 /* @brief Deletes the announcement with the given id. */
 announcements.delete = function (id) {
-  cache.invalidate();
-  return ajax.delete(`/api/announcements/${ id }`);
+  return ajax.delete(`/api/announcements/${id}`);
 };
 
 module.exports = announcements;

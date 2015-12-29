@@ -12,9 +12,9 @@
 var $ = require('jquery');
 
 $.ajaxSetup({
-  xhrFields: {
-    withCredentials: true,
-  }
+  'xhrFields': {
+    'withCredentials': true,
+  },
 });
 
 /* @brief Wraps the jQuery AJAX error into a standard form. */
@@ -35,7 +35,7 @@ var get = function (url) {
 
 /* @brief Promisified POST request. */
 var post = function (url, data) {
-  if (data === undefined) { data = {}; }
+  data = data || {};
 
   return new Promise((resolve, reject) => {
     $.post(url, data)
@@ -46,12 +46,12 @@ var post = function (url, data) {
 
 /* @brief Promisified PUT request. */
 var put = function (url, data) {
-  if (data === undefined) { data = {}; }
+  data = data || {};
 
   return new Promise((resolve, reject) => {
     $.ajax(url, {
-      data: data,
-      method: 'PUT',
+      'data': data,
+      'method': 'PUT',
     })
     .done(resolve)
     .fail(errorWrap(reject));
@@ -62,7 +62,7 @@ var put = function (url, data) {
 var del = function (url) {
   return new Promise((resolve, reject) => {
     $.ajax(url, {
-      method: 'DELETE',
+      'method': 'DELETE',
     })
     .done(resolve)
     .fail(errorWrap(reject));
@@ -70,8 +70,8 @@ var del = function (url) {
 };
 
 module.exports = {
-  get : get,
-  post: post,
-  put: put,
-  delete: del,
+  'get': get,
+  'post': post,
+  'put': put,
+  'delete': del,
 };
