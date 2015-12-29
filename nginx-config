@@ -15,6 +15,14 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server;
 
+    gzip on;
+    gzip_http_version 1.1;
+    gzip_vary on;
+    gzip_comp_level 9;
+    gzip_proxied any;
+    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/javascript text/x-js;
+    gzip_buffers 32 16k;
+
     root /home/bezi/github/tartanhacks/static/build;
 
     location /api/ {
