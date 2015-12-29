@@ -3,6 +3,7 @@
  *
  * @author Oscar Bezi (bezi@scottylabs)
  */
+'use strict';
 
 var EventEmitter = require('events').EventEmitter;
 
@@ -24,6 +25,6 @@ class Store extends EventEmitter {
   deregister(callback) {
     this.removeListener(CHANGE, callback);
   }
-};
+}
 
 module.exports = Store;

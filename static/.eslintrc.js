@@ -1,8 +1,10 @@
 /* @file eslintrc
- * @brief ESLintRC for client-facing code.
+ * @brief ESLintRC for ScottyLabs JS code.
  *
- * Notes: No ES6 stuff enabled (we'll have to live with that till transpiling
- * isn't so slow), also React goodies.
+ * This is a pretty freaking (or flippin', as our Tech Director would say)
+ * pedantic set of rules.  100% compliance is in no way required, but it helps
+ * find some egregious stuff (and also helps with some subtle bugs that might be
+ * otherwise hard to catch.
  *
  * @author Oscar Bezi (bezi@scottylabs)
  */
@@ -102,9 +104,6 @@ module.exports = {
     'no-new': 2,
     'no-octal-escape': 2,
     'no-octal': 2,
-    'no-param-reassign': [2, {
-      'props': true,
-    }],
     'no-process-env': 2,
     'no-proto': 2,
     'no-redeclare': [2, {'builtinGlobals': true}],

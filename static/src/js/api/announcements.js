@@ -19,6 +19,10 @@ announcements.getAll = function () {
 
 /* @brief Makes a new announcement with the given data.
  *
+ * A bit of a lie at the moment.  We disregard the client timestamp and use the
+ * server's, I'll get around to fixing it at some point (or not, the difference
+ * is tiny).
+ *
  * @param {string} text The text of the announcement.
  * @param {string} timestamp The timestamp of the announcement, as an ISO
  * string.
@@ -32,7 +36,7 @@ announcements.create = function (text, timestamp) {
     return Promise.reject(new Error('Announcement too long.'));
   }
 
-  return ajax.post('api/announcements', { text: text, });
+  return ajax.post('api/announcements', {'text': text});
 };
 
 /* @brief Deletes the announcement with the given id. */

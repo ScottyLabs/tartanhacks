@@ -3,4 +3,6 @@
  *
  * @author Oscar Bezi (bezi@scottylabs)
  */
-module.exports = new (require('flux').Dispatcher);
+'use strict';
+var Dispatcher = require('flux').Dispatcher;
+module.exports = new Dispatcher();

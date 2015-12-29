@@ -7,6 +7,6 @@
 
 var React = require('react');
 var ReactDom = require('react-dom');
-var AnnouncementList = require('./components/announcements');
+var AnnouncementList = require('./components/AnnouncementList.react');
 
 ReactDom.render(<AnnouncementList admin />, document.getElementById('announcements'));

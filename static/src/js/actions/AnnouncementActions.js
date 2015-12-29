@@ -3,6 +3,8 @@
  *
  * @author Oscar Bezi (bezi@scottylabs)
  */
+'use strict';
+
 var Dispatcher = require('../Dispatcher');
 var api = require('../api/announcements');
 var types = require('../ActionTypes');
@@ -41,7 +43,7 @@ var createAnnouncement = function (text) {
       'newID': id,
       'success': true,
     });
-  }).catch(()=>{
+  }).catch(() => {
     Dispatcher.dispatch({
       'type': types.ANNOUNCEMENT_CREATE_COMPLETE,
       'id': tempID,
@@ -75,7 +77,7 @@ var deleteAnnouncement = function (id) {
 };
 
 module.exports = {
-  load: loadAnnouncements,
-  create: createAnnouncement,
-  delete: deleteAnnouncement,
+  'load': loadAnnouncements,
+  'create': createAnnouncement,
+  'delete': deleteAnnouncement,
 };
