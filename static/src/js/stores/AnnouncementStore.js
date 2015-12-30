@@ -76,7 +76,7 @@ store.dispatchToken = Dispatcher.register((action) => {
   // Update internal store.
   toSend = serverAnnouncements.filter((a) => dirtyDeleted[a.id] !== true);
 
-  toSend.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+  toSend.sort((a, b) => parseInt(b.timestamp, 10) - parseInt(a.timestamp, 10));
 
   store.changed();
 });
@@ -89,8 +89,8 @@ var load = require('../actions/AnnouncementActions').load;
 api.getAll().then(load);
 
 // Set up future updates.
-// setInterval(() => {
-//   api.getAll().then(load);
-// }, 2 * MS_PER_SECOND);
+setInterval(() => {
+  api.getAll().then(load);
+}, 30 * MS_PER_SECOND);
 
 module.exports = store;

@@ -15,7 +15,5 @@ module.exports = keyMirror({
   'ANNOUNCEMENT_LOAD': null,
 
   // Authentication
-  'AUTH_LOGIN': null,
-  'AUTH_LOGIN_ADMIN': null,
-  'AUTH_LOGOUT': null,
+  'AUTH_STATUS_UPDATE': null,
 });

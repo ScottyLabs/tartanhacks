@@ -4,7 +4,8 @@
   "description": "Backend service for the the TartanHacks 2016 app.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "nodemon --harmony_destructuring server.js",
+    "prod": "PM2_NODE_OPTIONS='--harmony_destructuring' pm2 start server.js --name 'TH_2016'"
   },
   "author": "Oscar Bezi (oscar@bezi.io)",
   "license": "MIT",
@@ -16,6 +17,7 @@
     "googleapis": "^2.1.7",
     "morgan": "^1.6.1",
     "promise-mysql": "^1.1.1",
-    "request": "^2.67.0"
+    "request": "^2.67.0",
+    "request-promise": "^1.0.2"
   }
 }

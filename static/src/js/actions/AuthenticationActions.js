@@ -9,26 +9,18 @@
 var Dispatcher = require('../Dispatcher');
 var types = require('../ActionTypes');
 
-var reportLogin = function () {
+/* @brief Log auth status.
+ *
+ * @param {Object} status The auth status, as an object with boolean keys
+ * 'login' and 'admin'.
+ */
+var authStatus = function (state) {
   Dispatcher.dispatch({
-    'type': types.AUTH_LOGIN,
-  });
-};
-
-var reportAdminLogin = function () {
-  Dispatcher.dispatch({
-    'type': types.AUTH_LOGIN_ADMIN,
-  });
-};
-
-var reportLogout = function () {
-  Dispatcher.dispatch({
-    'type': types.AUTH_LOGOUT,
+    'type': types.AUTH_STATUS_UPDATE,
+    'data': state,
   });
 };
 
 module.exports = {
-  'reportLogin': reportLogin,
-  'reportAdminLogin': reportAdminLogin,
-  'reportLogout': reportLogout,
+  'authStatus': authStatus,
 };

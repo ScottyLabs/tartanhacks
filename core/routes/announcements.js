@@ -50,8 +50,8 @@ handlers.post = function (req, res) {
     return;
   }
 
-  var query = 'INSERT INTO announcements (text) VALUES (?)';
-  db.query(query, [req.body.text])
+  var query = 'INSERT INTO announcements (text, timestamp) VALUES (?, ?)';
+  db.query(query, [req.body.text, String(Date.now())])
   .then((data) => {
     res.status(200);
     res.json(data.insertId);
@@ -63,7 +63,6 @@ handlers.post = function (req, res) {
 
 /* @brief Delete the announcement with the given id. */
 handlers.delete = function (req, res) {
-  // TODO: mark inactive instead.
   var query = 'DELETE FROM announcements WHERE announcement_id = ?';
   db.query(query, [req.params.id])
   .then(() => {

@@ -2,20 +2,20 @@
  * @brief Defines the routes for the authentication end points in the API, as
  * defined in the auth spec in api.md.
  *
- * @author Oscar Bezi (oscar@bezi.io)
+ * @author Oscar Bezi (bezi@scottylabs)
  */
 'use strict';
-var clientID = '896735026831-2bc35407elu3h5rfed6o4r65mv3nea3p.apps.googleusercontent.com';
-var clientSecret = '8jkVKn1ylghCs2SIqwKfBBKe';
 
-var request = require('request');
+var request = require('request-promise');
+var config = require('../config');
 
 //==============================================================================
 // Google OAuth goodies.
 //==============================================================================
 var google = require('googleapis');
 var OAuth2 = google.auth.OAuth2;
-var oauth2client = new OAuth2(clientID, clientSecret);
+var oauth2client = new OAuth2(config.google.clientID, config.google.clientSecret);
+var hd = 'andrew.cmu.edu';
 
 /* @brief Validates an OpenID token using the Google libraries.
  *
@@ -32,9 +32,9 @@ var verifyToken = function (token) {
         var token = data.getPayload();
         // The client may already do these checks, but might as well double
         // triple check :).
-        if (token.aud !== clientID) {
+        if (token.aud !== config.google.clientID) {
           reject(new Error('ClientID mismatch.'));
-        } else if (token.hd !== 'andrew.cmu.edu') {
+        } else if (token.hd !== hd) {
           reject(new Error('Hosted Domain mismatch.'));
         } else {
           resolve(token);
@@ -61,7 +61,20 @@ lib.requireLoggedIn = function (req, res, next) {
   }
 };
 
-lib.requireAdmin = lib.requireLoggedIn;
+/* @brief Middleware that ensure connection is logged in with an admin. */
+lib.requireAdmin = function (req, res, next) {
+  if (req.session.isLoggedIn === true) {
+    if (req.session.isAdmin === true) {
+      next();
+    } else {
+      res.status(403);
+      res.end('Logged-in user isn\'t an admin.\n');
+    }
+  } else {
+    res.status(403);
+    res.end('Not logged in.\n');
+  }
+};
 
 /* @brief Middleware that ensure connection logged out. */
 lib.requireLoggedOut = function (req, res, next) {
@@ -85,13 +98,11 @@ handlers.login = {};
 
 /* @brief Queries whether a user is logged in. */
 handlers.login.get = function (req, res) {
-  if (req.session.isLoggedIn === true) {
-    res.status(200);
-    res.end('Logged in.\n');
-  } else {
-    res.status(403);
-    res.end('Not logged in.\n');
-  }
+  res.status(200);
+  res.json({
+    'login': req.session.isLoggedIn === true,
+    'admin': req.session.isAdmin === true,
+  });
 };
 
 /* @brief Logs a user in. */
@@ -105,24 +116,65 @@ handlers.login.post = function (req, res) {
     return;
   }
 
-  verifyToken(req.body.token).then((token) => {
-    console.log(token);
-
+  var token;
+  verifyToken(req.body.token).then((id_token) => {
+    token = id_token;
     var id = token.sub;
     req.session.isLoggedIn = true;
     req.session.ownerID = String(id);
 
-    // Check db for that ID.
-    // If not present, get some data from the Directory API to prefill and
-    // insert into DB.
+    var query = 'SELECT * FROM users WHERE google_id = ?';
+    return db.query(query, [req.session.ownerID]);
+  }).then((rows) => {
+    if (rows.length == 1) {
+      res.status(200);
+      req.session.isAdmin = (rows[0].is_admin === 1);
+      res.json({
+        'login': req.session.isLoggedIn,
+        'admin': req.session.isAdmin,
+      });
+      return;
+    }
 
-    res.status(200)
-    res.end('Logged in.');
-    return;
+    // Not present in DB
+    var [andrewID, domain] = token.email.split('@');
+
+    if (domain !== hd) {
+      throw new Error(`Mail domain '${domain}' invalid.`);
+    }
+
+    request({
+      'uri': `http://apis.scottylabs.org/directory/v1/andrewID/${andrewID}`,
+      'json': true,
+    }).then((data) => {
+      req.session.isAdmin = data.andrewID === config.MASTER_ADMIN;
+      var info = [
+        req.session.ownerID,  // google_id
+        data.andrewID,  // andrewID
+        data.first_name, // first_name
+        data.middle_name, // middle_name
+        data.last_name, // last_name
+        data.preferred_email, // preferred_email
+        data.department, // student_major
+        data.student_class, // student_class
+        true, // in_resume_drop
+        req.session.isAdmin // is_admin
+      ];
+
+      var query = 'INSERT INTO users (google_id, andrewID, first_name, middle_name, last_name, preferred_email, student_major, student_class, in_resume_drop, is_admin) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+      return db.query(query, info);
+    }).then((data) => {
+      res.status(200);
+      res.json({
+        'login': req.session.isLoggedIn,
+        'admin': req.session.isAdmin,
+      });
+    });
   }).catch((err) => {
     req.session.isLoggedIn = false;
+    req.session.isAdmin = false;
     req.session.ownerID = '';
-    res.status(500)
+    res.status(403);
     res.end(`Error: ${ JSON.stringify(err) }.\n`);
     return;
   });
@@ -134,10 +186,14 @@ handlers.login.post = function (req, res) {
 /* @brief Logs out a user. */
 handlers.logout = function (req, res) {
   req.session.isLoggedIn = false;
+  req.session.isAdmin = false;
   req.session.ownerID = '';
 
   res.status(200);
-  res.end('Logged out.\n');
+  res.json({
+    'login': req.session.isLoggedIn === true,
+    'admin': req.session.isAdmin === true,
+  });
 };
 
 /* @brief Initializes the authentication library and routes.
@@ -150,7 +206,6 @@ var init = function (app, dbConn) {
 
   // Attach handlers.
   app.get('/auth/login', handlers.login.get);
-  app.get('/auth/login/admin', handlers.login.get);
 
   app.post('/auth/login', handlers.login.post);
   app.post('/auth/logout', lib.requireLoggedIn, handlers.logout);

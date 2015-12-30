@@ -11,7 +11,7 @@
 
 var scriptjs = require('scriptjs');
 var ajax = require('./ajax');
-var callbacks = require('../actions/AuthenticationActions');
+var callback = require('../actions/AuthenticationActions').authStatus;
 
 var gauth;
 
@@ -20,8 +20,8 @@ var gauth;
 //==============================================================================
 /* @brief Resolves into whether or not we're logged in. */
 var isLoggedIn = () => new Promise((resolve) => {
-  ajax.get('/api/auth/login').then(() => {
-    resolve(true);
+  ajax.get('/api/auth/login').then((data) => {
+    resolve(data.login);
   }).catch(() => {
     resolve(false);
   });
@@ -29,8 +29,8 @@ var isLoggedIn = () => new Promise((resolve) => {
 
 /* @brief Resolves into whether or not we're logged in as an admin. */
 var isAdmin = () => new Promise((resolve) => {
-  ajax.get('/api/auth/login/admin').then(() => {
-    resolve(true);
+  ajax.get('/api/auth/login').then((data) => {
+    resolve(data.admin);
   }).catch(() => {
     resolve(false);
   });
@@ -40,19 +40,13 @@ var isAdmin = () => new Promise((resolve) => {
 var onLogin = () => {
   var me = gauth.currentUser.get();
   var token = me.getAuthResponse().id_token;
-  ajax.post('/api/auth/login', {'token': token}).then(() => {
-    return isAdmin();
-  }).then((admin) => {
-    if (admin) {
-      callbacks.reportAdminLogin();
-    } else {
-      callbacks.reportLogin();
-    }
+  ajax.post('/api/auth/login', {'token': token}).then((data) => {
+    callback(data);
   });
 };
 
 var onLogout = () => {
-  ajax.post('/api/auth/logout').then(callbacks.reportLogout);
+  ajax.post('/api/auth/logout').then(callback);
 };
 
 /* @brief Load the Google client library. */

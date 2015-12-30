@@ -23,7 +23,7 @@ var loadAnnouncements = function (announcements) {
  * @param {string} text The content of the announcement.
  */
 var createAnnouncement = function (text) {
-  var timestamp = (new Date()).toISOString();
+  var timestamp = String(Date.now());
   var tempID = `${timestamp}::${text}`;
   var announcement = {
     'text': text,

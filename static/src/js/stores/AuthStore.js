@@ -26,21 +26,9 @@ var store = new AuthStore();
 
 store.dispatchToken = Dispatcher.register((action) => {
   switch (action.type) {
-    case types.AUTH_LOGIN: {
-      loggedIn = true;
-      admin = false;
-      break;
-    }
-
-    case types.AUTH_LOGIN_ADMIN: {
-      loggedIn = true;
-      admin = true;
-      break;
-    }
-
-    case types.AUTH_LOGOUT: {
-      loggedIn = false;
-      admin = false;
+    case types.AUTH_STATUS_UPDATE: {
+      loggedIn = action.data.login;
+      admin = action.data.admin;
       break;
     }
 

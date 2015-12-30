@@ -31,7 +31,7 @@ class Announcement extends React.Component {
   /* @brief Rerenders the element. */
   render() {
     // Timestamp.
-    var t = moment(new Date(this.props.data.timestamp));
+    var t = moment(new Date(parseInt(this.props.data.timestamp)));
     var timeStr = `${t.fromNow()} (${t.calendar()})`;
     var time = <span className="timestamp">{timeStr}</span>;
 
