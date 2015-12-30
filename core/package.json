@@ -13,7 +13,9 @@
     "express": "^4.13.3",
     "express-session": "^1.12.1",
     "express-validator": "^2.18.0",
+    "googleapis": "^2.1.7",
     "morgan": "^1.6.1",
-    "promise-mysql": "^1.1.1"
+    "promise-mysql": "^1.1.1",
+    "request": "^2.67.0"
   }
 }

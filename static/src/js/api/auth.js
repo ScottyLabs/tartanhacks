@@ -10,7 +10,50 @@
 'use strict';
 
 var scriptjs = require('scriptjs');
+var ajax = require('./ajax');
+var callbacks = require('../actions/AuthenticationActions');
+
 var gauth;
+
+//==============================================================================
+// Internal functions that maintain state.
+//==============================================================================
+/* @brief Resolves into whether or not we're logged in. */
+var isLoggedIn = () => new Promise((resolve) => {
+  ajax.get('/api/auth/login').then(() => {
+    resolve(true);
+  }).catch(() => {
+    resolve(false);
+  });
+});
+
+/* @brief Resolves into whether or not we're logged in as an admin. */
+var isAdmin = () => new Promise((resolve) => {
+  ajax.get('/api/auth/login/admin').then(() => {
+    resolve(true);
+  }).catch(() => {
+    resolve(false);
+  });
+});
+
+
+var onLogin = () => {
+  var me = gauth.currentUser.get();
+  var token = me.getAuthResponse().id_token;
+  ajax.post('/api/auth/login', {'token': token}).then(() => {
+    return isAdmin();
+  }).then((admin) => {
+    if (admin) {
+      callbacks.reportAdminLogin();
+    } else {
+      callbacks.reportLogin();
+    }
+  });
+};
+
+var onLogout = () => {
+  ajax.post('/api/auth/logout').then(callbacks.reportLogout);
+};
 
 /* @brief Load the Google client library. */
 scriptjs('https://apis.google.com/js/platform.js', () => {
@@ -23,21 +66,58 @@ scriptjs('https://apis.google.com/js/platform.js', () => {
     });
 
     // proof of concept
-    gauth.isSignedIn.listen((bool) => {
-      console.log(bool ? 'Logged in.' : 'Logged out.');
+    gauth.isSignedIn.listen((login) => {
+      if (login) {
+        onLogin();
+      } else {
+        onLogout();
+      }
     });
   });
 });
 
+//==============================================================================
+// Public API
+//==============================================================================
 var auth = {};
 
-/* @brief Initiate sequence. */
-auth.login = gauth.signIn;
+/* @brief Wraps a function or promise to only execute if the user is logged in.
+ * Optionally can provide an error handler.
+ */
+auth.requireLoggedIn = (fn, err) => isLoggedIn().then((loggedIn) => {
+  if (loggedIn) {
+    return fn();
+  } else if (err) {
+    return err();
+  }
+  throw new Error('Not logged in.');
+});
 
-/* @brief Checks whether or not we're logged in. */
-auth.isLoggedIn = gauth.isSignedIn.get;
+/* @brief Wraps a function or promise to only execute if the user is logged in
+ * as an admin.  Optionally can provide an error handler.
+ */
+auth.requireAdmin = (fn, err) => isAdmin().then((loggedIn) => {
+  if (loggedIn) {
+    return fn();
+  } else if (err) {
+    return err();
+  }
+  throw new Error('Not logged in as admin.');
+});
 
-/* @brief Logs us out. */
-auth.logout = gauth.signOut;
+/* @brief Initiate login sequence. */
+auth.login = () => {
+  if (gauth) {
+    gauth.signIn();
+  }
+};
 
+/* @brief Logs out. */
+auth.logout = () => {
+  if (gauth) {
+    gauth.signOut();
+  }
+};
+
+window.auth = auth;
 module.exports = auth;

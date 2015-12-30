@@ -89,8 +89,8 @@ var load = require('../actions/AnnouncementActions').load;
 api.getAll().then(load);
 
 // Set up future updates.
-setInterval(() => {
-  api.getAll().then(load);
-}, 2 * MS_PER_SECOND);
+// setInterval(() => {
+//   api.getAll().then(load);
+// }, 2 * MS_PER_SECOND);
 
 module.exports = store;

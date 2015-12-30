@@ -17,7 +17,8 @@ var Glyphicon = require('react-bootstrap').Glyphicon;
 
 var Announcement = require('./Announcement.react');
 
-var Store = require('../stores/AnnouncementStore');
+var AnnouncementStore = require('../stores/AnnouncementStore');
+var AuthStore = require('../stores/AuthStore');
 var Actions = require('../actions/AnnouncementActions');
 
 var api = require('../api/announcements');
@@ -29,6 +30,7 @@ class AnnouncementList extends React.Component {
     this.state = {
       'announcements': [],
       'value': '',
+      'admin': false,
     };
 
     // Bind handlers.
@@ -39,20 +41,23 @@ class AnnouncementList extends React.Component {
 
   /* @brief Enables the timer that updates the element. */
   componentWillMount() {
-    Store.register(this.updateState);
+    AnnouncementStore.register(this.updateState);
+    AuthStore.register(this.updateState);
     this.updateState();
   }
 
   /* @brief Cleans up the timer that updates the element. */
   componentWillUnmount() {
-    Store.deregister(this.updateState);
+    AnnouncementStore.deregister(this.updateState);
+    AuthStore.deregister(this.updateState);
   }
 
   /* @brief Gets state from the store. */
   updateState() {
     this.setState({
-      'announcements': Store.get(),
+      'announcements': AnnouncementStore.get(),
       'value': this.state.value,
+      'admin': AuthStore.get().admin,
     });
   }
 
@@ -62,7 +67,6 @@ class AnnouncementList extends React.Component {
     if (this.state.value !== '') {
       Actions.create(this.state.value);
       this.setState({
-        'announcements': this.state.announcements,
         'value': '',
       });
     }
@@ -72,7 +76,6 @@ class AnnouncementList extends React.Component {
   handleKeypress() {
     if (this.refs.input.getValue().length <= api.maxLength) {
       this.setState({
-        'announcements': this.state.announcements,
         'value': this.refs.input.getValue(),
       });
     }
@@ -133,11 +136,11 @@ class AnnouncementList extends React.Component {
     } else {
       body = (
         <ListGroup componentClass="ul">
-        {this.state.announcements.map(this.mkAnnouncement(this.props.admin))}
+        {this.state.announcements.map(this.mkAnnouncement(this.state.admin))}
         </ListGroup>
       );
     }
-    var form = this.props.admin ? this.buildForm() : '';
+    var form = this.state.admin ? this.buildForm() : '';
 
     return (
       <Well
@@ -151,8 +154,5 @@ class AnnouncementList extends React.Component {
     );
   }
 }
-
-AnnouncementList.propTypes = {'admin': React.PropTypes.bool};
-AnnouncementList.defaultProps = {'admin': false};
 
 module.exports = AnnouncementList;

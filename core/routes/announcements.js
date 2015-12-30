@@ -79,13 +79,13 @@ handlers.delete = function (req, res) {
  * @param app Object The Express object to attach routes to.
  * @param dbConn Object A connection to a mySQL database.
  */
-var init = function (app, dbConn) {
+var init = function (app, dbConn, auth) {
   db = dbConn;
 
   // Attach handlers.
   app.get('/announcements', handlers.get);
-  app.post('/announcements', handlers.post);
-  app.delete('/announcements/:id', handlers.delete);
+  app.post('/announcements', auth.requireAdmin, handlers.post);
+  app.delete('/announcements/:id', auth.requireAdmin, handlers.delete);
 
   console.log('Initialized /announcements routes.');
 };

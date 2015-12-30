@@ -6,6 +6,7 @@
 'use strict';
 
 var ajax = require('./ajax');
+var auth = require('./auth');
 
 var announcements = {};
 
@@ -36,12 +37,16 @@ announcements.create = function (text, timestamp) {
     return Promise.reject(new Error('Announcement too long.'));
   }
 
-  return ajax.post('api/announcements', {'text': text});
+  return auth.requireAdmin(() => {
+    return ajax.post('api/announcements', {'text': text});
+  })
 };
 
 /* @brief Deletes the announcement with the given id. */
 announcements.delete = function (id) {
-  return ajax.delete(`/api/announcements/${id}`);
+  return auth.requireAdmin(() => {
+    return ajax.delete(`/api/announcements/${id}`);
+  })
 };
 
 module.exports = announcements;

@@ -26,7 +26,8 @@ var uglify = require('gulp-uglify');
 //==============================================================================
 var srcDir = './src/'
 var destDir = './build/'
-var bundleFiles = ['admin.js', 'index.js'];
+// var bundleFiles = ['admin.js', 'index.js'];
+var bundleFiles = ['index.js'];
 
 /* @brief Makes a JS build task for the given bundle files.
  *
@@ -59,7 +60,7 @@ var makeJSTask = function (fname) {
     .on('error', handleErr)
     .pipe(source(fname))
     .pipe(buffer())
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(`${destDir}/js/`));
   };
 

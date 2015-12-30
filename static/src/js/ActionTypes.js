@@ -14,4 +14,8 @@ module.exports = keyMirror({
   'ANNOUNCEMENT_DELETE_COMPLETE': null,
   'ANNOUNCEMENT_LOAD': null,
 
+  // Authentication
+  'AUTH_LOGIN': null,
+  'AUTH_LOGIN_ADMIN': null,
+  'AUTH_LOGOUT': null,
 });

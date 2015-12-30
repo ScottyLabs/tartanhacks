@@ -40,8 +40,10 @@ mysql.createConnection({
   console.log("Successfully connected to the SQL database.");
   var db = conn;
 
+  var auth = require('./routes/auth')(app, db);
+
   // Miscellaneous routes.
-  require('./routes/announcements')(app, db);
+  require('./routes/announcements')(app, db, auth);
 
   // Start the server.
   return app.listen(config.port);
