@@ -44,6 +44,7 @@ mysql.createConnection({
 
   // Miscellaneous routes.
   require('./routes/announcements')(app, db, auth);
+  require('./routes/profile')(app, db, auth);
 
   // Start the server.
   return app.listen(config.port);

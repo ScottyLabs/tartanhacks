@@ -83,14 +83,11 @@ store.dispatchToken = Dispatcher.register((action) => {
 
 // Start polling the server for updates.
 var MS_PER_SECOND = 1000;
-var api = require('../api/announcements');
 var load = require('../actions/AnnouncementActions').load;
 // Start loading data.
-api.getAll().then(load);
+load();
 
 // Set up future updates.
-setInterval(() => {
-  api.getAll().then(load);
-}, 30 * MS_PER_SECOND);
+setInterval(load, 5 * 60 * MS_PER_SECOND);
 
 module.exports = store;

@@ -69,6 +69,13 @@ var del = function (url) {
   });
 };
 
+window.ajax = {
+  'get': get,
+  'post': post,
+  'put': put,
+  'delete': del,
+};
+
 module.exports = {
   'get': get,
   'post': post,

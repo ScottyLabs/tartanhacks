@@ -12,10 +12,12 @@ var types = require('../ActionTypes');
 /* @brief Loads fresh announcements from the server into the AnnouncementStore.
  * @param {Object} Set of announcements from the server.
  */
-var loadAnnouncements = function (announcements) {
-  Dispatcher.dispatch({
-    'type': types.ANNOUNCEMENT_LOAD,
-    'data': announcements,
+var loadAnnouncements = function () {
+  api.getAll().then((announcements) => {
+    Dispatcher.dispatch({
+      'type': types.ANNOUNCEMENT_LOAD,
+      'data': announcements,
+    });
   });
 };
 

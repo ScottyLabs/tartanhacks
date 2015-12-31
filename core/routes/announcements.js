@@ -77,6 +77,7 @@ handlers.delete = function (req, res) {
 /* @brief Initializes the announcement routes.
  * @param app Object The Express object to attach routes to.
  * @param dbConn Object A connection to a mySQL database.
+ * @param atuh Object The authentication client library.
  */
 var init = function (app, dbConn, auth) {
   db = dbConn;

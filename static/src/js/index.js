@@ -8,7 +8,7 @@
 var React = require('react');
 var ReactDom = require('react-dom');
 var AnnouncementList = require('./components/AnnouncementList.react');
+var Profile = require('./components/Profile.react');
 
-require('./api/auth');
-
-ReactDom.render(<AnnouncementList admin />, document.getElementById('announcements'));
+ReactDom.render(<Profile />, document.getElementById('profile'));
+ReactDom.render(<AnnouncementList />, document.getElementById('announcements'));

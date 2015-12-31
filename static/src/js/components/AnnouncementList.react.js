@@ -36,29 +36,33 @@ class AnnouncementList extends React.Component {
     // Bind handlers.
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleKeypress = this.handleKeypress.bind(this);
-    this.updateState = this.updateState.bind(this);
+
+    this.updateAnnouncements = this.updateAnnouncements.bind(this);
+    this.updateAuth = this.updateAuth.bind(this);
+
+    this.mkAnnouncement = this.mkAnnouncement.bind(this);
   }
 
-  /* @brief Enables the timer that updates the element. */
   componentWillMount() {
-    AnnouncementStore.register(this.updateState);
-    AuthStore.register(this.updateState);
-    this.updateState();
+    AnnouncementStore.register(this.updateAnnouncements);
+    AuthStore.register(this.updateAuth);
+    this.updateAuth();
+    this.updateAnnouncements();
   }
 
-  /* @brief Cleans up the timer that updates the element. */
   componentWillUnmount() {
-    AnnouncementStore.deregister(this.updateState);
-    AuthStore.deregister(this.updateState);
+    AnnouncementStore.deregister(this.updateAnnouncements);
+    AuthStore.deregister(this.updateAuth);
   }
 
-  /* @brief Gets state from the store. */
-  updateState() {
-    this.setState({
-      'announcements': AnnouncementStore.get(),
-      'value': this.state.value,
-      'admin': AuthStore.get().admin,
-    });
+  /* @brief Get new announcements from the AnnouncementStore. */
+  updateAnnouncements() {
+    this.setState({'announcements': AnnouncementStore.get(),});
+  }
+
+  /* @brief Gets auth state from the AuthStore. */
+  updateAuth() {
+    this.setState({'admin': AuthStore.get().admin,});
   }
 
   /* @brief Handles form submission. */
@@ -114,18 +118,16 @@ class AnnouncementList extends React.Component {
    * @param {bool} admin Whether or not to render the delete button.
    * @param {Object} announcement The data from the server.
    */
-  mkAnnouncement(admin) {
-    return (announcement) => {
+  mkAnnouncement(announcement) {
       announcement.id = String(announcement.id);
 
       return (
         <Announcement
         key={announcement.id}
         data={announcement}
-        admin={admin}
+        admin={this.state.admin}
         temp={announcement.temp} />
       );
-    }
   }
 
   /* @brief Rerenders the element. */
@@ -136,7 +138,7 @@ class AnnouncementList extends React.Component {
     } else {
       body = (
         <ListGroup componentClass="ul">
-        {this.state.announcements.map(this.mkAnnouncement(this.state.admin))}
+        {this.state.announcements.map(this.mkAnnouncement)}
         </ListGroup>
       );
     }

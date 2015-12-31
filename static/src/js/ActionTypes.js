@@ -16,4 +16,8 @@ module.exports = keyMirror({
 
   // Authentication
   'AUTH_STATUS_UPDATE': null,
+
+  // Profiles
+  'PROFILE_LOAD': null,
+  'PROFILE_UPDATE': null,
 });

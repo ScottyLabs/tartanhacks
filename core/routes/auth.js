@@ -126,7 +126,7 @@ handlers.login.post = function (req, res) {
     var query = 'SELECT * FROM users WHERE google_id = ?';
     return db.query(query, [req.session.ownerID]);
   }).then((rows) => {
-    if (rows.length == 1) {
+    if (rows.length === 1) {
       res.status(200);
       req.session.isAdmin = (rows[0].is_admin === 1);
       res.json({
