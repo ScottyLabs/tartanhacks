@@ -24,6 +24,7 @@ server {
     gzip_buffers 32 16k;
 
     root /home/bezi/github/tartanhacks/static/build;
+    server_name th.unix.bezi.io;
 
     location /api/ {
         proxy_pass http://api/;

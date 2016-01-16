@@ -47,7 +47,7 @@ class Announcement extends React.Component {
 
     return (
       <li className="Announcement list-group-item">
-      <span>{this.props.data.text}</span>{time}{btn}
+        <span>{this.props.data.text}</span>{time}{btn}
       </li>
     );
   }
