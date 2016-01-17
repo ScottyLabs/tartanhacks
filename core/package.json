@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "watch": "nodemon --harmony_destructuring server.js",
-    "prod": "PM2_NODE_OPTIONS='--harmony_destructuring' pm2 start server.js --name 'TH_2016'"
+    "prod": "PM2_NODE_OPTIONS='--harmony_destructuring' pm2 start server.js --name 'TH_2016'",
+    "start": "node --harmony_destructuring server.js"
   },
   "author": "Oscar Bezi (oscar@bezi.io)",
   "license": "MIT",
