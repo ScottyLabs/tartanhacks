@@ -29,4 +29,9 @@ server {
     location /api/ {
         proxy_pass http://api/;
     }
+
+    location /crashcourse  {
+        alias /opt/github/crashcourse/www/;
+        try_files $uri $uri/ index.html;
+    }
 }
