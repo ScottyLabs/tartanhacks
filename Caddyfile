@@ -1,0 +1,5 @@
+dev.zimmerman.io {
+  gzip
+  root ./static/build
+  proxy /api/ localhost:5010
+}
