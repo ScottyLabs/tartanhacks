@@ -1,5 +1,5 @@
-/* @file AuthStore.js
- * @brief Small store that holds auth state.
+/* @file UserStatusStore.js
+ * @brief Small store that holds user login and state.
  *
  * @author Oscar Bezi (bezi@scottylabs)
  */
@@ -11,24 +11,25 @@ var types = require('../ActionTypes');
 var Store = require('./Store');
 
 var loggedIn = false;
-var admin = false;
+var status = '';
 
-class AuthStore extends Store {
+class StatusStore extends Store {
   get() {
     return {
-      'admin': admin,
+      'admin': status === 'ADMIN',
+      'status': loggedIn ? status : 'LOGGED_OUT',
       'loggedIn': loggedIn,
     };
   }
 }
 
-var store = new AuthStore();
+var store = new StatusStore();
 
 store.dispatchToken = Dispatcher.register((action) => {
   switch (action.type) {
-    case types.AUTH_STATUS_UPDATE: {
-      loggedIn = action.data.login;
-      admin = action.data.admin;
+    case types.USER_STATUS_UPDATE: {
+      loggedIn = action.data.loggedIn;
+      status = action.data.status;
       break;
     }
 

@@ -9,6 +9,8 @@ var React = require('react');
 var ReactDom = require('react-dom');
 var AnnouncementList = require('./components/AnnouncementList.react');
 var Profile = require('./components/Profile.react');
+var RegistrationPanel = require('./components/RegistrationPanel.react');
 
 ReactDom.render(<Profile />, document.getElementById('profile'));
 ReactDom.render(<AnnouncementList />, document.getElementById('announcements'));
+ReactDom.render(<RegistrationPanel />, document.getElementById('registration'));

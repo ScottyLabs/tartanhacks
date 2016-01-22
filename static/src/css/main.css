@@ -1,0 +1,143 @@
+html, body {
+    padding: 2em 0;
+    width: 100%;
+    font-family: "Roboto", "Helvetica Neue", "Calibri", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 2;
+    color: #bfbfbf;
+    text-align: center;
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+}
+
+@media (min-width: 520px) {
+    body {
+        width: 520px;
+        margin: 0 auto;
+    }
+}
+
+hr {
+    margin: 1em auto;
+    width: 50%;
+    height: 2px;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 72px;
+    line-height: 1.2;
+}
+
+h2 {
+    margin-top: 1.5em;
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+h3 {
+    line-height: 1.2;
+    font-weight: normal;
+    margin: 1em;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#leader {
+    margin: 2em 0 0 0;
+}
+
+#schedule > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#schedule ul > li {
+    padding: 0.5em 0;
+    margin: 2em 0;
+    text-align: left;
+    color: #bfbfbf;
+}
+
+#schedule .time {
+    text-align: right;
+}
+
+#schedule .name {
+    text-align: left;
+    font-family: 'Roboto Slab', serif;
+}
+
+#schedule p {
+    line-height: 1.2;
+    font-style: italic;
+}
+
+/* @component Announcement
+ * @brief An announcement is a li that contains some text, a timestamp, and an
+ * optional delete button.  The timestamp and delete button are absolutely
+ * positioned inside the li.
+ */
+.Announcement {
+    position: relative;
+    padding: 0.7em 36px 0.7em 1em; /* the 36px is eyeballed to prevent overlap. */
+    text-align: left;
+    color: #555;
+}
+
+.Announcement > .timestamp {
+    position: absolute;
+    bottom: 0.2em;
+    left: 4em;
+    color: #668DE5;
+    font-size: 0.6em;
+    font-style: italic;
+}
+
+.Announcement > button {
+    background: none;
+    border-style: none none none solid;
+    border-width: 1px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* @component AnnouncementList
+ * @brief An announcement list is a Bootstrap Well that contains a header, an ul
+ * of <Announcement />s, and an optional small form with a text input and a
+ * button to add new announcements.
+ */
+
+.AnnouncementList > form > input[type="text"] {
+    width: 100%;
+}
+
+/* @component LoginButton
+ * @brief A button that toggles login state.
+ */
+.LoginButton {
+    width: 100%;
+    text-align: center;
+}
+
+.Profile .form-control-static {
+    text-align: left;
+}

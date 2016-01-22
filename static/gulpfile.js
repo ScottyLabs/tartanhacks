@@ -26,8 +26,7 @@ var uglify = require('gulp-uglify');
 //==============================================================================
 var srcDir = './src/'
 var destDir = './build/'
-// var bundleFiles = ['admin.js', 'index.js'];
-var bundleFiles = ['index.js'];
+var bundleFiles = ['admin.js', 'index.js'];
 
 /* @brief Makes a JS build task for the given bundle files.
  *
@@ -87,6 +86,11 @@ gulp.task('css', function () {
   .pipe(gulp.dest(destDir));
 });
 
+gulp.task('imgs', function () {
+  return gulp.src(`${srcDir}/imgs/*`)
+    .pipe(gulp.dest(`${destDir}/imgs/`));
+});
+
 gulp.task('html', function () {
   return gulp.src(`${srcDir}/**/*.html`)
   .pipe(gulp.dest(destDir));
@@ -97,9 +101,10 @@ gulp.task('html', function () {
 //==============================================================================
 gulp.task('watch', ['build'], function () {
   gulp.watch([`${srcDir}/**/*.js`], ['js']);
+  gulp.watch([`${srcDir}/imgs/*`], ['imgs']);
   gulp.watch([`${srcDir}/**/*.html`], ['html']);
   gulp.watch([`${srcDir}/**/*.css`], ['css']);
 });
 
-gulp.task('build', ['js', 'css', 'html']);
+gulp.task('build', ['js', 'css', 'html', 'imgs']);
 gulp.task('default', ['watch']);

@@ -34,7 +34,7 @@ handlers.get = function (req, res) {
     res.json(rows);
   }).catch((err) => {
     res.status(500);
-    res.end(`${ err }\n`);
+    res.end(err);
   });
 };
 
@@ -46,7 +46,7 @@ handlers.post = function (req, res) {
   var errs = req.validationErrors();
   if (errs) {
     res.status(400);
-    res.end(`Error: malformed request.  Details: ${ JSON.stringify(errs) }.\n`);
+    res.end(`Error: malformed request.  Details: ${ JSON.stringify(errs) }.`);
     return;
   }
 
@@ -57,7 +57,7 @@ handlers.post = function (req, res) {
     res.json(data.insertId);
   }).catch((err) => {
     res.status(400);
-    res.end(`${ err }\n`);
+    res.end(`${ err }`);
   });
 };
 
@@ -67,10 +67,10 @@ handlers.delete = function (req, res) {
   db.query(query, [req.params.id])
   .then(() => {
     res.status(200);
-    res.end('Successfully deleted announcement.\n');
+    res.end('Successfully deleted announcement.');
   }).catch((err) => {
     res.status(404);
-    res.end(`${ err }\n`);
+    res.end(err);
   });
 };
 

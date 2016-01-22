@@ -19,15 +19,22 @@ class ProfileStore extends Store {
 }
 
 var store = new ProfileStore();
+var load = require('../actions/ProfileActions').load;
 
 store.dispatchToken = Dispatcher.register((action) => {
   switch (action.type) {
     case types.PROFILE_LOAD: {
-      // fall-through
+      data = action.data;
+      break;
     }
 
     case types.PROFILE_UPDATE: {
       data = action.data;
+      break;
+    }
+
+    case types.USER_STATUS_UPDATE: {
+      load();
       break;
     }
 
@@ -37,9 +44,5 @@ store.dispatchToken = Dispatcher.register((action) => {
 
   store.changed();
 });
-
-// Start loading data.
-var load = require('../actions/ProfileActions').load;
-load();
 
 module.exports = store;

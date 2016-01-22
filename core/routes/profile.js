@@ -32,6 +32,7 @@ handlers.get = function (req, res) {
   getProfile(req).then((data) => {
     delete data.is_admin;
     delete data.google_id;
+    delete data.user_status;
 
     // Convert ints to bool
     data.in_resume_drop = data.in_resume_drop === 1;
@@ -40,7 +41,7 @@ handlers.get = function (req, res) {
     res.json(data);
   }).catch((err) => {
     res.status(500);
-    res.send(`${JSON.stringify(err)}.\n`);
+    res.send(err);
   });
 };
 
@@ -53,12 +54,14 @@ handlers.put = function (req, res) {
     req.checkBody('student_major').isLength(0, 100);
     req.checkBody('student_class').isLength(0, 100);
     req.checkBody('personal_url').isLength(0, 100);
+    req.checkBody('github').isLength(0, 100);
+    req.checkBody('linkedin').isLength(0, 100);
     req.sanitize('in_resume_drop').toBoolean();
 
     var errs = req.validationErrors();
     if (errs) {
       res.status(400);
-      res.end(`Error: malformed request.  Details: ${ JSON.stringify(errs) }.\n`);
+      res.end(`Error: malformed request.  Details: ${ JSON.stringify(errs) }.`);
       return;
     }
 
@@ -71,6 +74,8 @@ handlers.put = function (req, res) {
       'student_class',
       'personal_url',
       'in_resume_drop',
+      'github',
+      'linkedin',
     ];
 
     // Load info into data
@@ -81,11 +86,10 @@ handlers.put = function (req, res) {
     var query = 'UPDATE users SET ? WHERE google_id = ?';
     return db.query(query, [data, req.session.ownerID]);
   }).then(() => {
-    res.status(200);
-    res.send('OK');
+    handlers.get(req, res);
   }).catch((err) => {
     res.status(500);
-    res.send(`${JSON.stringify(err)}.\n`);
+    res.send(err);
   });
 };
 

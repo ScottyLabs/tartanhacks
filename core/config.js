@@ -6,9 +6,9 @@
 module.exports = {
   'port': 5010,
   'sql': {
-    'url': 'localhost',
-    'user': 'root',
-    'pass': 'mysqlpass',
+    'url': 'unix.bezi.io',
+    'user': 'th',
+    'pass': '8xpnYKdFNgTg',
     'dbname': 'th_2016',
   },
   'google': {

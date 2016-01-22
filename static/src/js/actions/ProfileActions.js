@@ -15,7 +15,7 @@ var loadProfile = function () {
       'type': types.PROFILE_LOAD,
       'data': profile,
     });
-  });
+  }).catch(console.log.bind(console));
 };
 
 var updateProfile = function (profile) {
@@ -24,7 +24,12 @@ var updateProfile = function (profile) {
     'data': profile,
   });
 
-  api.update(profile).then(loadProfile).catch(loadProfile);
+  api.update(profile).then((profile) => {
+    Dispatcher.dispatch({
+      'type': types.PROFILE_LOAD,
+      'data': profile,
+    });
+  }).catch(loadProfile);
 };
 
 module.exports = {

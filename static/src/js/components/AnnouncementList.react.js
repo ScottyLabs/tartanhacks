@@ -9,16 +9,12 @@
 var React = require('react');
 var moment = require('moment');
 
-var Input = require('react-bootstrap').Input;
-var ListGroup = require('react-bootstrap').ListGroup;
-var Well = require('react-bootstrap').Well;
-var Button = require('react-bootstrap').Button;
-var Glyphicon = require('react-bootstrap').Glyphicon;
+var {Input, ListGroup, Button, Glyphicon} = require('react-bootstrap');
 
 var Announcement = require('./Announcement.react');
 
 var AnnouncementStore = require('../stores/AnnouncementStore');
-var AuthStore = require('../stores/AuthStore');
+var UserStatusStore = require('../stores/UserStatusStore');
 var Actions = require('../actions/AnnouncementActions');
 
 var api = require('../api/announcements');
@@ -45,14 +41,14 @@ class AnnouncementList extends React.Component {
 
   componentWillMount() {
     AnnouncementStore.register(this.updateAnnouncements);
-    AuthStore.register(this.updateAuth);
+    UserStatusStore.register(this.updateAuth);
     this.updateAuth();
     this.updateAnnouncements();
   }
 
   componentWillUnmount() {
     AnnouncementStore.deregister(this.updateAnnouncements);
-    AuthStore.deregister(this.updateAuth);
+    UserStatusStore.deregister(this.updateAuth);
   }
 
   /* @brief Get new announcements from the AnnouncementStore. */
@@ -60,9 +56,9 @@ class AnnouncementList extends React.Component {
     this.setState({'announcements': AnnouncementStore.get(),});
   }
 
-  /* @brief Gets auth state from the AuthStore. */
+  /* @brief Gets auth state from the UserStatusStore. */
   updateAuth() {
-    this.setState({'admin': AuthStore.get().admin,});
+    this.setState({'admin': UserStatusStore.get().admin,});
   }
 
   /* @brief Handles form submission. */
@@ -145,14 +141,11 @@ class AnnouncementList extends React.Component {
     var form = this.state.admin ? this.buildForm() : '';
 
     return (
-      <Well
-        className="AnnouncementList"
-        bsSize="small"
-      >
+      <div className="AnnouncementList" >
       <h2>{'Announcements'}</h2>
       {body}
       {form}
-      </Well>
+      </div>
     );
   }
 }

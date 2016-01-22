@@ -1,6 +1,6 @@
 /* @file server.js
  * @brief Core server for the TartanHacks back-end.
- * @author Oscar Bezi (oscar@bezi.io)
+ * @author Oscar Bezi (bezi@scottylabs)
  */
 'use strict';
 
@@ -31,6 +31,8 @@ app.use(morgan('dev'));
 
 // Database connection and final initialisation.
 var mysql = require('promise-mysql');
+var db;
+var auth;
 mysql.createConnection({
   host: config.sql.url,
   user: config.sql.user,
@@ -38,11 +40,12 @@ mysql.createConnection({
   database: config.sql.dbname,
 }).then((conn) => {
   console.log("Successfully connected to the SQL database.");
-  var db = conn;
-
-  var auth = require('./routes/auth')(app, db);
+  db = conn;
+  auth = require('./routes/auth')(app, db);
 
   // Miscellaneous routes.
+  return require('./routes/status')(app, db, auth);
+}).then(() => {
   require('./routes/announcements')(app, db, auth);
   require('./routes/profile')(app, db, auth);
 
@@ -51,5 +54,3 @@ mysql.createConnection({
 }).then(() => {
   console.log(`TartanHacks back-end listening on port ${ config.port }.`);
 });
-
-// Don't catch errors, we want the server to crash on error.

@@ -11,32 +11,15 @@
 
 var scriptjs = require('scriptjs');
 var ajax = require('./ajax');
-var callback = require('../actions/AuthenticationActions').authStatus;
+
+var callback = require('../actions/AuthenticationActions').update;
+var getState = require('../stores/UserStatusStore').get;
 
 var gauth;
 
 //==============================================================================
 // Internal functions that maintain state.
 //==============================================================================
-/* @brief Resolves into whether or not we're logged in. */
-var isLoggedIn = () => new Promise((resolve) => {
-  ajax.get('/api/auth/login').then((data) => {
-    resolve(data.login);
-  }).catch(() => {
-    resolve(false);
-  });
-});
-
-/* @brief Resolves into whether or not we're logged in as an admin. */
-var isAdmin = () => new Promise((resolve) => {
-  ajax.get('/api/auth/login').then((data) => {
-    resolve(data.admin);
-  }).catch(() => {
-    resolve(false);
-  });
-});
-
-
 var onLogin = () => {
   var me = gauth.currentUser.get();
   var token = me.getAuthResponse().id_token;
@@ -78,26 +61,27 @@ var auth = {};
 /* @brief Wraps a function or promise to only execute if the user is logged in.
  * Optionally can provide an error handler.
  */
-auth.requireLoggedIn = (fn, err) => isLoggedIn().then((loggedIn) => {
-  if (loggedIn) {
-    return fn();
-  } else if (err) {
-    return err();
-  }
-  throw new Error('Not logged in.');
-});
+auth.requireLoggedIn = (fn, err) => {
+  return Promise.resolve(getState().loggedIn).then((loggedIn) => {
+    if (loggedIn) {
+      return fn();
+    } else if (err) {
+      return err();
+    }
+    throw new Error('Not logged in.');
+  });
+}
 
-/* @brief Wraps a function or promise to only execute if the user is logged in
- * as an admin.  Optionally can provide an error handler.
- */
-auth.requireAdmin = (fn, err) => isAdmin().then((loggedIn) => {
-  if (loggedIn) {
-    return fn();
-  } else if (err) {
-    return err();
-  }
-  throw new Error('Not logged in as admin.');
-});
+auth.requireAdmin = (fn, err) => {
+  return Promise.resolve(getState().admin).then((isAdmin) => {
+    if (isAdmin) {
+      return fn();
+    } else if (err) {
+      return err();
+    }
+    throw new Error('Not logged in.');
+  });
+}
 
 /* @brief Initiate login sequence. */
 auth.login = () => {

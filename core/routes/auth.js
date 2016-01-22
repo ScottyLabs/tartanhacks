@@ -57,22 +57,22 @@ lib.requireLoggedIn = function (req, res, next) {
     next();
   } else {
     res.status(403);
-    res.end('Not logged in.\n');
+    res.end('Not logged in.');
   }
 };
 
 /* @brief Middleware that ensure connection is logged in with an admin. */
 lib.requireAdmin = function (req, res, next) {
   if (req.session.isLoggedIn === true) {
-    if (req.session.isAdmin === true) {
+    if (req.session.user_status === 'ADMIN') {
       next();
     } else {
       res.status(403);
-      res.end('Logged-in user isn\'t an admin.\n');
+      res.end('Logged-in user isn\'t an admin.');
     }
   } else {
     res.status(403);
-    res.end('Not logged in.\n');
+    res.end('Not logged in.');
   }
 };
 
@@ -80,7 +80,7 @@ lib.requireAdmin = function (req, res, next) {
 lib.requireLoggedOut = function (req, res, next) {
   if (req.session.isLoggedIn === true) {
     res.status(403);
-    res.end('Already logged in.\n');
+    res.end('Already logged in.');
   } else {
     next();
   }
@@ -100,8 +100,8 @@ handlers.login = {};
 handlers.login.get = function (req, res) {
   res.status(200);
   res.json({
-    'login': req.session.isLoggedIn === true,
-    'admin': req.session.isAdmin === true,
+    'loggedIn': req.session.isLoggedIn,
+    'status': req.session.user_status,
   });
 };
 
@@ -112,7 +112,7 @@ handlers.login.post = function (req, res) {
   var errs = req.validationErrors();
   if (errs) {
     res.status(400);
-    res.end(`Error: ${ JSON.stringify(errs) }.\n`);
+    res.end(err);
     return;
   }
 
@@ -121,18 +121,17 @@ handlers.login.post = function (req, res) {
     token = id_token;
     var id = token.sub;
     req.session.isLoggedIn = true;
+    // Default, as enforced by database.
+    req.session.user_status = 'UNREGISTERED';
     req.session.ownerID = String(id);
 
-    var query = 'SELECT * FROM users WHERE google_id = ?';
+    var query = 'SELECT name AS user_status FROM (SELECT * FROM users WHERE google_id = ?) AS me INNER JOIN user_statuses on user_status = user_statuses.id';
     return db.query(query, [req.session.ownerID]);
   }).then((rows) => {
     if (rows.length === 1) {
       res.status(200);
-      req.session.isAdmin = (rows[0].is_admin === 1);
-      res.json({
-        'login': req.session.isLoggedIn,
-        'admin': req.session.isAdmin,
-      });
+      req.session.user_status = rows[0].user_status;
+      handlers.login.get(req, res);
       return;
     }
 
@@ -147,7 +146,6 @@ handlers.login.post = function (req, res) {
       'uri': `http://apis.scottylabs.org/directory/v1/andrewID/${andrewID}`,
       'json': true,
     }).then((data) => {
-      req.session.isAdmin = data.andrewID === config.MASTER_ADMIN;
       var info = [
         req.session.ownerID,  // google_id
         data.andrewID,  // andrewID
@@ -158,24 +156,19 @@ handlers.login.post = function (req, res) {
         data.department, // student_major
         data.student_class, // student_class
         true, // in_resume_drop
-        req.session.isAdmin // is_admin
       ];
 
-      var query = 'INSERT INTO users (google_id, andrewID, first_name, middle_name, last_name, preferred_email, student_major, student_class, in_resume_drop, is_admin) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+      var query = 'INSERT INTO users (google_id, andrewID, first_name, middle_name, last_name, preferred_email, student_major, student_class, in_resume_drop) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
       return db.query(query, info);
     }).then((data) => {
-      res.status(200);
-      res.json({
-        'login': req.session.isLoggedIn,
-        'admin': req.session.isAdmin,
-      });
+      handlers.login.get(req, res);
     });
   }).catch((err) => {
     req.session.isLoggedIn = false;
-    req.session.isAdmin = false;
+    req.session.user_status = '';
     req.session.ownerID = '';
     res.status(403);
-    res.end(`Error: ${ JSON.stringify(err) }.\n`);
+    res.end(err);
     return;
   });
 };
@@ -186,15 +179,20 @@ handlers.login.post = function (req, res) {
 /* @brief Logs out a user. */
 handlers.logout = function (req, res) {
   req.session.isLoggedIn = false;
-  req.session.isAdmin = false;
+  req.session.user_status = '';
   req.session.ownerID = '';
 
-  res.status(200);
-  res.json({
-    'login': req.session.isLoggedIn === true,
-    'admin': req.session.isAdmin === true,
-  });
+  handlers.login.get(req, res);
 };
+
+//==============================================================================
+// POST /auth/register
+//==============================================================================
+handlers.register = function (req, res) {
+  data = {};
+  var query = 'UPDATE users SET ? WHERE google_id = ?';
+  return db.query(query, [data])
+}
 
 /* @brief Initializes the authentication library and routes.
  * @param app Object The Express object to attach routes to.

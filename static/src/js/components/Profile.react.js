@@ -7,10 +7,10 @@
 
 var React = require('react');
 
-var Well = require('react-bootstrap').Well;
-var Input = require('react-bootstrap').Input;
+var {Input, FormControls} = require('react-bootstrap');
+var LoginButton = require('./LoginButton.react');
 
-var AuthStore = require('../stores/AuthStore');
+var UserStatusStore = require('../stores/UserStatusStore');
 var ProfileStore = require('../stores/ProfileStore');
 
 var api = require('../api/profile');
@@ -36,21 +36,22 @@ class Profile extends React.Component {
     this.mkForm = this.mkForm.bind(this);
 
     this.handleKeypress = this.handleKeypress.bind(this);
-    this.validationState = this.validationState.bind(this);
+    this.handleCheckbox = this.handleCheckbox.bind(this);
   }
 
   componentWillMount() {
-    AuthStore.register(this.updateAuth);
+    UserStatusStore.register(this.updateAuth);
     ProfileStore.register(this.updateProfile);
   }
 
   componentWillUnmount() {
-    AuthStore.deregister(this.updateAuth);
+    clearTimeout(this.timingTyper);
+    UserStatusStore.deregister(this.updateAuth);
     ProfileStore.deregister(this.updateProfile);
   }
 
   updateAuth() {
-    this.setState({'loggedIn': AuthStore.get().loggedIn});
+    this.setState({'loggedIn': UserStatusStore.get().loggedIn});
   }
 
   updateProfile() {
@@ -60,57 +61,90 @@ class Profile extends React.Component {
   handleKeypress(refName) {
     return () => {
       if (this.refs[refName].getValue().length <= api.maxLength) {
+        // Only update the server after we've stopped typing for a second.
+        clearTimeout(this.timingTyper);
+        this.timingTyper = setTimeout(() => {
+          updateStore(data);
+        }, 1000);
+
         var data = this.state.value;
-        data[refName] = this.refs[refName].getValue().trim();
+        data[refName] = this.refs[refName].getValue();
         this.setState({
           'value': data,
         });
-        updateStore(data);
       }
     };
   }
 
-  validationState(refName) {
-    if (this.state.value[refName] === undefined) {
-      return null;
-    }
-   return this.state.profile[refName] === this.state.value[refName] ? null : 'warning';
+  handleCheckbox() {
+    var data = this.state.value;
+    data.in_resume_drop = !this.refs.in_resume_drop.getChecked();
+    this.setState({
+      'value': data,
+    });
+    updateStore(data);
   }
 
   mkForm() {
+    var explanation = "This information both lets us know about who comes to our events, and allows us to forward your resume and hack information to all of our sponsors in one spot!  If you want to opt-out of this, please check the button below."
     var getValue = (propName) => this.state.value[propName] !== undefined ? this.state.value[propName] : this.state.profile[propName];
+    var getInput = (propName, label) => {
+      return (
+        <Input
+          type="text"
+          ref={propName}
+          label={label}
+          labelClassName="col-xs-3"
+          wrapperClassName="col-xs-9"
+          onChange={this.handleKeypress(propName)}
+          value={getValue(propName)} />
+      );
+    }
+
     return (
-    <form className="form-horizontal">
+    <form className="form-horizontal" onSubmit={(e) => e.preventDefault()}>
+      <FormControls.Static label="AndrewID" labelClassName="col-xs-3" wrapperClassName="col-xs-9" value={this.state.profile.andrewID} />
+      {getInput('first_name', 'First Name')}
+      {getInput('middle_name', 'Middle Name')}
+      {getInput('last_name', 'Last Name')}
+      {getInput('preferred_email', 'Email')}
+      {getInput('student_class', 'Class')}
+      {getInput('student_major', 'Major')}
+      {getInput('personal_url', 'URL')}
+      {getInput('github', 'Github')}
+      {getInput('linkedin', 'LinkedIn')}
+      <FormControls.Static wrapperClassName="col-xs-offset-3 col-xs-9" value={explanation} />
       <Input
-        type="text"
-        ref="first_name"
-        label="First Name"
-        labelClassName="col-xs-2"
-        wrapperClassName="col-xs-10"
-        onChange={this.handleKeypress('first_name')}
-        bsStyle={this.validationState('first_name')}
-        value={getValue('first_name')} />
+        type="checkbox"
+        ref="in_resume_drop"
+        label="I don't want the sponsors to receive my resume."
+        wrapperClassName="col-xs-offset-3"
+        onChange={this.handleCheckbox}
+        checked={!getValue('in_resume_drop')} />
     </form>
     );
   }
 
   render() {
-    var body = <p>{'Loading...'}</p>;
-
+    var body;
     if (!this.state.loggedIn) {
-      body = <p>{'Log in to see your profile.'}</p>;
+      body = (
+        <div>
+          <p>{'Log in to see your profile.'}</p>
+        </div>
+      );
     } else if (Object.keys(this.state.profile).length !== 0) {
       body = this.mkForm();
+    } else {
+      body = 'Loading. . .';
     }
 
     return (
-      <Well
-        className="Profile"
-        bsSize="small"
-      >
-      <h2>{'Profile'}</h2>
-      {body}
-      </Well>
+      <div className="Profile" >
+        <h2>{'Profile'}</h2>
+        {body}
+          <LoginButton />
+      </div>
     );
   }
 }

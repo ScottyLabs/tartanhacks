@@ -1,5 +1,7 @@
-dev.zimmerman.io {
+localhost {
   gzip
   root ./static/build
-  proxy /api/ localhost:5010
+  proxy /api/ localhost:5010 {
+      without /api
+  }
 }

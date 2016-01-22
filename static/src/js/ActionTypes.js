@@ -14,8 +14,11 @@ module.exports = keyMirror({
   'ANNOUNCEMENT_DELETE_COMPLETE': null,
   'ANNOUNCEMENT_LOAD': null,
 
-  // Authentication
-  'AUTH_STATUS_UPDATE': null,
+  // User Status
+  'USER_STATUS_UPDATE': null,
+
+  // Registration Status
+  'REGISTRATION_STATUS_UPDATE': null,
 
   // Profiles
   'PROFILE_LOAD': null,
