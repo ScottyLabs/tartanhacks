@@ -102,7 +102,7 @@ class Profile extends React.Component {
     }
 
     return (
-    <form className="form-horizontal" onSubmit={(e) => e.preventDefault()}>
+    <form className="form-horizontal" onSubmit={(e) => {e.preventDefault()}}>
       <FormControls.Static label="AndrewID" labelClassName="col-xs-3" wrapperClassName="col-xs-9" value={this.state.profile.andrewID} />
       {getInput('first_name', 'First Name')}
       {getInput('middle_name', 'Middle Name')}

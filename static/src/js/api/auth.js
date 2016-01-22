@@ -23,9 +23,7 @@ var gauth;
 var onLogin = () => {
   var me = gauth.currentUser.get();
   var token = me.getAuthResponse().id_token;
-  ajax.post('/api/auth/login', {'token': token}).then((data) => {
-    callback(data);
-  });
+  ajax.post('/api/auth/login', {'token': token}).then(callback);
 };
 
 var onLogout = () => {
@@ -36,7 +34,7 @@ var onLogout = () => {
 scriptjs('https://apis.google.com/js/platform.js', () => {
   window.gapi.load('auth2', () => {
     gauth = window.gapi.auth2.init({
-      'client_id': '896735026831-554nd2fjkhovad8c8cf817uatb9ni00i.apps.googleusercontent.com',
+      'client_id': '896735026831-0jetl40m7r14djaedp3drbgifgt0cm11.apps.googleusercontent.com',
       'scope': 'email',
       'hosted_domain': 'andrew.cmu.edu',
       'fetch_basic_profile': false,
@@ -96,6 +94,8 @@ auth.logout = () => {
     gauth.signOut();
   }
 };
+
+auth.update_status = () => ajax.get('/api/auth/login').then(callback);
 
 window.auth = auth;
 module.exports = auth;

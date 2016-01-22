@@ -12,6 +12,8 @@ var LoginButton = require('./LoginButton.react');
 
 var UserStatusStore = require('../stores/UserStatusStore');
 
+var api = require('../api/status');
+
 class RegistrationPanel extends React.Component {
   constructor(props) {
     super(props);
@@ -54,9 +56,9 @@ class RegistrationPanel extends React.Component {
         case 'UNREGISTERED': {
           body = (
             <div className={this.state.status}>
-              <p>{'Welp, looks like you\'re logged in.'}</p>
-              <Button>Become a mentor.</Button>
-              <Button>Register as a hacker.</Button>
+              <p>{'You\'re logged in! Register as a hacker, or become a mentor for a guaranteed spot (and some extra swag!)'}</p>
+              <Button onClick={api.become_mentor}>Become a mentor.</Button>
+              <Button onClick={api.register}>Register as a hacker.</Button>
             </div>
           );
           break;
@@ -64,7 +66,8 @@ class RegistrationPanel extends React.Component {
         case 'ADMIN': {
           body = (
             <div className={this.state.status}>
-              <p>{'Registration is: CLOSED|OPEN|PRIVILEGED'}</p>
+              <p>{'You\'re an admin, silly.'}</p>
+              <Button onClick={() => api.get_registration_status().then(console.log.bind(console))}>Query info.</Button>
             </div>
           );
           break;
@@ -72,7 +75,8 @@ class RegistrationPanel extends React.Component {
         case 'MENTOR': {
           body = (
             <div className={this.state.status}>
-              <p>{'Thanks so much for being a mentor!  You should get email soon regarding the mentorship process.'}</p>
+              <p>{'Thanks so much for registering to be a mentor! We\'ll reach out to you over email soon.'}</p>
+              <Button onClick={api.revert_status}>Stop Being a Mentor</Button>
             </div>
           );
           break;
@@ -80,7 +84,8 @@ class RegistrationPanel extends React.Component {
         case 'HACKER_CHECKED_IN': {
           body = (
             <div className={this.state.status}>
-              <p>{'You have been checked in.  Better get started hacking!'}</p>
+              <p>{'You\'re checked in. Time to get hacking!'}</p>
+              <Button onClick={api.revert_status}>Give up Spot</Button>
             </div>
           );
           break;
@@ -88,7 +93,8 @@ class RegistrationPanel extends React.Component {
         case 'HACKER_ACCEPTED': {
           body = (
             <div className={this.state.status}>
-              <p>{'Congrats!  You\'re in.  Get excited.'}</p>
+              <p>{'Congrats! You\'re in. Make sure to check in by 5:30PM on hack day. See you February 5th!'}</p>
+              <Button onClick={api.revert_status}>Give up Spot</Button>
             </div>
           );
           break;
@@ -96,7 +102,8 @@ class RegistrationPanel extends React.Component {
         case 'HACKER_WAITLISTED': {
           body = (
             <div className={this.state.status}>
-              <p>{'Welp, looks like you\'re on the waitlist.'}</p>
+              <p>{'Thank you for registering! Unfortunately, due to overwhelming demand, we\'re unable to guarantee you a spot. Don\'t worry though - be at Porter 100 by 5:30 PM and we\'ll do our best to accommodate you.'}</p>
+              <Button onClick={api.revert_status}>Give up Spot</Button>
             </div>
           );
           break;
