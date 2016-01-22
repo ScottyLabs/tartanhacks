@@ -7,13 +7,20 @@
 
 # TartanHacks API backend.
 upstream th_2016_api {
-    server localhost:5010;
+    server localhost:5040;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name tartanhacks.com;
+    return 301 https://$host$request_uri;
 }
 
 # TartanHacks app.
 server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
+    listen 443 ssl;
+    listen [::]:443 ssl;
 
     gzip on;
     gzip_http_version 1.1;
@@ -23,7 +30,15 @@ server {
     gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/javascript text/x-js;
     gzip_buffers 32 16k;
 
-    root /home/bezi/github/tartanhacks/static/build;
+    root /opt/github/tartanhacks/static/build/;
+    server_name tartanhacks.com;
+
+    ssl_certificate /etc/letsencrypt/live/tartanhacks.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/tartanhacks.com/privkey.pem;
+
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    ssl_ciphers 'EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH';
 
     location /api/ {
         proxy_pass http://th_2016_api/;
