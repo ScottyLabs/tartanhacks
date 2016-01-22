@@ -26,7 +26,7 @@ var uglify = require('gulp-uglify');
 //==============================================================================
 var srcDir = './src/'
 var destDir = './build/'
-var bundleFiles = ['admin.js', 'index.js'];
+var bundleFiles = ['index.js'];
 
 /* @brief Makes a JS build task for the given bundle files.
  *
