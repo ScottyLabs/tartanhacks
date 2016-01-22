@@ -4,7 +4,7 @@
  */
 
 module.exports = {
-  'port': 5010,
+  'port': 5040,
   'sql': {
     'url': 'unix.bezi.io',
     'user': 'th',
@@ -12,9 +12,8 @@ module.exports = {
     'dbname': 'th_2016',
   },
   'google': {
-    // The pass checked in should only be for unix.bezi.io
-    'clientID': '896735026831-2bc35407elu3h5rfed6o4r65mv3nea3p.apps.googleusercontent.com',
-    'clientSecret': '8jkVKn1ylghCs2SIqwKfBBKe',
+    'clientID': '896735026831-554nd2fjkhovad8c8cf817uatb9ni00i.apps.googleusercontent.com',
+    'clientSecret': 'Ojbz2hrIsv9JH5_fMa6JkrGL',
   },
   // Should always be an admin.
   'MASTER_ADMIN': 'odb',
