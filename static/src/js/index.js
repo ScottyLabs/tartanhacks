@@ -12,5 +12,4 @@ var Profile = require('./components/Profile.react');
 var RegistrationPanel = require('./components/RegistrationPanel.react');
 
 ReactDom.render(<Profile />, document.getElementById('profile'));
-ReactDom.render(<AnnouncementList />, document.getElementById('announcements'));
 ReactDom.render(<RegistrationPanel />, document.getElementById('registration'));

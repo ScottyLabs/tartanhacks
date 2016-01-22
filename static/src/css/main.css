@@ -13,6 +13,11 @@ a {
     text-decoration: underline;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 @media (min-width: 520px) {
     body {
         width: 520px;
