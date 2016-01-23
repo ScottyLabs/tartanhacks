@@ -4,16 +4,16 @@
  */
 
 module.exports = {
-  'port': 5010,
+  'port': 5040,
   'sql': {
-    'url': 'unix.bezi.io',
-    'user': 'th',
-    'pass': '8xpnYKdFNgTg',
+    'url': 'localhost',
+    'user': 'root',
+    'pass': 'mysqlpass',
     'dbname': 'th_2016',
   },
   'google': {
-    'clientID': '896735026831-0jetl40m7r14djaedp3drbgifgt0cm11.apps.googleusercontent.com',
-    'clientSecret': 'T2Omq8Jr41ZKklsNX6KnjGJV',
+    'clientID': '896735026831-i2d8bp6qcqb65alta00daatpl2pd7a5g.apps.googleusercontent.com',
+    'clientSecret': 'tGHNpU-Azy_QF-9dYQlej1jl',
   },
   // Should always be an admin.
   'MASTER_ADMIN': 'odb',

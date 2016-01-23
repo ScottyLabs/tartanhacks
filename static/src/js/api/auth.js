@@ -34,7 +34,7 @@ var onLogout = () => {
 scriptjs('https://apis.google.com/js/platform.js', () => {
   window.gapi.load('auth2', () => {
     gauth = window.gapi.auth2.init({
-      'client_id': '896735026831-0jetl40m7r14djaedp3drbgifgt0cm11.apps.googleusercontent.com',
+      'client_id': '896735026831-i2d8bp6qcqb65alta00daatpl2pd7a5g.apps.googleusercontent.com',
       'scope': 'email',
       'hosted_domain': 'andrew.cmu.edu',
       'fetch_basic_profile': false,
