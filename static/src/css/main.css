@@ -13,6 +13,18 @@ a {
     text-decoration: underline;
 }
 
+.nice-btn {
+    border-radius: 0;
+    background: none;
+    color: white;
+    margin: 5px;
+}
+
+.nice-btn:hover {
+    background: none;
+    color: white;
+}
+
 img {
     width: 100%;
     height: auto;

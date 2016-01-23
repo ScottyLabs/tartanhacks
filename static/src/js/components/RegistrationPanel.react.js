@@ -20,10 +20,13 @@ class RegistrationPanel extends React.Component {
 
     this.state = {
       'loggedIn': false,
-      'status': ''
+      'status': '',
+      'registration_data': {},
     };
 
     this.updateAuth = this.updateAuth.bind(this);
+
+    this.reloadTimer = -1;
   }
 
   componentWillMount() {
@@ -41,6 +44,25 @@ class RegistrationPanel extends React.Component {
       'loggedIn': UserStatusStore.get().loggedIn,
       'status': UserStatusStore.get().status,
     });
+
+    if (UserStatusStore.get().status === 'ADMIN') {
+      var reload_stuff = () => {
+        return api.get_registration_status().then((data) => {
+          this.setState({
+            'registration_data': data,
+          })
+        });
+      };
+
+      if (this.reloadTimer === -1) {
+        this.reloadTimer = setInterval(reload_stuff, 100);
+      }
+    } else {
+      if (this.reloadTimer !== -1) {
+        clearInterval(reloadTimer);
+        this.reloadTimer = -1;
+      }
+    }
   }
 
   render() {
@@ -57,8 +79,9 @@ class RegistrationPanel extends React.Component {
           body = (
             <div className={this.state.status}>
               <p>{'You\'re logged in! Register as a hacker, or become a mentor for a guaranteed spot (and some extra swag!)'}</p>
-              <Button onClick={api.become_mentor}>Become a mentor.</Button>
-              <Button onClick={api.register}>Register as a hacker.</Button>
+              <Button className="nice-btn" onClick={api.become_mentor}>Become a mentor.</Button>
+              <br />
+              <Button className="nice-btn" onClick={api.register}>Register as a hacker.</Button>
             </div>
           );
           break;
@@ -67,7 +90,8 @@ class RegistrationPanel extends React.Component {
           body = (
             <div className={this.state.status}>
               <p>{'You\'re an admin, silly.'}</p>
-              <Button onClick={() => api.get_registration_status().then(console.log.bind(console))}>Query info.</Button>
+              <pre>{JSON.stringify(this.state.registration_data)}</pre>
+              <script src="https://app.box.com/embed/upload.js?token=2bhk7deq99xtb92sryx002ahv92g1a9d&folder_id=6229265697&w=385&h=250&i=&d=0&t=Tartanhacks%20Resume%20Drop&r=1" type="text/javascript"></script>
             </div>
           );
           break;
@@ -76,7 +100,7 @@ class RegistrationPanel extends React.Component {
           body = (
             <div className={this.state.status}>
               <p>{'Thanks so much for registering to be a mentor! We\'ll reach out to you over email soon.'}</p>
-              <Button onClick={api.revert_status}>Stop Being a Mentor</Button>
+              <Button className="nice-btn" onClick={api.revert_status}>Stop Being a Mentor</Button>
             </div>
           );
           break;
@@ -85,7 +109,7 @@ class RegistrationPanel extends React.Component {
           body = (
             <div className={this.state.status}>
               <p>{'You\'re checked in. Time to get hacking!'}</p>
-              <Button onClick={api.revert_status}>Give up Spot</Button>
+              <Button className="nice-btn" onClick={api.revert_status}>Give Up Your Spot</Button>
             </div>
           );
           break;
@@ -94,7 +118,7 @@ class RegistrationPanel extends React.Component {
           body = (
             <div className={this.state.status}>
               <p>{'Congrats! You\'re in. Make sure to check in by 5:30PM on hack day. See you February 5th!'}</p>
-              <Button onClick={api.revert_status}>Give up Spot</Button>
+              <Button className="nice-btn" onClick={api.revert_status}>Give Up Your Spot</Button>
             </div>
           );
           break;
@@ -103,7 +127,7 @@ class RegistrationPanel extends React.Component {
           body = (
             <div className={this.state.status}>
               <p>{'Thank you for registering! Unfortunately, due to overwhelming demand, we\'re unable to guarantee you a spot. Don\'t worry though - be at Porter 100 by 5:30 PM and we\'ll do our best to accommodate you.'}</p>
-              <Button onClick={api.revert_status}>Give up Spot</Button>
+              <Button className="nice-btn" onClick={api.revert_status}>Give Up Your Spot</Button>
             </div>
           );
           break;

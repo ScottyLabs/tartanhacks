@@ -37,9 +37,9 @@ class LoginButton extends React.Component {
 
   render() {
     if (this.state.loggedIn) {
-      return (<div className="LoginButton"><Button onClick={logout}>{'Logout'}</Button></div>);
+      return (<div className="LoginButton"><Button className="nice-btn" onClick={logout}>{'Logout'}</Button></div>);
     } else {
-      return (<div className="LoginButton"><Button onClick={login}>{'Login'}</Button></div>);
+      return (<div className="LoginButton"><Button className="nice-btn" onClick={login}>{'Login'}</Button></div>);
     }
   }
 }
