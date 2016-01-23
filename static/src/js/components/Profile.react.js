@@ -7,7 +7,7 @@
 
 var React = require('react');
 
-var {Input, FormControls} = require('react-bootstrap');
+var {Input, FormControls, Button} = require('react-bootstrap');
 var LoginButton = require('./LoginButton.react');
 
 var UserStatusStore = require('../stores/UserStatusStore');
@@ -86,7 +86,7 @@ class Profile extends React.Component {
   }
 
   mkForm() {
-    var explanation = "This information both lets us know about who comes to our events, and allows us to forward your resume and hack information to all of our sponsors in one spot!  If you want to opt-out of this, please check the button below."
+    var explanation = "This information both lets us know about who comes to our events, and allows us to share your resume and hack information to all of our sponsors in one spot!  Sponsors often reach out to students after the hackathon for employment opportunities.  If you want to opt-out of this, please check the button below."
     var getValue = (propName) => this.state.value[propName] !== undefined ? this.state.value[propName] : this.state.profile[propName];
     var getInput = (propName, label) => {
       return (
@@ -113,11 +113,13 @@ class Profile extends React.Component {
       {getInput('personal_url', 'URL')}
       {getInput('github', 'Github')}
       {getInput('linkedin', 'LinkedIn')}
+      <Button className="nice-btn"><a href="https://www.dropbox.com/request/ywCAo8WiRUId5tItNqD2">Upload your resume</a></Button>
+      <FormControls.Static wrapperClassName="col-xs-offset-3 col-xs-9" value="(Note, Jake Zimmerman is the Director of Technology at ScottyLabs.  He'll take good care of your resumes.)" />
       <FormControls.Static wrapperClassName="col-xs-offset-3 col-xs-9" value={explanation} />
       <Input
         type="checkbox"
         ref="in_resume_drop"
-        label="I don't want the sponsors to receive my resume."
+        label="I don't want to share my information."
         wrapperClassName="col-xs-offset-3"
         onChange={this.handleCheckbox}
         checked={!getValue('in_resume_drop')} />
