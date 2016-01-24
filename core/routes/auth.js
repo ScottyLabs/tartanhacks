@@ -146,6 +146,11 @@ handlers.login.post = function (req, res) {
       'uri': `http://apis.scottylabs.org/directory/v1/andrewID/${andrewID}`,
       'json': true,
     }).then((data) => {
+
+      if (Array.isArray(data.department)) {
+        data.department = data.department.join(', ');
+      }
+
       var info = [
         req.session.ownerID,  // google_id
         data.andrewID,  // andrewID

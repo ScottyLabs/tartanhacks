@@ -106,6 +106,10 @@ h3 {
     font-style: italic;
 }
 
+#faq {
+    text-align: left;
+}
+
 /* @component Announcement
  * @brief An announcement is a li that contains some text, a timestamp, and an
  * optional delete button.  The timestamp and delete button are absolutely

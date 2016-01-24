@@ -133,6 +133,7 @@ class Profile extends React.Component {
       body = (
         <div>
           <p>{'Log in to see your profile.'}</p>
+          <LoginButton />
         </div>
       );
     } else if (Object.keys(this.state.profile).length !== 0) {
@@ -145,7 +146,6 @@ class Profile extends React.Component {
       <div className="Profile" >
         <h2>{'Profile'}</h2>
         {body}
-          <LoginButton />
       </div>
     );
   }
