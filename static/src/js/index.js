@@ -7,9 +7,6 @@
 
 var React = require('react');
 var ReactDom = require('react-dom');
-var AnnouncementList = require('./components/AnnouncementList.react');
-var Profile = require('./components/Profile.react');
-var RegistrationPanel = require('./components/RegistrationPanel.react');
+var App = require('./components/App.react');
 
-ReactDom.render(<Profile />, document.getElementById('profile'));
-ReactDom.render(<RegistrationPanel />, document.getElementById('registration'));
+ReactDom.render(<App />, document.getElementById('app'));

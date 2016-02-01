@@ -54,7 +54,6 @@ h1 {
 }
 
 h2 {
-    margin-top: 1.5em;
     font-size: 48px;
     line-height: 1.2;
     font-weight: normal;
@@ -79,35 +78,84 @@ h3 {
     margin: 2em 0 0 0;
 }
 
-#schedule > ul {
+/* @component Schedule
+ */
+.Schedule > ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-#schedule ul > li {
+.Schedule ul > li {
     padding: 0.5em 0;
     margin: 2em 0;
     text-align: left;
     color: #bfbfbf;
 }
 
-#schedule .time {
+.Schedule .time {
     text-align: right;
 }
 
-#schedule .name {
+.Schedule .name {
     text-align: left;
     font-family: 'Roboto Slab', serif;
 }
 
-#schedule p {
+.Schedule p {
     line-height: 1.2;
     font-style: italic;
 }
 
-#faq {
+.FAQ {
     text-align: left;
+}
+
+div:target {
+    background: white; 
+    color: black;
+    border-radius:5px;
+    padding: 1em;
+    margin: 2em 0;
+}
+
+div:target a {
+    color: black;
+}
+
+footer {
+    padding: 2em 0 0 0;
+}
+
+/* @component App
+ * @brief Global component, has a bit of routing.
+ */
+.App ul.links {
+    padding: 2em 0;
+    width: 100%;
+}
+
+.App .links li {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+}
+
+@media (min-width: 520px) {
+    .App .links li {
+        width: 33%;
+    }
+}
+
+.App .links a {
+    font-size: 1.5em;
+    font-family: 'Roboto Slab', serif;
+}
+
+.App .links a:hover {
+    background: none;
 }
 
 /* @component Announcement
@@ -159,6 +207,18 @@ h3 {
     text-align: center;
 }
 
+/* @component Profile
+ * @brief A profile form.
+ */
 .Profile .form-control-static {
     text-align: left;
+}
+
+/* @component RegistrationPanel
+ * @brief A panel for viewing and managing registration.
+ */
+.RegistrationPanel table {
+   text-align: left;
+   background: white;
+   color: black;
 }

@@ -7,7 +7,7 @@
 
 var React = require('react');
 
-var {Button} = require('react-bootstrap');
+var {Button, Table} = require('react-bootstrap');
 var LoginButton = require('./LoginButton.react');
 
 var UserStatusStore = require('../stores/UserStatusStore');
@@ -55,8 +55,10 @@ class RegistrationPanel extends React.Component {
       };
 
       if (this.reloadTimer === -1) {
-        this.reloadTimer = setInterval(reload_stuff, 100);
+        this.reloadTimer = setInterval(reload_stuff, 5000);
       }
+
+      reload_stuff();
     } else {
       if (this.reloadTimer !== -1) {
         clearInterval(reloadTimer);
@@ -90,8 +92,40 @@ class RegistrationPanel extends React.Component {
           body = (
             <div className={this.state.status}>
               <p>{'You\'re an admin, silly.'}</p>
-              <pre>{JSON.stringify(this.state.registration_data)}</pre>
-              <script src="https://app.box.com/embed/upload.js?token=2bhk7deq99xtb92sryx002ahv92g1a9d&folder_id=6229265697&w=385&h=250&i=&d=0&t=Tartanhacks%20Resume%20Drop&r=1" type="text/javascript"></script>
+              <Table responsive bordered condensed>
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{'Administrators'}</td>
+                    <td>{this.state.registration_data.ADMIN}</td>
+                  </tr>
+                  <tr>
+                    <td>{'Mentors'}</td>
+                    <td>{this.state.registration_data.MENTOR}</td>
+                  </tr>
+                  <tr>
+                    <td>{'Checked In'}</td>
+                    <td>{this.state.registration_data.HACKER_CHECKED_IN}</td>
+                  </tr>
+                  <tr>
+                    <td>{'Accepted'}</td>
+                    <td>{this.state.registration_data.HACKER_ACCEPTED}</td>
+                  </tr>
+                  <tr>
+                    <td>{'Waitlisted'}</td>
+                    <td>{this.state.registration_data.HACKER_WAITLISTED}</td>
+                  </tr>
+                  <tr>
+                    <td>{'Unregistered'}</td>
+                    <td>{this.state.registration_data.UNREGISTERED}</td>
+                  </tr>
+                </tbody>
+              </Table>
             </div>
           );
           break;
