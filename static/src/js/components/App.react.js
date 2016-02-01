@@ -71,14 +71,14 @@ class App extends React.Component {
             <hr />
 
             <h4>Silver Sponsors</h4>
-            <ul class="silver">
+            <ul className="silver">
                 <li>Capital One</li>
                 <li>Facebook</li>
             </ul>
             <hr />
 
             <h4>Bronze Sponsors</h4>
-            <ul class="bronze">
+            <ul className="bronze">
                 <li>Bloomberg</li>
                 <li>Duolingo</li>
                 <li>GoDaddy</li>
