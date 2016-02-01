@@ -42,6 +42,8 @@ class Profile extends React.Component {
   componentWillMount() {
     UserStatusStore.register(this.updateAuth);
     ProfileStore.register(this.updateProfile);
+    this.updateAuth();
+    this.updateProfile();
   }
 
   componentWillUnmount() {
