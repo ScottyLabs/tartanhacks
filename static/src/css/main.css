@@ -26,7 +26,7 @@ a {
 }
 
 img {
-    width: 100%;
+    width: 80%;
     height: auto;
 }
 
@@ -43,7 +43,7 @@ hr {
     height: 2px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Slab', serif;
     text-align: center;
 }
@@ -78,6 +78,37 @@ h3 {
     margin: 2em 0 0 0;
 }
 
+#sponsors img {
+    width: 50%; 
+    opacity: 0.9;  
+}
+
+#sponsors ul {
+    padding: 0;
+    list-style: none;
+}
+
+#sponsors li {
+    display: inline-block;
+    width: 100%;
+}
+
+#sponsors .silver {
+    font-size: 1.5em;
+}
+
+#sponsors .bronze {
+    font-size: 1.3em;
+}
+
+
+@media (min-width: 520px) {
+    #sponsors li {
+        width: 33%;
+    }
+}
+
+
 /* @component Schedule
  */
 .Schedule > ul {
@@ -107,6 +138,8 @@ h3 {
     font-style: italic;
 }
 
+/* @component FAQ
+ */
 .FAQ {
     text-align: left;
 }

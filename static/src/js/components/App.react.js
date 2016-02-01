@@ -56,12 +56,43 @@ class App extends React.Component {
 
       default: {
         content = (
+        <div>
           <div id="leader">
             <p>TartanHacks is an annual, student hackathon run by <a href="http://scottylabs.org">ScottyLabs</a>.</p>
             <p>February 5-6, 2016</p>
             <p>Registration opens on January 22nd at 9pm</p>
             <p>Get ready by checking out our <a href="/crashcourse">CrashCourse</a>.</p>
-          </div>);
+          </div>
+
+          <div id="sponsors">
+            <h3>Our Sponsors</h3>
+            <h4>Gold Sponsor</h4>
+            <img src="imgs/bny-logo.png"  alt="BNY Mellon" />
+            <hr />
+
+            <h4>Silver Sponsors</h4>
+            <ul class="silver">
+                <li>Capital One</li>
+                <li>Facebook</li>
+            </ul>
+            <hr />
+
+            <h4>Bronze Sponsors</h4>
+            <ul class="bronze">
+                <li>Bloomberg</li>
+                <li>Duolingo</li>
+                <li>GoDaddy</li>
+                <li>Google</li>
+            </ul>
+            <hr />
+
+            <h4>Supporting Sponsors</h4>
+            <ul>
+                <li>APT</li>
+                <li>Venture for America</li>
+            </ul>
+          </div>
+        </div>);
       }
     }
 
