@@ -10,6 +10,8 @@ var React = require('react');
 var {Button, Table} = require('react-bootstrap');
 var LoginButton = require('./LoginButton.react');
 
+var CheckinPanel = require('./CheckinPanel.react');
+
 var UserStatusStore = require('../stores/UserStatusStore');
 
 var api = require('../api/status');
@@ -92,40 +94,7 @@ class RegistrationPanel extends React.Component {
           body = (
             <div className={this.state.status}>
               <p>{'You\'re an admin, silly.'}</p>
-              <Table responsive bordered condensed>
-                <thead>
-                  <tr>
-                    <th>Category</th>
-                    <th>Quantity</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>{'Administrators'}</td>
-                    <td>{this.state.registration_data.ADMIN}</td>
-                  </tr>
-                  <tr>
-                    <td>{'Mentors'}</td>
-                    <td>{this.state.registration_data.MENTOR}</td>
-                  </tr>
-                  <tr>
-                    <td>{'Checked In'}</td>
-                    <td>{this.state.registration_data.HACKER_CHECKED_IN}</td>
-                  </tr>
-                  <tr>
-                    <td>{'Accepted'}</td>
-                    <td>{this.state.registration_data.HACKER_ACCEPTED}</td>
-                  </tr>
-                  <tr>
-                    <td>{'Waitlisted'}</td>
-                    <td>{this.state.registration_data.HACKER_WAITLISTED}</td>
-                  </tr>
-                  <tr>
-                    <td>{'Unregistered'}</td>
-                    <td>{this.state.registration_data.UNREGISTERED}</td>
-                  </tr>
-                </tbody>
-              </Table>
+              <CheckinPanel />
             </div>
           );
           break;
@@ -133,7 +102,7 @@ class RegistrationPanel extends React.Component {
         case 'MENTOR': {
           body = (
             <div className={this.state.status}>
-              <p>{'Thanks so much for registering to be a mentor! We\'ll reach out to you over email soon.'}</p>
+              <CheckinPanel />
               <Button className="nice-btn" onClick={api.revert_status}>Stop Being a Mentor</Button>
             </div>
           );

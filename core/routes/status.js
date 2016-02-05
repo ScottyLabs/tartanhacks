@@ -79,7 +79,6 @@ handlers.adminUpdate = function (req, res) {
   } else {
     data = {};
     data.user_status = status;
-    req.session.user_status = req.params.status;
 
     var query = 'UPDATE users SET ? WHERE google_id = ?';
     db.query(query, [data, req.params.id]).then(() => {
@@ -153,6 +152,35 @@ handlers.register.post = function (req, res) {
   });
 }
 
+/* @brief Return every user. */
+handlers.list = function (req, res) {
+  var query = 'SELECT * FROM (users INNER JOIN user_statuses ON user_status = user_statuses.id)';
+  db.query(query, [])
+  .then((rows) => {
+    rows.forEach((row) => {
+      row.user_status = row.name;
+      delete row.name;
+    });
+
+    res.status(200);
+    res.json(rows);
+  }).catch((err) => {
+    res.status(500);
+    res.end(err);
+  });
+};
+/* @brief Check someone in. */
+handlers.mentorUpdate = function (req, res) {
+    data = {};
+    data.user_status = status_to_code('HACKER_CHECKED_IN');
+
+    var query = 'UPDATE users SET ? WHERE google_id = ?';
+    db.query(query, [data, req.params.id]).then(() => {
+      reload_numbers();
+      res.status(200);
+      res.end('OK');
+    });
+}
 /* @brief Initializes the status routes.
  * @param app Object The Express object to attach routes to.
  * @param dbConn Object A connection to a mySQL database.
@@ -175,6 +203,9 @@ var init = function (app, dbConn, auth) {
 
     return reload_numbers();
   }).then(() => {
+    app.get('/status', auth.requireMentor, handlers.list);
+    app.put('/status/checkin/:id', auth.requireMentor, handlers.mentorUpdate);
+
     // Revert to UNREGISTERED.
     app.put('/status', auth.requireLoggedIn, handlers.put);
 

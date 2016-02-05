@@ -76,6 +76,21 @@ lib.requireAdmin = function (req, res, next) {
   }
 };
 
+/* @brief Middleware that ensure connection is logged in with an admin. */
+lib.requireMentor = function (req, res, next) {
+  if (req.session.isLoggedIn === true) {
+    if (req.session.user_status === 'ADMIN' || req.session.user_status === 'MENTOR') {
+      next();
+    } else {
+      res.status(403);
+      res.end('Logged-in user isn\'t a mentor or admin.');
+    }
+  } else {
+    res.status(403);
+    res.end('Not logged in.');
+  }
+};
+
 /* @brief Middleware that ensure connection logged out. */
 lib.requireLoggedOut = function (req, res, next) {
   if (req.session.isLoggedIn === true) {
