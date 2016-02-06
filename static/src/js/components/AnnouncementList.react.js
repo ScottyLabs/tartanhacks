@@ -12,6 +12,7 @@ var moment = require('moment');
 var {Input, ListGroup, Button, Glyphicon} = require('react-bootstrap');
 
 var Announcement = require('./Announcement.react');
+var LoginButton = require('./LoginButton.react');
 
 var AnnouncementStore = require('../stores/AnnouncementStore');
 var UserStatusStore = require('../stores/UserStatusStore');
@@ -27,7 +28,8 @@ class AnnouncementList extends React.Component {
       'announcements': [],
       'question': '',
       'location': '',
-      'admin': false,
+      'admin': true,
+      'loggedIn': false,
     };
 
     // Bind handlers.
@@ -59,7 +61,10 @@ class AnnouncementList extends React.Component {
 
   /* @brief Gets auth state from the UserStatusStore. */
   updateAuth() {
-    this.setState({'admin': UserStatusStore.get().status !== 'MENTOR' && UserStatusStore.get().status !== 'ADMIN'  ,});
+    this.setState({
+      'admin': UserStatusStore.get().status !== 'MENTOR' && UserStatusStore.get().status !== 'ADMIN'  ,
+      'loggedIn':  UserStatusStore.get().loggedIn,
+    });
   }
 
   /* @brief Handles form submission. */
@@ -133,6 +138,11 @@ class AnnouncementList extends React.Component {
   /* @brief Rerenders the element. */
   render() {
     var body;
+
+    if (!this.state.loggedIn) {
+      return <LoginButton />;
+    }
+
     if (this.state.announcements.length === 0) {
       body = <p>{'No mentor requests yet. Stay tuned!'}</p>;
     } else {
