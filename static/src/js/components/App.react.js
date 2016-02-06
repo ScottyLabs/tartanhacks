@@ -10,6 +10,7 @@ var React = require('react');
 var Profile = require('./Profile.react');
 var Schedule = require('./Schedule.react');
 var RegistrationPanel = require('./RegistrationPanel.react');
+var AnnouncementList = require('./AnnouncementList.react');
 var FAQ = require('./FAQ.react');
 
 class App extends React.Component {
@@ -51,6 +52,11 @@ class App extends React.Component {
 
       case 'faq': {
         content = <FAQ />
+        break;
+      }
+
+      case 'mentors': {
+        content = <AnnouncementList />
         break;
       }
 
@@ -104,6 +110,7 @@ class App extends React.Component {
           <li><a href="#/faq">FAQ</a></li>
           <li><a href="#/register">Register</a></li>
           <li><a href="#/profile">Profile</a></li>
+          <li><a href="#/mentors">Mentors</a></li>
         </ul>
 
         {content}

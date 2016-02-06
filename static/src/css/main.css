@@ -222,16 +222,6 @@ footer {
     top: 0;
 }
 
-/* @component AnnouncementList
- * @brief An announcement list is a Bootstrap Well that contains a header, an ul
- * of <Announcement />s, and an optional small form with a text input and a
- * button to add new announcements.
- */
-
-.AnnouncementList > form > input[type="text"] {
-    width: 100%;
-}
-
 /* @component LoginButton
  * @brief A button that toggles login state.
  */

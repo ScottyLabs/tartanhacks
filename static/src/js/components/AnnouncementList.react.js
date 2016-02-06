@@ -25,7 +25,8 @@ class AnnouncementList extends React.Component {
 
     this.state = {
       'announcements': [],
-      'value': '',
+      'question': '',
+      'location': '',
       'admin': false,
     };
 
@@ -58,51 +59,54 @@ class AnnouncementList extends React.Component {
 
   /* @brief Gets auth state from the UserStatusStore. */
   updateAuth() {
-    this.setState({'admin': UserStatusStore.get().admin,});
+    this.setState({'admin': UserStatusStore.get().status !== 'MENTOR' && UserStatusStore.get().status !== 'ADMIN'  ,});
   }
 
   /* @brief Handles form submission. */
   handleFormSubmit(e) {
     e.preventDefault();
-    if (this.state.value !== '') {
-      Actions.create(this.state.value);
+      Actions.create(this.state.question + ' - ' + this.state.location);
       this.setState({
-        'value': '',
+        'question': '',
+        'location': this.refs.location.getValue(),
       });
     }
-  }
 
   /* @brief Handles keypresses. */
   handleKeypress() {
-    if (this.refs.input.getValue().length <= api.maxLength) {
       this.setState({
-        'value': this.refs.input.getValue(),
+        'question': this.refs.question.getValue(),
+        'location': this.refs.location.getValue(),
       });
-    }
   }
 
   /* @brief Returns whether the the input has a valid input. */
   validationState() {
-    if (this.state.value === '') {
-      return;
-    }
-
-    return this.state.value.length <= api.maxLength ? 'success' : 'error';
+    return '';
   }
 
   /* @brief Returns the built form. */
   buildForm() {
-    var button = <Button type="submit"><Glyphicon glyph="upload" /></Button>;
+    var button = <Button className="nice-btn" type="submit">Submit a Mentor Request</Button>;
     var form = (
-      <form onSubmit={this.handleFormSubmit}>
+      <form className="form-horizontal" onSubmit={this.handleFormSubmit}>
       <Input
         type="text"
-        buttonAfter={button}
-        ref="input"
+        ref='question'
+        label='Question'
+        labelClassName="col-xs-3"
+        wrapperClassName="col-xs-9"
         onChange={this.handleKeypress}
-        placeholder={`New announcement (max ${api.maxLength} characters).`}
-        bsStyle={this.validationState()}
-        value={this.state.value}/>
+        value={this.state.question} />
+      <Input
+        type="text"
+        ref='location'
+        label='Location'
+        labelClassName="col-xs-3"
+        wrapperClassName="col-xs-9"
+        onChange={this.handleKeypress}
+        value={this.state.location} />
+        {button}
       </form>
     );
 
@@ -121,7 +125,7 @@ class AnnouncementList extends React.Component {
         <Announcement
         key={announcement.id}
         data={announcement}
-        admin={this.state.admin}
+        admin={!this.state.admin}
         temp={announcement.temp} />
       );
   }
@@ -130,7 +134,7 @@ class AnnouncementList extends React.Component {
   render() {
     var body;
     if (this.state.announcements.length === 0) {
-      body = <p>{'No announcements yet. Stay tuned!'}</p>;
+      body = <p>{'No mentor requests yet. Stay tuned!'}</p>;
     } else {
       body = (
         <ListGroup componentClass="ul">
@@ -139,10 +143,11 @@ class AnnouncementList extends React.Component {
       );
     }
     var form = this.state.admin ? this.buildForm() : '';
+    body = this.state.admin ? '' : body;
 
     return (
       <div className="AnnouncementList" >
-      <h2>{'Announcements'}</h2>
+      <h2>{'Mentor Requests'}</h2>
       {body}
       {form}
       </div>

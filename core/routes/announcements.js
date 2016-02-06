@@ -84,8 +84,8 @@ var init = function (app, dbConn, auth) {
 
   // Attach handlers.
   app.get('/announcements', handlers.get);
-  app.post('/announcements', auth.requireAdmin, handlers.post);
-  app.delete('/announcements/:id', auth.requireAdmin, handlers.delete);
+  app.post('/announcements', auth.requireLoggedIn, handlers.post);
+  app.delete('/announcements/:id', auth.requireMentor, handlers.delete);
 
   console.log('Initialized /announcements routes.');
 };

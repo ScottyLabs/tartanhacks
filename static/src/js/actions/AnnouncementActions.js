@@ -27,6 +27,8 @@ var loadAnnouncements = function () {
 var createAnnouncement = function (text) {
   var timestamp = String(Date.now());
   var tempID = `${timestamp}::${text}`;
+  console.log('Creating announcment with text:: ');
+  console.log(text);
   var announcement = {
     'text': text,
     'timestamp': timestamp,
