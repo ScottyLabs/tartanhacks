@@ -1,0 +1,63 @@
+/* accent.css
+ *
+ * Styling and animations for the colored rectangle "accents" used in the
+ * TartanHacks 2017 website.
+ *
+ * Scott Krulcik
+ * (c) 2017 ScottyLabs
+ */
+
+/* The accent container provides a black background for the screen, and will
+ * eventually hold all of the animated accent objects within it. */
+#accent-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+    overflow: auto;
+}
+
+/* Accents - colored rectangles floating across the screen */
+@keyframes accent-animation
+{
+    0% {
+        /* Maximum accent size, feels kinda hacky. */
+        left: -192px;
+        visibility: visible;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.accent {
+    position: absolute;
+    height: 32px;
+    border-radius: 4px;
+
+    /* Hide until the animation begins. */
+    visibility: hidden;
+    /* The crossing animation should happen with linear speed, on a continuous
+     * loop for all accents. The duration and delay for each accent will be
+     * determined later. */
+    -webkit-animation: accent-animation infinite;
+    animation: accent-animation infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+
+}
+
+/* Mixup widths for accents */
+.accent.w0 {
+    width: 32px;
+}
+.accent.w1 {
+    width: 96px;
+}
+.accent.w2 {
+    width: 192px;
+}
+

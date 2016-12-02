@@ -1,46 +1,12 @@
-/* Transit animation moves items across the the entire screen */
-@keyframes transit-animation
-{
-    0% {
-        /* Maximum accent size, feels kinda hacky. */
-        left: -192px;
-        visibility: visible;
-    }
-    100% {
-        left: 100%;
-    }
-}
+/* style.css
+ *
+ * Theme colors and generally useful classes for the TartanHacks 2017 website.
+ *
+ * Scott Krulcik
+ * (c) 2017 ScottyLabs
+ */
 
-.transit
-{
-    /* Hide until the animation begins. */
-    position: absolute;
-    -webkit-animation: transit-animation infinite;
-    animation: transit-animation infinite;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-}
-
-/* Accents are the floating rectangles crossing the screen */
-.accent {
-    height: 32px;
-    border-radius: 0.25em;
-    z-index: 0;
-    visibility: hidden;
-}
-
-/* Mixup widths for accents */
-.accent.w0 {
-    width: 32px;
-}
-.accent.w1 {
-    width: 96px;
-}
-.accent.w2 {
-    width: 192px;
-}
-
-/* TartanHacks-themed background colors. */
+/* TartanHacks theme colors. */
 /* Medallion Gold */
 .bg0 {
     background-color: #FFC620;
@@ -67,18 +33,7 @@
     color: #FFFFFF;
 }
 
-/* Accent container should be the background for the whole screen. */
-#accent-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: #000000;
-    overflow: auto;
-}
-
+/* Center an object inside of its parent. */
 .centered {
     position: fixed;
     width: 50%;
@@ -87,10 +42,13 @@
     transform: translate(-50%,-50%);
 }
 
+/* The logo object should be centered in the middle of the screen, with
+ * a responsive width. */
 .logo {
+    /* Default to 50% width for large screens. */
     width: 50%;
     /* We want the logo to be on top of everything else. */
-    z-index: 1000;
+    z-index: 100;
 }
 
 /* Medium size (tabletish) screens */
