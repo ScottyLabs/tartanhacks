@@ -1,70 +1,96 @@
+/* Transit animation moves items across the the entire screen */
 @keyframes transit-animation
 {
     0% {
-        left: -12em;
+        /* Maximum accent size, feels kinda hacky. */
+        left: -192px;
     }
     100% {
         left: 100%;
     }
 }
-
-.transit-object {
+.transit-1,
+.transit-2,
+.transit-3,
+.transit-4,
+.transit-5
+{
     position: absolute;
-    left: -12em;
     -webkit-animation: transit-animation infinite;
     animation: transit-animation infinite;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
-}
-
-.animation-conf-1 {
-    animation-duration: 5s;
     animation-delay: 0s;
 }
-.animation-conf-2 {
-    animation-duration: 7s;
-    animation-delay: 1s;
+/* Mixup the animation durations a bit */
+.transit-1 {
+    animation-duration: 4s;
 }
-.animation-conf-3 {
-    animation-duration: 5s;
-    animation-delay: 2s;
+.transit-2 {
+    animation-duration: 8s;
 }
-.animation-conf-4 {
-    animation-duration: 5s;
-    animation-delay: 3.5s;
+.transit-3 {
+    animation-duration: 12s;
+}
+.transit-4 {
+    animation-duration: 18s;
 }
 
-.accent-rect {
-    width: 12em;
-    height: 2em;
+/* Accents are the floating rectangles crossing the screen */
+.accent {
+    height: 32px;
     border-radius: 0.25em;
     z-index: 0;
 }
 
+/* Mixup widths for accents */
+.accent.w1 {
+    width: 32px;
+}
+.accent.w2 {
+    width: 96px;
+}
+.accent.w3 {
+    width: 192px;
+}
+
+/* TartanHacks-themed background colors. */
 /* Medallion Gold */
-.accent-1 {
+.bg1 {
     background-color: #FFC620;
     color: #FFFFFF;
 }
 /* Gilded Rose red */
-.accent-2 {
+.bg2 {
     background-color: #DE3479;
     color: #FFFFFF;
 }
 /* Peaceful Sea Blue */
-.accent-3 {
+.bg3 {
     background-color: #2679D0;
     color: #FFFFFF;
 }
 /* Bright Sky Blue */
-.accent-4 {
+.bg4 {
     background-color: #7ED6FA;
     color: #FFFFFF;
 }
 /* Fresh Kale Salad Green */
-.accent-5 {
+.bg5 {
     background-color: #4BAE16;
     color: #FFFFFF;
+}
+
+/* Accent container should be the background for the whole screen. */
+.accent-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+    overflow: auto;
 }
 
 .container {
@@ -73,7 +99,6 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: #000000;
 }
 
 .logo {
@@ -85,6 +110,4 @@
     z-index: 1000;
 }
 
-.accent-container {
-    z-index: 0;
-}
+
