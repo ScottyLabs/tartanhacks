@@ -101,13 +101,30 @@
     width: 100vw;
 }
 
-.logo {
+.centered {
     position: fixed;
-    left: 25%;
     width: 50%;
-    display: block;
-    margin: 18% auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.logo {
+    width: 50%;
+    /* We want the logo to be on top of everything else. */
     z-index: 1000;
 }
 
+/* Medium size (tabletish) screens */
+@media (max-width : 992px) {
+    .logo {
+        width: 75%;
+    }
+}
+/* Mobile screens */
+@media (max-width : 600px) {
+    .logo {
+        width: 90%;
+    }
+}
 
