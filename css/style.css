@@ -68,7 +68,7 @@
 }
 
 /* Accent container should be the background for the whole screen. */
-.accent-container {
+#accent-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -77,14 +77,6 @@
     width: 100vw;
     background-color: #000000;
     overflow: auto;
-}
-
-.container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
 }
 
 .centered {
