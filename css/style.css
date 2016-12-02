@@ -1,0 +1,90 @@
+@keyframes transit-animation
+{
+    0% {
+        left: -12em;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.transit-object {
+    position: absolute;
+    left: -12em;
+    -webkit-animation: transit-animation infinite;
+    animation: transit-animation infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.animation-conf-1 {
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+.animation-conf-2 {
+    animation-duration: 7s;
+    animation-delay: 1s;
+}
+.animation-conf-3 {
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+.animation-conf-4 {
+    animation-duration: 5s;
+    animation-delay: 3.5s;
+}
+
+.accent-rect {
+    width: 12em;
+    height: 2em;
+    border-radius: 0.25em;
+    z-index: 0;
+}
+
+/* Medallion Gold */
+.accent-1 {
+    background-color: #FFC620;
+    color: #FFFFFF;
+}
+/* Gilded Rose red */
+.accent-2 {
+    background-color: #DE3479;
+    color: #FFFFFF;
+}
+/* Peaceful Sea Blue */
+.accent-3 {
+    background-color: #2679D0;
+    color: #FFFFFF;
+}
+/* Bright Sky Blue */
+.accent-4 {
+    background-color: #7ED6FA;
+    color: #FFFFFF;
+}
+/* Fresh Kale Salad Green */
+.accent-5 {
+    background-color: #4BAE16;
+    color: #FFFFFF;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+}
+
+.logo {
+    position: fixed;
+    left: 25%;
+    width: 50%;
+    display: block;
+    margin: 18% auto;
+    z-index: 1000;
+}
+
+.accent-container {
+    z-index: 0;
+}
