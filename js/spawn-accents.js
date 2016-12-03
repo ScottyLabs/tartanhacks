@@ -51,6 +51,15 @@ var generateDelay = function() {
     return createProperty(randDecimal(0, MAX_DELAY), 's');
 };
 
+// Improves the variation in accent colors. This is important on mobile, where
+// the small number of total colors makes it easy to only get two or three
+// colors with pure randomness
+var lastColor = 0;
+var nextColor = function() {
+    lastColor = (lastColor + randInt(1, NUM_ACCENT_COLORS)) % NUM_ACCENT_COLORS;
+    return lastColor;
+}
+
 // Creates new accent objects with randomized properties (color, size and
 // animation properties)
 var generateAccent = function() {
@@ -58,7 +67,7 @@ var generateAccent = function() {
 
     accent.addClass('accent transit');
     accent.addClass('w' + randInt(0, NUM_ACCENT_WIDTHS));
-    accent.addClass('bg' + randInt(0, NUM_ACCENT_COLORS));
+    accent.addClass('bg' + nextColor());
 
     // Randomize both the start times and durations of animations to create
     // a chaotic staggered affect
