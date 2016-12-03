@@ -50,10 +50,29 @@
     text-align: center;
 }
 
+.container > div {
+    display: inline-block;
+}
+
+.container .logo {
+    width: 60%;
+}
+
+.info-text {
+    margin-top: 1.5em;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
 /* Medium size (tabletish) screens */
 @media (max-width : 992px) {
     .container {
         width: 65%;
+    }
+    .container .logo {
+        width: 75%;
     }
 }
 /* Mobile screens */
@@ -61,20 +80,9 @@
     .container {
         width: 90%;
     }
+    .container .logo {
+        width: 100%;
+    }
 }
 
-.container > div {
-    display: inline-block;
-}
-
-.container .logo {
-    width: 80%;
-}
-
-.info-text {
-    color: #FFFFFF;
-    font-size: 1.2em;
-    font-family: monospace;
-    text-transform: uppercase;
-}
 
