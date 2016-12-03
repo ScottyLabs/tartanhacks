@@ -9,7 +9,8 @@
 
 /* The accent container provides a black background for the screen, and will
  * eventually hold all of the animated accent objects within it. */
-#accent-container {
+#accent-container,
+#accent-frame {
     position: absolute;
     top: 0;
     left: 0;
@@ -18,6 +19,14 @@
     width: 100vw;
     background-color: #000000;
     overflow: auto;
+}
+
+@media (max-aspect-ratio: 1/1 ) {
+    /* Expand the accent container beyond the accent frame to simulate a larger
+     * (square) screen. This reduces clutter on small screens. */
+    #accent-container {
+        width: 100vh;
+    }
 }
 
 /* Accents - colored rectangles floating across the screen */

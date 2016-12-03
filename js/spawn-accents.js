@@ -14,12 +14,15 @@ console.assert(ACCENT_CONTAINER,
     "Accent container cannot be found. Cannot spawn accents.");
 var CONTAINER_HEIGHT = $(ACCENT_CONTAINER).height();
 var CONTAINER_WIDTH = $(ACCENT_CONTAINER).width();
+var ASPECT_RATIO = CONTAINER_WIDTH / CONTAINER_HEIGHT;
 
 // Animation Options
-// Minimum rate of 30 px/s, maximum of 180 px/s
-var MIN_DURATION = CONTAINER_WIDTH / 180;
+// Minimum rate of 30 px/s, variable maximum of about 115 px/s on an iphone and
+// about 180 px/s on a large desktop monitor. The variable maximum  makes the
+// mobile site less chaotic
+var MIN_DURATION = CONTAINER_WIDTH / (100 + (CONTAINER_WIDTH / 25));
 var MAX_DURATION = CONTAINER_WIDTH / 30;
-var MAX_DELAY = Math.floor((MAX_DURATION - MIN_DURATION) / 3);
+var MAX_DELAY = (MIN_DURATION + (MAX_DURATION - MIN_DURATION) / 2) / ASPECT_RATIO;
 
 // Accent Styling (see accent.css)
 var ACCENT_HEIGHT = 32;
