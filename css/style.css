@@ -62,8 +62,9 @@
     margin-top: 1.5em;
     color: #FFFFFF;
     font-size: 1.2em;
-    font-family: monospace;
     text-transform: uppercase;
+    /* Stack-overflow method of choosing a code font */
+    font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
 /* Insert middle dot and no-break space before each information item. */
