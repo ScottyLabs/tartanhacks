@@ -16,10 +16,10 @@ var CONTAINER_HEIGHT = $(ACCENT_CONTAINER).height();
 var CONTAINER_WIDTH = $(ACCENT_CONTAINER).width();
 
 // Animation Options
-// Minimum rate of 40 px/s, maximum of 200 px/s
-var MIN_DURATION = Math.floor(CONTAINER_WIDTH / 200);
-var MAX_DURATION = Math.floor(CONTAINER_WIDTH / 40);
-var MAX_DELAY = Math.floor((MAX_DURATION - MIN_DURATION) / 2);
+// Minimum rate of 30 px/s, maximum of 180 px/s
+var MIN_DURATION = CONTAINER_WIDTH / 180;
+var MAX_DURATION = CONTAINER_WIDTH / 30;
+var MAX_DELAY = Math.floor((MAX_DURATION - MIN_DURATION) / 3);
 
 // Accent Styling (see accent.css)
 var ACCENT_HEIGHT = 32;
