@@ -46,19 +46,8 @@
  * a responsive width. */
 .container {
     /* Default to 50% width for large screens. */
-    width: 40%;
-    /* We want the container to be on top of everything else. */
-    z-index: 100;
-    opacity: 0.9;
-    padding: 3em;
-    background-color: #111111;
-    border-radius: 0.5em;
+    width: 60%;
     text-align: center;
-}
-
-/* Do not propogate .container's opacity to its children */
-.container > * {
-    opacity: 1.0;
 }
 
 /* Medium size (tabletish) screens */
@@ -74,32 +63,18 @@
     }
 }
 
-/* Terminal fonts and colors */
-.terminal {
-    margin-top: 1em;
-    text-align: left;
-    font-family: monospace;
-    color: #FFFFFF;
-}
-
-.container .terminal {
+.container > div {
     display: inline-block;
-    font-size: 1.4em;
-}
-/* Mobile screens */
-@media (max-width : 600px) {
-    .container .terminal {
-        font-size: 1.6em;
-    }
 }
 
-/* Special block elements used like bullets before a line of text */
-.terminal .highlight {
-    height: 1.1em;
-    padding-left: .25em;
-    padding-right: .25em;
-    border-radius: 0.1em;
-    margin-right: 1em;
-    padding-bottom: 0.1em;
+.container .logo {
+    width: 80%;
+}
+
+.info-text {
+    color: #FFFFFF;
+    font-size: 1.2em;
+    font-family: monospace;
+    text-transform: uppercase;
 }
 
