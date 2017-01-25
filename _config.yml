@@ -1,0 +1,10 @@
+title: TartanHacks 2017
+email: tartanhacks@scottylabs.org
+description: >
+  Carnegie Mellon's largest hackathon, hosted by ScottyLabs. Come hack, build,
+  make or create your own project
+baseurl: "/"
+url: "https://tartanhacks.com/"
+github_username:  scottylabs
+
+markdown: kramdown
