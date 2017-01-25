@@ -8,7 +8,6 @@ layout: null
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="mobile-web-app-capable" content="yes"/>
-    <link rel="canonical" href="https://tartanhacks.com">
 
     <title>TartanHacks 2017</title>
     <link rel="icon" href="rsc/img/favicon.ico">
@@ -51,19 +50,24 @@ layout: null
     </div>
     <div class="static-center container">
         <div class="logo">
-            <img alt="logo" src="rsc/img/logo-white.svg"/>
+            <img src="rsc/img/logo-white.svg"/>
         </div>
-        <div class="info-text">
-            <p>
-                <span class="item">Feb.&nbsp;10-11</span>
-                <span class="item">Registration&nbsp;Opens&nbsp;Jan.&nbsp;27th&nbsp;5PM</span>
-                <span class="item">tartanhacks@<span class="displaynone">X</span>scottylabs.org</span>
-            </p>
+        <div class="separator">  <!-- this class is needed to make sure the text class is under the info-text -->
+            <div class="info-text">
+                <p>
+                    <span class="item">Feb.&nbsp;10-11</span>
+                    <span class="item">Registration&nbsp;opens&nbsp;Jan.&nbsp;27th&nbsp;5pm</span>
+                    <span class="item">tartanhacks@<span class="displaynone">X</span>scottylabs.org</span>
+                </p>
+            </div>
+        </div>
+        <div class="text">
+            <a id="rsvp-hacker" class="rsvp-button unavailable">be&nbsp;a&nbsp;hacker</a>
+            <a href="mentor-typeform.html" id="rsvp-mentor" class="rsvp-button available">be&nbsp;a&nbsp;mentor</a>
         </div>
     </div>
-
     <script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script defer type="text/javascript" src="js/spawn-accents.js"></script>
+    <script defer type="text/javascript" src="js/rsvp-button.js"></script>
 </body>
 </html>
-
