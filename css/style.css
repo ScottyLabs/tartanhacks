@@ -108,15 +108,17 @@
   top: 1px;
 }
 
-
-
-/* Insert middle dot and no-break space before each information item. */
+/* On all screens, put each item on its own line, this used to only happend for small screens */
 .info-text p span.item::before {
-    content: "\00b7\00a0";
+    content: ">\00a0";
 }
-/* Except for the first one... */
-.info-text p span.item:first-child::before {
-    content: "";
+.info-text p span.item::after {
+    content: "\a";
+    white-space: pre;
+}
+.info-text {
+    text-align: left;
+    font-size: 1em;
 }
 
 /* Medium size (tabletish) screens */
@@ -126,19 +128,6 @@
     }
     .container .logo {
         width: 75%;
-    }
-    /* On smaller screens, put each item on its own line */
-    .info-text p span.item::before,
-    .info-text p span.item:first-child::before {
-        content: "> ";
-    }
-    .info-text p span.item::after {
-        content: "\a";
-        white-space: pre;
-    }
-    .info-text {
-        text-align: left;
-        font-size: 1em;
     }
 }
 /* Mobile screens */
