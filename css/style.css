@@ -33,6 +33,14 @@
     color: #FFFFFF;
 }
 
+/* Set font and color */
+body {
+    /* Stack-overflow method of choosing a code font */
+    font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    color: white;
+    background-color: #000000;
+}
+
 /* Fix an object to the center of the screen. */
 .static-center {
     position: fixed;
@@ -63,9 +71,8 @@
     width: 100%;
 }
 
-
 .info-text {
-    display:inline-block;
+    display: inline-block;
     margin-top: 1.5em auto 0;
     color: #FFFFFF;
     font-size: 1.2em;

@@ -11,6 +11,7 @@ body > .page-button-wrapper {
     position: fixed;
     left: 0;
     bottom: 0;
+    height: 10vh;
     width: 100vw;
     text-align: center;
 }
@@ -48,3 +49,48 @@ body > .back-button-wrapper > a.back-button {
 body > .page-button-wrapper > a.back-button:hover {
     text-decoration: underline;
 }
+
+/* Modal pages are containers with special attributes. */
+.container.modal-page {
+    position: fixed;
+    left: 50%;
+    top: 0%;
+    width: 50%;
+    height: 100vh;
+    transform: translate(-50%,0%);
+    text-align: left;
+}
+
+.container.modal-page h1,
+.container.modal-page h2,
+.container.modal-page h3,
+.container.modal-page h4,
+.container.modal-page h5,
+.container.modal-page h6 {
+    text-size: 2em;
+    font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    text-transform: uppercase;
+}
+
+.container.modal-page p {
+    font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    text-size: 1em;
+}
+
+.container.modal-page div.title {
+    height: 10vh;
+}
+.container.modal-page div.content {
+    overflow: scroll;
+    height: 90vh;
+}
+
+/* FAQs */
+#faq.container.modal-page div.content .faq {
+    margin-top: 2em;
+}
+
+#faq.container.modal-page div.content .question {
+    font-weight: bold;
+}
+

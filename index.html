@@ -77,6 +77,19 @@ layout: null
             <a href="mentor-typeform.html" id="rsvp-mentor" class="rsvp-button available">be&nbsp;a&nbsp;mentor</a>
         </div>
     </div>
+    <div id="faq" class="container modal-page" style="display:none">
+      <div class="title">
+        <h2>F.A.Q.</h2>
+      </div>
+      <div class="content">
+      {% for faq in site.data.faq %}
+        <div class="faq">
+          <p class="question"> {{ faq.question }}</p>
+          <p class="answer"> {{ faq.answer }}</p>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
     <div class="page-button-wrapper"></div>
     <div class="back-button-wrapper"></div>
     <script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

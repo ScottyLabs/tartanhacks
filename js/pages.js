@@ -8,8 +8,8 @@
 // The page map holds selectors for the elements that should be hidden or shown
 // for the desired page
 var pageMap = {
-    "main": [".accent", ".logo.main-logo", ".info-text", ".text", ".page-button"],
-    "faq": [".faq", ".logo.accent-logo", ".back-button"]
+    "main": ["#accent-frame", ".static-center.container", ".page-button"],
+    "faq": ["#faq", ".logo.accent-logo", ".back-button"]
 };
 
 
