@@ -1,0 +1,50 @@
+/* pages.css
+ *
+ * Modal paging system style and layout.
+ *
+ * Scott Krulcik
+ * (c) 2017 ScottyLabs
+ */
+
+/* Align page buttons along the bottom of the screen */
+body > .page-button-wrapper {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+}
+/* White, uppercase text, underline on hover */
+body > .page-button-wrapper > a.page-button {
+    /* Stack-overflow method of choosing a code font */
+    font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    display: inline-block;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+body > .page-button-wrapper > a.page-button:hover {
+    text-decoration: underline;
+}
+
+/* Back Button - Return to main from a modal dialog */
+/* Put the back button at the top left, but make it hidden by default. */
+body > .back-button-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/* Large X for back button (until we find a decent arrow) */
+body > .back-button-wrapper > a.back-button {
+    /* Stack-overflow method of choosing a code font */
+    font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    color: #FFFFFF;
+    font-size: 3em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+body > .page-button-wrapper > a.back-button:hover {
+    text-decoration: underline;
+}
