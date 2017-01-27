@@ -100,10 +100,10 @@ a {
     border-radius: 8px;
     font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     color: #ffffff;
-    font-size: 1.2em;
+    font-weight: bold;
     margin: 0px 0.4em;
     line-height: 3em;
-    padding: 0.4em 0.4em 0.35em;
+    padding: 0.5em 1em 0.45em;
     border: solid #FFF 2px;
     text-transform: uppercase;
     text-decoration: none;
@@ -118,6 +118,7 @@ a {
     text-decoration: none;
     position:relative;
     top: 1px;
+    background-color: #636363;
 }
 
 /* On all screens, put each item on its own line, this used to only happend for small screens */
