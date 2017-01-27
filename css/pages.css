@@ -33,8 +33,8 @@ body > .page-button-wrapper > a.page-button:hover {
 /* Put the back button at the top left, but make it hidden by default. */
 body > .back-button-wrapper {
     position: fixed;
-    left: 0;
-    top: 0;
+    left: 1em;
+    top: 1em;
 }
 
 /* Large X for back button (until we find a decent arrow) */
@@ -46,7 +46,7 @@ body > .back-button-wrapper > a.back-button {
     text-transform: uppercase;
     text-decoration: none;
 }
-body > .page-button-wrapper > a.back-button:hover {
+body > .back-button-wrapper > a.back-button:hover {
     text-decoration: underline;
 }
 
@@ -63,18 +63,15 @@ body > .page-button-wrapper > a.back-button:hover {
 
 .container.modal-page h1,
 .container.modal-page h2,
-.container.modal-page h3,
-.container.modal-page h4,
-.container.modal-page h5,
-.container.modal-page h6 {
-    text-size: 2em;
-    font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+.container.modal-page h3 {
+    font-size: 2.5em;
     text-transform: uppercase;
+    margin-top: 2.5em;
 }
 
 .container.modal-page p {
     font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-    text-size: 1em;
+    font-size: 1em;
 }
 
 .container.modal-page div.title {
@@ -91,6 +88,38 @@ body > .page-button-wrapper > a.back-button:hover {
 }
 
 #faq.container.modal-page div.content .question {
-    font-weight: bold;
+}
+#faq.container.modal-page div.content .answer {
+    padding-left: 0.5em;
+}
+
+/* Modal logos */
+.modal-logo {
+    width: 30vh;
+    position: absolute;
+}
+#modal-logo-1 {
+    top: 10vh;
+    left: 100vw;
+    transform: translate(-50%,0%);
+}
+#modal-logo-2 {
+    top: 70vh;
+    left: 0;
+    transform: translate(-50%,0%);
+}
+
+/* Mobile screens */
+@media (max-width : 600px) {
+    .modal-logo {
+        width: 0;
+    }
+    .container.modal-page {
+        width: 85%;
+        left: 55%;
+    }
+    .container.modal-page h3 {
+        margin-top: 2em;
+    }
 }
 

@@ -79,16 +79,22 @@ layout: null
     </div>
     <div id="faq" class="container modal-page" style="display:none">
       <div class="title">
-        <h2>F.A.Q.</h2>
+        <h2>Frequently Asked Questions</h2>
       </div>
       <div class="content">
       {% for faq in site.data.faq %}
         <div class="faq">
-          <p class="question"> {{ faq.question }}</p>
+          <p class="boxed question"> {{ faq.question }}</p>
           <p class="answer"> {{ faq.answer }}</p>
         </div>
       {% endfor %}
       </div>
+  </div>
+    <div id="modal-logo-1" class="logo modal-logo" style="display:none">
+        <img src="rsc/img/logo-white.svg"/>
+    </div>
+    <div id="modal-logo-2" class="logo modal-logo" style="display:none">
+        <img src="rsc/img/logo-white.svg"/>
     </div>
     <div class="page-button-wrapper"></div>
     <div class="back-button-wrapper"></div>

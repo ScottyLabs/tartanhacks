@@ -9,9 +9,11 @@
 // for the desired page
 var pageMap = {
     "main": ["#accent-frame", ".static-center.container", ".page-button"],
-    "faq": ["#faq", ".logo.accent-logo", ".back-button"]
+    "faq": ["#faq", ".logo.accent-logo", ".back-button", ".modal-logo"]
 };
 
+var FADE_OUT = 300; // ms
+var FADE_IN = 500; // ms
 
 // Set a default page before making page navigation buttons available, to
 // prevent races
@@ -19,11 +21,11 @@ var currentPage = 'main';
 
 // Add a back button that is only visible from modal pages
 $('<a>',{
-    text: 'X',
+    text: '<',
     title: 'back',
     href: '#',
     class: 'back-button uppercase',
-    click: function() { displayModal("main"); }
+    click: function() { displayModal("main", FADE_OUT, FADE_IN); }
 }).hide().appendTo('body > .back-button-wrapper');
 
 
@@ -62,7 +64,10 @@ var displayModal = function(page, timeOut, timeIn) {
             hidePage(otherPage, timeOut);
         }
     }
-    showPage(page);
+    // Delay displaying new page. Surprisingly no race condition with this
+    // timeout because they won't be able to click the "X" until this starts
+    // fading in
+    setTimeout(function() { showPage(page, timeIn); }, timeOut);
 }
 
 // Hard-coded FAQ example
@@ -71,7 +76,7 @@ $('<a>',{
     title: 'faq',
     href: '#',
     class: 'page-button uppercase',
-    click: function() { displayModal("faq"); }
+    click: function() { displayModal("faq", FADE_OUT, FADE_IN); }
 }).appendTo('body > .page-button-wrapper');
 
 
