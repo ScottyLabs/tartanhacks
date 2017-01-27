@@ -94,3 +94,8 @@ $('<a>',{
     href: 'https://scottylabs.org/crashcourse',
     class: 'page-button uppercase',
 }).appendTo('body > .page-button-wrapper');
+
+// FAQ Collapse
+$('.faq .question').click(function() {
+    $(this).next().slideToggle(FADE_IN);
+});

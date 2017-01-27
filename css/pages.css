@@ -100,15 +100,27 @@
 
 /* FAQs */
 #faq.container.modal-page div.content .faq {
+    margin: 0;
+}
+#faq.container.modal-page div.content .faq:first-child {
+    margin-top: 2em;
+}
+#faq.container.modal-page div.content .faq:last-child {
     margin-bottom: 2em;
 }
 
 #faq.container.modal-page div.content .question {
+    margin: 0;
+}
+#faq.container.modal-page div.content .question:hover {
+    text-decoration: underline;
 }
 #faq.container.modal-page div.content .answer {
+    /* Smaller font in answer, which is thinner than the question box. */
+    font-size: 10pt;
     padding-left: 1em;
     padding-right: 1em;
-    font-size: 10pt;
+    display: none;
 }
 
 /* Modal logos */
