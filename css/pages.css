@@ -7,7 +7,7 @@
  */
 
 /* Align page buttons along the bottom of the screen */
-body > .page-button-wrapper {
+.page-button-wrapper {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -16,7 +16,7 @@ body > .page-button-wrapper {
     text-align: center;
 }
 /* White, uppercase text, underline on hover */
-body > .page-button-wrapper > a.page-button {
+.page-button-wrapper > a.page-button {
     /* Stack-overflow method of choosing a code font */
     font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     display: inline-block;
@@ -26,33 +26,34 @@ body > .page-button-wrapper > a.page-button {
     text-decoration: none;
     min-width: 15%;
 }
+.page-button-wrapper > a.page-button:hover {
+    text-decoration: underline;
+}
+/* Bring buttons closer to the bottom, but distribute them wider, as screen
+ * size decreases. */
 @media (max-width : 992px) {
-    body > .page-button-wrapper {
+    .page-button-wrapper {
         height: 2em;
     }
-    body > .page-button-wrapper > a.page-button {
+    .page-button-wrapper > a.page-button {
         min-width: 30%;
     }
 }
 @media (max-width : 600) {
-    body > .page-button-wrapper > a.page-button {
+    .page-button-wrapper > a.page-button {
         min-width: 100%;
     }
-}
-body > .page-button-wrapper > a.page-button:hover {
-    text-decoration: underline;
 }
 
 /* Back Button - Return to main from a modal dialog */
 /* Put the back button at the top left, but make it hidden by default. */
-body > .back-button-wrapper {
+.back-button-wrapper {
     position: fixed;
-    left: 1em;
-    top: 1em;
+    left: 3em;
+    top: 3vh; /* Scaled the same as the modal top margin. */
 }
-
 /* Large X for back button (until we find a decent arrow) */
-body > .back-button-wrapper > a.back-button {
+.back-button-wrapper > a.back-button {
     /* Stack-overflow method of choosing a code font */
     font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     color: #FFFFFF;
@@ -60,52 +61,54 @@ body > .back-button-wrapper > a.back-button {
     text-transform: uppercase;
     text-decoration: none;
 }
-body > .back-button-wrapper > a.back-button:hover {
+.back-button-wrapper > a.back-button:hover {
     text-decoration: underline;
 }
+@media (max-width : 992px) {
+    .back-button-wrapper {
+        left: 2em;
+    }
+    .back-button-wrapper > a.back-button {
+        font-size: 2em;
+    }
+}
+@media (max-width : 600px) {
+    .back-button-wrapper {
+        left: 1em;
+    }
+}
+
 
 /* Modal pages are containers with special attributes. */
 .container.modal-page {
     position: fixed;
     left: 50%;
-    top: 0%;
-    width: 50%;
-    height: 100vh;
+    top: 2vw;
+    height: 98vh;
     transform: translate(-50%,0%);
     text-align: left;
 }
 
-.container.modal-page h1,
-.container.modal-page h2,
-.container.modal-page h3 {
-    font-size: 2.5em;
-    text-transform: uppercase;
-    margin-top: 2.5em;
-}
-
-.container.modal-page p {
-    font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-    font-size: 1em;
-}
-
 .container.modal-page div.title {
+    text-transform: uppercase;
     height: 10vh;
 }
 .container.modal-page div.content {
     overflow: scroll;
-    height: 90vh;
-    padding-top: 1em;
+    height: 88vh;
 }
 
 /* FAQs */
 #faq.container.modal-page div.content .faq {
-    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 #faq.container.modal-page div.content .question {
 }
 #faq.container.modal-page div.content .answer {
-    padding-left: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 10pt;
 }
 
 /* Modal logos */
@@ -147,6 +150,7 @@ body > .back-button-wrapper > a.back-button:hover {
 #schedule .content .day .date {
     width: 20%;
     float: left;
+    font-weight: bold;
 }
 #schedule .content .day .event-list {
     width: 70%;
@@ -183,7 +187,7 @@ body > .back-button-wrapper > a.back-button:hover {
     padding-left: 5%;
 }
 
-.day-spacer {
+.vert-spacer {
     width: 100%;
     height: 1.5em;
     display: inline-block;

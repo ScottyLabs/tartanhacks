@@ -80,7 +80,7 @@ $('<a>',{
     click: function() { displayModal("schedule", FADE_OUT, FADE_IN); }
 }).appendTo('body > .page-button-wrapper');
 $('<a>',{
-    text: 'F.A.Q.',
+    text: 'FAQ',
     title: 'faq',
     href: '#',
     class: 'page-button uppercase',
