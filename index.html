@@ -89,7 +89,31 @@ layout: null
         </div>
       {% endfor %}
       </div>
-  </div>
+    </div>
+    <div id="schedule" class="container modal-page" style="display:none">
+      <div class="title">
+        <h2>Schedule</h2>
+      </div>
+      <div class="content">
+      {% for day in site.data.schedule %}
+        <div class="day">
+          <div class="boxed date">
+            {{ day.date }}
+          </div>
+          <div class="event-list">
+            {% for event in day.events %}
+              <div class="event">
+                <div class="time">{{ event.time }}</div>
+                <div class="name">{{ event.name }}</div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="day-spacer">
+        </div>
+      {% endfor %}
+      </div>
+    </div>
     <div id="modal-logo-1" class="logo modal-logo" style="display:none">
         <img src="rsc/img/logo-white.svg"/>
     </div>

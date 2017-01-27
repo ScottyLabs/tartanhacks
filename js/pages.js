@@ -9,7 +9,8 @@
 // for the desired page
 var pageMap = {
     "main": ["#accent-frame", ".static-center.container", ".page-button"],
-    "faq": ["#faq", ".logo.accent-logo", ".back-button", ".modal-logo"]
+    "faq": ["#faq", ".logo.accent-logo", ".back-button", ".modal-logo"],
+    "schedule": ["#schedule", ".logo.accent-logo", ".back-button", ".modal-logo"]
 };
 
 var FADE_OUT = 300; // ms
@@ -70,7 +71,14 @@ var displayModal = function(page, timeOut, timeIn) {
     setTimeout(function() { showPage(page, timeIn); }, timeOut);
 }
 
-// Hard-coded FAQ example
+// Hard-coded for now
+$('<a>',{
+    text: 'Schedule',
+    title: 'schedule',
+    href: '#',
+    class: 'page-button uppercase',
+    click: function() { displayModal("schedule", FADE_OUT, FADE_IN); }
+}).appendTo('body > .page-button-wrapper');
 $('<a>',{
     text: 'F.A.Q.',
     title: 'faq',
@@ -79,4 +87,10 @@ $('<a>',{
     click: function() { displayModal("faq", FADE_OUT, FADE_IN); }
 }).appendTo('body > .page-button-wrapper');
 
-
+// Crash course link appears next to page links
+$('<a>',{
+    text: 'Crash Course',
+    title: 'crashcourse',
+    href: 'https://scottylabs.org/crashcourse',
+    class: 'page-button uppercase',
+}).appendTo('body > .page-button-wrapper');

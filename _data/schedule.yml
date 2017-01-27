@@ -1,4 +1,4 @@
-- day: Feb 10
+- date: February&nbsp;10
   events:
     - name: Check-in (pre-registered)
       time: 4:00pm
@@ -10,12 +10,12 @@
       time: 6:00pm
     - name: Hacking Begins
       time: 6:00pm
-- day: Feb 11
+- date: February&nbsp;11
   events:
     - name: Midnight Snack
-      time: Midnight
+      time: 12:00AM
     - name: TartanSnacks
-      time: Early Morning
+      time: 3:00AM
     - name: Breakfast
       time: 8:00am
     - name: Lunch
@@ -23,9 +23,9 @@
     - name: Hacking Ends
       time: 4:30pm
     - name: Exhibition 1
-      time: 5:00pm - 5:50pm
+      time: 5:00pm
     - name: Exhibition 2
-      time: 6:00pm - 6:50pm
+      time: 6:00pm
     - name: Dinner
       time: 7:00pm
     - name: Closing ceremony

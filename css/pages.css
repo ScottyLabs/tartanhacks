@@ -21,9 +21,23 @@ body > .page-button-wrapper > a.page-button {
     font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     display: inline-block;
     color: #FFFFFF;
-    font-size: 1.2em;
+    font-size: 1em;
     text-transform: uppercase;
     text-decoration: none;
+    min-width: 15%;
+}
+@media (max-width : 992px) {
+    body > .page-button-wrapper {
+        height: 2em;
+    }
+    body > .page-button-wrapper > a.page-button {
+        min-width: 30%;
+    }
+}
+@media (max-width : 600) {
+    body > .page-button-wrapper > a.page-button {
+        min-width: 100%;
+    }
 }
 body > .page-button-wrapper > a.page-button:hover {
     text-decoration: underline;
@@ -80,6 +94,7 @@ body > .back-button-wrapper > a.back-button:hover {
 .container.modal-page div.content {
     overflow: scroll;
     height: 90vh;
+    padding-top: 1em;
 }
 
 /* FAQs */
@@ -115,7 +130,7 @@ body > .back-button-wrapper > a.back-button:hover {
         width: 0;
     }
     .container.modal-page {
-        width: 85%;
+        width: 80%;
         left: 55%;
     }
     .container.modal-page h3 {
@@ -123,3 +138,53 @@ body > .back-button-wrapper > a.back-button:hover {
     }
 }
 
+/* Schedule */
+#schedule .content .day {
+    padding-top: 1em;
+}
+/* Date and event list should be side-by-side on large screens, and stacked on
+ * small ones */
+#schedule .content .day .date {
+    width: 20%;
+    float: left;
+}
+#schedule .content .day .event-list {
+    width: 70%;
+    float: left;
+}
+@media (max-width : 992px) {
+    /* Stack on medium and small screens */
+    #schedule .content .day .date {
+        width: auto;
+        clear: left;
+        margin-bottom: 1em
+    }
+    #schedule .content .day .event-list {
+        width: 100%;
+        clear: left;
+    }
+}
+
+#schedule .content .day .event-list .event {
+    padding-top: 0.25em;
+    clear: left;
+}
+
+#schedule .content .day .event-list .event .time {
+    text-align: right;
+    font-weight: bold;
+    width: 27%;
+    margin-left: 3%;
+    float: left;
+}
+#schedule .content .day .event-list .event .name {
+    width: 55%;
+    float: left;
+    padding-left: 5%;
+}
+
+.day-spacer {
+    width: 100%;
+    height: 1.5em;
+    display: inline-block;
+}
