@@ -15,6 +15,7 @@ var pageMap = {
 
 var FADE_OUT = 300; // ms
 var FADE_IN = 500; // ms
+var COLLAPSE = 200; // ms
 
 // Set a default page before making page navigation buttons available, to
 // prevent races
@@ -97,5 +98,5 @@ $('<a>',{
 
 // FAQ Collapse
 $('.faq .question').click(function() {
-    $(this).next().slideToggle(FADE_IN);
+    $(this).next().slideToggle(COLLAPSE);
 });
