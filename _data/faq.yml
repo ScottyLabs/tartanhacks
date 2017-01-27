@@ -1,3 +1,23 @@
+- question: How do I register?
+  answer: >
+    Starting at 5PM on Friday January 27th, you can click \'Be a Hacker\'
+    button to fill out a simple form (and optionally add your resume for
+    potential recruiters) to register for TartanHacks. We plan on keeping
+    registration open until Monday, January 30th at 11:59PM, even if sign-ups
+    exceed capacity (see questions about waitlists below).
+
+- question: I'm not a CS major, can I still join?
+  answer: >
+    Yes! All majors and programs, even if they aren't technical, are welcome at
+    TartanHacks. We're running a series of talks called <a
+    href="/crashcourse">Crash Course</a> the weekends leading up to TartanHacks
+    to help you brush up your skills.
+
+- question: Is TartanHacks open to freshman?
+  answer: >
+    Yes! We welcome students of all skill levels to participate.  Freshman and
+    other first-time hackers have always been part of TartanHacks; we would
+    love to see you at the event!
 
 - question: Can I register with a team?
   answer: >
@@ -14,27 +34,36 @@
   answer: >
     Absolutely! We've set aside some time at the beginning of event for helping hackers create teams.
 
-- question: I got in, but a few of my team members were put on the waitlist. Will they be able to participate?
+- question: Does everyone who registers get to participate at TartanHacks?
   answer: >
-    Hackers are accepted individually, so we are unable to guarantee that
-    all members of your team will get in. However, if they're on the waitlist, there's still hope! See the next question.
+    Each year, more hackers sign up than we can admit, but we try our best to
+    let as many people participate as we can. Once registration closes, hackers
+    are accepted based on a combination of registration order and a random
+    process. Those who are \"accepted\" after registration will be notified via
+    email. All other registrants will receive an email with information about
+    our waiting list, allowing them to participate if accepted hackers do not
+    show up.
 
 - question: Is there a way to get off of the waitlist?
   answer: >
-    We will be letting hackers off the waitlist on a first-come,
-    first-served basis.  Historically, many people have gotten off the
-    waitlist.
+    We will be letting hackers off the waitlist on a first-come, first-served
+    basis on the day of the event.  Historically, many people have gotten off
+    the waitlist.
+
+- question: I got in, but a few of my team members were put on the waitlist. Will they be able to participate?
+  answer: >
+    Hackers are accepted individually, so we are unable to guarantee that all
+    members of your team will get in. However, if they're on the waitlist,
+    there's still hope! See the next question.
 
 - question: How much does it cost to participate in TartanHacks?
   answer: >
-    Nothing. TartanHacks is free for all current CMU students.
+    Nothing. TartanHacks is free for all current CMU students!
 
-- question: I'm not a CS major, can I still join?
+- question: I'm a graduate student, can I still participate?
   answer: >
-    Yes! All majors and programs, even if they aren't technical, can
-    participate in TartanHacks. We're running a series of talks called
-    <a href="/crashcourse">Crash Course</a> the weekends leading up to
-    TartanHacks to help you brush up your skills.
+    Unfortunately, graduate students cannot participate. TartanHacks is
+    currently limited to undergraduate students only.
 
 - question: Are we limited to software projects or are hardware hacks allowed?
   answer: >
@@ -50,10 +79,10 @@
 
 - question: What if I need help during the hackathon?
   answer: >
-    We'll have a team of mentors on hand who are experts in many common
-    technologies. They'll be able to answer your questions, help you debug,
-    and help you along with anything you might not be confident with. They
-    can't make your project for you, but they are always there to help!
+    We will have a team of mentors on hand who are experts in many common
+    technologies. They'll be able to answer your questions, help you debug, and
+    help you along with anything you might not be confident with. They can't
+    make your project for you, but they are always there to help!
 
 - question: What can I prepare before the hackathon?
   answer: >
