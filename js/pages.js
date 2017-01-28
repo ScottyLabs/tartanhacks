@@ -76,14 +76,14 @@ var displayModal = function(page, timeOut, timeIn) {
 $('<a>',{
     text: 'Schedule',
     title: 'schedule',
-    href: '#',
+    href: '#schedule',
     class: 'page-button uppercase',
     click: function() { displayModal("schedule", FADE_OUT, FADE_IN); }
 }).appendTo('body > .page-button-wrapper');
 $('<a>',{
     text: 'FAQ',
     title: 'faq',
-    href: '#',
+    href: '#faq',
     class: 'page-button uppercase',
     click: function() { displayModal("faq", FADE_OUT, FADE_IN); }
 }).appendTo('body > .page-button-wrapper');
