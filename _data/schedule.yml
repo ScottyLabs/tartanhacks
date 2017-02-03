@@ -2,31 +2,42 @@
   events:
     - name: Check-in (pre-registered)
       time: 4:00pm
+      location: CUC Connan
     - name: Check-in (off of waitlist)
       time: 4:30pm
+      location: CUC Conan
     - name: Opening Ceremony
       time: 5:00pm
+      location: CUC McConomy
     - name: Dinner
       time: 6:00pm
+      location: CUC Rangos
     - name: Hacking Begins
       time: 6:00pm
+      location: CUC
 - date: February&nbsp;11
   events:
     - name: Midnight Snack
       time: 12:00AM
-    - name: TartanSnacks
-      time: 3:00AM
+      location: CUC Rangos
     - name: Breakfast
       time: 8:30am
+      location: CUC Rangos
     - name: Lunch
       time: 12:00pm
-    - name: Hacking Ends
+      location: CUC Rangos
+    - name: Hacking Ends & Submission
       time: 4:30pm
+      location: CUC
+    - name: Dinner
+      time: 4:30pm
+      location: CUC Rangos
     - name: Exhibition 1
       time: 5:00pm
+      location: CUC Rangos
     - name: Exhibition 2
       time: 6:00pm
-    - name: Dinner
-      time: 7:00pm
+      location: CUC Rangos
     - name: Closing ceremony
       time: 7:30pm
+      location: CUC McConomy
