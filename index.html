@@ -104,7 +104,7 @@ layout: null
             {% for event in day.events %}
               <div class="event">
                 <div class="time">{{ event.time }}</div>
-                <div class="name">{{ event.name }}</div>
+                <div class="name">{{ event.name }}<br>{{ event.location }}</div>
               </div>
             {% endfor %}
           </div>
