@@ -75,13 +75,6 @@ var displayModal = function(page, timeOut, timeIn) {
 
 // Hard-coded for now
 $('<a>',{
-    text: 'Schedule',
-    title: 'schedule',
-    href: '#schedule',
-    class: 'page-button uppercase',
-    click: function() { displayModal("schedule", FADE_OUT, FADE_IN); }
-}).appendTo('body > .page-button-wrapper');
-$('<a>',{
     text: 'FAQ',
     title: 'faq',
     href: '#faq',
@@ -89,11 +82,26 @@ $('<a>',{
     click: function() { displayModal("faq", FADE_OUT, FADE_IN); }
 }).appendTo('body > .page-button-wrapper');
 $('<a>',{
+    text: 'Schedule',
+    title: 'schedule',
+    href: '#schedule',
+    class: 'page-button uppercase',
+    click: function() { displayModal("schedule", FADE_OUT, FADE_IN); }
+}).appendTo('body > .page-button-wrapper');
+$('<a>',{
     text: 'How-To',
     title: 'howto',
     href: '#howto',
     class: 'page-button uppercase',
     click: function() { displayModal("howto", FADE_OUT, FADE_IN); }
+}).appendTo('body > .page-button-wrapper');
+
+// Crash course link appears next to page links
+$('<a>',{
+    text: 'Slides',
+    title: 'slides',
+    href: 'https://tartanhacks.com/rsc/slides.pdf',
+    class: 'page-button uppercase',
 }).appendTo('body > .page-button-wrapper');
 
 // FAQ Collapse

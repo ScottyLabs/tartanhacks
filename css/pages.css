@@ -36,12 +36,12 @@
         height: 2em;
     }
     .page-button-wrapper > a.page-button {
-        min-width: 30%;
+        min-width: 25%;
     }
 }
-@media (max-width : 600) {
-    .page-button-wrapper > a.page-button {
-        min-width: 100%;
+@media (max-width : 600px) {
+    .page-button-wrapper {
+        height: 4em;
     }
 }
 
