@@ -84,7 +84,7 @@
     position: fixed;
     left: 50%;
     top: 2vw;
-    height: 98vh;
+    height: 98%;
     transform: translate(-50%,0%);
     text-align: left;
 }
@@ -95,7 +95,8 @@
 }
 .container.modal-page div.content {
     overflow: scroll;
-    height: 88vh;
+    height: 80vh;
+    padding-bottom: 3em;
 }
 
 /* FAQs */

@@ -86,6 +86,19 @@ layout: null
       {% endfor %}
       </div>
     </div>
+    <div id="howto" class="container modal-page" style="display:none">
+      <div class="title">
+        <h2>How-To</h2>
+      </div>
+      <div class="content">
+      {% for howto in site.data.howto %}
+        <div class="howto">
+          <h3> {{ howto.title }}</h3>
+          <p class="howto-text"> {{ howto.text }}</p>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
     <div id="schedule" class="container modal-page" style="display:none">
       <div class="title">
         <h2>Schedule</h2>

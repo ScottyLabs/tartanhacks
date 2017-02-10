@@ -10,7 +10,8 @@
 var pageMap = {
     "main": ["#accent-frame", ".static-center.container", ".page-button-wrapper", ".page-button"],
     "faq": ["#faq", ".logo.accent-logo", ".back-button", ".modal-logo"],
-    "schedule": ["#schedule", ".logo.accent-logo", ".back-button", ".modal-logo"]
+    "schedule": ["#schedule", ".logo.accent-logo", ".back-button", ".modal-logo"],
+    "howto": ["#howto", ".logo.accent-logo", ".back-button", ".modal-logo"],
 };
 
 var FADE_OUT = 300; // ms
@@ -87,13 +88,12 @@ $('<a>',{
     class: 'page-button uppercase',
     click: function() { displayModal("faq", FADE_OUT, FADE_IN); }
 }).appendTo('body > .page-button-wrapper');
-
-// Crash course link appears next to page links
 $('<a>',{
-    text: 'Crash Course',
-    title: 'crashcourse',
-    href: 'https://scottylabs.org/crashcourse',
+    text: 'How-To',
+    title: 'howto',
+    href: '#howto',
     class: 'page-button uppercase',
+    click: function() { displayModal("howto", FADE_OUT, FADE_IN); }
 }).appendTo('body > .page-button-wrapper');
 
 // FAQ Collapse
