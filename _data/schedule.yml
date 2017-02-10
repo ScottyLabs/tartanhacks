@@ -3,6 +3,9 @@
     - name: Check-in (pre-registered)
       time: 4:00pm
       location: CUC Connan
+    - name: Microsoft Tech Talk
+      time: 4:30pm
+      location: CUC McConomy
     - name: Check-in (off of waitlist)
       time: 4:30pm
       location: CUC Connan
