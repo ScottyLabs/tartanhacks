@@ -35,12 +35,9 @@
     - name: Dinner
       time: 4:30pm
       location: CUC Connan
-    - name: Exhibition 1
+    - name: Exhibition
       time: 5:00pm
       location: CUC Rangos
-    - name: Exhibition 2
-      time: 6:00pm
-      location: CUC Rangos
     - name: Closing ceremony
-      time: 7:30pm
+      time: 6:30pm
       location: CUC McConomy
