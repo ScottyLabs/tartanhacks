@@ -66,72 +66,15 @@ layout: null
         <div class="separator">  <!-- this class is needed to make sure the text class is under the info-text -->
             <div class="info-text">
                 <p>
-                    <span class="item">Feb.&nbsp;10-11</span>
-                    <span class="item">Check-in&nbsp;starts&nbsp;at&nbsp;4PM</span>
+                    <span class="item">Feb.&nbsp;9-10&nbsp;2018</span>
+                    <span class="item">More&nbsp;Info&nbsp;Coming&nbsp;Soon</span>
                     <span class="item">tartanhacks@<span class="displaynone">X</span>scottylabs.org</span>
+                    <span class="item"><a href="./rsc/SponsorshipPacket2018.pdf">Sponsorship&nbsp;Packet</a></span>
                 </p>
             </div>
         </div>
     </div>
-    <div id="faq" class="container modal-page" style="display:none">
-      <div class="title">
-        <h2>Frequently Asked Questions</h2>
-      </div>
-      <div class="content">
-      {% for faq in site.data.faq %}
-        <div class="faq">
-          <p class="boxed question"> {{ faq.question }}</p>
-          <p class="answer"> {{ faq.answer }}</p>
-        </div>
-      {% endfor %}
-      </div>
-    </div>
-    <div id="howto" class="container modal-page" style="display:none">
-      <div class="title">
-        <h2>How-To</h2>
-      </div>
-      <div class="content">
-      {% for howto in site.data.howto %}
-        <div class="howto">
-          <h3> {{ howto.title }}</h3>
-          <p class="howto-text"> {{ howto.text }}</p>
-        </div>
-      {% endfor %}
-      </div>
-    </div>
-    <div id="schedule" class="container modal-page" style="display:none">
-      <div class="title">
-        <h2>Schedule</h2>
-      </div>
-      <div class="content">
-      {% for day in site.data.schedule %}
-        <div class="day">
-          <div class="boxed date">
-            {{ day.date }}
-          </div>
-          <div class="event-list">
-            {% for event in day.events %}
-              <div class="event">
-                <div class="time">{{ event.time }}</div>
-                <div class="name">{{ event.name }}<br>{{ event.location }}</div>
-              </div>
-            {% endfor %}
-          </div>
-        </div>
-        <div class="vert-spacer"></div>
-      {% endfor %}
-      </div>
-    </div>
-    <div id="modal-logo-1" class="logo modal-logo" style="display:none">
-        <img src="rsc/img/logo-white.svg"/>
-    </div>
-    <div id="modal-logo-2" class="logo modal-logo" style="display:none">
-        <img src="rsc/img/logo-white.svg"/>
-    </div>
-    <div class="page-button-wrapper"></div>
-    <div class="back-button-wrapper"></div>
     <script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script defer type="text/javascript" src="js/spawn-accents.js"></script>
-    <script defer type="text/javascript" src="js/pages.js"></script>
 </body>
 </html>
