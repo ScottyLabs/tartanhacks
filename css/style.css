@@ -134,10 +134,15 @@ btn {
     margin: 1em 0em;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1160px) {
+
+    /* This media breakpoint is made because at 1160px without any interference the registration text will wrap under the big graphic we have on the left half, forcing the user to scroll to see the
+     * main text. To prevent this we turn off the main graphic, and center the registration text on the webpage.
+     */
     #main-graphic img {
         display: none;
     }
+
     #registration {
         width: 100%;
         left: 0px;
@@ -156,13 +161,18 @@ btn {
 
 small {
     display: none;
+    font-size: inherit;
 }
 
 @media (max-width: 750px) {
+
+    /*
+     * When the viewport is extremely narrow, we remove the main text and leave only the menu and the registration button.
+     */
+
     #main {
         display: none;
     }
-
 
     #menu .options::after {
         content: "\a";
@@ -197,8 +207,11 @@ small {
         display: inherit;
         height: auto;
         width: auto;
-        font-size: 10px;
+        font-size: 18pt;
     }
 
+    small br {
+        font-size: 10px;
+    }
 }
 
