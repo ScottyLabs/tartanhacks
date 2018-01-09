@@ -7,130 +7,198 @@
  */
 
 /* TartanHacks theme colors. */
-/* Medallion Gold */
-.bg0 {
-    background-color: #FFC620;
-    color: #FFFFFF;
+
+.blue {
+    background-color: rgb(67, 97, 153);
 }
-/* Gilded Rose red */
-.bg1 {
-    background-color: #DE3479;
-    color: #FFFFFF;
+
+.yellow {
+    background-color: rgb(241, 204, 107);
 }
-/* Peaceful Sea Blue */
-.bg2 {
-    background-color: #2679D0;
-    color: #FFFFFF;
+
+.red {
+    background-color: rgb(232, 83, 74);
 }
-/* Bright Sky Blue */
-.bg3 {
-    background-color: #7ED6FA;
-    color: #FFFFFF;
+
+
+.white {
+    background-color: rgb(255, 255,255);
 }
-/* Fresh Kale Salad Green */
-.bg4 {
-    background-color: #4BAE16;
-    color: #FFFFFF;
+
+.orange {
+    background-color: rgb(247, 149, 72);
+}
+
+.sky-blue {
+    background-color: rgb(181, 213, 229);
+}
+
+.navy-blue {
+    background-color: rgb(37, 64, 143);
 }
 
 /* Set font and color */
 body {
     /* Stack-overflow method of choosing a code font */
-    font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    /* TODO remove monospace fonts from the sans-serif */
+    font-family: Styrene A Web, Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     color: white;
     background-color: #000000;
     overflow: hidden;
+    padding: 0px 0px;
+    margin: 0px 0px;
 }
 
-a {
-    color: white;
+.logo {
+    display: inline-block;
+    float: left;
 }
 
-/* Fix an object to the center of the screen. */
-.static-center {
-    position: fixed;
-    width: 50%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+#menu {
+    margin: 1.3em 1.3em 0em;
+    position: relative;
+    display: block;
+    font-size: 20pt;
+    overflow: hidden;
+    width: calc(100% - 2.6em);
 }
 
-/* The content should be centered in the middle of the screen, with
- * a responsive width. */
-.container {
-    /* Default to 50% width for large screens. */
-    width: 60%;
-    text-align: center;
+#menu .logo {
+    margin-right: 1.7em;
+    float:left;
 }
 
-.main-logo {
+#menu .options {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    padding-top: 0.4em;
+    margin-right: 0.9em;
+    padding-bottom: 0.4em;
+    text-transform: uppercase;
+    float: left;
+}
+
+#menu .options:last-child {
+    margin-right: 0em;
+}
+
+#menu .options.underline {
+    border-bottom: 3px solid white;
+}
+
+#registration {
+    margin-top: 4em;
+    overflow: hidden;
+    left: -12vw;
+    position: relative;
     display: inline-block;
 }
 
-.container .logo {
-    width: 60%;
+#main-graphic {
+    float: left;
+    position: relative;
+    display: inline-block;
+    overflow:hidden;
 }
 
-.separator {
-    margin-top: 1.5em;
+#main-graphic img {
+    position: relative;
+    float: left;
+    width: 50vw;
+    max-height: 75vh;
+}
+
+#main {
     width: 100%;
 }
 
-.info-text {
-    display: inline-block;
-    margin-top: 1.5em auto 0;
-    color: #FFFFFF;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    /* Stack-overflow method of choosing a code font */
-    font-family: Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-}
-
-/* On all screens, put each item on its own line, this used to only happend for small screens */
-.info-text p span.item::before {
-    content: ">\00a0";
-}
-.info-text p span.item::after {
+#main .logo > *::after {
     content: "\a";
     white-space: pre;
 }
-.info-text {
-    text-align: left;
-    font-size: 1em;
+
+#registration .logo {
+    position: relative;
+    padding-left: 50px;
+    font-size: 30pt;
+    margin-top: 17vh;
 }
 
-/* Medium size (tabletish) screens */
-@media (max-width : 992px) {
-    .container {
-        width: 65%;
-    }
-    .container .logo {
-        width: 75%;
-    }
+btn {
+    display: inline-block;
+    background-color: white;
+    font-size: 18pt;
+    color: rgb(232, 83, 74);
+    padding: 0.4em 1em 0.4em;
+    margin: 1em 0em;
 }
-/* Mobile screens */
-@media (max-width : 600px) {
-    .container {
-        width: 90%;
+
+@media (max-width: 950px) {
+    #main-graphic img {
+        display: none;
     }
-    .container .logo {
+    #registration {
         width: 100%;
+        left: 0px;
+        text-align: center;
+        margin: 2em auto 0;
     }
+
+
+    #registration .logo {
+        padding-left: 0;
+        float: none;
+        margin: 10vh auto 0;
+    }
+
 }
 
-/* Used to obfuscate email address from scrapers. */
-.displaynone {
+small {
     display: none;
 }
 
-.hidden {
-    visibility: hidden;
+@media (max-width: 750px) {
+    #main {
+        display: none;
+    }
+
+
+    #menu .options::after {
+        content: "\a";
+        white-space: pre;
+    }
+
+    #menu .options.underline {
+        display: none;
+    }
+
+    #menu {
+        text-align: center;
+        padding-top: 20vh;
+    }
+
+    #menu .logo {
+        float: none;
+        margin-right: 0;
+    }
+
+    #menu .options {
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        padding-top: 0em;
+        margin-right: 0em;
+        padding-bottom: 0em;
+        float: none;
+    }
+
+    small {
+        display: inherit;
+        height: auto;
+        width: auto;
+        font-size: 10px;
+    }
+
 }
 
-.boxed {
-    border: 1px solid #FFFFFF;
-    padding: 0.5em;
-}
-.logosize{
-  width:60%
-}
