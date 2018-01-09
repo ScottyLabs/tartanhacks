@@ -4,79 +4,93 @@ layout: null
 ---
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="mobile-web-app-capable" content="yes"/>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes"/>
 
-    <title>TartanHacks 2018</title>
-    <link rel="icon" href="rsc/img/favicon.ico">
-    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen"/>
-    <link type="text/css" rel="stylesheet" href="css/accent.css" media="screen"/>
-    <link type="text/css" rel="stylesheet" href="css/pages.css" media="screen"/>
-    <link rel="canonical" href="https://tartanhacks.com/" />
-    <meta name="description" content="Carnegie Mellon University's largest hackathon, hosted by ScottyLabs. Come hack, build, make or create your own project.">
-    <meta name="keywords" content="CMU,hackathon,hack,ScottyLabs,technology,Carnegie Mellon">
+        <title>TartanHacks 2018</title>
+        <link rel="icon" href="rsc/img/favicon.ico">
+        <link type="text/css" rel="stylesheet" href="fonts/fonts.css" media="screen"/>
+        <link type="text/css" rel="stylesheet" href="css/style.css" media="screen"/>
+        <link rel="canonical" href="https://tartanhacks.com/" />
+        <meta name="description" content="Carnegie Mellon University's largest hackathon, hosted by ScottyLabs. Come hack, build, make or create your own project.">
+        <meta name="keywords" content="CMU,hackathon,hack,ScottyLabs,technology,Carnegie Mellon">
 
-    <!-- Facebook Open Graph - Tells Facebook what to show when our webpage is shared. -->
-    <meta property="og:url" content="https://tartanhacks.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="TartanHacks 2017" />
-    <meta property="og:description" content="Carnegie Mellon University's largest hackathon, hosted by ScottyLabs. Come hack, build, make or create your own project." />
-    <meta property="og:image" content="https://tartanhacks.com/rsc/img/TartanhacksEventSquare.png" />
+        <!-- Facebook Open Graph - Tells Facebook what to show when our webpage is shared. -->
+        <meta property="og:url" content="https://tartanhacks.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="TartanHacks 2017" />
+        <meta property="og:description" content="Carnegie Mellon University's largest hackathon, hosted by ScottyLabs. Come hack, build, make or create your own project." />
+        <meta property="og:image" content="https://tartanhacks.com/rsc/img/TartanhacksEventSquare.png" />
 
-    <!-- Schema.org JSON-LD tags, describes the organization to web crawlers -->
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Event",
-      "description": "Carnegie Mellon University's largest hackathon, hosted by ScottyLabs. Come hack, build, make or create your own project.",
-      "location": {
-          "@type": "PostalAddress",
-          "addressCountry": "USA",
-          "addressLocality": "Pittsburgh",
-          "addressRegion": "PA",
-          "postalCode": "15213",
-          "streetAddress": "5032 Forbes Ave.",
-          "name": "Cohon University Center"
-      },
-      "image": "https://tartanhacks.com/rsc/img/TartanhacksEventSquare.png",
-      "name": "TartanHacks",
-      "alternateName": "Tartan Hacks",
-      "startDate": "2017-02-10T17:00:00-05:00",
-      "endDate": "2017-02-11T20:00:00-05:00",
-      "organizer": {
-        "@type": "Organization",
-        "sameAs": "https://scottylabs.org"
-      },
-      "url": "https://tartanhacks.com"
-    }
-    </script>
-</head>
-<body>
-    <div id="accent-frame">
-        <div id="accent-container">
-            <!-- Accent rectangles go here -->
+        <!-- Schema.org JSON-LD tags, describes the organization to web crawlers -->
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "Event",
+                "description": "Carnegie Mellon University's largest hackathon, hosted by ScottyLabs. Come hack, build, make or create your own project.",
+                "location": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "USA",
+                    "addressLocality": "Pittsburgh",
+                    "addressRegion": "PA",
+                    "postalCode": "15213",
+                    "streetAddress": "5032 Forbes Ave.",
+                    "name": "Cohon University Center"
+                },
+                "image": "https://tartanhacks.com/rsc/img/TartanhacksEventSquare.png",
+                "name": "TartanHacks",
+                "alternateName": "Tartan Hacks",
+                "startDate": "2017-02-09T17:00:00-05:00",
+                "endDate": "2017-02-10T20:00:00-05:00",
+                "organizer": {
+                    "@type": "Organization",
+                    "sameAs": "https://scottylabs.org"
+                },
+                "url": "https://tartanhacks.com"
+            }
+        </script>
+    </head>
+    <body class="red clearfix">
+        <div id="menu">
+            <div class="logo">
+                <img src="rsc/img/white-tartanhacks.svg">
+                <span>February 9-10, 2018</span>
+            </div>
+            <small>
+                    <span>Registration Opens Soon</span>
+                    {% comment %} <btn>Register Now</btn> {% endcomment %}
+            </small>
+            <span class="options underline">
+                Home
+            </span>
+            {% comment %} This will be added when FAQ, Registration, and the other menu options become available {% endcomment %}
+            {% comment %} <span class="options"> {% endcomment %}
+            {% comment %}     Register {% endcomment %}
+            {% comment %} </span> {% endcomment %}
+            {% comment %} <small><br></small> {% endcomment %}
+            {% comment %} <span class="options"> {% endcomment %}
+            {% comment %}     FAQ {% endcomment %}
+            {% comment %} </span> {% endcomment %}
+            {% comment %} <small><br></small> {% endcomment %}
+            {% comment %} <span class="options"> {% endcomment %}
+            {% comment %}     Schedule {% endcomment %}
+            {% comment %} </span> {% endcomment %}
         </div>
-    </div>
-    <div class="static-center container">
-        <div class="logo main-logo">
-
-            <img src="rsc/img/logo.png" style="width: 60%"/>
-
-        </div>
-        <div class="separator">  <!-- this class is needed to make sure the text class is under the info-text -->
-            <div class="info-text">
-                <p>
-                    <span class="item">Feb.&nbsp;9-10&nbsp;2018</span>
-                    <span class="item">More&nbsp;Info&nbsp;Coming&nbsp;Soon</span>
-                    <span class="item">tartanhacks@<span class="displaynone">X</span>scottylabs.org</span>
-                    <span class="item"><a href="./rsc/SponsorshipPacket2018.pdf">Sponsorship&nbsp;Packet</a></span>
-                </p>
+        <div id="main">
+            <div id="registration">
+                <div id="main-graphic">
+                    <img src="rsc/img/home-page.svg" width="100%">
+                </div>
+                <div class="logo">
+                    <img src="rsc/img/white-tartanhacks.svg">
+                    <span>February 9-10, 2018</span>
+                    <br>
+                    <span>Registration Opens Soon</span>
+                    {% comment %} <btn>Register Now</btn> {% endcomment %}
+                </div>
             </div>
         </div>
-    </div>
-    <script defer type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script defer type="text/javascript" src="js/spawn-accents.js"></script>
-</body>
+    </body>
 </html>
