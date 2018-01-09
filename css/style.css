@@ -134,6 +134,21 @@ btn {
     margin: 1em 0em;
 }
 
+small {
+    display: none;
+    font-size: inherit;
+}
+
+#copyright {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 14pt;
+    padding-bottom: 1.7em;
+    position: absolute;
+    bottom: 0px;
+}
+
 @media (max-width: 1160px) {
 
     /* This media breakpoint is made because at 1160px without any interference the registration text will wrap under the big graphic we have on the left half, forcing the user to scroll to see the
@@ -159,10 +174,6 @@ btn {
 
 }
 
-small {
-    display: none;
-    font-size: inherit;
-}
 
 @media (max-width: 750px) {
 
@@ -212,6 +223,10 @@ small {
 
     small br {
         font-size: 10px;
+    }
+
+    #copyright {
+        display: none;
     }
 }
 
