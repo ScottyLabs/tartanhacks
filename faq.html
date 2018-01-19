@@ -13,7 +13,7 @@ layout: null
         <link rel="icon" href="rsc/img/favicon.ico">
         <link type="text/css" rel="stylesheet" href="fonts/fonts.css" media="screen"/>
         <link type="text/css" rel="stylesheet" href="css/style.css" media="screen"/>
-        <link type="text/css" rel="stylesheet" href="css/main.css" media="screen"/>
+        <link type="text/css" rel="stylesheet" href="css/faq.css" media="screen"/>
         <link rel="canonical" href="https://tartanhacks.com/" />
         <meta name="description" content="Carnegie Mellon University's largest hackathon, hosted by ScottyLabs. Come hack, build, make or create your own project.">
         <meta name="keywords" content="CMU,hackathon,hack,ScottyLabs,technology,Carnegie Mellon">
@@ -53,55 +53,63 @@ layout: null
             }
         </script>
     </head>
-    <body class="red white-text clearfix">
-        <div id="menu">
-            <div class="logo">
-                <img src="rsc/img/white-tartanhacks.svg">
-                <span>February 9-10, 2018</span>
-            </div>
-            <small>
-                <br>
-                <span class="options">
-                    Registration Opens on 1/26
-                </span>
-                    {% comment %} <btn>Register Now</btn> {% endcomment %}
-            </small>
-            <span class="options underline">
-                Home
-            </span>
-            <small><br></small>
-            <span class="options">
-                <a href="faq.html"> FAQ </a>
-            </span>
-            {% comment %} This will be added when FAQ, Registration, and the other menu options become available {% endcomment %}
-            {% comment %} <span class="options"> {% endcomment %}
-            {% comment %}     Register {% endcomment %}
-            {% comment %} </span> {% endcomment %}
-            {% comment %} <small><br></small> {% endcomment %}
-            {% comment %} <span class="options"> {% endcomment %}
-            {% comment %}     FAQ {% endcomment %}
-            {% comment %} </span> {% endcomment %}
-            {% comment %} <small><br></small> {% endcomment %}
-            {% comment %} <span class="options"> {% endcomment %}
-            {% comment %}     Schedule {% endcomment %}
-            {% comment %} </span> {% endcomment %}
-        </div>
-        <div id="main">
-            <div id="registration">
-                <div id="main-graphic">
-                    <img src="rsc/img/home-page.svg" width="100%">
-                </div>
+    <body class="blue clearfix">
+        <div class="yellow-text">
+            <div id="menu">
                 <div class="logo">
-                    <img src="rsc/img/white-tartanhacks.svg">
+                    <img src="rsc/img/yellow-tartanhacks.svg">
                     <span>February 9-10, 2018</span>
-                    <br>
-                    <span>Registration Opens on 1/26</span>
-                    {% comment %} <btn>Register Now</btn> {% endcomment %}
                 </div>
+                <span class="options">
+                    <a href="/"> Home </a>
+                </span>
+                <span class="options underline">
+                    FAQ
+                </span>
+                <span id="nav">
+                    <div class="large">
+                        <i class="fa fa-bars open-menu" aria-hidden="true"></i>
+                    </div>
+                </span>
             </div>
         </div>
-        <div id="copyright">
-            Copyright Scottylabs 2018.
+        <div class="blue-text" id="sidebar">
+            <div id="menu">
+                <span class="options">
+                    <a href="/"> Home </a>
+                </span>
+                <space><br/></space>
+                <span class="options underline">
+                    FAQ
+                </span>
+                <space><br/></space>
+                <span class="options close-menu">
+                    close menu
+                </span>
+            </div>
         </div>
+        <div id="faq" class="clearfix">
+            <div id="left-graphic">
+                <img src="rsc/img/faq-page-left-side.svg" width="100%">
+            </div>
+            <div id="faq-text">
+                {% for faq in site.data.faq %}
+                    <h2>{{ faq.question}}</h2>
+                    <p>{{ faq.answer }}</p>
+                {% endfor %}
+            </div>
+            <div id="right-graphic">
+                <img src="rsc/img/faq-page-right-side.svg" width="100%">
+            </div>
+            <div class="relative" id="copyright">
+                Copyright Scottylabs 2018.
+            </div>
+        </div>
+        <script src="https://use.fontawesome.com/9c8a25da89.js"></script>
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+        <script src="js/sidebar.js"></script>
     </body>
 </html>

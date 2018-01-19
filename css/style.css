@@ -13,29 +13,68 @@
     background-color: rgb(67, 97, 153);
 }
 
+.blue-text {
+    --text: rgb(67, 97, 153);
+    color: rgb(67, 97, 153);
+}
+
 .yellow {
     background-color: rgb(241, 204, 107);
+}
+
+.yellow-text {
+    --text:  rgb(241, 204, 107);
+    color: rgb(241, 204, 107);
 }
 
 .red {
     background-color: rgb(232, 83, 74);
 }
 
+.red-text {
+    --text:  rgb(232, 83, 74);
+    color: rgb(232, 83, 74);
+}
 
 .white {
     background-color: rgb(255, 255,255);
+}
+
+.white-text {
+    --text:  rgb(255, 255,255);
+    color: rgb(255, 255,255);
 }
 
 .orange {
     background-color: rgb(247, 149, 72);
 }
 
+.orange-text {
+    --text:  rgb(247, 149, 72);
+    color: rgb(247, 149, 72);
+}
+
 .sky-blue {
     background-color: rgb(181, 213, 229);
 }
 
+.sky-blue-text {
+    --text:  rgb(181, 213, 229);
+    color: rgb(181, 213, 229);
+}
+
 .navy-blue {
     background-color: rgb(37, 64, 143);
+}
+
+.navy-blue-text {
+    --text:  rgb(37, 64, 143);
+    color: rgb(37, 64, 143);
+}
+
+a {
+    color: white;
+    font-weight: bold;
 }
 
 /* Set font and color */
@@ -45,9 +84,13 @@ body {
     font-family: Styrene A Web, Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     color: white;
     background-color: #000000;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding: 0px 0px;
     margin: 0px 0px;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
 }
 
 .logo {
@@ -56,12 +99,19 @@ body {
 }
 
 #menu {
-    margin: 1.3em 1.3em 0em;
+    margin: 4vh 4vh 2vh;
     position: relative;
     display: block;
     font-size: 20pt;
     overflow: hidden;
-    width: calc(100% - 2.6em);
+    height: 10vh;
+    width: calc(100% - 8vh);
+}
+
+#menu a {
+    color: var(--text);
+    font-weight: inherit;
+    text-decoration: none;
 }
 
 #menu .logo {
@@ -69,10 +119,14 @@ body {
     float:left;
 }
 
+#menu .logo > img {
+    fill: var(--text);
+}
+
 #menu .options {
     position: relative;
     display: inline-block;
-    height: 100%;
+    height: 1.5em;
     padding-top: 0.4em;
     margin-right: 0.9em;
     padding-bottom: 0.4em;
@@ -80,50 +134,24 @@ body {
     float: left;
 }
 
+#menu #nav {
+    position: relative;
+    display: none;
+    height: 1.5em;
+    padding-top: 0.4em;
+    margin-right: 0.9em;
+    padding-bottom: 0.4em;
+    text-transform: uppercase;
+    float: left;
+}
+
+
 #menu .options:last-child {
     margin-right: 0em;
 }
 
 #menu .options.underline {
-    border-bottom: 3px solid white;
-}
-
-#registration {
-    margin-top: 4em;
-    overflow: hidden;
-    left: -12vw;
-    position: relative;
-    display: inline-block;
-}
-
-#main-graphic {
-    float: left;
-    position: relative;
-    display: inline-block;
-    overflow:hidden;
-}
-
-#main-graphic img {
-    position: relative;
-    float: left;
-    width: 50vw;
-    max-height: 75vh;
-}
-
-#main {
-    width: 100%;
-}
-
-#main .logo > *::after {
-    content: "\a";
-    white-space: pre;
-}
-
-#registration .logo {
-    position: relative;
-    padding-left: 50px;
-    font-size: 30pt;
-    margin-top: 17vh;
+    border-bottom: 3px solid var(--text);
 }
 
 btn {
@@ -145,89 +173,29 @@ small {
     margin: auto;
     text-align: center;
     font-size: 14pt;
-    padding-bottom: 1.7em;
     position: absolute;
+    padding-bottom: 1.7em;
     bottom: 0px;
 }
 
-@media (max-width: 1160px) {
 
-    /* This media breakpoint is made because at 1160px without any interference the registration text will wrap under the big graphic we have on the left half, forcing the user to scroll to see the
-     * main text. To prevent this we turn off the main graphic, and center the registration text on the webpage.
-     */
-    #main-graphic img {
-        display: none;
-    }
+/* ::-webkit-scrollbar { */
+/*     width: 0px;  /1* remove scrollbar space *1/ */
+/*     background: transparent;  /1* optional: just make scrollbar invisible *1/ */
+/* } */
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
 
-    #registration {
-        width: 100%;
-        left: 0px;
-        text-align: center;
-        margin: 2em auto 0;
-    }
-
-
-    #registration .logo {
-        padding-left: 0;
-        float: none;
-        margin: 10vh auto 0;
-    }
-
+.clearfix {
+    overflow: auto;
 }
 
 
 @media (max-width: 750px) {
 
-    /*
-     * When the viewport is extremely narrow, we remove the main text and leave only the menu and the registration button.
-     */
-
-    #main {
-        display: none;
-    }
-
-    #menu .options::after {
-        content: "\a";
-        white-space: pre;
-    }
-
-    #menu .options.underline {
-        display: none;
-    }
-
-    #menu {
-        text-align: center;
-        padding-top: 20vh;
-    }
-
-    #menu .logo {
-        float: none;
-        margin-right: 0;
-    }
-
-    #menu .options {
-        position: relative;
-        display: inline-block;
-        height: 100%;
-        padding-top: 0em;
-        margin-right: 0em;
-        padding-bottom: 0em;
-        float: none;
-    }
-
-    small {
-        display: inherit;
-        height: auto;
-        width: auto;
-        font-size: 18pt;
-    }
-
-    small br {
-        font-size: 10px;
-    }
-
     #copyright {
         display: none;
     }
 }
-
