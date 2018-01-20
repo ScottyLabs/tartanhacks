@@ -106,6 +106,7 @@ body {
     overflow: hidden;
     height: 10vh;
     width: calc(100% - 8vh);
+    min-height: 72px;
 }
 
 #menu a {
