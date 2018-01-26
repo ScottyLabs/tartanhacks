@@ -109,4 +109,8 @@
     small br {
         font-size: 10px;
     }
+
+    .big {
+        display: none;
+    }
 }

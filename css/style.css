@@ -72,6 +72,12 @@
     color: rgb(37, 64, 143);
 }
 
+/* btn > a { */
+/*     color: inherit; */
+/*     font-weight: inherit; */
+/*     text-decoration: none; */
+/* } */
+
 a {
     color: white;
     font-weight: bold;
@@ -162,6 +168,7 @@ btn {
     color: rgb(232, 83, 74);
     padding: 0.4em 1em 0.4em;
     margin: 1em 0em;
+    cursor: pointer;
 }
 
 small {
