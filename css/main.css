@@ -27,7 +27,7 @@
 #registration .logo {
     position: relative;
     padding-left: 50px;
-    font-size: 30pt;
+    font-size: 24pt;
     margin-top: 17vh;
 }
 
@@ -103,11 +103,11 @@
         display: inherit;
         height: auto;
         width: auto;
-        font-size: 18pt;
+        font-size: 15pt;
     }
 
     small br {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .big {

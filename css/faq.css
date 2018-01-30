@@ -36,7 +36,7 @@
 
 
 .large {
-    font-size: 25pt;
+    font-size: 20pt;
 }
 
 #nav {
@@ -123,7 +123,7 @@
 
     space {
         display: block;
-        font-size: 0.70em;
+        font-size: 0.56em;
         margin: 0.15em 0;
     }
 

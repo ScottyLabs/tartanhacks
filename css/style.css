@@ -85,11 +85,11 @@
 }
 
 .schedule {
-    font-size: 20pt;
+    font-size: 16pt;
 }
 
 .day {
-    font-size: 25pt;
+    font-size: 20pt;
     margin: 1em 0em;
     margin-left: 4.5em;
     display: inline-block;
@@ -131,7 +131,7 @@ body {
     margin: 4vh 4vh 2vh;
     position: relative;
     display: block;
-    font-size: 20pt;
+    font-size: 16pt;
     overflow: hidden;
     height: 10vh;
     width: calc(100% - 8vh);
