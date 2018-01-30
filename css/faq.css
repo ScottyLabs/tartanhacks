@@ -24,6 +24,7 @@
     position: relative;
     float: left;
     max-width: 48vw;
+    margin-bottom: 3vh;
 }
 
 #faq {
@@ -102,6 +103,23 @@
         float: none;
         line-height: 1em;
     }
+
+    .flex * {
+        flex-basis: 100%;
+    }
+
+    .flex {
+        margin-bottom: 1em;
+    }
+
+    .flex:last-child {
+        margin-bottom: 0em;
+    }
+
+    #menu.topbar .options {
+        display: none;
+    }
+
 
     space {
         display: block;

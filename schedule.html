@@ -53,21 +53,21 @@ layout: null
             }
         </script>
     </head>
-    <body class="blue clearfix">
-        <div class="yellow-text">
-            <div id="menu">
+    <body class="sky-blue clearfix">
+        <div class="navy-blue-text">
+            <div id="menu" class="topbar">
                 <div class="logo">
-                    <img src="rsc/img/yellow-tartanhacks.svg">
+                    <img src="rsc/img/blue-tartanhacks.svg">
                     <span>February 9-10, 2018</span>
                 </div>
                 <span class="options">
                     <a href="/"> Home </a>
                 </span>
-                <span class="options underline">
-                    FAQ
-                </span>
                 <span class="options">
-                    <a href="schedule.html"> schedule </a>
+                    <a href="/faq.html"> FAQ </a>
+                </span>
+                <span class="options underline">
+                    Schedule
                 </span>
                 <span class="options">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfnR-nWXl5Iww0WirRuK0D8GzIqpHxvE-tfee4lj6hKMfbD6g/viewform"> Register </a>
@@ -79,18 +79,18 @@ layout: null
                 </span>
             </div>
         </div>
-        <div class="blue-text" id="sidebar">
+        <div class="navy-blue-text" id="sidebar">
             <div id="menu">
                 <span class="options">
                     <a href="/"> Home </a>
                 </span>
                 <space><br/></space>
-                <span class="options underline">
-                    FAQ
+                <span class="options">
+                    <a href="/faq.html"> FAQ </a>
                 </span>
                 <space><br/></space>
-                <span class="options">
-                    <a href="schedule.html"> schedule </a>
+                <span class="options underline">
+                    Schedule
                 </span>
                 <space><br/></space>
                 <span class="options">
@@ -104,18 +104,27 @@ layout: null
         </div>
         <div id="faq" class="clearfix">
             <div id="left-graphic">
-                <img src="rsc/img/faq-page-left-side.svg" width="100%">
+                <img src="rsc/img/schedule-page-left-side.svg" width="100%">
             </div>
-            <div id="faq-text">
-                {% for faq in site.data.faq %}
-                    <h2>{{ faq.question}}</h2>
-                    <p>{{ faq.answer }}</p>
+            <div class="navy-blue-text" id="faq-text">
+                {% for date in site.data.schedule %}
+                    <span class="day">{{date.date}}</span>
+                    {% for event in date.events %}
+                        <div class="flex schedule">
+                            <span class="time"><b>{{ event.time }}</b></span>
+                            <span>
+                                {{ event.name }}
+                                <br/>
+                                <i> {{ event.location }} </i>
+                            <span>
+                        </div>
+                    {% endfor %}
                 {% endfor %}
             </div>
             <div id="right-graphic">
-                <img src="rsc/img/faq-page-right-side.svg" width="100%">
+                <img src="rsc/img/schedule-page-right-side.svg" width="100%">
             </div>
-            <div class="relative" id="copyright">
+            <div id="copyright" class="relative navy-blue-text" >
                 Copyright Scottylabs 2018.
             </div>
         </div>

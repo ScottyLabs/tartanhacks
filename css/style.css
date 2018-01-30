@@ -72,6 +72,29 @@
     color: rgb(37, 64, 143);
 }
 
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.time {
+    margin-right: 0.7em;
+    min-width: 4.5em;
+    text-transform: uppercase;
+}
+
+.schedule {
+    font-size: 20pt;
+}
+
+.day {
+    font-size: 25pt;
+    margin: 1em 0em;
+    margin-left: 4.5em;
+    display: inline-block;
+}
+
 /* btn > a { */
 /*     color: inherit; */
 /*     font-weight: inherit; */
@@ -79,7 +102,7 @@
 /* } */
 
 a {
-    color: white;
+    color: inherit;
     font-weight: bold;
 }
 

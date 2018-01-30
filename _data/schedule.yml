@@ -1,43 +1,46 @@
+- date: February&nbsp;9
+  events:
+    - name: Check-in for registered hackers
+      time: 4:00 PM
+      location: Connan
+    - name: Check-in for waitlisted hackers
+      time: 4:30 PM
+      location: Connan
+    - name: Opening Ceremony
+      time: 5:00 PM
+      location: McConomy
+    - name: Team Mixer
+      time: 5:50 PM
+      location: Connan/McConomy
+    - name: Hacking begins <br/> Sponsor expo opens <br/> Dinner
+      time: 6:00 PM
+      location: Rangos
 - date: February&nbsp;10
   events:
-    - name: Check-in (pre-registered)
-      time: 4:00pm
-      location: CUC Connan
-    - name: Microsoft Tech Talk
-      time: 4:30pm
-      location: CUC McConomy
-    - name: Check-in (off of waitlist)
-      time: 4:30pm
-      location: CUC Connan
-    - name: Opening Ceremony
-      time: 5:00pm
-      location: CUC McConomy
-    - name: Dinner
-      time: 6:00pm
-      location: CUC Rangos
-    - name: Hacking Begins
-      time: 6:00pm
-      location: CUC
-- date: February&nbsp;11
-  events:
     - name: Midnight Snack
-      time: 12:00AM
-      location: CUC Rangos
+      time: 12:00 AM
+      location: Rangos
     - name: Breakfast
-      time: 8:30am
-      location: CUC Rangos
+      time: 9:00 AM
+      location: Rangos
     - name: Lunch
-      time: 12:00pm
-      location: CUC Rangos
-    - name: Hacking Ends & Submission
-      time: 4:30pm
-      location: CUC
-    - name: Dinner
-      time: 4:30pm
-      location: CUC Connan
-    - name: Exhibition
-      time: 5:00pm
-      location: CUC Rangos
-    - name: Closing ceremony
-      time: 6:30pm
-      location: CUC McConomy
+      time: 12:00 PM
+      location: Rangos
+    - name: Hacking ends <br/> Sponsor expo ends <br/> Dinner available
+      time: 4:30 PM
+      location: Rangos
+    - name: Exhibition 1 Begins
+      time: 5:15 PM
+      location: Rangos
+    - name: Exhibition 1 Ends <br/> Exhibition 2 Setup
+      time: 6:00 PM
+      location: TBD
+    - name: Exhibition 2 Starts
+      time: 6:15 PM
+      location: Rangos
+    - name: Exhibition 2 Ends
+      time: 7:00 PM
+      location: TBD
+    - name: Closing Ceremony
+      time: 7:30 PM
+      location: McConomy
