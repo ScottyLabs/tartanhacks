@@ -75,9 +75,9 @@ layout: null
             </span>
             <small>
                 <br>
-                <btn class="register">Request A Mentor </btn>
+                <btn class="request">Request A Mentor </btn>
                 <br>
-                <btn class="mentor">Submit Your Project</btn>
+                <btn class="submit">Submit Your Project</btn>
             </small>
         </div>
         <div id="main">
@@ -88,8 +88,8 @@ layout: null
                 <div class="logo">
                     <img src="rsc/img/white-tartanhacks.svg">
                     <span>February 9-10, 2018</span>
-                    <btn class="register">Request a Mentor </btn>
-                    <btn class="mentor">Submit Your Project</btn>
+                    <btn class="request">Request a Mentor </btn>
+                    <btn class="submit">Submit Your Project</btn>
                 </div>
             </div>
         </div>
@@ -97,13 +97,13 @@ layout: null
             Copyright Scottylabs 2018.
         </div>
         <script type="text/javascript">
-            var regs = document.getElementsByClassName("register");
+            var regs = document.getElementsByClassName("request");
             for (i = 0; i < regs.length; i++) {
                 regs[i].onclick = function () {
                     location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfuIyuk4NtoL0gsajwPzZ5wlXqHVfc9QUo1ou3jGfjWv26MHg/viewform";
                 };
             }
-            var ments = document.getElementsByClassName("mentor");
+            var ments = document.getElementsByClassName("submit");
             for (i = 0; i < ments.length; i++) {
                 ments[i].onclick = function () {
                     location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdQICqopHDlRkJg20_Xc1sxsKXRVcTDPOKeMrzcGFh2juSg8w/viewform";
