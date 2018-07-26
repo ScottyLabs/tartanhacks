@@ -55,60 +55,30 @@ layout: null
     </head>
     <body class="red white-text clearfix">
         <div id="menu">
-            <div class="logo">
-                <img src="rsc/img/white-tartanhacks.svg">
-                <span>February 9-10, 2018</span>
-            </div>
-            <span class="options underline">
-                Home
-            </span>
-            <small><br></small>
-            <span class="options">
-                <a href="faq.html"> FAQ </a>
-            </span>
-            <small><br></small>
-            <span class="options">
-                <a href="schedule.html"> schedule </a>
-            </span>
-            <span class="options">
-                <a href="rsc/2018TartanHacksOpening.pdf"> slides </a>
-            </span>
-            <small>
-                <br>
-                <btn class="request">Request A Mentor </btn>
-                <br>
-                <btn class="submit">Submit Your Project</btn>
-            </small>
         </div>
         <div id="main">
-            <div id="registration">
-                <div id="main-graphic">
-                    <img src="rsc/img/home-page.svg" width="100%">
-                </div>
-                <div class="logo">
-                    <img src="rsc/img/white-tartanhacks.svg">
-                    <span>February 9-10, 2018</span>
-                    <btn class="request">Request a Mentor </btn>
-                    <btn class="submit">Submit Your Project</btn>
-                </div>
+            <div id="main-graphic">
+                <img src="rsc/img/home-page.svg" width="100%">
+            </div>
+            <div class="logo">
+                <img src="rsc/img/white-tartanhacks.svg">
+            </div>
+            <div class="additional-info">
+                <span># Feb. 8-9, 2019<br></span>
+                <span># tartanhacks@<span class="displaynone">X</span>scottylabs.org</span>
+                <btn class="sponsorship-packet">Sponsorship Packet</btn>
             </div>
         </div>
         <div id="copyright">
             Copyright Scottylabs 2018.
         </div>
         <script type="text/javascript">
-            var regs = document.getElementsByClassName("request");
+            var regs = document.getElementsByClassName("sponsorship-packet");
             for (i = 0; i < regs.length; i++) {
                 regs[i].onclick = function () {
-                    location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfuIyuk4NtoL0gsajwPzZ5wlXqHVfc9QUo1ou3jGfjWv26MHg/viewform";
+                    window.open("./rsc/SponsorshipPacket2019.pdf");
                 };
             }
-            var ments = document.getElementsByClassName("submit");
-            for (i = 0; i < ments.length; i++) {
-                ments[i].onclick = function () {
-                    location.href = "https://docs.google.com/forms/d/e/1FAIpQLSdQICqopHDlRkJg20_Xc1sxsKXRVcTDPOKeMrzcGFh2juSg8w/viewform";
-                };
-            }
-    </script>
+        </script>
     </body>
 </html>
