@@ -3,7 +3,7 @@
  * Theme colors and generally useful classes for the TartanHacks 2018 website.
  *
  * Scott Krulcik
- * Modified by Shalom Yiblet, Stephanie You
+ * Modified by Shalom Yiblet
  * (c) 2018 ScottyLabs
  */
 
@@ -122,11 +122,9 @@ body {
     top: 0;
 }
 
-.logo, .additional-info {
+.logo {
     display: inline-block;
     float: left;
-    width: 80vh;
-    word-wrap: break-word;
 }
 
 #menu {
@@ -140,13 +138,59 @@ body {
     min-height: 72px;
 }
 
+#menu a {
+    color: var(--text);
+    font-weight: inherit;
+    text-decoration: none;
+}
+
+#menu .logo {
+    margin-right: 1.7em;
+    float:left;
+}
+
+#menu .logo > img {
+    fill: var(--text);
+}
+
+#menu .options {
+    position: relative;
+    display: inline-block;
+    height: 1.5em;
+    padding-top: 0.4em;
+    margin-right: 0.9em;
+    padding-bottom: 0.4em;
+    text-transform: uppercase;
+    float: left;
+}
+
+#menu #nav {
+    position: relative;
+    display: none;
+    height: 1.5em;
+    padding-top: 0.4em;
+    margin-right: 0.9em;
+    padding-bottom: 0.4em;
+    text-transform: uppercase;
+    float: left;
+}
+
+
+#menu .options:last-child {
+    margin-right: 0em;
+}
+
+#menu .options.underline {
+    border-bottom: 3px solid var(--text);
+}
+
 btn {
     display: inline-block;
     background-color: white;
     font-size: 18pt;
     color: rgb(232, 83, 74);
     padding: 0.4em 1em 0.4em;
-    margin: 0.5em 0em;
+    margin: 1em 0em;
     cursor: pointer;
 }
 
@@ -165,6 +209,7 @@ small {
     bottom: 0px;
 }
 
+
 /* ::-webkit-scrollbar { */
 /*     width: 0px;  /1* remove scrollbar space *1/ */
 /*     background: transparent;  /1* optional: just make scrollbar invisible *1/ */
@@ -178,9 +223,6 @@ small {
     overflow: auto;
 }
 
-.displaynone {
-    display: none;
-}
 
 @media (max-width: 750px) {
 
