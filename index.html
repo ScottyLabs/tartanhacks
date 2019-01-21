@@ -14,7 +14,6 @@ layout: null
         <link type="text/css" rel="stylesheet" href="fonts/fonts.css" media="screen"/>
         <link type="text/css" rel="stylesheet" href="css/style.css" media="screen"/>
         <link type="text/css" rel="stylesheet" href="css/main.css" media="screen"/>
-        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
         <link rel="canonical" href="https://tartanhacks.com/" />
         <meta name="description" content="Carnegie Mellon University's largest hackathon, hosted by ScottyLabs. Come hack, build, make or create your own project.">
         <meta name="keywords" content="CMU,hackathon,hack,ScottyLabs,technology,Carnegie Mellon">
@@ -22,7 +21,7 @@ layout: null
         <!-- Facebook Open Graph - Tells Facebook what to show when our webpage is shared. -->
         <meta property="og:url" content="https://tartanhacks.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="TartanHacks 2019" />
+        <meta property="og:title" content="TartanHacks 2018" />
         <meta property="og:description" content="Carnegie Mellon University's largest hackathon, hosted by ScottyLabs. Come hack, build, make or create your own project." />
         <meta property="og:image" content="https://tartanhacks.com/rsc/img/TartanhacksEventSquare.png" />
 
@@ -54,42 +53,32 @@ layout: null
             }
         </script>
     </head>
-    <body class="navy-blue lavender-text clearfix">
+    <body class="red white-text clearfix">
         <div id="menu">
-            <div class="logo">
-                <h2>TartanHacks</h2>
-                <span>February 8-9, 2019</span>
-            </div>
-            <span class="options underline">
-                Home
-            </span>
-            <small><br></small>
-            <span class="options">
-                <a href="faq.html"> FAQ </a>
-            </span>
-            <small><br></small>
-            <span class="options">
-                <a href="schedule.html"> schedule </a>
-            </span>
-            <small><br></small>
-            <!--
-            <span class="options">
-                <a href="http://registration.tartanhacks.com"> register </a>
-            </span>
-            -->
         </div>
         <div id="main">
-            <div id="registration">
-                <div class="logo">
-                    <img src="rsc/img/full-logo.png" >
-                    <br>
-                    <span>February 8-9, 2019</span>
-                    <span class="notice">Registration opens 01/25/2019 5:00:00PM EST</span>
-                </div>
+            <div id="main-graphic">
+                <img src="rsc/img/home-page.svg" width="100%">
+            </div>
+            <div class="logo">
+                <img src="rsc/img/white-tartanhacks.svg">
+            </div>
+            <div class="additional-info">
+                <span># Feb. 8-9, 2019<br></span>
+                <span># tartanhacks@<span class="displaynone">X</span>scottylabs.org</span>
+                <btn class="sponsorship-packet">Sponsorship Packet</btn>
             </div>
         </div>
         <div id="copyright">
-            Copyright Scottylabs 2019.
+            Copyright Scottylabs 2018.
         </div>
+        <script type="text/javascript">
+            var regs = document.getElementsByClassName("sponsorship-packet");
+            for (i = 0; i < regs.length; i++) {
+                regs[i].onclick = function () {
+                    window.open("./rsc/SponsorshipPacket2019.pdf");
+                };
+            }
+        </script>
     </body>
 </html>

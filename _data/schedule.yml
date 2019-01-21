@@ -3,6 +3,9 @@
     - name: Check-in for registered hackers
       time: 4:00 PM
       location: Connan
+    - name: Tech talk by Microsoft
+      time: 4:15 PM
+      location: McConomy
     - name: Check-in for waitlisted hackers
       time: 4:30 PM
       location: Connan
@@ -15,13 +18,9 @@
     - name: Hacking begins <br/> Sponsor expo opens <br/> Dinner
       time: 6:00 PM
       location: Rangos
-    - name: Microsoft Workshop&#58; How to Hack with AI
-      time: 7:00 PM
-      location: Danforth Conference Room
-
 - date: February&nbsp;10
   events:
-    - name: Midnight Snack with Bloomberg
+    - name: Midnight Snack
       time: 12:00 AM
       location: Rangos
     - name: Breakfast
@@ -30,24 +29,21 @@
     - name: Lunch
       time: 12:00 PM
       location: Rangos
-    - name: Hacking ends <br/> Sponsor expo ends
+    - name: Hacking ends <br/> Sponsor expo ends <br/> Dinner available
       time: 4:30 PM
       location: Rangos
     - name: Exhibition 1 Begins
       time: 5:15 PM
       location: Rangos
-    - name: Dinner available
-      time: 5:30 PM
-      location: Connan
     - name: Exhibition 1 Ends <br/> Exhibition 2 Setup
       time: 6:00 PM
-      location: Rangos
+      location: TBD
     - name: Exhibition 2 Starts
       time: 6:15 PM
       location: Rangos
     - name: Exhibition 2 Ends
       time: 7:00 PM
-      location: Rangos
+      location: TBD
     - name: Closing Ceremony
       time: 7:30 PM
       location: McConomy

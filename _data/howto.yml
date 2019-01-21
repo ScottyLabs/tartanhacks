@@ -5,22 +5,34 @@
 - title: How to Request a Mentor
   text: >
 
-      If you need help getting through a bug, send us a Slack message in the
-      mentor channel. To do this, first make sure you have joined the
-      TartanHacks 2019 Slack workspace and the mentor channel within the
-      workspace. Then, send us a message including your location and what
-      technologies your bug involves so that we can pair you with a suitable
-      mentor. We will try to send a mentor your way as soon as possible!
+      If you need help getting through a bug, you can fill out a form with your
+      location and some information about what you need help with, and we will
+      send a mentor your way. <a
+      href="https://tartanhacks.com/help">tartanhacks.com/help</a> will
+      redirect you to the correct form. Once you've filled out the form, you
+      can comment on the issue to update mentors with more information. If you
+      want to get back to your submission afterwards, you can look at the <a
+      href="https://github.com/scottylabs/hackerhelp/issues">help list</a></p><p>
+
+      Since this form is submitted via GitHub, someone on your team will need
+      to have a GitHub account to submit an issue. It is free to <a
+      href="https://github.com/join">create an account</a>. If you don't have
+      a GitHub account, you will probably want one in the near future, so we
+      hope this isn't prohibitive. If you are strongly against signing up, you
+      can contact tartanhacks@<span class="displaynone">X</span>scottylabs.org
+      for help, but we may not be able to resopnd as quickly.
 - title: How to Submit
   text: >
 
       We will be doing submissions via <a
       href="https://devpost.com">DevPost</a>. When we get closer to the
       deadline (4:30PM on Saturday), we will be accepting submissions on our <a
-      href="https://tartanhacks2019.devpost.com/">DevPost Hackathon
+      href="https://tartanhacks2017.devpost.com/">DevPost Hackathon
       Page</a>.</p><p>
 
       DevPost also requires an account, so make sure you create one before
-      submission time! Only one person from your team needs an account in order
-      to submit. If more than one person has an account, you should only submit
-      once, then connect the other team member accounts to the one submission.
+      submission time! If you already have a GitHub account from sending mentor
+      requests, you can use that to sign in to DevPost. Only one person from
+      your team needs an account in order to submit. If more than one person
+      has an account, you should only submit once, then connect the other team
+      member accounts to the one submission.

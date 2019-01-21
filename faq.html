@@ -1,5 +1,5 @@
 ---
-title: TartanHacks 2019
+title: TartanHacks 2018
 layout: null
 ---
 <!DOCTYPE html>
@@ -9,12 +9,11 @@ layout: null
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="mobile-web-app-capable" content="yes"/>
 
-        <title>TartanHacks 2019</title>
+        <title>TartanHacks 2018</title>
         <link rel="icon" href="rsc/img/favicon.ico">
         <link type="text/css" rel="stylesheet" href="fonts/fonts.css" media="screen"/>
         <link type="text/css" rel="stylesheet" href="css/style.css" media="screen"/>
         <link type="text/css" rel="stylesheet" href="css/faq.css" media="screen"/>
-        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
         <link rel="canonical" href="https://tartanhacks.com/" />
         <meta name="description" content="Carnegie Mellon University's largest hackathon, hosted by ScottyLabs. Come hack, build, make or create your own project.">
         <meta name="keywords" content="CMU,hackathon,hack,ScottyLabs,technology,Carnegie Mellon">
@@ -22,7 +21,7 @@ layout: null
         <!-- Facebook Open Graph - Tells Facebook what to show when our webpage is shared. -->
         <meta property="og:url" content="https://tartanhacks.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="TartanHacks 2019" />
+        <meta property="og:title" content="TartanHacks 2018" />
         <meta property="og:description" content="Carnegie Mellon University's largest hackathon, hosted by ScottyLabs. Come hack, build, make or create your own project." />
         <meta property="og:image" content="https://tartanhacks.com/rsc/img/TartanhacksEventSquare.png" />
 
@@ -44,8 +43,8 @@ layout: null
                 "image": "https://tartanhacks.com/rsc/img/TartanhacksEventSquare.png",
                 "name": "TartanHacks",
                 "alternateName": "Tartan Hacks",
-                "startDate": "2019-02-08T17:00:00-05:00",
-                "endDate": "2019-02-09T20:00:00-05:00",
+                "startDate": "2018-02-09T17:00:00-05:00",
+                "endDate": "2018-02-10T20:00:00-05:00",
                 "organizer": {
                     "@type": "Organization",
                     "sameAs": "https://scottylabs.org"
@@ -54,12 +53,12 @@ layout: null
             }
         </script>
     </head>
-    <body class="light-teal clearfix">
-        <div class="navy-blue-text">
+    <body class="blue clearfix">
+        <div class="yellow-text">
             <div id="menu">
                 <div class="logo">
-                    <h2>TartanHacks</h2>
-                    <span>February 8-9, 2019</span>
+                    <img src="rsc/img/yellow-tartanhacks.svg">
+                    <span>February 9-10, 2018</span>
                 </div>
                 <span class="options">
                     <a href="/"> Home </a>
@@ -70,11 +69,12 @@ layout: null
                 <span class="options">
                     <a href="schedule.html"> schedule </a>
                 </span>
-                <!--
                 <span class="options">
-                    <a href="http://registration.tartanhacks.com"> register</a>
+                    <a href=href="rsc/2018TartanHacksOpening.pdf"> slides </a>
                 </span>
-                -->
+                <span class="options">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfuIyuk4NtoL0gsajwPzZ5wlXqHVfc9QUo1ou3jGfjWv26MHg/viewform"> Request A Mentor </a>
+                </span>
                 <span id="nav">
                     <div class="large">
                         <i class="fa fa-bars open-menu" aria-hidden="true"></i>
@@ -82,7 +82,7 @@ layout: null
                 </span>
             </div>
         </div>
-        <div class="navy-blue-text" id="sidebar">
+        <div class="blue-text" id="sidebar">
             <div id="menu">
                 <span class="options">
                     <a href="/"> Home </a>
@@ -96,26 +96,34 @@ layout: null
                     <a href="schedule.html"> schedule </a>
                 </span>
                 <space><br/></space>
-                <!--
                 <span class="options">
-                    <a href="http://registration.tartanhacks.com"> register </a>
+                    <a href="schedule.html"> schedule </a>
                 </span>
                 <space><br/></space>
-                -->
+                <span class="options">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfuIyuk4NtoL0gsajwPzZ5wlXqHVfc9QUo1ou3jGfjWv26MHg/viewform"> Request A Mentor </a>
+                </span>
+                <space><br/></space>
                 <span class="options close-menu">
                     close menu
                 </span>
             </div>
         </div>
-        <div id="faq" class="navy-blue-text clearfix">
+        <div id="faq" class="clearfix">
+            <div id="left-graphic">
+                <img src="rsc/img/faq-page-left-side.svg" width="100%">
+            </div>
             <div id="faq-text">
                 {% for faq in site.data.faq %}
                     <h2>{{ faq.question}}</h2>
                     <p>{{ faq.answer }}</p>
                 {% endfor %}
             </div>
+            <div id="right-graphic">
+                <img src="rsc/img/faq-page-right-side.svg" width="100%">
+            </div>
             <div class="relative" id="copyright">
-                Copyright Scottylabs 2019.
+                Copyright Scottylabs 2018.
             </div>
         </div>
         <script src="https://use.fontawesome.com/9c8a25da89.js"></script>
