@@ -1,34 +1,26 @@
 #main {
     width: 100%;
+    margin-bottom: 2em;
     overflow: auto;
 }
 
-#main .logo > *::after {
+#registration .logo > *::after {
     content: "\a";
     white-space: pre;
 }
 
-#main-graphic {
-    float: left;
-    position: relative;
-    display: inline-block;
-    overflow:hidden;
-    left: -10vh;
-}
-
-#main-graphic img {
-    position: relative;
-    float: left;
-    width: 40vw;
-    max-height: 75vh;
-}
-
-
 #registration .logo {
-    position: relative;
-    padding-left: 50px;
-    font-size: 24pt;
-    margin-top: 17vh;
+    width: 100%;
+    overflow: auto;
+    font-size: 26pt;
+    margin: 0 auto 0;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#registration .logo > img{
+    height: 50vh;
+    width: auto;
 }
 
 @media (max-width: 1160px) {
