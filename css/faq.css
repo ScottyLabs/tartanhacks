@@ -3,28 +3,19 @@
     float: left;
 }
 
-#left-graphic {
-    position: relative;
-    float: left;
-    width: 20vw;
-    margin-right: 5vw;
-    height: 80vh;
-    overflow: hidden;
-}
-
-#right-graphic {
-    position: relative;
-    float: right;
-    width: 20vw;
-    margin-left: 5vw;
-    height: 80vh;
-}
-
 #faq-text {
+    font-family: 'Quicksand';
     position: relative;
-    float: left;
-    max-width: 48vw;
+    max-width: 75vw;
     margin-bottom: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14pt;
+}
+
+#faq-text > h2 {
+    font-family: 'Ostrich Sans';
+    font-size: 18pt;
 }
 
 #faq {

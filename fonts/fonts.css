@@ -1,14 +1,14 @@
 @font-face {
-  font-family: 'Styrene A Web';
-  src: url('StyreneA-Regular-Web.woff') format('woff');
+  font-family: 'Ostrich Sans';
+  src: url('OstrichSans-Medium.otf') format('otf');
   font-weight:  400;
   font-style:   normal;
   font-stretch: normal;
 }
 
 @font-face {
-  font-family: 'Styrene A Web';
-  src: url('StyreneA-Medium-Web.woff') format('woff');
+  font-family: 'Ostrich Sans';
+  src: url('OstrichSans-Heavy.otf') format('otf');
   font-weight:  500;
   font-style:   normal;
   font-stretch: normal;

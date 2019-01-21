@@ -18,9 +18,9 @@
     href="https://scottylabs.org/crashcourse">Crash Course</a> the weekends leading up to TartanHacks
     to help you brush up your skills.
 
-- question: Is TartanHacks open to freshman?
+- question: Is TartanHacks open to freshmen?
   answer: >
-    Yes! We welcome students of all skill levels to participate.  Freshman and
+    Yes! We welcome students of all skill levels to participate.  Freshmen and
     other first-time hackers have always been part of TartanHacks; we would
     love to see you at the event!
 
@@ -49,21 +49,21 @@
     our waiting list, allowing them to participate if accepted hackers do not
     show up.
 
-- question: Is there a way to get off of the waitlist?
-  answer: >
-    We will be letting hackers off the waitlist on a first-come, first-served
-    basis on the day of the event.  Historically, many people have gotten off
-    the waitlist.
-
 - question: I got in, but a few of my team members were put on the waitlist. Will they be able to participate?
   answer: >
     Hackers are accepted individually, so we are unable to guarantee that all
     members of your team will get in. However, if they're on the waitlist,
     there's still hope! See the next question.
 
+- question: Is there a way to get off of the waitlist?
+  answer: >
+    We will be letting hackers off the waitlist on a first-come, first-served
+    basis on the day of the event.  Historically, many people have gotten off
+    the waitlist.
+
 - question: How much does it cost to participate in TartanHacks?
   answer: >
-    Nothing. TartanHacks is free for all current CMU students!
+    Nothing. TartanHacks is free for all undergraduate students!
 
 - question: I'm a graduate student, can I still participate?
   answer: >
@@ -88,6 +88,3 @@
     technologies. They'll be able to answer your questions, help you debug, and
     help you along with anything you might not be confident with. They can't
     make your project for you, but they are always there to help!
-
-#     To enter a mentor request, fill out the <a href="https://tartanhacks.com/help">form</a>.
-

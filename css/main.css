@@ -1,53 +1,26 @@
 #main {
     width: 100%;
+    margin-bottom: 2em;
     overflow: auto;
 }
 
-#main .logo > *::after {
+#registration .logo > *::after {
     content: "\a";
     white-space: pre;
 }
 
-#main-graphic {
-    float: left;
-    position: relative;
-    display: inline-block;
-    overflow:hidden;
-    left: -10vh;
+#registration .logo {
+    width: 100%;
+    overflow: auto;
+    font-size: 26pt;
+    margin: 0 auto 0;
+    text-align: center;
+    line-height: 1.5;
 }
 
-#main-graphic img {
-    position: relative;
-    float: left;
-    width: 40vw;
-    max-height: 75vh;
-}
-
-
-#main .logo {
-    position: relative;
-    padding-left: 30px;
-    font-size: 24pt;
-    margin-top: 12vh;
-    margin-bottom:2vh;
-}
-
-#main .additional-info {
-    position: relative;
-    float: left;
-    padding-left: 30px;
-    font-size: 18pt;
-}
-
-small {
-    display: inherit;
-    height: auto;
+#registration .logo > img{
+    height: 50vh;
     width: auto;
-    font-size: 1pt;
-}
-
-small br {
-    font-size: 1pt;
 }
 
 @media (max-width: 1160px) {
@@ -59,7 +32,7 @@ small br {
         display: none;
     }
 
-    #main {
+    #registration {
         width: 100%;
         left: 0px;
         text-align: center;
@@ -67,28 +40,69 @@ small br {
     }
 
 
-    #main .logo {
+    #registration .logo {
         display: inline-block;
         padding-left: 0;
         float: none;
-        margin: 10vh auto 2vh;
-    }
-    
-    #main .additional-info {
-        display:block;
-        padding-left: 0;
-        float: none;
-        margin: 0 auto 0;
+        margin: 10vh auto 0;
     }
 
 }
 
-@media (max-width: 750px) {    
-    #main btn {
-        display:none;
+
+
+@media (max-width: 750px) {
+
+    /*
+     * When the viewport is extremely narrow, we remove the main text and leave only the menu and the registration button.
+     */
+
+    #main {
+        display: none;
     }
-    
-    #main .additional-info {
-        font-size: 14pt;
+
+    #menu .options::after {
+        content: "\a";
+        white-space: pre;
+    }
+
+    #menu .options.underline {
+        display: none;
+    }
+
+    #menu {
+        text-align: center;
+        padding-top: 20vh;
+        height: auto;
+    }
+
+    #menu .logo {
+        float: none;
+        margin-right: 0;
+    }
+
+    #menu .options {
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        padding-top: 0em;
+        margin-right: 0em;
+        padding-bottom: 0em;
+        float: none;
+    }
+
+    small {
+        display: inherit;
+        height: auto;
+        width: auto;
+        font-size: 15pt;
+    }
+
+    small br {
+        font-size: 8px;
+    }
+
+    .big {
+        display: none;
     }
 }

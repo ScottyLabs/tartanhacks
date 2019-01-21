@@ -1,39 +1,39 @@
 /* style.css
  *
- * Theme colors and generally useful classes for the TartanHacks 2018 website.
+ * Theme colors and generally useful classes for the TartanHacks 2019 website.
  *
  * Scott Krulcik
  * Modified by Shalom Yiblet, Stephanie You
- * (c) 2018 ScottyLabs
+ * (c) 2019 ScottyLabs
  */
 
 /* TartanHacks theme colors. */
 
-.blue {
-    background-color: rgb(67, 97, 153);
+.navy-blue {
+    background-color: rgb(66, 73, 94);
 }
 
-.blue-text {
-    --text: rgb(67, 97, 153);
-    color: rgb(67, 97, 153);
+.navy-blue-text {
+    --text: rgb(66, 73, 94);
+    color: rgb(66, 73, 94);
 }
 
-.yellow {
-    background-color: rgb(241, 204, 107);
+.lavender-text {
+    --text: rgb(228, 208, 227);
+    color: rgb(228, 208, 227);
 }
 
-.yellow-text {
-    --text:  rgb(241, 204, 107);
-    color: rgb(241, 204, 107);
+.lavender {
+    background-color: rgb(228, 208, 227);
 }
 
-.red {
-    background-color: rgb(232, 83, 74);
+.light-teal {
+    background-color: rgb(119, 172, 175);
 }
 
-.red-text {
-    --text:  rgb(232, 83, 74);
-    color: rgb(232, 83, 74);
+.light-teal-text {
+    --text: rgb(119, 172, 175);
+    color: rgb(119, 172, 175);
 }
 
 .white {
@@ -45,33 +45,6 @@
     color: rgb(255, 255,255);
 }
 
-.orange {
-    background-color: rgb(247, 149, 72);
-}
-
-.orange-text {
-    --text:  rgb(247, 149, 72);
-    color: rgb(247, 149, 72);
-}
-
-.sky-blue {
-    background-color: rgb(181, 213, 229);
-}
-
-.sky-blue-text {
-    --text:  rgb(181, 213, 229);
-    color: rgb(181, 213, 229);
-}
-
-.navy-blue {
-    background-color: rgb(37, 64, 143);
-}
-
-.navy-blue-text {
-    --text:  rgb(37, 64, 143);
-    color: rgb(37, 64, 143);
-}
-
 .flex {
     display: flex;
     flex-flow: row wrap;
@@ -79,27 +52,22 @@
 
 
 .time {
-    margin-right: 0.7em;
+    margin-right: 0.65em;
     min-width: 4.5em;
     text-transform: uppercase;
 }
 
 .schedule {
-    font-size: 16pt;
+    font-size: 14pt;
 }
 
 .day {
-    font-size: 20pt;
+    font-size: 28pt;
     margin: 1em 0em;
-    margin-left: 4.5em;
+    margin-left: 4.1em;
     display: inline-block;
+    font-family: 'Ostrich Sans';
 }
-
-/* btn > a { */
-/*     color: inherit; */
-/*     font-weight: inherit; */
-/*     text-decoration: none; */
-/* } */
 
 a {
     color: inherit;
@@ -110,7 +78,7 @@ a {
 body {
     /* Stack-overflow method of choosing a code font */
     /* TODO remove monospace fonts from the sans-serif */
-    font-family: Styrene A Web, Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font-family: Ostrich Sans, Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     color: white;
     background-color: #000000;
     /* overflow: hidden; */
@@ -122,31 +90,76 @@ body {
     top: 0;
 }
 
-.logo, .additional-info {
+.logo {
     display: inline-block;
     float: left;
-    width: 80vh;
-    word-wrap: break-word;
+    font-size: 14pt;
+}
+
+.logo > h2 {
+    margin: 0 0 0 0;
+    font-size: 18pt;
 }
 
 #menu {
     margin: 4vh 4vh 2vh;
     position: relative;
     display: block;
-    font-size: 16pt;
+    font-size: 20pt;
     overflow: hidden;
     height: 10vh;
     width: calc(100% - 8vh);
     min-height: 72px;
 }
 
+#menu a {
+    color: var(--text);
+    font-weight: inherit;
+    text-decoration: none;
+}
+
+#menu .logo {
+    margin-right: 1.7em;
+    float:left;
+}
+
+#menu .options {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.4em;
+    margin-right: 0.9em;
+    padding-bottom: 0.1em;
+    text-transform: uppercase;
+    float: left;
+}
+
+#menu #nav {
+    position: relative;
+    display: none;
+    height: 1.5em;
+    padding-top: 0.4em;
+    margin-right: 0.9em;
+    padding-bottom: 0.4em;
+    text-transform: uppercase;
+    float: left;
+}
+
+
+#menu .options:last-child {
+    margin-right: 0em;
+}
+
+#menu .options.underline {
+    border-bottom: 3px solid var(--text);
+}
+
 btn {
     display: inline-block;
     background-color: white;
     font-size: 18pt;
-    color: rgb(232, 83, 74);
+    color: rgb(119, 172, 175);
     padding: 0.4em 1em 0.4em;
-    margin: 0.5em 0em;
+    margin: 1em 0em;
     cursor: pointer;
 }
 
@@ -160,10 +173,10 @@ small {
     margin: auto;
     text-align: center;
     font-size: 14pt;
-    position: absolute;
     padding-bottom: 1.7em;
     bottom: 0px;
 }
+
 
 /* ::-webkit-scrollbar { */
 /*     width: 0px;  /1* remove scrollbar space *1/ */
@@ -178,9 +191,6 @@ small {
     overflow: auto;
 }
 
-.displaynone {
-    display: none;
-}
 
 @media (max-width: 750px) {
 
