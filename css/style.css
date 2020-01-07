@@ -9,6 +9,29 @@
 
 /* TartanHacks theme colors. */
 
+.bg-color {
+
+}
+
+.home-text-color {
+    --text: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.text-color {
+    --text: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.bg-color {
+    background-color: #D91819;
+}
+
+.dark-red-text {
+    --text: #6c0000;
+    color: #6c0000;
+}
+
 .navy-blue {
     background-color: rgb(66, 73, 94);
 }

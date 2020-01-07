@@ -10,7 +10,7 @@ layout: null
         <meta name="mobile-web-app-capable" content="yes"/>
 
         <title>TartanHacks 2019</title>
-        <link rel="icon" href="rsc/img/favicon.ico">
+        <link rel="icon" href="rsc/img/favicon.png">
         <link type="text/css" rel="stylesheet" href="fonts/fonts.css" media="screen"/>
         <link type="text/css" rel="stylesheet" href="css/style.css" media="screen"/>
         <link type="text/css" rel="stylesheet" href="css/faq.css" media="screen"/>
@@ -54,12 +54,12 @@ layout: null
             }
         </script>
     </head>
-    <body class="light-teal clearfix">
-        <div class="navy-blue-text">
+    <body class="bg-color clearfix">
+        <div class="home-text-color">
             <div id="menu">
                 <div class="logo">
                     <h2>TartanHacks</h2>
-                    <span>February 8-9, 2019</span>
+                    <span>February 14-15, 2020</span>
                 </div>
                 <span class="options">
                     <a href="/"> Home </a>
@@ -70,11 +70,9 @@ layout: null
                 <span class="options">
                     <a href="schedule.html"> schedule </a>
                 </span>
+                <small><br></small>
                 <span class="options">
-                    <a href="https://tartanhacks2019.devpost.com/submissions"> projects </a>
-                </span>
-                <span class="options">
-                    <a href="closing-ceremony.pdf"> closing ceremony slides </a>
+                    <a href="https://registration.tartanhacks.com"> register </a>
                 </span>
                 <span id="nav">
                     <div class="large">
@@ -83,7 +81,7 @@ layout: null
                 </span>
             </div>
         </div>
-        <div class="navy-blue-text" id="sidebar">
+        <div class="home-text-color" id="sidebar">
             <div id="menu">
                 <span class="options">
                     <a href="/"> Home </a>
@@ -96,13 +94,9 @@ layout: null
                 <span class="options">
                     <a href="schedule.html"> schedule </a>
                 </span>
-                <space><br/></space>
+                <space><br /></space>
                 <span class="options">
-                    <a href="https://tartanhacks2019.devpost.com/submissions"> projects </a>
-                </span>
-                <space><br/></space>
-                <span class="options">
-                    <a href="closing-ceremony.pdf"> closing ceremony slides </a>
+                    <a href="https://registration.tartanhacks.com"> register </a>
                 </span>
                 <space><br/></space>
                 <span class="options close-menu">
@@ -110,7 +104,7 @@ layout: null
                 </span>
             </div>
         </div>
-        <div id="faq" class="navy-blue-text clearfix">
+        <div id="faq" class="text-color clearfix">
             <div id="faq-text">
                 {% for faq in site.data.faq %}
                     <h2>{{ faq.question}}</h2>

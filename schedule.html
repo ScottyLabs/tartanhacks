@@ -10,7 +10,7 @@ layout: null
         <meta name="mobile-web-app-capable" content="yes"/>
 
         <title>TartanHacks 2019</title>
-        <link rel="icon" href="rsc/img/favicon.ico">
+        <link rel="icon" href="rsc/img/favicon.png">
         <link type="text/css" rel="stylesheet" href="fonts/fonts.css" media="screen"/>
         <link type="text/css" rel="stylesheet" href="css/style.css" media="screen"/>
         <link type="text/css" rel="stylesheet" href="css/faq.css" media="screen"/>
@@ -54,12 +54,12 @@ layout: null
             }
         </script>
     </head>
-    <body class="light-teal clearfix">
-        <div class="navy-blue-text">
+    <body class="bg-color clearfix">
+        <div class="home-text-color">
             <div id="menu" class="topbar">
                 <div class="logo">
                     <h2>TartanHacks</h2>
-                    <span>February 8-9, 2019</span>
+                    <span>February 14-15, 2020</span>
                 </div>
                 <span class="options">
                     <a href="/"> Home </a>
@@ -71,14 +71,11 @@ layout: null
                     Schedule
                 </span>
                 <span class="options">
-                    <a href="https://tartanhacks2019.devpost.com/submissions"> projects </a>
-                </span>
-                <span class="options">
-                    <a href="/closing-ceremony.pdf"> closing ceremony slides </a>
+                    <a href="https://registration.tartanhacks.com"> register </a>
                 </span>
             </div>
         </div>
-        <div class="navy-blue-text" id="sidebar">
+        <div class="home-text-color" id="sidebar">
             <div id="menu">
                 <span class="options">
                     <a href="/"> Home </a>
@@ -93,11 +90,7 @@ layout: null
                 </span>
                 <space><br/></space>
                 <span class="options">
-                    <a href="https://tartanhacks2019.devpost.com/submissions"> projects </a>
-                </span>
-                <space><br/></space>
-                <span class="options">
-                    <a href="/closing-ceremony.pdf"> closing ceremony slides </a>
+                    <a href="https://registration.tartanhacks.com"> register </a>
                 </span>
                 <space><br/></space>
                 <span class="options close-menu">
@@ -106,7 +99,7 @@ layout: null
             </div>
         </div>
         <div id="faq" class="clearfix">
-            <div class="navy-blue-text" id="faq-text">
+            <div class="text-color" id="faq-text">
                 {% for date in site.data.schedule %}
                     <h2 class="day">{{date.date}}</h2>
                     {% for event in date.events %}
@@ -121,7 +114,7 @@ layout: null
                     {% endfor %}
                 {% endfor %}
             </div>
-            <div id="copyright" class="relative navy-blue-text" >
+            <div id="copyright" class="relative text-color" >
                 Copyright Scottylabs 2019.
             </div>
         </div>
