@@ -1,16 +1,16 @@
 /* style.css
  *
- * Theme colors and generally useful classes for the TartanHacks 2019 website.
+ * Theme colors and generally useful classes for the TartanHacks 2020 website.
  *
  * Scott Krulcik
  * Modified by Shalom Yiblet, Stephanie You
- * (c) 2019 ScottyLabs
+ * (c) 2020 ScottyLabs
  */
 
 /* TartanHacks theme colors. */
 
 .bg-color {
-
+    background-color: #D91819;
 }
 
 .home-text-color {
@@ -21,51 +21,6 @@
 .text-color {
     --text: #FFFFFF;
     color: #FFFFFF;
-}
-
-.bg-color {
-    background-color: #D91819;
-}
-
-.dark-red-text {
-    --text: #6c0000;
-    color: #6c0000;
-}
-
-.navy-blue {
-    background-color: rgb(66, 73, 94);
-}
-
-.navy-blue-text {
-    --text: rgb(66, 73, 94);
-    color: rgb(66, 73, 94);
-}
-
-.lavender-text {
-    --text: rgb(228, 208, 227);
-    color: rgb(228, 208, 227);
-}
-
-.lavender {
-    background-color: rgb(228, 208, 227);
-}
-
-.light-teal {
-    background-color: rgb(119, 172, 175);
-}
-
-.light-teal-text {
-    --text: rgb(119, 172, 175);
-    color: rgb(119, 172, 175);
-}
-
-.white {
-    background-color: rgb(255, 255,255);
-}
-
-.white-text {
-    --text:  rgb(255, 255,255);
-    color: rgb(255, 255,255);
 }
 
 .flex {
