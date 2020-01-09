@@ -71,23 +71,27 @@ body {
 .logo {
     display: inline-block;
     float: left;
-    font-size: 14pt;
+    font-size: 10pt;
+    font-family: 'Syncopate';
+    text-transform: uppercase;
 }
 
 .logo > h2 {
     margin: 0 0 0 0;
-    font-size: 18pt;
+    font-size: 20pt;
 }
 
 #menu {
     margin: 4vh 4vh 2vh;
     position: relative;
     display: block;
-    font-size: 20pt;
+    font-size: 14pt;
     overflow: hidden;
     height: 10vh;
     width: calc(100% - 8vh);
     min-height: 72px;
+    font-family: 'Syncopate';
+    text-transform: uppercase;
 }
 
 #menu a {
@@ -98,6 +102,7 @@ body {
 
 #menu .logo {
     margin-right: 1.7em;
+    margin-bottom: 1em;
     float:left;
 }
 

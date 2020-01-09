@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Syncopate:700&display=swap");
+
 @font-face {
   font-family: 'Ostrich Sans';
   src: url('OstrichSans-Medium.woff') format('woff');
@@ -13,3 +15,5 @@
   font-style:   normal;
   font-stretch: normal;
 }
+
+
