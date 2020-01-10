@@ -22,8 +22,8 @@
     width: auto;
 }
 
-#main #registration .logo img#mobile {
-    display:none
+#mobile {
+    display: none
 }
 
 @media (max-width: 1160px) {
@@ -58,12 +58,12 @@
      */
 
     
-    #main #registration .logo img#desktop {
-        display:none;
+    #desktop {
+        display: none;
     }
 
     #date {
-        visibility:hidden;
+        visibility: hidden;
     }
 
     #menu .options::after {
@@ -71,7 +71,7 @@
         white-space: pre;
     }
 
-    #main #registration .logo img#mobile {
+    #mobile {
         position: absolute;
         display: inline-block;
         width: 23%;
