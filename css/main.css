@@ -22,7 +22,7 @@
     width: auto;
 }
 
-#main #registration .logo img#cool2 {
+#main #registration .logo img#mobile {
     display:none
 }
 
@@ -31,25 +31,6 @@
     /* This media breakpoint is made because at 1160px without any interference the registration text will wrap under the big graphic we have on the left half, forcing the user to scroll to see the
      * main text. To prevent this we turn off the main graphic, and center the registration text on the webpage.
      */
-    /*#main-graphic img {
-        display: inline-block;
-    }*/
-
-    /*#main #registration .logo img#cool2 {
-        /*position:absolute;*/
-        /*display: inline-block;
-        width: 100%;
-        height: auto;
-        top:10px;
-
-    }*/
-
-    /*img#cool {
-        display: inline-block;
-        width: 50%;
-        height: auto;
-
-    }*/
 
     #registration {
         width: 100%;
@@ -76,14 +57,12 @@
      * When the viewport is extremely narrow, we remove the main text and leave only the menu and the registration button.
      */
 
-    /*#main {
-        display: none;
-    }*/
-    #main #registration .logo img#cool {
+    
+    #main #registration .logo img#desktop {
         display:none;
     }
 
-    #date2 {
+    #date {
         visibility:hidden;
     }
 
@@ -92,16 +71,14 @@
         white-space: pre;
     }
 
-    #main #registration .logo img#cool2 {
+    #main #registration .logo img#mobile {
         position:absolute;
         display: inline-block;
         width: 25%;
         padding-top: 0.25em;
         height: auto;
-        top:0em; /*1.5*/
-        left:6em; /*5.75*/
-        
-
+        top:0em;
+        left:6em;
     }
 
     
