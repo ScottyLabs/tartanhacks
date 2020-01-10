@@ -84,6 +84,21 @@
     }
 
     #menu .options {
+        /*position: absolute;*/
+        /*display: flex; /*inline-block*/
+        /*justify-content: center;*/
+        /*top: 40px;
+        padding-top: 0px;
+        margin-right: 30000em;
+        margin-left: 0em;*/
+        /*height: 100%;
+        padding-top: 0em;
+        margin-right: 0em;
+        margin-left: 0em;
+        padding-bottom: 0em;
+        float: none;
+        line-height: 1em;*/
+        font-size: 13px;
         position: relative;
         display: inline-block;
         height: 100%;
@@ -93,6 +108,11 @@
         padding-bottom: 0em;
         float: none;
         line-height: 1em;
+        justify-content: space-between
+    }
+
+    span.options {
+        padding-left: 5px;
     }
 
     .flex * {
@@ -115,7 +135,7 @@
     space {
         display: block;
         font-size: 0.56em;
-        margin: 0.15em 0;
+        margin: 0.15em 0; /*0.15em 0*/
     }
 
     #sidebar #menu {
