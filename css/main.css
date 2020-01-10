@@ -72,13 +72,13 @@
     }
 
     #main #registration .logo img#mobile {
-        position:absolute;
+        position: absolute;
         display: inline-block;
-        width: 25%;
-        padding-top: 0.25em;
+        width: 23%;
+        padding-top: 0.75em;
         height: auto;
-        top:0em;
-        left:6em;
+        top: 0em;
+        left: 6.2em;
     }
 
     
