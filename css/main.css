@@ -71,7 +71,7 @@
         white-space: pre;
     }
 
-    #mobile {
+    #main #registration .logo img#mobile {
         position: absolute;
         display: inline-block;
         width: 23%;
