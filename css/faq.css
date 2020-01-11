@@ -84,7 +84,6 @@
     }
 
     #menu .options {
-        font-size: 13px;
         position: relative;
         display: inline-block;
         height: 100%;
@@ -94,11 +93,6 @@
         padding-bottom: 0em;
         float: none;
         line-height: 1em;
-        justify-content: space-between
-    }
-
-    span.options {
-        padding-left: 5px;
     }
 
     .flex * {

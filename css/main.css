@@ -22,15 +22,14 @@
     width: auto;
 }
 
-#mobile {
-    display: none
-}
-
 @media (max-width: 1160px) {
 
     /* This media breakpoint is made because at 1160px without any interference the registration text will wrap under the big graphic we have on the left half, forcing the user to scroll to see the
      * main text. To prevent this we turn off the main graphic, and center the registration text on the webpage.
      */
+    #main-graphic img {
+        display: none;
+    }
 
     #registration {
         width: 100%;
@@ -57,31 +56,14 @@
      * When the viewport is extremely narrow, we remove the main text and leave only the menu and the registration button.
      */
 
-    
-    #desktop {
+    #main {
         display: none;
-    }
-
-    #date {
-        visibility: hidden;
     }
 
     #menu .options::after {
         content: "\a";
         white-space: pre;
     }
-
-    #mobile {
-        position: absolute;
-        display: inline-block;
-        width: 23%;
-        padding-top: 0.75em;
-        height: auto;
-        top: 0em;
-        left: 6.2em;
-    }
-
-    
 
     #menu .options.underline {
         display: none;
