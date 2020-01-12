@@ -22,7 +22,7 @@
     width: auto;
 }
 
-#mobile {
+.logo #mobile {
     display: none
 }
 
@@ -71,7 +71,7 @@
         white-space: pre;
     }
 
-    #mobile {
+    .logo img#mobile {
         position: absolute;
         display: inline-block;
         width: 23%;
