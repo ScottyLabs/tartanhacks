@@ -1,0 +1,42 @@
+
+#sponsors-box {
+    background-color: #FFFFFF;
+    font-family: 'Quicksand';
+    position: relative;
+    max-width: 75vw;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14pt;
+    padding-bottom: 10vh;
+    margin-top: -10px;
+}
+
+#sponsors {
+    height: 85vh;
+    position: relative;
+    
+}
+
+@media (max-width: 1024px) {
+    #sponsors-box {
+        max-width: 68vw;
+    }
+
+}
+
+@media (max-width: 850px) {
+    #sponsors-box {
+        padding-left: 8vw;
+        padding-right: 8vw;
+        max-width: initial;
+    }
+}
+
+.company-logo {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 300px;
+}
