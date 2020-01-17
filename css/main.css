@@ -69,14 +69,15 @@
         white-space: pre;
     }
 
+    
     .logo img#mobile {
-        position: absolute;
-        display: inline-block;
-        width: 23%;
-        padding-top: 0.75em;
-        height: auto;
-        top: 0em;
-        left: 6.2em;
+        position: relative;
+        width: 30%;
+        height:auto;
+        display:block;
+        margin:0 auto;
+        margin-bottom: 30px;
+        
     }
 
     #menu .options.underline {
@@ -85,7 +86,7 @@
 
     #menu {
         text-align: center;
-        padding-top: 20vh;
+        padding-top: 5vh;
         height: auto;
     }
 
