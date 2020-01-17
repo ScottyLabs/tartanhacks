@@ -50,14 +50,12 @@
 }
 
 
-/*comment*/
 @media (max-width: 750px) {
 
     /*
      * When the viewport is extremely narrow, we remove the main text and leave only the menu and the registration button.
      */
 
-    
     #desktop {
         display: none;
     }
@@ -81,10 +79,6 @@
         margin-bottom: 30px;
         
     }
-
-
-
-    
 
     #menu .options.underline {
         display: none;
