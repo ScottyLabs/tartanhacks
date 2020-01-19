@@ -9,8 +9,11 @@
 
 /* TartanHacks theme colors. */
 
+
 .bg-color {
-    background-color: #D91819;
+    background-color: black;
+    background-image: url("../rsc/img/backgroundDesign.png");
+    background-size: cover;
 }
 
 .home-text-color {
