@@ -118,6 +118,10 @@ body {
     float: left;
 }
 
+#menu .options :hover {
+    color:#6A0205;
+}
+
 #menu #nav {
     position: relative;
     display: none;
