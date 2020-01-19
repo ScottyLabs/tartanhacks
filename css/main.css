@@ -26,28 +26,21 @@
     display: none
 }
 
-@media (max-width: 1160px) {
+#registration .button {
+    background-color: #6A0205;
+    border: none;
+    color: white;
+    padding: 12px 22px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    margin: 20px 50px;
+  }
 
-    /* This media breakpoint is made because at 1160px without any interference the registration text will wrap under the big graphic we have on the left half, forcing the user to scroll to see the
-     * main text. To prevent this we turn off the main graphic, and center the registration text on the webpage.
-     */
-
-    #registration {
-        width: 100%;
-        left: 0px;
-        text-align: center;
-        margin: 2em auto 0;
-    }
-
-
-    #registration .logo {
-        display: inline-block;
-        padding-left: 0;
-        float: none;
-        margin: 10vh auto 0;
-    }
-
-}
+  #registration .button:hover {
+    background-color: white;
+    color: #6A0205;
+  }
 
 
 
@@ -59,6 +52,10 @@
 
     
     #desktop {
+        display: none;
+    }
+
+    #registration .button {
         display: none;
     }
 
@@ -81,10 +78,20 @@
         left: 6.2em;
     }
 
-    
 
     #menu .options.underline {
         display: none;
+    }
+
+    #menu .options-register {
+        background-color: #6A0205;
+        border: none;
+        color: white;
+        padding: 12px 22px;
+        text-align: center;
+        display: inline-block;
+        font-size: 20px;
+        margin: 20px 50px;
     }
 
     #menu {
@@ -107,7 +114,7 @@
         padding-bottom: 0em;
         float: none;
     }
-
+    
     small {
         display: inherit;
         height: auto;
@@ -122,4 +129,6 @@
     .big {
         display: none;
     }
+    
+
 }
