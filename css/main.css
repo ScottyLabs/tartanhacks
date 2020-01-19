@@ -47,6 +47,8 @@
         margin: 10vh auto 0;
     }
 
+    
+
 }
 
 
@@ -54,7 +56,7 @@
 
     /*
      * When the viewport is extremely narrow, we remove the main text and leave only the menu and the registration button.
-     */
+     */    
 
     #desktop {
         display: none;
