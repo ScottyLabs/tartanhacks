@@ -35,19 +35,19 @@
     display: inline-block;
     font-size: 20px;
     margin: 20px 50px;
-  }
+ }
 
-  #registration .button:hover {
-    background-color: white;
-    color: #6A0205;
-  }
+#registration .button:hover {
+  background-color: white;
+  color: #6A0205;
+}
 
 
 @media (max-width: 750px) {
 
     /*
      * When the viewport is extremely narrow, we remove the main text and leave only the menu and the registration button.
-     */
+     */    
 
     #desktop {
         display: none;
