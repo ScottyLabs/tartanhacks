@@ -27,7 +27,7 @@
 }
 
 #registration .button {
-    background-color: #6A0205;
+    background-color: #EA2B40;
     border: none;
     color: white;
     padding: 12px 22px;
@@ -35,11 +35,11 @@
     display: inline-block;
     font-size: 20px;
     margin: 20px 50px;
- }
+  }
 
 #registration .button:hover {
-  background-color: white;
-  color: #6A0205;
+    background-color: white;
+    color: #EA2B40;
 }
 
 
@@ -82,7 +82,7 @@
     }
 
     #menu .options-register {
-        background-color: #6A0205;
+        background-color: #EA2B40;
         border: none;
         color: white;
         padding: 12px 22px;
