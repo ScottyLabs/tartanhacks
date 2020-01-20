@@ -9,8 +9,11 @@
 
 /* TartanHacks theme colors. */
 
+
 .bg-color {
-    background-color: #D91819;
+    background-color: black;
+    background-image: url("../rsc/img/backgroundDesign.png");
+    background-size: cover;
 }
 
 .home-text-color {
@@ -116,7 +119,7 @@ body {
 }
 
 #menu .options :hover {
-    color:#6A0205;
+    color: #EA2B40;
 }
 
 #menu #nav {
