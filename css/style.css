@@ -26,6 +26,11 @@
     color: #FFFFFF;
 }
 
+.header-color {
+    --text: rgb(233, 102, 117);
+    color: rgb(233, 102, 117);
+}
+
 .flex {
     display: flex;
     flex-flow: row wrap;

@@ -107,7 +107,7 @@ layout: null
         <div id="faq" class="clearfix">
             <div class="text-color" id="faq-text">
                 {% for date in site.data.schedule %}
-                    <h2 class="day">{{date.date}}</h2>
+                    <h2 class="header-color day">{{date.date}}</h2>
                     {% for event in date.events %}
                         <div class="flex schedule">
                             <span class="time"><b>{{ event.time }}</b></span>
