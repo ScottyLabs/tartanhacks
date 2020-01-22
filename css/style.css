@@ -76,7 +76,7 @@ body {
 }
 
 .logo {
-    display: inline-block;
+    display: block;
     float: left;
     font-size: 10pt;
     font-family: 'Syncopate';
@@ -185,9 +185,13 @@ small {
     overflow: auto;
 }
 
+#header-logo {
+    display: block;
+    width: 260px;
+    float: left;
+}
 
 @media (max-width: 750px) {
-
     #copyright {
         display: none;
     }

@@ -17,13 +17,14 @@
     text-align: center;
 }
 
-#registration .logo > img{
+#registration .logo > img {
     height: 50vh;
     width: auto;
+    
 }
 
 .logo #mobile {
-    display: none
+    display: none;
 }
 
 #registration .button {
@@ -126,6 +127,13 @@
 
     .big {
         display: none;
+    }
+
+    #header-logo {
+        float: none;
+        margin: 0 auto;
+        text-align: center;
+        /* display: none; */
     }
     
 
