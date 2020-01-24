@@ -1,13 +1,11 @@
 
 #sponsors-box {
     background-color: #FFFFFF;
-    font-family: 'Quicksand';
     position: relative;
     max-width: 75vw;
     margin-bottom: 0;
     margin-left: auto;
-    margin-right: auto;
-    font-size: 14pt;
+    margin-right: auto; 
     padding-bottom: 10vh;
     margin-top: -10px;
 }
@@ -15,7 +13,6 @@
 #sponsors {
     height: 85vh;
     position: relative;
-    
 }
 
 @media (max-width: 1024px) {
@@ -35,8 +32,24 @@
 
 .company-logo {
     display: block;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
-    margin-top: 10px;
-    max-width: 300px;
+    margin-top: 30px;
+    max-width: 400px;
+}
+
+.diamond {
+    width: 60%;
+}
+
+.gold {
+    width: 50%;
+}
+
+.silver {
+    width: 40%
+}
+
+.bronze {
+    width: 30%;
 }
