@@ -4,24 +4,25 @@
 }
 
 #faq-text {
-    font-family: 'Quicksand';
+    font-family: 'Open Sans';
     position: relative;
     max-width: 75vw;
-    margin-bottom: 3vh;
+    margin-bottom: 10vh;
     margin-left: auto;
     margin-right: auto;
     font-size: 14pt;
 }
 
 #faq-text > h2 {
-    font-family: 'Ostrich Sans';
+    font-family: 'Open Sans';
+    font-weight: 700;
     font-size: 18pt;
 }
 
 #faq {
-    /* overflow-y: scroll; */
     height: 80vh;
-    padding-bottom: 5vh;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
     position: relative;
 }
 

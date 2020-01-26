@@ -1,21 +1,18 @@
 - date: February&nbsp;14
   events:
-    - name: Check-in for registered hackers
+    - name: Hacker Check-In
       time: 4:00 PM
-      location: Connan
-    - name: Check-in for waitlisted hackers
-      time: 4:30 PM
-      location: Connan
-    - name: Opening Ceremony
+      location: Connan Room
+    - name: Tech Talk with Emirates <br/> Opening Ceremony
       time: 5:00 PM
-      location: McConomy
+      location: McConomy Auditorium
     - name: Team Mixer
       time: 5:50 PM
-      location: Connan/McConomy
-    - name: Hacking begins <br/> Sponsor expo opens <br/> Dinner
+      location: McConomy Auditorium
+    - name: Hacking Begins <br/> Sponsor Expo Begins <br/> Dinner
       time: 6:00 PM
-      location: Rangos
-    - name: Microsoft Workshop&#58; How to Hack with AI
+      location: Rangos Ballroom
+    - name: Tech Talk with Microsoft
       time: 8:00 PM
       location: Danforth Conference Room
 
@@ -23,31 +20,31 @@
   events:
     - name: Midnight Snack with Bloomberg
       time: 12:00 AM
-      location: Rangos
+      location: Rangos Ballroom
     - name: Breakfast
       time: 9:00 AM
-      location: Rangos
+      location: Rangos Ballroom
     - name: Lunch
       time: 12:00 PM
       location: Rangos
-    - name: Hacking ends <br/> Sponsor expo ends
+    - name: Hacking Ends <br/> Sponsor Expo Ends
       time: 4:30 PM
-      location: Rangos
-    - name: Exhibition 1 Begins
+      location: Rangos Ballroom
+    - name: Hacker Expo 1 Begins
       time: 5:15 PM
-      location: Rangos
-    - name: Dinner available
+      location: Rangos Ballroom
+    - name: Dinner
       time: 5:30 PM
-      location: Connan
-    - name: Exhibition 1 Ends <br/> Exhibition 2 Setup
+      location: Connan Room
+    - name: Hacker Expo 1 Ends <br/> Hacker Expo 2 Setup
       time: 6:00 PM
-      location: Rangos
+      location: Rangos Ballroom
     - name: Exhibition 2 Starts
       time: 6:15 PM
-      location: Rangos
+      location: Rangos Ballroom
     - name: Exhibition 2 Ends
       time: 7:00 PM
-      location: Rangos
+      location: Rangos Ballroom
     - name: Closing Ceremony
       time: 7:30 PM
-      location: McConomy
+      location: McConomy Auditorium
