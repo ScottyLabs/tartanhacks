@@ -1,22 +1,64 @@
-- diamond:
-  - emirates.png
+- tier: Diamond
+  class: diamond
+  sponsors:
+  - name: Emirates
+    image: emirates.png
+    url: https://www.emirates.com/us/english/
 
-- gold:
-  - microsoft.png
+- tier: Gold
+  class: gold
+  sponsors:
+  - name: Microsoft
+    image: microsoft.png
+    url: https://privacy.microsoft.com/en-us/privacystatement
 
-- silver:
-  - facebook.png
-  - bny_mellon.jpg
+- tier: Silver
+  class: silver
+  sponsors:
+  - name: Facebook
+    image: facebook.png
+    url: https://www.facebook.com/
+  - name: BNY Mellon
+    image: bny_mellon.jpg
+    url: https://www.bnymellon.com/
 
-- bronze:
-  - capital_one.png
-  - rockwell_automation.png
-  - dicks_sporting_goods.png
-  - panopto.jpg
-  - ness_digital_engineering.jpg
-  - nefeli_networks.png 
-  - bloomberg.png
-  - sketch.png
-  - wolfram.png
-  - mixmax.jpg
-  - string_and_loop.png
+- tier: Bronze
+  class: bronze
+  sponsors:
+  - name: Capital One
+    image: capital_one.png
+    url: https://campus.capitalone.com/
+  - name: Rockwell Automation
+    image: rockwell_automation.png
+    url: https://www.rockwellautomation.com/en_NA/overview.page
+  - name: DICK's Sporting Goods
+    image: dicks_sporting_goods.png
+    url: https://www.dickssportinggoods.com/
+  - name: Panopto
+    image: panopto.jpg
+    url: https://www.panopto.com/
+  - name: Ness Digital Engineering
+    image: ness_digital_engineering.jpg
+    url: https://www.ness.com/
+  - name: Nefeli Networks
+    image: nefeli_networks.png
+    url: https://www.nefeli.io/
+
+- tier: Partners
+  class: kind
+  sponsors:
+  - name: Bloomberg
+    image: bloomberg.png
+    url: https://www.bloomberg.com/
+  - name: String && Loop
+    image: string_and_loop.png
+    url: https://www.stringandloop.com/
+  - name: Sketch
+    image: sketch.png
+    url: https://www.sketch.com/
+  - name: Wolfram
+    image: wolfram.png
+    url: https://www.wolfram.com/
+  - name: Mixmax
+    image: mixmax.jpg
+    url: https://mixmax.com/

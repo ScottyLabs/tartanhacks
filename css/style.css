@@ -14,6 +14,7 @@
     background-color: black;
     background-image: url("../rsc/img/backgroundDesign.png");
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .home-text-color {
@@ -27,13 +28,14 @@
 }
 
 .header-color {
-    --text: rgb(233, 102, 117);
-    color: rgb(233, 102, 117);
+    --text: #EA2B40;
+    color: #EA2B40;
 }
 
 .flex {
     display: flex;
     flex-flow: row wrap;
+    margin-bottom: 0.5em;
 }
 
 .time {
@@ -56,14 +58,15 @@
 
 a {
     color: inherit;
-    font-weight: bold;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 /* Set font and color */
 body {
     /* Stack-overflow method of choosing a code font */
     /* TODO remove monospace fonts from the sans-serif */
-    font-family: Ostrich Sans, Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font-family: 'Open Sans', Menlo, Monaco, Consolas, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     color: white;
     background-color: #000000;
     /* overflow: hidden; */
@@ -79,7 +82,8 @@ body {
     display: block;
     float: left;
     font-size: 10pt;
-    font-family: 'Syncopate';
+    font-family: 'Montserrat';
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
@@ -97,7 +101,8 @@ body {
     height: 10vh;
     width: calc(100% - 8vh);
     min-height: 72px;
-    font-family: 'Syncopate';
+    font-family: 'Montserrat';
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
@@ -166,8 +171,8 @@ small {
     width: 100%;
     margin: auto;
     text-align: center;
-    font-size: 14pt;
-    padding-bottom: 1.7em;
+    font-size: 12pt;
+    padding-bottom: -0.5em;
     bottom: 0px;
 }
 

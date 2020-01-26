@@ -62,9 +62,9 @@ layout: null
   <div class="home-text-color">
     <div id="menu">
       <div class="logo">
-        <img id="header-logo" src="rsc/img/header-logo.png">
-        <!-- <h2>TartanHacks</h2>
-        <span>February 14-15, 2020</span> -->
+        <a href="/"> 
+          <img id="header-logo" src="rsc/img/header-logo.png">
+        </a>
       </div>
       <span class="options">
         <a href="/"> Home </a>
@@ -117,8 +117,15 @@ layout: null
   </div>
   <div id="sponsors" class="clearfix">
     <div id="sponsors-box">
-      {% for sponsor in site.data.sponsors %}
-      <img class="company-logo" src="rsc/img/sponsors/{{ sponsor }}"></img>
+      {% for tier in site.data.sponsors-tiered %}
+        <h2>{{ tier.tier }}</h2>
+        <div class="tier">
+          {% for sponsor in tier.sponsors %}
+              <!-- <a href="{{ sponsor.url }}"> -->
+                <img class="{{ tier.class }} company-logo" src="rsc/img/sponsors/{{ sponsor.image }}"></img>
+              <!-- </a> -->
+          {% endfor %}
+        </div>
       {% endfor %}
     </div>
   </div>

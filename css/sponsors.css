@@ -30,12 +30,23 @@
     }
 }
 
+.tier {
+    flex-wrap: wrap;
+    display: flex;
+    max-width: 90%;
+    margin: auto;
+}
+
 .company-logo {
-    display: block;
+    text-align: center;
+    /* position: relative; */
+    display: flex;
     width: 80%;
-    margin: 0 auto;
-    margin-top: 30px;
-    max-width: 400px;
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 50px;
+    min-width: 100pt;
 }
 
 .diamond {
@@ -51,5 +62,16 @@
 }
 
 .bronze {
-    width: 30%;
+    width: 20%;
+}
+
+.kind {
+    width: 10%;
+}
+
+h2 {
+    padding-top: 1.5em;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
 }

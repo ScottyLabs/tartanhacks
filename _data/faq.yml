@@ -1,64 +1,63 @@
-- question: Are non-CMU students allowed to attend?
-  answer: >
-    Yes! However, we are unable to offer a transportation stipend,
-    so you will have to provide for your own transportation.
 
-- question: How can I prepare before the hackathon?
+- question: How much does it cost to participate in TartanHacks?
   answer: >
-    You can come to <a href="https://scottylabs.org/crashcourse">Crash Course</a>
-    to learn about topics ranging from web development to data science and more!
-    You can also come up with an idea and know what you'd like to use before the
-    event. However, you are not allowed to pre-write any code for your hack.
-    Furthermore, any libraries you use must be open-source.
+    Nothing. TartanHacks is free for all undergraduate students!
 
 - question: I'm not a CS major, can I still join?
   answer: >
-    Yes! All majors and programs, even if they aren't technical, are welcome at
-    TartanHacks. We're running a series of talks called <a
-    href="https://scottylabs.org/crashcourse">Crash Course</a> the weekends leading up to TartanHacks
-    to help you brush up your skills.
+    Yes! All undergradauate majors and programs, even if they aren't technical, are welcome at
+    TartanHacks. We have slides from a series of <a href="https://scottylabs.org/wdw/ style="text-decoration:none"">web 
+    development workshops</a> online that you can use to brush up your skills! We'll also have
+    some workshops during the event so you can get started with new frameworks.
 
-- question: Is TartanHacks open to first-years?
+- question: Is TartanHacks open to first-year students?
   answer: >
-    Yes! We welcome students of all skill levels to participate.  Freshmen and
-    other first-time hackers have always been part of TartanHacks; we would
-    love to see you at the event!
+    Yes! We welcome students of all skill levels to participate. First-year students and
+    first-time hackers have always been part of TartanHacks; we would
+    love to see you at the event! Some prizes will also be specific for beginner hackers.
+
+- question: I'm a graduate student. Can I still participate?
+  answer: >
+    Unfortunately, graduate students cannot participate. TartanHacks is
+    currently limited to undergraduate students only.
+
+- question: Are non-CMU students allowed to attend?
+  answer: >
+    Yes! However, we are unable to offer travel reimbusement,
+    so you will have to provide for your own transportation. Anyone with an educational
+    email address can sign up on the registration system.
 
 - question: Can I register with a team?
   answer: >
-    Currently we're having everyone sign up as an individual for the
-    event, and we'll have you specify your team later on.  Don't worry,
-    if you already have a team chosen, you'll still be able to work with
-    them.
+    You have to sign up as an individual for the event, and we'll have you specify 
+    your team later on. Don't worry, if you already have a team chosen you'll still be 
+    able to work with them during event.
+
+- question: If I don't have a team before the event, can I still participate?
+  answer: >
+    Absolutely! We'll have a team mixer after the opening ceremony to help you meet new hackers.
 
 - question: How many people can we have per team?
   answer: >
     Up to 4 people are allowed.
 
-- question: If I don't have a team before the event, can I still participate?
-  answer: >
-    Absolutely! We've set aside some time at the beginning of event for helping hackers create teams.
-
 - question: I'm confused about my registration status. How does the registration process work?
   answer: >
     There are 3 states you can be in.<br>
-    1. <b>Submitted</b>. In this case, you have submitted your application, but we
+    1. <b>Submitted</b>. You have submitted your application, but we
     haven't accepted you yet. Don't worry though; we are doing acceptances in
     waves, i.e. one wave each day, up until early Friday morning.<br>
-    2. <b>Admitted</b>. In this case, we have accepted your TartanHacks application!
+    2. <b>Admitted</b>. We have accepted your TartanHacks application!
     The final step is to click 'Confirm Your Spot' and fill out the form.<br>
-    3. <b>Confirmed</b>. In this case, all you need to do is show up on Friday at 4PM
+    3. <b>Confirmed</b>. All you need to do is show up on Friday at 4PM
     for check in! Your spot in TartanHacks is confirmed.
 
 - question: Does everyone who registers get to participate at TartanHacks?
   answer: >
     We expect that everyone who registers can get in. However, sometimes more
     hackers sign up than we can admit. Once registration closes, hackers
-    are accepted based on a combination of registration order and a random
-    process. Those who are accepted after registration will be notified via
-    email. All other registrants will receive an email with information about
-    our waiting list, allowing them to participate if accepted hackers do not
-    show up.
+    are accepted on a rolling basis. You will be notified via email about your
+    registration status.
 
 - question: I got in, but a few of my team members were put on the waitlist. Will they be able to participate?
   answer: >
@@ -68,34 +67,26 @@
 
 - question: Is there a way to get off of the waitlist?
   answer: >
-    We will be letting hackers off the waitlist on a first-come, first-served
-    basis on the day of the event.  Historically, many people have gotten off
+    We will be letting hackers off the waitlist on a first-come, first-serve
+    basis on the day of the event. Historically, many people have gotten off
     the waitlist.
-
-- question: How much does it cost to participate in TartanHacks?
-  answer: >
-    Nothing. TartanHacks is free for all undergraduate students!
-
-- question: I'm a graduate student, can I still participate?
-  answer: >
-    Unfortunately, graduate students cannot participate. TartanHacks is
-    currently limited to undergraduate students only.
 
 - question: Are we limited to software projects or are hardware hacks allowed?
   answer: >
     Hardware hacks are certainly allowed! We don't restrict projects to
     software, though you will need to bring your own hardware/materials.
 
-- question: Who runs TartanHacks?
-  answer: >
-    TartanHacks is run by ScottyLabs, a student organization at Carnegie
-    Mellon that develops apps for CMU and runs educational events, like
-    TartanHacks. ScottyLabs isn't affiliated with any academic department,
-    and all of our funding comes from our sponsor companies.
-
 - question: What if I need help during the hackathon?
   answer: >
-    We will have a team of mentors on hand who are experts in many common
-    technologies. They'll be able to answer your questions, help you debug, and
-    help you along with anything you might not be confident with. They can't
+    We will have a team of student and corporate mentors on hand who are experts 
+    in many common technologies. They'll be able to answer your questions, help
+    you debug, and get you set up with new frameworks. They can't
     make your project for you, but they are always there to help!
+
+- question: Who runs TartanHacks?
+  answer: >
+    TartanHacks is run by <a href="https://scottylabs.org/ style="text-decoration:none"">ScottyLabs</a>, 
+    a student organization at Carnegie Mellon University that develops apps 
+    for CMU and runs educational events, like TartanHacks. ScottyLabs isn't 
+    affiliated with any academic department, and all of our funding comes from 
+    corporate sponsors.

@@ -1,19 +1,2 @@
-@import url("https://fonts.googleapis.com/css?family=Syncopate:700&display=swap");
-
-@font-face {
-  font-family: 'Ostrich Sans';
-  src: url('OstrichSans-Medium.woff') format('woff');
-  font-weight:  400;
-  font-style:   normal;
-  font-stretch: normal;
-}
-
-@font-face {
-  font-family: 'Ostrich Sans';
-  src: url('OstrichSans-Heavy.woff') format('woff');
-  font-weight:  500;
-  font-style:   normal;
-  font-stretch: normal;
-}
-
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:800&display=swap');
