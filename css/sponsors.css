@@ -38,6 +38,18 @@
     margin-top: 10px;
 }
 
+.link {
+    text-align: center;
+    /* position: relative; */
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 20px;
+    min-width: 100pt;
+}
+
 .company-logo {
     text-align: center;
     /* position: relative; */

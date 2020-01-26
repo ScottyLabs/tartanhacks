@@ -121,8 +121,8 @@ layout: null
         <h2>{{ tier.tier }}</h2>
         <div class="tier">
           {% for sponsor in tier.sponsors %}
-              <a class="{{ tier.class }} company-logo" href="{{ sponsor.url }}">
-                <img class="{{ tier.class }} company-logo" src="rsc/img/sponsors/{{ sponsor.image }}"></img>
+              <a class="{{ tier.class }} link" href="{{ sponsor.url }}">
+                <img class="company-logo" src="rsc/img/sponsors/{{ sponsor.image }}"></img>
               </a>
           {% endfor %}
         </div>
