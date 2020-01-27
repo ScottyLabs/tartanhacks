@@ -33,6 +33,7 @@
 .tier {
     flex-wrap: wrap;
     display: flex;
+    flex-direction: row;
     max-width: 90%;
     margin: auto;
     margin-top: 10px;
@@ -55,14 +56,15 @@
     /* position: relative; */
     display: flex;
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
     padding-left: 5%;
     padding-right: 5%;
     margin-top: 20px;
     min-width: 100pt;
     opacity: 1;
-    transition: opacity .2s ease-in-out;
     -webkit-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+    align-self: center;
 }
 
 .company-logo:hover {
