@@ -60,6 +60,13 @@
     padding-right: 5%;
     margin-top: 20px;
     min-width: 100pt;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+}
+
+.company-logo:hover {
+    opacity: .7;
 }
 
 .diamond {
