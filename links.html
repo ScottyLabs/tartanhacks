@@ -14,7 +14,7 @@ layout: null
   <link type="text/css" rel="stylesheet" href="fonts/fonts.css" media="screen" />
   <link type="text/css" rel="stylesheet" href="css/style.css" media="screen" />
   <link type="text/css" rel="stylesheet" href="css/faq.css" media="screen" />
-  <link type="text/css" rel="stylesheet" href="css/sponsors.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="css/challenges.css" media="screen" />
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <link rel="canonical" href="https://tartanhacks.com/" />
   <meta name="description"
@@ -62,8 +62,8 @@ layout: null
   <div class="home-text-color">
     <div id="menu">
       <div class="logo">
-        <a href="/"> 
-          <img id="header-logo" src="rsc/img/header-logo.png">
+        <a href="/">
+          <img id="header-logo" src="rsc/img/header-logo.png" href="/">
         </a>
       </div>
       <span class="options">
@@ -75,29 +75,15 @@ layout: null
       <span class="options">
         <a href="schedule.html"> schedule </a>
       </span>
+      <span class="options">
+        <a href="sponsors.html"> sponsors </a>
+      </span>
       <span class="options underline">
-        sponsors
+        Challenges
       </span>
       <span class="options">
-        <a href="challenges.html"> challenges </a>
+        <a href="https://registration.tartanhacks.com"> register </a>
       </span>
-      <small><br></small>
-      <span class="options">
-        <a href="slides_link"> slides </a>
-      </span>
-      <small><br></small>
-      <span class="options">
-        <a href="https://queue.tartanhacks.com"> queue </a>
-      </span>
-      <small><br></small>
-      <span class="options">
-        <a href="https://tartanhacks.com/slack"> slack </a>
-      </span>
-      <!-- <small><br></small>
-                  <span class="options">
-                  <span class="options-register">   
-                      <a href="https://registration.tartanhacks.com"> register </a>
-                  </span> -->
       <span id="nav">
         <div class="large">
           <i class="fa fa-bars open-menu" aria-hidden="true"></i>
@@ -105,45 +91,24 @@ layout: null
       </span>
     </div>
   </div>
-  <!-- <div class="home-text-color" id="sidebar">
-    <div id="menu">
-      <span class="options">
-        <a href="/"> Home </a>
-      </span>
-      <space><br /></space>
-      <span class="options">
-        FAQ
-      </span>
-      <space><br /></space>
-      <span class="options">
-        <a href="schedule.html"> schedule </a>
-      </span>
-      <space><br /></space>
-      <span class="options underline">
-        <a href="sponsors.html"> sponsors </a>
-      </span>
-      <space><br /></space>
-      <span class="options">
-        <a href="https://registration.tartanhacks.com"> register </a>
-      </span>
-      <space><br /></space>
-      <span class="options close-menu">
-        close menu
-      </span>
+  <div id="faq" class="text-color clearfix">
+    <div id="faq-text">
+      <h2 class="header-color">Emirates Challenges</h2>
+      <h3>Mentor Queue</h3>
+      <p>
+        <a href="rsc/challenges/challenge1.pdf" download>Document</a>
+        <br>
+        <a href="https://drive.google.com/file/d/1u1LXWHrDVxTDZMG8AVdL4JfjfdMWRI3T/view?usp=sharing" download>Video</a>
+      </p>
+      <h3>Slack</h3>
+      <p>
+        <a href="rsc/challenges/challenge2.pdf" download>Document</a>
+        <br>
+        <a href="https://drive.google.com/file/d/1ZQ26Zb8qYGQ4-ziKLviwvnlLmul39a-g/view?usp=sharing" download>Video</a>
+      </p>
     </div>
-  </div> -->
-  <div id="sponsors" class="clearfix">
-    <div id="sponsors-box">
-      {% for tier in site.data.sponsors-tiered %}
-        <h2>{{ tier.tier }}</h2>
-        <div class="tier">
-          {% for sponsor in tier.sponsors %}
-              <a class="{{ tier.class }} link" href="{{ sponsor.url }}">
-                <img class="company-logo" src="rsc/img/sponsors/{{ sponsor.image }}"></img>
-              </a>
-          {% endfor %}
-        </div>
-      {% endfor %}
+    <div class="relative" id="copyright">
+      &copy; ScottyLabs 2020
     </div>
   </div>
   <script src="https://use.fontawesome.com/9c8a25da89.js"></script>
