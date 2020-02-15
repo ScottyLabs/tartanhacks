@@ -74,7 +74,7 @@ body {
     margin: 0px 0px;
     height: 100vh;
     width: 100vw;
-    /* position: fixed; */
+    position: fixed;
     top: 0;
 }
 

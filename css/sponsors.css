@@ -1,6 +1,6 @@
 
 #sponsors-box {
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     position: relative;
     max-width: 75vw;
     margin-bottom: 0;
@@ -8,6 +8,10 @@
     margin-right: auto; 
     padding-bottom: 10vh;
     margin-top: -10px;
+}
+
+#sponsors-box h2 {
+    color: white;
 }
 
 #sponsors {
@@ -65,6 +69,9 @@
     -webkit-transition: opacity .2s ease-in-out;
     transition: opacity .2s ease-in-out;
     align-self: center;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: white;
 }
 
 .company-logo:hover {
