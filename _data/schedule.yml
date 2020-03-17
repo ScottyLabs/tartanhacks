@@ -12,9 +12,16 @@
     - name: Hacking Begins <br/> Sponsor Expo Begins <br/> Dinner
       time: 6:00 PM
       location: Rangos Ballroom
-    - name: Tech Talk with Microsoft
+    - name: Tech Talk with Microsoft (Happy Sad Angry Workshop)
       time: 8:00 PM
       location: Danforth Conference Room
+    - name: Crash Course
+      time: 8:30 PM
+      location: Danforth Conference Room
+    - name: Smash Course
+      time: 10:00 PM
+      location: Danforth Conference Room
+
 
 - date: February&nbsp;15
   events:

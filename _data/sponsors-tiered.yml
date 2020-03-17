@@ -2,7 +2,7 @@
   class: diamond
   sponsors:
   - name: Emirates
-    image: emirates.png
+    image: emirates.jpg
     url: https://www.emirates.com/us/english/
 
 - tier: Gold
@@ -43,6 +43,9 @@
   - name: Nefeli Networks
     image: nefeli_networks.png
     url: https://www.nefeli.io/
+  - name: Sandia National Laboratories
+    image: sandia.png
+    url: https://www.sandia.gov/
 
 - tier: Partners
   class: kind
@@ -62,3 +65,12 @@
   - name: Mixmax
     image: mixmax.jpg
     url: https://mixmax.com/
+  - name: UltraPress
+    image: ultra_press.png
+    url: https://ultrapress.com/
+  - name: Repl.it
+    image: repl_it.png
+    url: https://repl.it/
+  - name: Ritual Energy
+    image: ritual_energy.png
+    url: https://www.ritualenergy.com/

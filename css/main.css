@@ -2,6 +2,7 @@
     width: 100%;
     margin-bottom: 2em;
     overflow: auto;
+    
 }
 
 #registration .logo > *::after {
@@ -48,7 +49,12 @@
 
     /*
      * When the viewport is extremely narrow, we remove the main text and leave only the menu and the registration button.
-     */    
+     */   
+     
+    /* Cheesy scrolling fix on mobile home page */
+    body {
+        position: static;
+    }
 
     #desktop {
         display: none;
@@ -65,12 +71,13 @@
     #menu .options::after {
         content: "\a";
         white-space: pre;
+        
     }
 
     
     .logo img#mobile {
         position: relative;
-        width: 30%;
+        width: 25%;
         height:auto;
         display:block;
         margin:0 auto;
@@ -90,13 +97,14 @@
         text-align: center;
         display: inline-block;
         font-size: 20px;
-        margin: 20px 50px;
+        margin: 0 50px;
     }
 
     #menu {
         text-align: center;
         padding-top: 5vh;
         height: auto;
+        
     }
 
     #menu .logo {

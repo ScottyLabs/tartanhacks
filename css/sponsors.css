@@ -1,5 +1,5 @@
 #sponsors-box {
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     position: relative;
     max-width: 75vw;
     margin-bottom: 0;
@@ -7,6 +7,10 @@
     margin-right: auto; 
     padding-bottom: 10vh;
     margin-top: -10px;
+}
+
+#sponsors-box h2 {
+    color: white;
 }
 
 #sponsors {
@@ -38,7 +42,11 @@
     display: -ms-flexbox;
     -webkit-box-flex: 1;
     display: flex;
+<<<<<<< HEAD
     flex: 1 1 0;
+=======
+    flex-direction: row;
+>>>>>>> ee806b7c08e6ac802d4703616f8cebf277632096
     max-width: 90%;
     margin: auto;
     margin-top: 10px;
@@ -69,11 +77,22 @@
     display: flex;
     flex: 1 1 0;
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
     padding-left: 5%;
     padding-right: 5%;
     margin-top: 20px;
     min-width: 100pt;
+    opacity: 1;
+    -webkit-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+    align-self: center;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.company-logo:hover {
+    opacity: .7;
 }
 
 .diamond {
