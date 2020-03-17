@@ -42,11 +42,7 @@
     display: -ms-flexbox;
     -webkit-box-flex: 1;
     display: flex;
-<<<<<<< HEAD
-    flex: 1 1 0;
-=======
     flex-direction: row;
->>>>>>> ee806b7c08e6ac802d4703616f8cebf277632096
     max-width: 90%;
     margin: auto;
     margin-top: 10px;
