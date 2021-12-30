@@ -2,7 +2,7 @@ import { styled } from "@mui/material/styles";
 import React, { ReactElement } from "react";
 
 const WaveContainer = styled("div")({
-  position: "fixed",
+  position: "absolute",
   width: "100%",
   overflow: "hidden",
   lineHeight: 0,
