@@ -65,7 +65,7 @@ const AboutSection = (): ReactElement => {
           <Link href="http://scottylabs.org/" target="_blank" underline="none">
             ScottyLabs
           </Link>
-          , it's a hackathon where, in 36 hours, participants from all over the
+          , it&apos;s a hackathon where, in 36 hours, participants from all over the
           country work in groups to create innovative projects. This year,
           Tartanhacks will be hybrid, with an in-person option for CMU students.
           Come on over to hack, learn new concepts through our virtual
