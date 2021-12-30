@@ -10,7 +10,7 @@ import { ReactElement, useState } from "react";
 
 const Section = styled("div")(({ theme }) => ({
   minHeight: "100vh",
-  backgroundImage: `linear-gradient(#F68F4487, #F6C744FF 80%)`,
+  backgroundImage: `linear-gradient(#F6C744FF, #F68F4487 80%)`,
   paddingTop: "5em",
   display: "flex",
   flexDirection: "column",

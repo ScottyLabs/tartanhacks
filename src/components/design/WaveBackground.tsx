@@ -15,10 +15,10 @@ const WaveSVG = styled("svg")(({ theme }) => ({
   height: "465px",
   bottom: "0",
   [theme.breakpoints.down("md")]: {
-    height: "15em",
+    height: "35em",
   },
   [theme.breakpoints.down("sm")]: {
-    height: "10em",
+    height: "30em",
   },
 }));
 

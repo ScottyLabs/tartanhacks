@@ -60,7 +60,7 @@ const DashboardDialog = (): ReactElement => {
     <Dialog>
       <DialogContent>
         <Heading variant="h2">TartanHacks</Heading>
-        <SubHeading variant="h5">Feb 5-6, 2022</SubHeading>
+        <SubHeading variant="h5">Feb 4-6, 2022</SubHeading>
         <ButtonContainer>
           <Link href="#faq" underline="none">
             <RectangleButton type="button">FAQs</RectangleButton>

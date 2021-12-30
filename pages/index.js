@@ -3,7 +3,8 @@ import { styled } from "@mui/material/styles";
 import WaveBackground from "src/components/design/WaveBackground";
 import ScottyLabsHeader from "src/components/design/ScottyLabsHeader";
 import DashboardDialog from "src/components/dashboard/DashboardDialog";
-import FAQSection from "src/components/faq/FAQSection";
+import AboutSection from "src/components/sections/AboutSection";
+import FAQSection from "src/components/sections/FAQSection";
 
 const DialogContainer = styled("div")({
   width: "100%",
@@ -11,6 +12,11 @@ const DialogContainer = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+});
+
+const SectionContainer = styled("div")({
+  display: "flex",
+  flexDirection: "column",
 });
 
 export default function Home() {
@@ -23,9 +29,10 @@ export default function Home() {
           <DashboardDialog />
         </DialogContainer>
       </div>
-      <div>
+      <SectionContainer>
+        <AboutSection />
         <FAQSection />
-      </div>
+      </SectionContainer>
     </>
   );
 }
