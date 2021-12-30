@@ -14,7 +14,6 @@ const WaveSVG = styled("svg")(({ theme }) => ({
   width: "100%",
   height: "465px",
   bottom: "0",
-  filter: "drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.2))",
   [theme.breakpoints.down("md")]: {
     height: "15em",
   },
