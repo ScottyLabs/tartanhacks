@@ -9,13 +9,14 @@ import { styled } from "@mui/material/styles";
 import { ReactElement, useState } from "react";
 
 const Section = styled("div")(({ theme }) => ({
-  height: "100vh",
+  minHeight: "100vh",
   backgroundImage: `linear-gradient(#F68F4487, #F6C744FF 80%)`,
   paddingTop: "5em",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   gap: "3em",
+  paddingBottom: "5em",
 }));
 
 const Heading = styled(Typography)(({ theme }) => ({
