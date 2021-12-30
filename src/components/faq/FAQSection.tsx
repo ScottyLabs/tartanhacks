@@ -39,6 +39,12 @@ const StyledAccordionContent = styled(AccordionDetails)({
 
 const faqs = [
   {
+    question: "Will TartanHacks be in-person this year?",
+    answer: `TartanHacks will be hybrid this year, with CMU students being given the option to
+    attend in-person. However, we are closely monitoring the current COVID-19 situation and may
+    consider moving to a completely virtual setting if the situation becomes more severe.`
+  },
+  {
     question: "How much does it cost to participate in TartanHacks?",
     answer: "Nothing. TartanHacks is free for all undergraduate students!",
   },
