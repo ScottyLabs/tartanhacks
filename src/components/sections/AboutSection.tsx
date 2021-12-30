@@ -1,13 +1,9 @@
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
   Link,
-  Typography,
+  Typography
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { ReactElement, useState } from "react";
+import { ReactElement } from "react";
 
 const Section = styled("div")(({ theme }) => ({
   minHeight: "50vh",
@@ -18,6 +14,9 @@ const Section = styled("div")(({ theme }) => ({
   alignItems: "center",
   gap: "3em",
   paddingBottom: "5em",
+  [theme.breakpoints.down(theme.breakpoints.values.mobile)]: {
+    minHeight: "80vh"
+  },
 }));
 
 const Heading = styled(Typography)(({ theme }) => ({
