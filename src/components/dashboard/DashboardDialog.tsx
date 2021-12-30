@@ -49,19 +49,30 @@ const SubHeading = styled(Typography)(({ theme }) => ({
   marginBottom: "1em",
 }));
 
+const ButtonContainer = styled("div")({
+  display: "flex",
+  flexDirection: "row",
+  gap: "1.5em",
+});
+
 const DashboardDialog = (): ReactElement => {
   return (
     <Dialog>
       <DialogContent>
         <Heading variant="h2">TartanHacks</Heading>
         <SubHeading variant="h5">Feb 5-6, 2022</SubHeading>
-        <Link
-          href="https://register.tartanhacks.com/"
-          target="_blank"
-          underline="none"
-        >
-          <RectangleButton type="button">Register</RectangleButton>
-        </Link>
+        <ButtonContainer>
+          <Link href="#faq" underline="none">
+            <RectangleButton type="button">FAQs</RectangleButton>
+          </Link>
+          <Link
+            href="https://register.tartanhacks.com/"
+            target="_blank"
+            underline="none"
+          >
+            <RectangleButton type="button">Register</RectangleButton>
+          </Link>
+        </ButtonContainer>
       </DialogContent>
     </Dialog>
   );

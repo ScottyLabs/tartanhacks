@@ -125,11 +125,12 @@ const FAQSection = (): ReactElement => {
   const [expanded, setExpanded] = useState(-1);
 
   return (
-    <Section>
+    <Section id="faq">
       <Heading variant="h2">FAQs</Heading>
       <Questions>
         {faqs.map(({ question, answer }, idx) => (
           <Accordion
+            key={idx}
             expanded={expanded === idx}
             onChange={(e, isExpanded) => {
               setExpanded(isExpanded ? idx : -1);
