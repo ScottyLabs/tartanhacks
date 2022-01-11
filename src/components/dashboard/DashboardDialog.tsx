@@ -33,7 +33,7 @@ const DialogContent = styled("div")({
 const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "4em",
   fontWeight: 600,
-  color: theme.palette.primary.main,
+  color: theme.palette.text.primary,
   [theme.breakpoints.down(theme.breakpoints.values.mobile)]: {
     fontSize: "2.5em",
   },
@@ -42,7 +42,7 @@ const Heading = styled(Typography)(({ theme }) => ({
 const SubHeading = styled(Typography)(({ theme }) => ({
   fontSize: "2em",
   fontWeight: 500,
-  color: theme.palette.text.primary,
+  color: theme.palette.text.secondary,
   [theme.breakpoints.down(theme.breakpoints.values.mobile)]: {
     fontSize: "1.5em",
   },

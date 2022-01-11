@@ -3,30 +3,30 @@ import { createTheme } from "@mui/material/styles";
 export const theme = createTheme({
   palette: {
     primary: {
-      main: "#F3964A"
+      main: "#FFC738"
     },
     secondary: {
-      main: "#AA5418"
+      main: "#07054C"
     },
     gradient: {
       start: "#AA5418",
-      end: "#F6C744"
+      end: "#FFC738"
     },
     waveGradient: {
-      start: "#F6C744",
-      end: "#F68F44"
+      start: "#FFC738",
+      end: "#DB4D20"
     },
     lightGradient: {
       start: "#FFFFFF",
       end: "#FFE3E3"
     },
     text: {
-      primary: "#AA5418",
-      secondary: "#F3964A"
+      primary: "#DB4D20",
+      secondary: "#FFC738"
     },
     button: {
-      main: "#F7C062",
-      focused: "#e0ac52"
+      main: "#FFC738",
+      focused: "#FFC738"
     },
     unverified: "#F3964A",
     verified: "#2979ff",

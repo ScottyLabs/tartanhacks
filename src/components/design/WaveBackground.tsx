@@ -1,4 +1,4 @@
-import { styled } from "@mui/material/styles";
+import { styled, useTheme } from "@mui/material/styles";
 import React, { ReactElement } from "react";
 
 const WaveContainer = styled("div")({
@@ -23,6 +23,7 @@ const WaveSVG = styled("svg")(({ theme }) => ({
 }));
 
 const WaveBackground = (): ReactElement => {
+  const theme = useTheme();
   return (
     <WaveContainer>
       <WaveSVG viewBox="0 0 1440 465" preserveAspectRatio="none">
@@ -39,8 +40,8 @@ const WaveBackground = (): ReactElement => {
             y2="465"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#F6C744" />
-            <stop offset="1" stopColor="#F68F44" stopOpacity="0.53" />
+            <stop stopColor={theme.palette.waveGradient.start} />
+            <stop offset="1" stopColor={theme.palette.waveGradient.end} stopOpacity="0.53" />
           </linearGradient>
         </defs>
       </WaveSVG>
