@@ -66,6 +66,13 @@ const DashboardDialog = (): ReactElement => {
             <RectangleButton type="button">FAQs</RectangleButton>
           </Link>
           <Link
+            href="https://tartanhacks.com/sponsorship.pdf"
+            target="_blank"
+            underline="none"
+          >
+            <RectangleButton type="button">Sponsor</RectangleButton>
+          </Link>
+          <Link
             href="https://register.tartanhacks.com/"
             target="_blank"
             underline="none"
