@@ -62,9 +62,6 @@ const DashboardDialog = (): ReactElement => {
         <Heading variant="h2">TartanHacks</Heading>
         <SubHeading variant="h5">Feb 4-6, 2022</SubHeading>
         <ButtonContainer>
-          <Link href="#faq" underline="none">
-            <RectangleButton type="button">FAQs</RectangleButton>
-          </Link>
           <Link
             href="https://tartanhacks.com/sponsorship.pdf"
             target="_blank"
