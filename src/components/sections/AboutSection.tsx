@@ -3,17 +3,13 @@ import { styled } from "@mui/material/styles";
 import { ReactElement } from "react";
 
 const Section = styled("div")(({ theme }) => ({
-  minHeight: "50vh",
-  backgroundImage: `linear-gradient(${theme.palette.waveGradient.end}87, ${theme.palette.waveGradient.start} 80%)`,
+  backgroundImage: `linear-gradient(${theme.palette.waveGradient.end}87, ${theme.palette.waveGradient.start})`,
   paddingTop: "5em",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   gap: "3em",
   paddingBottom: "5em",
-  [theme.breakpoints.down(theme.breakpoints.values.mobile)]: {
-    minHeight: "80vh",
-  },
 }));
 
 const Heading = styled(Typography)(({ theme }) => ({
