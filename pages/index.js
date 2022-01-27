@@ -6,6 +6,7 @@ import DashboardDialog from "src/components/dashboard/DashboardDialog";
 import AboutSection from "src/components/sections/AboutSection";
 import FAQSection from "src/components/sections/FAQSection";
 import ScheduleSection from "src/components/sections/ScheduleSection"
+import Menu from "src/components/design/Menu"
 
 const DialogContainer = styled("div")({
   width: "100%",
@@ -24,6 +25,7 @@ export default function Home() {
   return (
     <>
       <WaveBackground />
+      <Menu />
       <div>
         <ScottyLabsHeader />
         <DialogContainer>
