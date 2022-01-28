@@ -211,6 +211,7 @@ const StyledLink = styled(Link)(({ theme }) => ({
     right: "auto",
     width: "100%",
   },
+  wordBreak: "break-word"
 }))
 
 const SpinnerContainer = styled("div")(({ theme }) => ({
