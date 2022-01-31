@@ -41,22 +41,28 @@ const CategoryHeading = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const PrizeSection = styled("div")({
+const PrizeSection = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   gap: "5em",
   padding: 0,
-});
+  [theme.breakpoints.down(theme.breakpoints.values.tablet)]: {
+    gap: "3em",
+  },
+  [theme.breakpoints.down(theme.breakpoints.values.mobile)]: {
+    flexDirection: "column",
+    gap: "2em",
+  },
+}));
 
-const ImageContainer = styled("div")({
-  position: "relative",
-});
-
-const StyledImage = styled("img")({
+const StyledImage = styled("img")(({ theme }) => ({
   height: "70px",
   objectFit: "contain",
   borderRadius: "5px",
-});
+  [theme.breakpoints.down(theme.breakpoints.values.tablet)]: {
+    height: "50px",
+  },
+}));
 
 const sponsors = {
   silver: [
@@ -102,7 +108,7 @@ const SponsorsSection = (): ReactElement => {
             <CategoryHeading variant="h4" key={index}>
               {tier}
             </CategoryHeading>
-            <PrizeSection>
+            <PrizeSection key={index}>
               {sponsors[key].map((sponsor, idx) => (
                 <a
                   href={sponsor.href}
