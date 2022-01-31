@@ -1,12 +1,14 @@
-import React from "react";
 import { styled } from "@mui/material/styles";
-import WaveBackground from "src/components/design/WaveBackground";
-import ScottyLabsHeader from "src/components/design/ScottyLabsHeader";
+import React from "react";
 import DashboardDialog from "src/components/dashboard/DashboardDialog";
+import Menu from "src/components/design/Menu";
+import ScottyLabsHeader from "src/components/design/ScottyLabsHeader";
+import WaveBackground from "src/components/design/WaveBackground";
 import AboutSection from "src/components/sections/AboutSection";
 import FAQSection from "src/components/sections/FAQSection";
-import ScheduleSection from "src/components/sections/ScheduleSection"
-import Menu from "src/components/design/Menu"
+import Footer from "src/components/sections/Footer";
+import ScheduleSection from "src/components/sections/ScheduleSection";
+import SponsorsSection from "src/components/sections/SponsorsSection";
 
 const DialogContainer = styled("div")({
   width: "100%",
@@ -36,6 +38,8 @@ export default function Home() {
         <AboutSection />
         <ScheduleSection />
         <FAQSection />
+        <SponsorsSection />
+        <Footer />
       </SectionContainer>
     </>
   );
