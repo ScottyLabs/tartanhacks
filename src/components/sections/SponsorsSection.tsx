@@ -1,15 +1,6 @@
 import { Card, Link, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { ReactElement } from "react";
-import Image from "next/image";
-import capitalOne from "public/sponsors/capital-one.png";
-import figma from "public/sponsors/figma.png";
-import gcp from "public/sponsors/gcp.png";
-import hrt from "public/sponsors/hrt.png";
-import meta from "public/sponsors/meta.gif";
-import oracle from "public/sponsors/oracle.png";
-import replit from "public/sponsors/replit.png";
-import wayfair from "public/sponsors/wayfair.png";
 
 const Section = styled("div")(({ theme }) => ({
   backgroundImage: `linear-gradient(${theme.palette.waveGradient.end}, ${theme.palette.waveGradient.start})`,
@@ -85,6 +76,7 @@ const sponsors = {
       href: "https://www.hudsonrivertrading.com/",
     },
     { name: "Figma", path: "figma.png", href: "https://www.figma.com/" },
+    { name: "Sandia", path: "sandia.png", href: "https://www.sandia.gov/" },
   ],
   special: [
     { name: "Meta", path: "meta.gif", href: "https://www.facebook.com/" },
