@@ -131,9 +131,9 @@ const EventGroupSummary = styled(AccordionSummary)(({ theme }) => ({
 }))
 
 const EventDate = styled(Typography)(({ theme }) => ({
-  fontSize: "2.5em",
+  fontSize: "2em",
   [theme.breakpoints.down(theme.breakpoints.values.tablet)]: {
-    fontSize: "2.0em"
+    fontSize: "1.5em"
   },
   [theme.breakpoints.down(theme.breakpoints.values.mobile)]: {
     fontSize: "1.5em"
