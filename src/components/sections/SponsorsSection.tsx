@@ -1,4 +1,4 @@
-import { Link, Typography } from "@mui/material";
+import { Card, Link, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { ReactElement } from "react";
 import Image from "next/image";
@@ -55,6 +55,10 @@ const PrizeSection = styled("div")(({ theme }) => ({
   },
 }));
 
+const StyledCard = styled(Card)({
+  padding: "0.5em",
+});
+
 const StyledImage = styled("img")(({ theme }) => ({
   height: "70px",
   objectFit: "contain",
@@ -99,7 +103,7 @@ const tiers = ["Silver", "Bronze", "Special", "Kind"];
 
 const SponsorsSection = (): ReactElement => {
   return (
-    <Section id="about">
+    <Section id="sponsors">
       <Heading variant="h2">Sponsors</Heading>
       {tiers.map((tier: string, index) => {
         const key = tier.toLowerCase() as keyof typeof sponsors;
@@ -110,18 +114,20 @@ const SponsorsSection = (): ReactElement => {
             </CategoryHeading>
             <PrizeSection key={index}>
               {sponsors[key].map((sponsor, idx) => (
-                <a
-                  href={sponsor.href}
-                  key={idx}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <StyledImage
+                <StyledCard key={idx}>
+                  <a
+                    href={sponsor.href}
                     key={idx}
-                    src={`/sponsors/${sponsor.path}`}
-                    alt={sponsor.name}
-                  />
-                </a>
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <StyledImage
+                      key={idx}
+                      src={`/sponsors/${sponsor.path}`}
+                      alt={sponsor.name}
+                    />
+                  </a>
+                </StyledCard>
               ))}
             </PrizeSection>
           </>

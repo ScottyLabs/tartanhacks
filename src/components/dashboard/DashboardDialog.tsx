@@ -63,11 +63,10 @@ const DashboardDialog = (): ReactElement => {
         <SubHeading variant="h5">Feb 4-6, 2022</SubHeading>
         <ButtonContainer>
           <Link
-            href="https://tartanhacks.com/sponsorship.pdf"
-            target="_blank"
+            href="#sponsors"
             underline="none"
           >
-            <RectangleButton type="button">Sponsor</RectangleButton>
+            <RectangleButton type="button">Sponsors</RectangleButton>
           </Link>
           <Link
             href="https://register.tartanhacks.com/"
