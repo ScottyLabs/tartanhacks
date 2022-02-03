@@ -48,6 +48,7 @@ const PrizeSection = styled("div")(({ theme }) => ({
 
 const StyledCard = styled(Card)({
   padding: "0.5em",
+  boxShadow: "0px 4px 4px rgba(200, 116, 56, 0.25)",
 });
 
 const StyledImage = styled("img")(({ theme }) => ({

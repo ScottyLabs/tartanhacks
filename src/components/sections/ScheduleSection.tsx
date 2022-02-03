@@ -93,6 +93,7 @@ const EventDetails = styled("div")(({ theme }) => ({
   textAlign: "center",
   marginLeft: "10px",
   background: "#fff",
+  boxShadow: "0px 4px 4px rgba(200, 116, 56, 0.25)",
   borderRadius: "20px",
   padding: "10px",
 }));
