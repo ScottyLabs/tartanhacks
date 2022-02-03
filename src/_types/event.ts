@@ -5,6 +5,7 @@ export enum ScheduleItemPlatform {
   HOPIN = "HOPIN",
   DISCORD = "DISCORD",
   YOUTUBE = "YOUTUBE",
+  HYBRID = "HYBRID",
   OTHER = "OTHER",
 }
 
