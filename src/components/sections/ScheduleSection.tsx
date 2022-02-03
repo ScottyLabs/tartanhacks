@@ -13,7 +13,7 @@ import { ScheduleItem, ScheduleItemPlatform } from "types/event";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Section = styled("div")(({ theme }) => ({
-  backgroundImage: `linear-gradient(${theme.palette.waveGradient.start}, ${theme.palette.waveGradient.start})`,
+  backgroundImage: `linear-gradient(${theme.palette.waveGradient.end}87, ${theme.palette.waveGradient.start} 50%, ${theme.palette.waveGradient.start})`,
   alignItems: "center",
   paddingTop: "5em",
   display: "flex",
@@ -37,16 +37,22 @@ const DialogText = styled("div")(({ theme }) => ({
   [theme.breakpoints.down(theme.breakpoints.values.mobile)]: {
     width: "100%",
   },
+  display: "flex",
+  alignItems: "center"
 }));
 
-const GroupList = styled("ul")({
+const GroupList = styled("ul")(({ theme }) => ({
   listStyle: "none",
   paddingLeft: "0px",
   display: "flex",
   flexDirection: "row",
   alignItems: "start",
-  gap: "1em"
-});
+  [theme.breakpoints.down(theme.breakpoints.values.tablet)]: {
+    flexDirection: "column",
+    alignItems: "center"
+  },
+  gap: "1em",
+}));
 
 const EventList = styled("ul")({
   listStyle: "none",
@@ -106,7 +112,6 @@ const EventGroup = styled(Accordion)(({ theme }) => ({
   [theme.breakpoints.down(theme.breakpoints.values.tablet)]: {
     width: "80%",
     padding: "1em",
-    flexDirection: "row",
   },
   "&.MuiAccordion-root:before": {
     display: "none",
@@ -117,7 +122,7 @@ const EventGroup = styled(Accordion)(({ theme }) => ({
     borderTopRightRadius: "20px",
   },
   "&.MuiAccordion-root.Mui-expanded:first-of-type": {
-    marginTop: "16px"
+    marginTop: "16px",
   },
   "&.MuiAccordion-root:last-of-type": {
     borderBottomLeftRadius: "20px",
@@ -186,7 +191,7 @@ const EventDescription = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down(theme.breakpoints.values.mobile)]: {
     fontSize: "0.8em",
   },
-  color: "#000"
+  color: "#000",
 }));
 
 const EventName = styled(Typography)(({ theme }) => ({
@@ -204,7 +209,7 @@ const EventName = styled(Typography)(({ theme }) => ({
 
 const EventLocation = styled(Typography)(({ theme }) => ({
   fontSize: "1em",
-  fontWeight: "bold"
+  fontWeight: "bold",
 }));
 
 const StyledLink = styled(Link)(({ theme }) => ({
@@ -375,7 +380,9 @@ const ScheduleSection = (): ReactElement => {
       }
 
       const eventString = platformsStrings[event.platform];
-      let eventLabel = <EventLocation>{eventString + ", " + event.location}</EventLocation>;
+      let eventLabel = (
+        <EventLocation>{eventString + ", " + event.location}</EventLocation>
+      );
       if (event.platformUrl && event.platform !== ScheduleItemPlatform.ZOOM) {
         eventLabel = (
           <EventLocation>
