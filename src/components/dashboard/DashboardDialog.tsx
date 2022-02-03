@@ -63,6 +63,18 @@ const DashboardDialog = (): ReactElement => {
         <SubHeading variant="h5">Feb 4-6, 2022</SubHeading>
         <ButtonContainer>
           <Link
+            href="#schedule"
+            underline="none"
+          >
+            <RectangleButton type="button">Schedule</RectangleButton>
+          </Link>
+          <Link
+            href="#speakers"
+            underline="none"
+          >
+            <RectangleButton type="button">Speakers</RectangleButton>
+          </Link>
+          <Link
             href="#sponsors"
             underline="none"
           >

@@ -7,6 +7,7 @@ import WaveBackground from "src/components/design/WaveBackground";
 import AboutSection from "src/components/sections/AboutSection";
 import FAQSection from "src/components/sections/FAQSection";
 import Footer from "src/components/sections/Footer";
+import SpeakerSection from "src/components/sections/SpeakerSection";
 import ScheduleSection from "src/components/sections/ScheduleSection";
 import SponsorsSection from "src/components/sections/SponsorsSection";
 
@@ -27,7 +28,6 @@ export default function Home() {
   return (
     <>
       <WaveBackground />
-      <Menu />
       <div>
         <ScottyLabsHeader />
         <DialogContainer>
@@ -37,6 +37,7 @@ export default function Home() {
       <SectionContainer>
         <AboutSection />
         <ScheduleSection />
+        <SpeakerSection />
         <FAQSection />
         <SponsorsSection />
         <Footer />

@@ -13,7 +13,7 @@ import { ScheduleItem, ScheduleItemPlatform } from "types/event";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Section = styled("div")(({ theme }) => ({
-  backgroundImage: `linear-gradient(${theme.palette.waveGradient.end}87, ${theme.palette.waveGradient.start} 50%, ${theme.palette.waveGradient.start})`,
+  backgroundImage: `linear-gradient(${theme.palette.waveGradient.end}87, ${theme.palette.waveGradient.end})`,
   alignItems: "center",
   paddingTop: "5em",
   display: "flex",
