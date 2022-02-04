@@ -1,5 +1,7 @@
-import { Link, Typography } from "@mui/material";
+import { Computer } from "@mui/icons-material";
+import { Button, IconButton, Link, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import Image from "next/image";
 import { ReactElement } from "react";
 import RectangleButton from "../design/RectangleButton";
 
@@ -49,11 +51,17 @@ const SubHeading = styled(Typography)(({ theme }) => ({
   marginBottom: "1em",
 }));
 
-const ButtonContainer = styled("div")({
+const ButtonContainer = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   gap: "1.5em",
-});
+  justifyContent: "center",
+  alignItems: "center",
+  [theme.breakpoints.down(theme.breakpoints.values.mobile)]: {
+    flexDirection: "column",
+    flexWrap: "wrap",
+  },
+}));
 
 const DashboardDialog = (): ReactElement => {
   return (
@@ -63,29 +71,39 @@ const DashboardDialog = (): ReactElement => {
         <SubHeading variant="h5">Feb 4-6, 2022</SubHeading>
         <ButtonContainer>
           <Link
-            href="#schedule"
-            underline="none"
+            href="https://play.google.com/store/apps/details?id=org.scottylabs.thdapp"
+            target="_blank"
           >
-            <RectangleButton type="button">Schedule</RectangleButton>
+            <Image
+              alt="Get it on Google Play"
+              src="/google-play-badge.svg"
+              width={563 * (40 / 168)}
+              height={40}
+            />
           </Link>
           <Link
-            href="#speakers"
-            underline="none"
+            href="https://apps.apple.com/us/app/scottylabs-dashboard/id1556362423"
+            target="_blank"
           >
-            <RectangleButton type="button">Speakers</RectangleButton>
+            <Image
+              alt="Download on the App Store"
+              src="/ios-app-store-badge.svg"
+              width={120}
+              height={40}
+            />
           </Link>
           <Link
-            href="#sponsors"
-            underline="none"
-          >
-            <RectangleButton type="button">Sponsors</RectangleButton>
-          </Link>
-          <Link
-            href="https://register.tartanhacks.com/"
+            href="https://dashboard.tartanhacks.com/"
             target="_blank"
             underline="none"
           >
-            <RectangleButton type="button">Register</RectangleButton>
+            <RectangleButton
+              type="button"
+              startIcon={<Computer />}
+              backgroundColor="#000"
+            >
+              Web
+            </RectangleButton>
           </Link>
         </ButtonContainer>
       </DialogContent>

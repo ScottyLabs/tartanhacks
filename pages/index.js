@@ -28,6 +28,7 @@ export default function Home() {
   return (
     <>
       <WaveBackground />
+      <Menu />
       <div>
         <ScottyLabsHeader />
         <DialogContainer>

@@ -17,11 +17,15 @@ const RectangleButton = ({
   children,
   type,
   onClick,
+  startIcon,
+  backgroundColor,
 }: {
   className?: string;
   children?: ReactElement | string;
   type: "button" | "reset" | "submit" | undefined;
   onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
+  startIcon?: ReactElement | undefined;
+  backgroundColor?: string;
 }): ReactElement => {
   return (
     <>
@@ -29,7 +33,9 @@ const RectangleButton = ({
         variant="contained"
         type={type}
         className={className}
+        startIcon={startIcon}
         onClick={onClick}
+        sx={{ backgroundColor }}
       >
         {children}
       </StyledButton>

@@ -74,38 +74,54 @@ const DialogText = styled(Typography)({
   fontSize: "1.2em",
 });
 
-const SpeakerContainer = styled("div")({
+const SpeakerContainer = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
   gap: "5em",
   width: "60%",
-});
+  [theme.breakpoints.down(theme.breakpoints.values.tablet)]: {
+    flexDirection: "column",
+    width: "90%",
+  },
+}));
 
 const StyledCard = styled(Card)({
   padding: "1em 2em 1em 2em",
   borderRadius: "1em",
 });
 
-const StyledImage = styled("img")({
+const StyledImage = styled("img")(({ theme }) => ({
   borderRadius: "50%",
-  height: "300px",
-});
+  height: "18rem",
+  [theme.breakpoints.down(theme.breakpoints.values.mobile)]: {
+    height: "10rem",
+  },
+}));
 
-const SpeakerName = styled(Typography)({
+const SpeakerName = styled(Typography)(({ theme }) => ({
   fontSize: "2.5em",
   fontWeight: "bold",
   textAlign: "center",
-});
+  [theme.breakpoints.down(theme.breakpoints.values.mobile)]: {
+    fontSize: "1.8em",
+  },
+}));
 
-const SpeakerSubtitle = styled(Typography)({
+const SpeakerSubtitle = styled(Typography)(({ theme }) => ({
   fontSize: "1.5em",
   textAlign: "center",
-});
+  [theme.breakpoints.down(theme.breakpoints.values.mobile)]: {
+    fontSize: "1em",
+  },
+}));
 
-const SpeakerBio = styled(Typography)({
+const SpeakerBio = styled(Typography)(({ theme }) => ({
   fontSize: "1em",
-});
+  [theme.breakpoints.down(theme.breakpoints.values.mobile)]: {
+    fontSize: "0.8em",
+  },
+}));
 
 const speakers = [
   {
@@ -146,8 +162,8 @@ const speakers = [
     subtitle: "Engineer & Entrepreneur",
     bio: `Jasmine Lawrence is an experienced Product Manager and Entrepreneur
     with a passion for both consumer technology and business strategy.
-    Whether it's building devices or formulating beauty products, I
-    focus on creating delightful experiences that make a difference in
+    Whether it's building devices or formulating beauty products, she
+    focuses on creating delightful experiences that make a difference in
     people's lives.`,
   },
 ];

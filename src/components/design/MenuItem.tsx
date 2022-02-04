@@ -26,7 +26,7 @@ const MenuItem = ({
 }): ReactElement => {
   return (
     <NextLink href={url} passHref>
-      <StyledLink>
+      <StyledLink underline="none">
         <StyledMenuItem>
           <Typography variant="h5">{text}</Typography>
         </StyledMenuItem>
