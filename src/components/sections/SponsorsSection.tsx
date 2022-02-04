@@ -90,9 +90,26 @@ const sponsors = {
     },
     { name: "Repl.it", path: "replit.png", href: "https://replit.com/" },
   ],
+  "in partnership with": [
+    {
+      name: "Robotics Club",
+      path: "roboclub.png",
+      href: "https://roboticsclub.org/",
+    },
+    {
+      name: "Design for America",
+      path: "dfa.jpeg",
+      href: "https://www.dfaxcmu.org/",
+    },
+    {
+      name: "Undergraduate Entrepreneurship Association",
+      path: "uea.png",
+      href: "https://www.ueacmu.com/",
+    },
+  ],
 };
 
-const tiers = ["Silver", "Bronze", "Special", "Kind"];
+const tiers = ["Silver", "Bronze", "Special", "Kind", "In Partnership With"];
 
 const SponsorsSection = (): ReactElement => {
   return (
