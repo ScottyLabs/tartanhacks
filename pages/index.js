@@ -10,6 +10,7 @@ import Footer from "src/components/sections/Footer";
 import SpeakerSection from "src/components/sections/SpeakerSection";
 import ScheduleSection from "src/components/sections/ScheduleSection";
 import SponsorsSection from "src/components/sections/SponsorsSection";
+import PrizesSection from "src/components/sections/PrizesSection"
 
 const DialogContainer = styled("div")({
   width: "100%",
@@ -39,6 +40,7 @@ export default function Home() {
         <AboutSection />
         <ScheduleSection />
         <SpeakerSection />
+        <PrizesSection />
         <FAQSection />
         <SponsorsSection />
         <Footer />

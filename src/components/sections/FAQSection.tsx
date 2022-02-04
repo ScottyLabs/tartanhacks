@@ -9,7 +9,7 @@ import { styled } from "@mui/material/styles";
 import { ReactElement, useState } from "react";
 
 const Section = styled("div")(({ theme }) => ({
-  backgroundImage: `linear-gradient(${theme.palette.waveGradient.start}, ${theme.palette.waveGradient.end})`,
+  backgroundImage: `linear-gradient(${theme.palette.waveGradient.end}87, ${theme.palette.waveGradient.end})`,
   paddingTop: "5em",
   display: "flex",
   flexDirection: "column",
