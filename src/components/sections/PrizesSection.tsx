@@ -185,7 +185,7 @@ const PrizesSection = (): ReactElement => {
       sponsor: "ScottyLabs"
     },
     {
-      name: "Scott Krulick Grand Prize",
+      name: "Scott Krulcik Grand Prize",
       description: "The prize for the most impressive hack at TartanHacks 2022",
       prize: "$2,000 per team",
       sponsor: "ScottyLabs"
