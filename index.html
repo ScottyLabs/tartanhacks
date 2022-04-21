@@ -53,6 +53,24 @@ layout: null
                 "url": "https://tartanhacks.com"
             }
         </script>
+        <script>
+            var pathname = window.location.pathname;
+      
+            function notAFile(pathname) {
+              for (var i = pathname.length - 1; i >= 0; i--) {
+                if (pathname[i] === "/") {
+                  break;
+                } else if (pathname[i] === ".") {
+                  return false;
+                }
+              }
+              return true;
+            }
+            if (!pathname.endsWith("/") && notAFile(pathname)) {
+              window.history.pushState(null, null, `${window.location.href}/`);
+              window.location.reload();
+            }
+        </script>      
     </head>
     <body class="bg-color home-text-color clearfix">
         <div id="menu">
