@@ -3,17 +3,14 @@ import type { ReactNode } from "react";
 
 interface Props {
   children?: ReactNode;
-  collapsedNavBar?: boolean;
+  className?: string;
 }
 
 /**
  * The base layout which includes the ScottyLabs header,
  * a navbar, and a footer
  */
-export default function BaseLayout({
-  children,
-  collapsedNavBar = true,
-}: Props) {
+export default function BaseLayout({ children, className }: Props) {
   return (
     <>
       <Head>
@@ -44,7 +41,7 @@ export default function BaseLayout({
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div>
-        <main>{children}</main>
+        <main className={className}>{children}</main>
       </div>
     </>
   );

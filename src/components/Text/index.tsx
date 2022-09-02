@@ -2,6 +2,7 @@ import clsx from "clsx";
 import styles from "./index.module.scss";
 
 export type TextVariant =
+  | "hero"
   | "h1"
   | "h2"
   | "body"

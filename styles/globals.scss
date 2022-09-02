@@ -14,6 +14,10 @@ body {
   font-size: $text-size-body;
 }
 
+body {
+  background-color: $background-color;
+}
+
 * {
   box-sizing: border-box;
 }
