@@ -1,0 +1,29 @@
+@import "~/styles/variables.scss";
+@import "~/styles/mixins.scss";
+
+.header {
+  font-size: $text-size-h1;
+  font-weight: 800;
+}
+
+.subheader {
+  font-size: $text-size-h2;
+  font-weight: 500;
+}
+
+.body {
+  font-size: $text-size-body;
+  line-height: 1.5;
+}
+
+.subtitle {
+  font-size: $text-size-subtitle;
+}
+
+.subtitle1 {
+  font-size: $text-size-subtitle1;
+}
+
+.button {
+  font-size: $text-size-button;
+}
