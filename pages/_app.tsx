@@ -1,8 +1,11 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faCircle as faCircleHollow } from "@fortawesome/free-regular-svg-icons";
+import type { AppProps } from "next/app";
+import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  library.add(faCircleHollow);
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;

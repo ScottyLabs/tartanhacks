@@ -1,0 +1,26 @@
+// Text color
+$text-primary: #000000;
+$text-alt: #ffffff;
+$text-unfocused: #999999;
+
+// Font sizes
+$text-size-h1: 3rem;
+$text-size-h2: 2rem;
+$text-size-body: 1rem;
+$text-size-subtitle: 0.8rem;
+$text-size-subtitle1: 0.6rem;
+$text-size-button: 1.3rem;
+
+// Container paddings
+$container-padding: 1em 1.5em 1em 1.5em;
+
+// Shadows
+$box-shadow:
+  0 1px 2px rgba(0, 0, 0, 0.07), 
+  0 2px 4px rgba(0, 0, 0, 0.07),
+  0 4px 8px rgba(0, 0, 0, 0.07), 
+  0 8px 16px rgba(0, 0, 0, 0.07);
+$text-shadow: 1px 1px 10px #0005;
+
+// Transitions
+$logo-hover-transition: 0.2s;
