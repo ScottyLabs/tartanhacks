@@ -1,6 +1,7 @@
 import Link from "next/link";
 import HeroBackground from "../../svg/HeroBackground";
 import TartanHacksIcon from "../../svg/TartanHacksIcon";
+import DotMatrix from "../DotMatrix";
 import Text from "../Text";
 import styles from "./index.module.scss";
 
@@ -12,9 +13,13 @@ export default function Hero() {
           <TartanHacksIcon className={styles.homeIcon} />
         </a>
       </Link>
+
       <div className={styles.heroBackgroundContainer}>
         <HeroBackground className={styles.heroBackground} />
       </div>
+
+      <DotMatrix width={3} height={3} className={styles.dotMatrixTopLeft} />
+
       <div className={styles.heroText}>
         <div className={styles.heroSpacerStart} />
         <Text variant="hero" className={styles.heroTitle}>
@@ -25,6 +30,7 @@ export default function Hero() {
         </Text>
         <div className={styles.heroSpacerEnd} />
       </div>
+
       <div className={styles.eventDate}>
         <Text variant="h2">FEB 2023</Text>
       </div>

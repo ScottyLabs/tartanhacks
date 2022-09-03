@@ -1,0 +1,33 @@
+@import "~/styles/variables.scss";
+@import "~/styles/mixins.scss";
+
+.dotMatrixContainer {
+  position: absolute;
+  display: grid;
+}
+
+.circle {
+  color: $circle-color-1;
+  background-blend-mode: hard-light;
+  height: 0.9rem;
+}
+
+@for $i from 0 through 5 {
+  .circle--#{$i} {
+    animation: pulse 2s ease-out #{$i}s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

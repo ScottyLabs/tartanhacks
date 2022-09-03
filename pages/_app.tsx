@@ -1,10 +1,13 @@
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faCircle as faCircleHollow } from "@fortawesome/free-regular-svg-icons";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import type { AppProps } from "next/app";
 import "../styles/globals.scss";
 
+config.autoAddCss = false;
+
 function MyApp({ Component, pageProps }: AppProps) {
-  library.add(faCircleHollow);
+  library.add(faCircle);
   return <Component {...pageProps} />;
 }
 
