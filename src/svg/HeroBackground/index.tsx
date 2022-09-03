@@ -69,7 +69,7 @@ export default function HeroBackground({
   className,
 }: HeroBackgroundProps): JSX.Element {
   return (
-    <div className={clsx(styles.mountainCountainer, className)}>
+    <div className={clsx(styles.backgroundContainer, className)}>
       <HeroMountainBack
         className={clsx(styles.mountain, styles.mountainBack)}
       />
