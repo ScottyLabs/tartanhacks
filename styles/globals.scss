@@ -12,7 +12,8 @@ body {
   margin: 0;
   font-family: "Rubik", sans-serif;
   color: $text-primary;
-  font-size: $text-size-body;
+  overflow-x: hidden;
+  @include font-size($body-font-sizes);
 }
 
 body {

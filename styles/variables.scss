@@ -5,30 +5,33 @@ $text-unfocused: #999999;
 
 $background-color: #ffc738;
 
+$circle-color-1: #dd562b;
+
 // Font sizes
-$text-size-hero: 5rem;
-$text-size-h1: 3rem;
-$text-size-h2: 2rem;
-$text-size-body: 1rem;
-$text-size-subtitle: 0.8rem;
-$text-size-subtitle1: 0.6rem;
-$text-size-button: 1.3rem;
-
-$text-size-hero-sm: 3rem;
-$text-size-h1-sm: 3rem;
-$text-size-h2-sm: 2rem;
-$text-size-body-sm: 1rem;
-$text-size-subtitle-sm: 0.8rem;
-$text-size-subtitle1-sm: 0.6rem;
-$text-size-button-sm: 1.3rem;
-
-$text-size-hero-xs: 2rem;
-$text-size-h1-xs: 3rem;
-$text-size-h2-xs: 1.5rem;
-$text-size-body-xs: 1rem;
-$text-size-subtitle-xs: 0.8rem;
-$text-size-subtitle1-xs: 0.6rem;
-$text-size-button-xs: 1.3rem;
+$hero-font-sizes: (
+  default: 5rem,
+  sm: 3rem,
+  xs: 2rem,
+);
+$h1-font-sizes: (
+  default: 3rem,
+);
+$h2-font-sizes: (
+  default: 2rem,
+  xs: 1.5rem,
+);
+$body-font-sizes: (
+  default: 1rem,
+);
+$subtitle-font-sizes: (
+  default: 0.8rem,
+);
+$subtitle1-font-sizes: (
+  default: 0.6rem,
+);
+$button-font-sizes: (
+  default: 1.3rem,
+);
 
 // Container paddings
 $container-padding: 1em 1.5em 1em 1.5em;
