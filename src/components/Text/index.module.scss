@@ -8,16 +8,33 @@
   @include down($breakpoint-sm) {
     font-size: $text-size-hero-sm;
   }
+  @include down($breakpoint-xs) {
+    font-size: $text-size-hero-xs;
+  }
 }
 
 .h1 {
   font-size: $text-size-h1;
   font-weight: 800;
+
+  @include down($breakpoint-sm) {
+    font-size: $text-size-h1-sm;
+  }
+  @include down($breakpoint-xs) {
+    font-size: $text-size-h1-xs;
+  }
 }
 
 .h2 {
   font-size: $text-size-h2;
   font-weight: 500;
+
+  @include down($breakpoint-sm) {
+    font-size: $text-size-h2-sm;
+  }
+  @include down($breakpoint-xs) {
+    font-size: $text-size-h2-xs;
+  }
 }
 
 .body {

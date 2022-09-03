@@ -49,6 +49,10 @@
   @include down($breakpoint-sm) {
     font-size: 5rem;
   }
+
+  @include down($breakpoint-xs) {
+    font-size: 4rem;
+  }
 }
 
 .heroSpacerStart {
