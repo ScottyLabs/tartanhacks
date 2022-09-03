@@ -4,6 +4,10 @@
 .hero {
   font-size: $text-size-hero;
   font-weight: 800;
+
+  @include down($breakpoint-sm) {
+    font-size: $text-size-hero-sm;
+  }
 }
 
 .h1 {

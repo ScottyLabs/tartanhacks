@@ -10,13 +10,19 @@
   z-index: 1;
 }
 
-.heroBackground {
+.heroBackgroundContainer {
   height: 100%;
   width: 100%;
-  top: 0;
   bottom: 0;
   position: absolute;
   z-index: -1;
+  overflow-x: hidden;
+}
+
+.heroBackground {
+  @include down($breakpoint-sm) {
+    width: 200%;
+  }
 }
 
 .heroText {
@@ -30,10 +36,19 @@
   text-align: right;
   margin: auto auto;
   position: absolute;
+
+  @include down($breakpoint-lg) {
+    text-align: center;
+    padding-right: 0;
+  }
 }
 
 .heroYear {
   font-size: 7rem;
+
+  @include down($breakpoint-sm) {
+    font-size: 5rem;
+  }
 }
 
 .heroSpacerStart {

@@ -12,8 +12,8 @@ export default function Hero() {
           <TartanHacksIcon className={styles.homeIcon} />
         </a>
       </Link>
-      <div className={styles.heroBackground}>
-        <HeroBackground />
+      <div className={styles.heroBackgroundContainer}>
+        <HeroBackground className={styles.heroBackground} />
       </div>
       <div className={styles.heroText}>
         <div className={styles.heroSpacerStart} />
@@ -21,12 +21,12 @@ export default function Hero() {
           TARTANHACKS
         </Text>
         <Text variant="hero" className={styles.heroYear}>
-          2022
+          2023
         </Text>
         <div className={styles.heroSpacerEnd} />
       </div>
       <div className={styles.eventDate}>
-        <Text variant="h2">FEB 4-6, 2022</Text>
+        <Text variant="h2">FEB 4-6, 2023</Text>
       </div>
     </>
   );
