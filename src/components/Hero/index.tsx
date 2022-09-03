@@ -26,7 +26,7 @@ export default function Hero() {
         <div className={styles.heroSpacerEnd} />
       </div>
       <div className={styles.eventDate}>
-        <Text variant="h2">FEB 4-6, 2023</Text>
+        <Text variant="h2">FEB 2023</Text>
       </div>
     </>
   );
