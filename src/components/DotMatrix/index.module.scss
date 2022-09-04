@@ -6,9 +6,37 @@
   display: grid;
 }
 
+.matrixDense {
+  gap: 1.5em;
+
+  @include down($breakpoint-lg) {
+    gap: 1em;
+  }
+}
+
+.matrixSparse {
+  gap: 4em;
+
+  @include down($breakpoint-lg) {
+    gap: 3em;
+  }
+
+  @include down($breakpoint-xs) {
+    gap: 2em;
+  }
+}
+
 .circle {
   background-blend-mode: hard-light;
   height: 0.9rem;
+
+  @include down($breakpoint-lg) {
+    height: 0.8rem;
+  }
+
+  @include down($breakpoint-md) {
+    height: 0.5rem;
+  }
 }
 
 .circlePrimary {

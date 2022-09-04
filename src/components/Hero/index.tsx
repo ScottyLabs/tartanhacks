@@ -1,7 +1,7 @@
 import Link from "next/link";
 import HeroBackground from "../../svg/HeroBackground";
 import TartanHacksIcon from "../../svg/TartanHacksIcon";
-import DotMatrix, { DotColor, DotOpacity } from "../DotMatrix";
+import DotMatrix, { DotColor, DotOpacity, MatrixSpacing } from "../DotMatrix";
 import Text from "../Text";
 import styles from "./index.module.scss";
 
@@ -36,9 +36,9 @@ export default function Hero() {
         width={3}
         height={4}
         className={styles.dotMatrixBottomLeft}
-        gap="4em"
         dotColor={DotColor.SECONDARY}
         dotOpacity={DotOpacity.FADED}
+        matrixSpacing={MatrixSpacing.SPARSE}
       />
 
       <div className={styles.eventDate}>

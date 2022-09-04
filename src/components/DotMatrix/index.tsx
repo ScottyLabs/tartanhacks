@@ -13,10 +13,15 @@ export enum DotOpacity {
   FADED = "circleFaded",
 }
 
+export enum MatrixSpacing {
+  DENSE = "matrixDense",
+  SPARSE = "matrixSparse",
+}
+
 interface DotMatrixProps {
   width: number;
   height: number;
-  gap?: string;
+  matrixSpacing?: MatrixSpacing;
   dotColor?: DotColor;
   dotOpacity?: DotOpacity;
   className?: string;
@@ -25,7 +30,7 @@ interface DotMatrixProps {
 export default function DotMatrix({
   width,
   height,
-  gap = "1.5em",
+  matrixSpacing = MatrixSpacing.DENSE,
   dotColor = DotColor.PRIMARY,
   dotOpacity = DotOpacity.DARK,
   className,
@@ -53,10 +58,13 @@ export default function DotMatrix({
 
   return (
     <div
-      className={clsx(styles.dotMatrixContainer, className)}
+      className={clsx(
+        styles.dotMatrixContainer,
+        styles[matrixSpacing],
+        className
+      )}
       style={{
         gridTemplateColumns: `repeat(${width}, 1fr)`,
-        gap,
       }}
     >
       {matrix}
