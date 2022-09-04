@@ -19,19 +19,40 @@
   color: $circle-color-secondary;
 }
 
+.circleFaded {
+  opacity: 0.6;
+}
+
 @for $i from 0 through 5 {
-  .circle--#{$i} {
-    animation: pulse 2s ease-out #{$i}s infinite;
+  .circle--#{$i}.circleDark {
+    animation: pulseDark 2s ease-out #{$i}s infinite;
+  }
+  .circle--#{$i}.circleFaded {
+    animation: pulseFaded 2s ease-out #{$i}s infinite;
   }
 }
 
-@keyframes pulse {
+@keyframes pulseDark {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulseFaded {
   0% {
     opacity: 0.6;
   }
 
   50% {
-    opacity: 0.3;
+    opacity: 0.2;
   }
 
   100% {

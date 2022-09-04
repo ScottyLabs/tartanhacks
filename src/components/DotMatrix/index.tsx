@@ -8,11 +8,17 @@ export enum DotColor {
   SECONDARY = "circleSecondary",
 }
 
+export enum DotOpacity {
+  DARK = "circleDark",
+  FADED = "circleFaded",
+}
+
 interface DotMatrixProps {
   width: number;
   height: number;
   gap?: string;
   dotColor?: DotColor;
+  dotOpacity?: DotOpacity;
   className?: string;
 }
 
@@ -21,6 +27,7 @@ export default function DotMatrix({
   height,
   gap = "1.5em",
   dotColor = DotColor.PRIMARY,
+  dotOpacity = DotOpacity.DARK,
   className,
 }: DotMatrixProps) {
   const matrix = [];
@@ -33,6 +40,7 @@ export default function DotMatrix({
           className={clsx(
             styles.circle,
             styles[dotColor],
+            styles[dotOpacity],
             styles[`circle--${i + j}`]
           )}
           key={i * height + j}
