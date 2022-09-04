@@ -3,10 +3,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import styles from "./index.module.scss";
 
+export enum DotColor {
+  PRIMARY = "circlePrimary",
+  SECONDARY = "circleSecondary",
+}
+
 interface DotMatrixProps {
   width: number;
   height: number;
   gap?: string;
+  dotColor?: DotColor;
   className?: string;
 }
 
@@ -14,6 +20,7 @@ export default function DotMatrix({
   width,
   height,
   gap = "1.5em",
+  dotColor = DotColor.PRIMARY,
   className,
 }: DotMatrixProps) {
   const matrix = [];
@@ -23,7 +30,12 @@ export default function DotMatrix({
       const circle = (
         <FontAwesomeIcon
           icon={faCircle}
-          className={clsx(styles.circle, styles[`circle--${j}`])}
+          className={clsx(
+            styles.circle,
+            styles[dotColor],
+            styles[`circle--${i + j}`]
+          )}
+          key={i * height + j}
         />
       );
       row.push(circle);
