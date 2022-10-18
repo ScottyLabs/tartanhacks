@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { ReactNode } from "react";
 import styles from "./index.module.scss";
 
 export type TextVariant =
@@ -16,7 +17,7 @@ const Text = ({
   className,
 }: {
   variant?: TextVariant;
-  children?: string;
+  children?: ReactNode;
   className?: String;
 }) => {
   return <div className={clsx(className, styles[variant])}>{children}</div>;
