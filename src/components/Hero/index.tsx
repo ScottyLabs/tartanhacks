@@ -42,7 +42,7 @@ export default function Hero() {
       />
 
       <div className={styles.eventDate}>
-        <Text variant="h2">FEB 2023</Text>
+        <Text variant="h2">FEB 3-5, 2023</Text>
       </div>
     </>
   );
