@@ -11,7 +11,6 @@ export default function Sponsors() {
               <div className="flex flex-1 justify-center gap-x-8">
                 <img src="/sponsors/wayfair.png" className="flex-0 h-24 p-2 object-contain bg-white rounded-lg"/>
                 <img src="/sponsors/oracle.png" className="flex-0 h-24 p-2 object-contain bg-white rounded-lg"/>
-                <img src="/sponsors/capital-one.png" className="flex-0 h-24 p-2 object-contain bg-white rounded-lg"/>
               </div>
             </div>
             <div className="flex justify-between items-center">
