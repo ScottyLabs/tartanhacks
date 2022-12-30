@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Footer from "../src/components/Footer";
 import Hero from "../src/components/Hero";
 import About from "../src/components/About";
 import Speakers from "../src/components/Speakers";
@@ -18,7 +17,6 @@ const Home: NextPage = () => {
       <Prizes />
       <FAQs />
       <Sponsors />
-      <Footer />
     </BaseLayout>
   );
 };
