@@ -1,7 +1,13 @@
-import {Disclosure, Transition} from "@headlessui/react";
-import { ChevronUpIcon } from '@heroicons/react/20/solid'
+import { Disclosure, Transition } from '@headlessui/react';
+import { ChevronUpIcon } from '@heroicons/react/20/solid';
 
-function FAQDisclosure({question, answer}: {question: string, answer: string}) {
+function FAQDisclosure({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string;
+}) {
   return (
     <Disclosure>
       {({ open }) => (
@@ -20,22 +26,31 @@ function FAQDisclosure({question, answer}: {question: string, answer: string}) {
         </>
       )}
     </Disclosure>
-  )
+  );
 }
 
 function FAQList() {
   return (
     <div className="w-full">
-      <FAQDisclosure question="Will TartanHacks be in-person this year?" answer="Yes." />
-      <FAQDisclosure question="How much does it cost to participate in TartanHacks?" answer="Nothing. TartanHacks is free for all undergraduate students!" />
-      <FAQDisclosure question="I'm not a CS major, can I still join?" answer="Yes! All undergraduate majors and programs, even if they aren't technical, are welcome at TartanHacks. We have slides from a series of web development workshops online that you can use to brush up your skills! We'll also have some workshops during the event so you can get started with new frameworks." />
+      <FAQDisclosure
+        question="Will TartanHacks be in-person this year?"
+        answer="Yes."
+      />
+      <FAQDisclosure
+        question="How much does it cost to participate in TartanHacks?"
+        answer="Nothing. TartanHacks is free for all undergraduate students!"
+      />
+      <FAQDisclosure
+        question="I'm not a CS major, can I still join?"
+        answer="Yes! All undergraduate majors and programs, even if they aren't technical, are welcome at TartanHacks. We have slides from a series of web development workshops online that you can use to brush up your skills! We'll also have some workshops during the event so you can get started with new frameworks."
+      />
     </div>
   );
 }
 
 export default function FAQs() {
   return (
-    <div className="py-16 pb-40">
+    <div className="py-16 pb-40" id="faq">
       <div className="text-beige m-auto">
         <h3 className="text-2xl mb-4 text-center text-yellow">FAQs</h3>
         <div className="max-w-4xl m-auto">

@@ -1,5 +1,5 @@
-import clsx from "clsx";
-import styles from "./index.module.scss";
+import clsx from 'clsx';
+import styles from './index.module.scss';
 
 interface HeroBackgroundProps {
   className?: string;

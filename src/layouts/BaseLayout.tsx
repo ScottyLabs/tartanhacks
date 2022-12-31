@@ -1,6 +1,6 @@
-import Head from "next/head";
-import type { ReactNode } from "react";
-import Header from "../components/Header";
+import Head from 'next/head';
+import type { ReactNode } from 'react';
+import Header from '../components/Header';
 
 interface Props {
   children?: ReactNode;
@@ -43,7 +43,7 @@ export default function BaseLayout({ children, className }: Props) {
       </Head>
       <div>
         <Header />
-        <main className={className}>{children}</main>
+        <main className="scroll-smooth">{children}</main>
       </div>
     </>
   );

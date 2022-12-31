@@ -1,5 +1,5 @@
-import wrapElement from "../../utils/wrapElement";
-import TartanHacksIcon from "../TartanHacksIcon";
+import wrapElement from '../../utils/wrapElement';
+import TartanHacksIcon from '../TartanHacksIcon';
 
 const IconMapping = {
   tartanhacks: <TartanHacksIcon />,

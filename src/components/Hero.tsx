@@ -1,4 +1,4 @@
-import Logo from "../../public/svg/logo.svg";
+import Logo from '../../public/svg/logo.svg';
 
 export default function Hero() {
   return (
@@ -14,10 +14,11 @@ export default function Hero() {
             <h2 className="text-lg sm:text-3xl">February 4 - 6</h2>
           </div>
           <div className="text-beige flex justify-center mt-8">
-            <div className="py-2 px-8 text-xl bg-blue text-black rounded-xl">Register</div>
+            <div className="py-2 px-8 text-xl bg-blue text-black rounded-xl">
+              Register
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   );

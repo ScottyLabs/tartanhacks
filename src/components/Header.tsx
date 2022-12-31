@@ -1,4 +1,11 @@
-import Logo from "../../public/svg/logo.svg";
+import Logo from '../../public/svg/logo.svg';
+import Link from 'next/link';
+
+function HeaderLink({ name, href }: { name: string, href: string }) {
+  return (<Link href={href} scroll={false}>
+    <span className="hover:text-yellow cursor-pointer">{name}</span>
+  </Link>);
+}
 
 export default function Header() {
   return (
@@ -8,11 +15,11 @@ export default function Header() {
           <Logo className="leading-4 h-6 mr-4" />
         </div>
         <div className="space-x-8 text-lg">
-          <a>About</a>
-          <a>Speakers</a>
-          <a>Prizes</a>
-          <a>FAQ</a>
-          <a>Sponsors</a>
+          <HeaderLink name="About" href="#about" />
+          <HeaderLink name="Speakers" href="#speakers" />
+          <HeaderLink name="Prizes" href="#prizes" />
+          <HeaderLink name="FAQ" href="#faq" />
+          <HeaderLink name="Sponsors" href="#sponsors" />
         </div>
       </div>
     </header>
