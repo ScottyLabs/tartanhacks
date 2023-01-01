@@ -1,14 +1,15 @@
-import type { NextPage } from "next";
-import Footer from "../src/components/Footer";
-import Hero from "../src/components/Hero";
-import BaseLayout from "../src/layouts/BaseLayout";
-import styles from "../styles/Home.module.scss";
+import type { NextPage } from 'next';
+import Hero from '../src/components/Hero';
+import About from '../src/components/About';
+import FAQs from '../src/components/FAQ';
+import BaseLayout from '../src/layouts/BaseLayout';
 
 const Home: NextPage = () => {
   return (
-    <BaseLayout className={styles.main}>
+    <BaseLayout>
       <Hero />
-      <Footer />
+      <About />
+      <FAQs />
     </BaseLayout>
   );
 };

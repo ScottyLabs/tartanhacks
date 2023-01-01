@@ -1,15 +1,10 @@
-import { Html, Head, Main, NextScript } from "next/document";
-import Script from "next/script";
+import { Html, Head, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 
 export default function Document() {
   return (
-    <Html>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+    <Html style={{ scrollBehavior: 'smooth' }}>
+      <Head></Head>
       <body>
         <Main />
         <NextScript />

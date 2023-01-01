@@ -1,5 +1,6 @@
-import Head from "next/head";
-import type { ReactNode } from "react";
+import Head from 'next/head';
+import type { ReactNode } from 'react';
+import Header from '../components/Header';
 
 interface Props {
   children?: ReactNode;
@@ -41,7 +42,8 @@ export default function BaseLayout({ children, className }: Props) {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div>
-        <main className={className}>{children}</main>
+        <Header />
+        <main className="scroll-smooth">{children}</main>
       </div>
     </>
   );

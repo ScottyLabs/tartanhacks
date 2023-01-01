@@ -1,6 +1,6 @@
-import BaseIcon from "../BaseIcon";
-import styles from "../styles/index.module.scss";
-import { SvgIconProps } from "../SvgIcon";
+import BaseIcon from '../BaseIcon';
+import styles from '../styles/index.module.scss';
+import { SvgIconProps } from '../SvgIcon';
 
 export default function TartanHacksIcon({
   className,
@@ -21,7 +21,7 @@ export default function TartanHacksIcon({
         <mask
           id="tartanhacks_a"
           style={{
-            maskType: "alpha",
+            maskType: 'alpha',
           }}
           maskUnits="userSpaceOnUse"
           x={28}
@@ -46,7 +46,7 @@ export default function TartanHacksIcon({
         <mask
           id="tartanhacks_b"
           style={{
-            maskType: "alpha",
+            maskType: 'alpha',
           }}
           maskUnits="userSpaceOnUse"
           x={49}

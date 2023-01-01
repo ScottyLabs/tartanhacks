@@ -1,1 +1,4 @@
 src/styles/variables.scss
+.next/
+node_modules/
+*.svg
