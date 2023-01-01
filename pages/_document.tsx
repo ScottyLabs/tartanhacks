@@ -3,7 +3,7 @@ import Script from 'next/script';
 
 export default function Document() {
   return (
-    <Html style={{scrollBehavior:'smooth'}}>
+    <Html style={{ scrollBehavior: 'smooth' }}>
       <Head></Head>
       <body>
         <Main />

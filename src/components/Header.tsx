@@ -1,10 +1,12 @@
 import Logo from '../../public/svg/logo.svg';
 import Link from 'next/link';
 
-function HeaderLink({ name, href }: { name: string, href: string }) {
-  return (<Link href={href} scroll={false}>
-    <span className="hover:text-yellow cursor-pointer">{name}</span>
-  </Link>);
+function HeaderLink({ name, href }: { name: string; href: string }) {
+  return (
+    <Link href={href} scroll={false}>
+      <span className="hover:text-yellow cursor-pointer">{name}</span>
+    </Link>
+  );
 }
 
 export default function Header() {

@@ -1,4 +1,19 @@
 import Logo from '../../public/svg/logo.svg';
+import Link from "next/link";
+
+export function HeroRegister() {
+  return (
+    <div className="text-beige flex justify-center mt-8">
+      {/* TODO: Update link */}
+      <Link href="https://stg-register.tartanhacks.com/login">
+        <div
+          className="border-2 border-black py-2 px-8 text-xl bg-blue text-black rounded-xl cursor-pointer hover:bg-black hover:text-blue hover:border-blue">
+          Register
+        </div>
+      </Link>
+    </div>
+  );
+}
 
 export default function Hero() {
   return (
@@ -8,16 +23,12 @@ export default function Hero() {
         <div className="text-beige m-auto">
           <div>
             <div className="flex text-4xl sm:text-6xl items-baseline">
-              <Logo className="leading-4 h-[0.7em] mr-4" />
+              <Logo className="leading-4 h-[0.7em] mr-4"/>
               <h1 className="flex-initial font-bold">TartanHacks 2023</h1>
             </div>
             <h2 className="text-lg sm:text-3xl">February 4 - 6</h2>
           </div>
-          <div className="text-beige flex justify-center mt-8">
-            <div className="py-2 px-8 text-xl bg-blue text-black rounded-xl">
-              Register
-            </div>
-          </div>
+          <HeroRegister/>
         </div>
       </div>
     </div>

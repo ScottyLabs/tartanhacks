@@ -18,8 +18,12 @@ export function SponsorTier({
 }) {
   return (
     <div className="flex justify-between items-center flex-col md:flex-row">
-      <div className="text-xl text-black md:mr-8 w-24 text-center md:text-right">{name}</div>
-      <div className="flex flex-1 justify-center md:gap-x-8 md:gap-y-0 gap-y-2 flex-col md:flex-row">{children}</div>
+      <div className="text-xl text-black md:mr-8 w-24 text-center md:text-right">
+        {name}
+      </div>
+      <div className="flex flex-1 justify-center md:gap-x-8 md:gap-y-0 gap-y-2 flex-col md:flex-row">
+        {children}
+      </div>
     </div>
   );
 }
