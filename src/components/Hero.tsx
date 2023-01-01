@@ -5,7 +5,7 @@ export function HeroRegister() {
   return (
     <div className="text-beige flex justify-center mt-8">
       {/* TODO: Update link */}
-      <Link href="https://stg-register.tartanhacks.com/login">
+      <Link href="https://register.tartanhacks.com/">
         <div
           className="border-2 border-black py-2 px-8 text-xl bg-blue text-black rounded-xl cursor-pointer hover:bg-black hover:text-blue hover:border-blue">
           Register
