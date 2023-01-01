@@ -27,7 +27,7 @@ export default function Hero() {
               <Logo className="leading-4 h-[0.7em] mr-4" />
               <h1 className="flex-initial font-bold">TartanHacks 2023</h1>
             </div>
-            <h2 className="text-lg sm:text-3xl">February 4 - 6</h2>
+            <h2 className="text-lg sm:text-3xl">February 3 - 4</h2>
           </div>
           <HeroRegister />
         </div>
