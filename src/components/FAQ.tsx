@@ -1,18 +1,20 @@
-import { Disclosure, Transition } from '@headlessui/react';
-import { ChevronUpIcon } from '@heroicons/react/20/solid';
+import {Disclosure, Transition} from '@headlessui/react';
+import {ChevronUpIcon} from '@heroicons/react/20/solid';
 
-function FAQDisclosure({
-  question,
-  answer,
-}: {
-  question: string;
-  answer: string;
-}) {
+function FAQDisclosure(
+  {
+    question,
+    answer,
+  }: {
+    question: string;
+    answer: string;
+  }) {
   return (
     <Disclosure>
-      {({ open }) => (
+      {({open}) => (
         <>
-          <Disclosure.Button className="flex w-full justify-between rounded-lg px-4 pt-3 pb-1 text-left text-md hover:text-yellow">
+          <Disclosure.Button
+            className="flex w-full justify-between rounded-lg px-4 pt-3 pb-1 text-left text-md hover:text-yellow">
             <span>{question}</span>
             <ChevronUpIcon
               className={`${
@@ -30,20 +32,21 @@ function FAQDisclosure({
 }
 
 function FAQList() {
+  const FAQs = [
+    {q: `Will TartanHacks be in-person this year?`, a: `Yes.`},
+    {
+      q: `How much does it cost to participate in TartanHacks?`,
+      a: `Nothing. TartanHacks is free for all undergraduate students!`
+    },
+    {
+      q: `I'm not a CS major, can I still join?`,
+      a: `Yes! All undergraduate majors and programs, even if they aren't technical, are welcome at TartanHacks. We have slides from a series of web development workshops online that you can use to brush up your skills! We'll also have some workshops during the event so you can get started with new frameworks.`
+    },
+  ]
+
   return (
     <div className="w-full">
-      <FAQDisclosure
-        question="Will TartanHacks be in-person this year?"
-        answer="Yes."
-      />
-      <FAQDisclosure
-        question="How much does it cost to participate in TartanHacks?"
-        answer="Nothing. TartanHacks is free for all undergraduate students!"
-      />
-      <FAQDisclosure
-        question="I'm not a CS major, can I still join?"
-        answer="Yes! All undergraduate majors and programs, even if they aren't technical, are welcome at TartanHacks. We have slides from a series of web development workshops online that you can use to brush up your skills! We'll also have some workshops during the event so you can get started with new frameworks."
-      />
+      {FAQs.map(({q, a}) => (<FAQDisclosure key={q} question={q} answer={a}/>))}
     </div>
   );
 }
@@ -54,7 +57,7 @@ export default function FAQs() {
       <div className="text-beige m-auto">
         <h3 className="text-2xl mb-4 text-center text-yellow">FAQs</h3>
         <div className="max-w-4xl m-auto">
-          <FAQList />
+          <FAQList/>
         </div>
       </div>
     </div>
