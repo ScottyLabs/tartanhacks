@@ -3,7 +3,7 @@ import {useRouter} from 'next/router';
 
 export function HeroRegister() {
   const router = useRouter();
-  let registerLink = `https://register.tartanhacks.com/`;
+  let registerLink = `https://register.tartanhacks.com/register`;
   if ('utm_source' in router.query) {
     registerLink = `${registerLink}?utm_source=${router.query["utm_source"]}`;
   }
