@@ -1,22 +1,21 @@
 import Logo from '../../public/svg/logo.svg';
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 
 export function HeroRegister() {
   const router = useRouter();
   let registerLink = `https://register.tartanhacks.com/register`;
-  if ('utm_source' in router.query) {
-    registerLink = `${registerLink}?utm_source=${router.query["utm_source"]}`;
+  if (
+    'utm_source' in router.query &&
+    'utm_medium' in router.query &&
+    'utm_campaign' in router.query
+  ) {
+    registerLink = `${registerLink}?utm_source=${router.query['utm_source']}&utm_medium=${router.query['utm_medium']}&utm_campaign=${router.query['utm_campaign']}`;
   }
 
   return (
     <div className="text-beige flex justify-center mt-8">
-      <a
-        href={registerLink}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div
-          className="border-2 border-black py-2 px-8 text-xl bg-blue text-black rounded-xl cursor-pointer hover:bg-black hover:text-blue hover:border-blue">
+      <a href={registerLink} target="_blank" rel="noopener noreferrer">
+        <div className="border-2 border-black py-2 px-8 text-xl bg-blue text-black rounded-xl cursor-pointer hover:bg-black hover:text-blue hover:border-blue">
           Register
         </div>
       </a>
@@ -32,12 +31,12 @@ export default function Hero() {
         <div className="text-beige m-auto">
           <div>
             <div className="flex text-4xl sm:text-6xl items-baseline">
-              <Logo className="leading-4 h-[0.7em] mr-4"/>
+              <Logo className="leading-4 h-[0.7em] mr-4" />
               <h1 className="flex-initial font-bold">TartanHacks 2023</h1>
             </div>
             <h2 className="text-lg sm:text-3xl">February 3 - 4</h2>
           </div>
-          <HeroRegister/>
+          <HeroRegister />
         </div>
       </div>
     </div>
