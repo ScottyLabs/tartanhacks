@@ -29,7 +29,10 @@ export default function BaseLayout({ children, className }: Props) {
           property="og:description"
           content="TartanHacks is Carnegie Mellon's largest hackathon! It is a 24-hour hackathon where participants from all over the country create innovative projects."
         />
-        <meta property="og:image" content="/cover-photo.png" />
+        <meta
+          property="og:image"
+          content="https://tartanhacks.com/cover-photo-2023.png"
+        />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://tartanhacks.com/" />
@@ -41,8 +44,11 @@ export default function BaseLayout({ children, className }: Props) {
           property="twitter:description"
           content="TartanHacks is Carnegie Mellon's largest hackathon! It is a 24-hour hackathon where participants from all over the country create innovative projects."
         />
-        <meta property="twitter:image" content="/cover-photo.png" />
-        <link rel="icon" href="/favicon.png" />
+        <meta
+          property="twitter:image"
+          content="https://tartanhacks.com/cover-photo-2023.png"
+        />
+        <link rel="icon" href="https://tartanhacks.com/favicon.png" />
       </Head>
       <div>
         <Header />
