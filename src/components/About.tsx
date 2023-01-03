@@ -4,11 +4,11 @@ export default function About() {
   `;
 
   return (
-    <section className="py-16" id="about">
-      <div className="flex">
-        <div className="text-beige m-auto flex flex-row">
-          <h3 className="text-2xl mr-8 text-yellow">About</h3>
-          <div className="max-w-xl text-lg">
+    <section className='py-16' id='about'>
+      <div className='flex'>
+        <div className='text-beige m-auto flex flex-col md:flex-row px-6'>
+          <h3 className='text-2xl mb-4 md:mr-8 text-yellow text-center md:text-left'>About</h3>
+          <div className='max-w-xl text-lg'>
             <p>{aboutContent}</p>
           </div>
         </div>
