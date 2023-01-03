@@ -15,7 +15,7 @@ function FooterLink({ text, href }: { text: string; href: string }) {
 
 export default function Footer() {
   return (
-    <footer className="sticky bottom-0 z-30 w-full flex justify-center text-beige">
+    <footer className="pb-3 z-30 w-full flex justify-center text-beige">
       Made with &lt;3 by&nbsp;
       <FooterLink text="ScottyLabs" href="https://scottylabs.org/" />
     </footer>
