@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import type { ReactNode } from 'react';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 interface Props {
@@ -53,6 +54,7 @@ export default function BaseLayout({ children, className }: Props) {
       <div>
         <Header />
         <main className="scroll-smooth">{children}</main>
+        <Footer />
       </div>
     </>
   );
