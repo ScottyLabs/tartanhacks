@@ -18,7 +18,7 @@ export function RegisterButton({ className }: { className?: string }) {
   return (
     <div className={clsx(className, 'text-beige flex justify-center')}>
       <a href={registerLink} target="_blank" rel="noopener noreferrer">
-        <div className="border-2 border-black py-1 px-4 text-xl bg-yellow text-black rounded-xl cursor-pointer hover:bg-black hover:text-yellow hover:border-yellow">
+        <div className="border-2 border-black py-3 px-6 text-2xl font-medium bg-yellow text-black rounded-xl cursor-pointer hover:bg-black hover:text-yellow hover:border-yellow">
           Register
         </div>
       </a>
