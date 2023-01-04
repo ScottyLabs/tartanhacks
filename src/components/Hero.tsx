@@ -1,5 +1,7 @@
 import Logo from '../../public/svg/logo.svg';
 import { useRouter } from 'next/router';
+import Jumbotron from '../svg/Jumbotron';
+import TiledBackground from '../svg/TiledBackground';
 
 export function HeroRegister() {
   const router = useRouter();
@@ -28,14 +30,9 @@ export default function Hero() {
     <div className="h-screen">
       {/* TODO: Use grid? */}
       <div className="flex h-screen flex-col justify-center">
+        <TiledBackground />
         <div className="text-beige m-auto">
-          <div>
-            <div className="flex text-4xl sm:text-6xl items-baseline">
-              <Logo className="leading-4 h-[0.7em] mr-4" />
-              <h1 className="flex-initial font-bold">TartanHacks 2023</h1>
-            </div>
-            <h2 className="text-lg sm:text-3xl">February 3 - 4</h2>
-          </div>
+          <Jumbotron className="w-4/5" />
           <HeroRegister />
         </div>
       </div>
