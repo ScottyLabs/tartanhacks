@@ -6,13 +6,14 @@
   top: 0;
   display: flex;
   flex-direction: column;
+
+  overflow: hidden;
 }
 
 .tileContainer {
   display: grid;
   grid-template-columns: repeat(22, 1fr);
   gap: 3px;
-  overflow: hidden;
 }
 
 .fadeCover {
