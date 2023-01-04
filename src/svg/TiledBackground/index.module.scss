@@ -28,3 +28,29 @@
   margin-top: $v-offset;
   background: linear-gradient(#00000000, #000000ff);
 }
+
+.static {
+  fill-opacity: 0;
+}
+
+// Generate utility classes for assigning random animation delays and durations
+$maxDelay: 60;
+@for $i from 1 through 60 {
+  .animate--#{i} {
+    animation: pulse 3s #{i}s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    fill-opacity: 0;
+  }
+
+  50% {
+    fill-opacity: 1;
+  }
+
+  100% {
+    fill-opacity: 0;
+  }
+}

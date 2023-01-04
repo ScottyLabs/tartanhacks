@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { OutlinedHTile, OutlinedTTile } from '../BackgroundTile';
 import styles from './index.module.scss';
 
@@ -5,24 +6,52 @@ export interface TiledBackgroundProps {
   className?: string;
 }
 
+const WIDTH = 22;
+const HEIGHT = 30;
+const ANIMATED_COUNT = 30;
+const MAX_DELAY = 60;
+
+const animateIndexes = new Set();
+for (let i = 0; i < ANIMATED_COUNT; i++) {
+  const r = Math.round(Math.random() * (WIDTH * HEIGHT));
+  animateIndexes.add(r);
+}
+
 export default function TiledBackground({
   className,
 }: TiledBackgroundProps): JSX.Element {
-  const width = 22;
-  const height = 30;
   const tiles = [];
 
   let useTTile = true;
-  for (let row = 0; row < height; row++) {
+  for (let row = 0; row < HEIGHT; row++) {
     useTTile = !useTTile;
-    for (let col = 0; col < width; col++) {
+    for (let col = 0; col < WIDTH; col++) {
+      const idx = row * WIDTH + col;
+
+      // Assign random delay and duration to animation
+      const delay = Math.round(Math.random() * MAX_DELAY) + 1;
+      const animateClass = styles[`animate--${delay}`];
+      console.log(animateClass);
+
       if (useTTile) {
         tiles.push(
-          <OutlinedTTile className="w-14 md:w-16" key={`t-r${row}-c${col}`} />
+          <OutlinedTTile
+            className={clsx(
+              'w-14 md:w-16',
+              animateIndexes.has(idx) ? animateClass : styles.static
+            )}
+            key={`t-r${row}-c${col}`}
+          />
         );
       } else {
         tiles.push(
-          <OutlinedHTile className="w-14 md:w-16" key={`h-r${row}-c${col}`} />
+          <OutlinedHTile
+            className={clsx(
+              'w-14 md:w-16',
+              animateIndexes.has(idx) ? animateClass : styles.static
+            )}
+            key={`h-r${row}-c${col}`}
+          />
         );
       }
       useTTile = !useTTile;
