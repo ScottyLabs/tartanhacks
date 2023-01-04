@@ -8,12 +8,13 @@ export interface TiledBackgroundProps {
 export default function TiledBackground({
   className,
 }: TiledBackgroundProps): JSX.Element {
-  const width = 23;
+  const width = 22;
   const height = 12;
   const tiles = [];
 
   let useTTile = true;
   for (let row = 0; row < height; row++) {
+    useTTile = !useTTile;
     for (let col = 0; col < width; col++) {
       if (useTTile) {
         tiles.push(
