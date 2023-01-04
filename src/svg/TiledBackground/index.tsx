@@ -8,8 +8,8 @@ export interface TiledBackgroundProps {
 
 const WIDTH = 22;
 const HEIGHT = 30;
-const ANIMATED_COUNT = 30;
-const MAX_DELAY = 60;
+const ANIMATED_COUNT = 50;
+const MAX_DELAY = 30;
 
 const animateIndexes = new Set();
 for (let i = 0; i < ANIMATED_COUNT; i++) {
@@ -31,7 +31,6 @@ export default function TiledBackground({
       // Assign random delay and duration to animation
       const delay = Math.round(Math.random() * MAX_DELAY) + 1;
       const animateClass = styles[`animate--${delay}`];
-      console.log(animateClass);
 
       if (useTTile) {
         tiles.push(
