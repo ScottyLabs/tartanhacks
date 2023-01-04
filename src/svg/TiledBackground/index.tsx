@@ -9,7 +9,7 @@ export default function TiledBackground({
   className,
 }: TiledBackgroundProps): JSX.Element {
   const width = 22;
-  const height = 12;
+  const height = 30;
   const tiles = [];
 
   let useTTile = true;

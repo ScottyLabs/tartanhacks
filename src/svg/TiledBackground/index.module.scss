@@ -1,6 +1,6 @@
 .backgroundContainer {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0 auto;
   z-index: -1;
   position: absolute;
@@ -18,9 +18,13 @@
 }
 
 .fadeCover {
-  $v-offset: 20vh;
+  $height: 20vh;
+  $v-offset: calc(100vh - $height);
+
   width: 100vw;
-  height: $v-offset;
-  margin-top: -$v-offset;
+  position: absolute;
+  top: 0;
+  height: $height;
+  margin-top: $v-offset;
   background: linear-gradient(#00000000, #000000ff);
 }
