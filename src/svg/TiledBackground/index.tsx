@@ -6,7 +6,7 @@ export interface TiledBackgroundProps {
   className?: string;
 }
 
-const WIDTH = 22;
+const WIDTH = 24;
 const HEIGHT = 30;
 const ANIMATED_COUNT = 50;
 const MAX_DELAY = 30;
