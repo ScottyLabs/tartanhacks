@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Logo from '../../public/svg/logo.svg';
@@ -10,7 +11,7 @@ function HeaderLink({ name, href }: { name: string; href: string }) {
   );
 }
 
-export function RegisterButton() {
+export function RegisterButton({ className }: { className: string }) {
   const router = useRouter();
   let registerLink = `https://register.tartanhacks.com/register`;
   if (
@@ -22,7 +23,7 @@ export function RegisterButton() {
   }
 
   return (
-    <div className="text-beige flex justify-center">
+    <div className={clsx(className, 'text-beige flex justify-center')}>
       <a href={registerLink} target="_blank" rel="noopener noreferrer">
         <div className="border-2 border-black py-1 px-4 text-xl bg-blue text-black rounded-xl cursor-pointer hover:bg-black hover:text-blue hover:border-blue">
           Register
@@ -40,9 +41,9 @@ export default function Header() {
           <Logo className="leading-4 h-6 mr-4" />
         </div>
         <div className="space-x-8 text-lg flex items-center">
-          <RegisterButton />
           <HeaderLink name="About" href="#about" />
           <HeaderLink name="FAQ" href="#faq" />
+          <RegisterButton />
         </div>
       </div>
     </header>

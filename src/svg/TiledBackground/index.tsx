@@ -17,11 +17,11 @@ export default function TiledBackground({
     for (let col = 0; col < width; col++) {
       if (useTTile) {
         tiles.push(
-          <OutlinedTTile className="w-16" key={`t-r${row}-c${col}`} />
+          <OutlinedTTile className="w-14 md:w-16" key={`t-r${row}-c${col}`} />
         );
       } else {
         tiles.push(
-          <OutlinedHTile className="w-16" key={`h-r${row}-c${col}`} />
+          <OutlinedHTile className="w-14 md:w-16" key={`h-r${row}-c${col}`} />
         );
       }
       useTTile = !useTTile;
