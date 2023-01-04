@@ -19,7 +19,7 @@ export function RegisterButton({ className }: { className?: string }) {
     <div className={clsx(className, 'text-beige flex justify-center')}>
       <a href={registerLink} target="_blank" rel="noopener noreferrer">
         <div className="border-2 border-black py-3 px-6 text-2xl font-medium bg-yellow text-black rounded-xl cursor-pointer hover:bg-black hover:text-yellow hover:border-yellow">
-          Register
+          Register Now
         </div>
       </a>
     </div>
@@ -32,11 +32,13 @@ export default function Hero() {
       {/* TODO: Use grid? */}
       <div className="flex h-screen flex-col justify-center">
         <TiledBackground />
-        <div className="text-beige md:mt-28 m-auto">
+        <div className="text-beige m-auto pb-10">
           <Jumbotron
             className={clsx(styles.jumbotron, 'w-[80vw] lg:w-[40vw] ')}
           />
-          <RegisterButton className="mt-10 shadow-2xl" />
+          <RegisterButton
+            className={clsx(styles.registerButton, 'mt-10 shadow-2xl')}
+          />
         </div>
       </div>
     </div>
