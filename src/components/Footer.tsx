@@ -15,9 +15,14 @@ function FooterLink({ text, href }: { text: string; href: string }) {
 
 export default function Footer() {
   return (
-    <footer className="pb-3 z-30 w-full flex justify-center text-beige">
-      Made with &lt;3 by&nbsp;
-      <FooterLink text="ScottyLabs" href="https://scottylabs.org/" />
+    <footer className="pb-3 z-30 w-full flex flex-col items-center justify-center text-beige">
+      <span>
+        <FooterLink text="Contact us" href="mailto://hello@scottylabs.org" />
+      </span>
+      <span>
+        Made with &lt;3 by&nbsp;
+        <FooterLink text="ScottyLabs" href="https://scottylabs.org/" />
+      </span>
     </footer>
   );
 }
