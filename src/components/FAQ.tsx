@@ -1,20 +1,18 @@
-import {Disclosure, Transition} from '@headlessui/react';
-import {ChevronUpIcon} from '@heroicons/react/20/solid';
+import { Disclosure, Transition } from '@headlessui/react';
+import { ChevronUpIcon } from '@heroicons/react/20/solid';
 
-function FAQDisclosure(
-  {
-    question,
-    answer,
-  }: {
-    question: string;
-    answer: string;
-  }) {
+function FAQDisclosure({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string;
+}) {
   return (
     <Disclosure>
-      {({open}) => (
+      {({ open }) => (
         <>
-          <Disclosure.Button
-            className="flex w-full justify-between rounded-lg px-4 pt-3 pb-1 text-left text-md hover:text-yellow">
+          <Disclosure.Button className="flex w-full justify-between rounded-lg px-4 pt-3 pb-1 text-left text-md hover:text-yellow">
             <span>{question}</span>
             <ChevronUpIcon
               className={`${
@@ -35,27 +33,31 @@ function FAQList() {
   const FAQs = [
     {
       q: `Will TartanHacks be in-person this year?`,
-      a: `Yes, TartanHacks will be fully in-person.`
+      a: `Yes, TartanHacks will be fully in-person.`,
     },
     {
       q: `How much does it cost to participate in TartanHacks?`,
-      a: `Nothing. TartanHacks is free for all undergraduate students!`
+      a: `Nothing. TartanHacks is free for all undergraduate students! However, we will not be providing travel reimbursements for non-CMU hackers.`,
+    },
+    {
+      q: `Will travel costs be reimbursed?`,
+      a: `No, unfortunately we are unable to provide travel reimbursements due to budgetary constraints. Non-CMU students are always welcome though!`,
     },
     {
       q: `I'm not a CS major, can I still join?`,
-      a: `Yes! All undergraduate majors and programs, even if they aren't technical, are welcome at TartanHacks. We have slides from a series of web development workshops online that you can use to brush up your skills! We'll also have some workshops during the event so you can get started with new frameworks.`
+      a: `Yes! All undergraduate majors and programs, even if they aren't technical, are welcome at TartanHacks. We have slides from a series of web development workshops online that you can use to brush up your skills! We'll also have some workshops during the event so you can get started with new frameworks.`,
     },
     {
       q: 'Is TartanHacks open to first-year students?',
-      a: `Yes! We welcome students of all skill levels to participate. First-year students and first-time hackers have always been part of TartanHacks; we would love to see you at the event! Some prizes will also be specific for beginner hackers.`
+      a: `Yes! We welcome students of all skill levels to participate. First-year students and first-time hackers have always been part of TartanHacks; we would love to see you at the event! Some prizes will also be specific for beginner hackers.`,
     },
     {
       q: `I'm a graduate student. Can I still participate?`,
-      a: `Unfortunately, graduate students cannot participate. TartanHacks is currently limited to undergraduate students only.`
+      a: `Unfortunately, graduate students cannot participate. TartanHacks is currently limited to undergraduate students only.`,
     },
     {
       q: 'Are non-CMU students allowed to attend?',
-      a: 'Absolutely! Just sign up :)'
+      a: 'Absolutely! Just sign up :)',
     },
     {
       q: 'Can I register with a team?',
@@ -71,11 +73,11 @@ function FAQList() {
     },
     {
       q: 'Does everyone who registers get to participate at TartanHacks?',
-      a: `We expect that everyone who registers can get in. However, sometimes more hackers sign up than we can admit. Once registration closes, hackers are accepted on a rolling basis. You will be notified via email about your registration status.`
+      a: `We expect that everyone who registers can get in. However, sometimes more hackers sign up than we can admit. Once registration closes, hackers are accepted on a rolling basis. You will be notified via email about your registration status.`,
     },
     {
       q: `I got in, but a few of my team members were put on the waitlist. Will they be able to participate?`,
-      a: `Hackers are accepted individually, so we are unable to guarantee that all members of your team will get in. However, if they're on the waitlist, there's still hope! See the next question.`
+      a: `Hackers are accepted individually, so we are unable to guarantee that all members of your team will get in. However, if they're on the waitlist, there's still hope! See the next question.`,
     },
     {
       q: `Is there a way to get off the waitlist?`,
@@ -83,17 +85,19 @@ function FAQList() {
     },
     {
       q: 'Are we limited to software projects or are hardware projects allowed?',
-      a: `We will have a team of student and corporate mentors on hand who are experts in many common technologies. They'll be able to answer your questions, help you debug, and get you set up with new frameworks. They can't make your project for you, but they are always there to help!`
+      a: `We will have a team of student and corporate mentors on hand who are experts in many common technologies. They'll be able to answer your questions, help you debug, and get you set up with new frameworks. They can't make your project for you, but they are always there to help!`,
     },
     {
       q: 'Who runs TartanHacks?',
-      a: `TartanHacks is run by ScottyLabs, a student organization at Carnegie Mellon University that develops apps for CMU and runs educational events, like TartanHacks. ScottyLabs isn't affiliated with any academic department, and all of our funding comes from corporate sponsors.`
-    }
-  ]
+      a: `TartanHacks is run by ScottyLabs, a student organization at Carnegie Mellon University that develops apps for CMU and runs educational events, like TartanHacks. ScottyLabs isn't affiliated with any academic department, and all of our funding comes from corporate sponsors.`,
+    },
+  ];
 
   return (
     <div className="w-full">
-      {FAQs.map(({q, a}) => (<FAQDisclosure key={q} question={q} answer={a}/>))}
+      {FAQs.map(({ q, a }) => (
+        <FAQDisclosure key={q} question={q} answer={a} />
+      ))}
     </div>
   );
 }
@@ -104,7 +108,7 @@ export default function FAQs() {
       <div className="text-beige m-auto">
         <h3 className="text-2xl mb-4 text-center text-yellow">FAQs</h3>
         <div className="max-w-4xl m-auto">
-          <FAQList/>
+          <FAQList />
         </div>
       </div>
     </div>
