@@ -85,7 +85,7 @@ function FAQList() {
     },
     {
       q: 'Are we limited to software projects or are hardware projects allowed?',
-      a: `We will have a team of student and corporate mentors on hand who are experts in many common technologies. They'll be able to answer your questions, help you debug, and get you set up with new frameworks. They can't make your project for you, but they are always there to help!`,
+      a: `Hardware projects are absolutely allowed!`,
     },
     {
       q: 'Who runs TartanHacks?',
