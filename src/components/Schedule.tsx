@@ -1,6 +1,6 @@
 function Block({ title, time, className }: { title: string, time: string, className: string }) {
   return (
-    <div className={`${className} border p-2 rounded border-gray-600`}>
+    <div className={`${className} border p-2 rounded border-gray-600 flex flex-col justify-center`}>
       <h1 className='text-lg text-center'>{title}</h1>
       <p className='text-sm text-center text-gray-400'>{time}</p>
     </div>
@@ -14,7 +14,8 @@ export default function Schedule() {
         <div className='text-beige m-auto'>
           <h3 className='text-2xl mb-4 text-center text-yellow'>Schedule</h3>
           <div className='max-w-4xl m-auto'>
-            <div className='grid grid-rows-[repeat(12,_minmax(0,_1fr))] grid-cols-4 gap-x-2 gap-y-2'>
+            { /* For more flexibility, can use grid-template-areas */}
+            <div className='grid grid-cols-4 gap-x-2 gap-y-2'>
               <div className='col-span-2 col-start-1 row-span-1 text-center text-xl text-yellow'>Feb 3</div>
               <div className='col-span-2 col-start-3 row-span-1 text-center text-xl text-yellow'>Feb 4</div>
               <Block time='10am - 11am' title='Breakfast' className='col-span-2 col-start-3 row-span-1' />
