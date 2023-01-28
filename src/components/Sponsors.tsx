@@ -39,6 +39,9 @@ export default function Sponsors() {
               <Sponsor src="/sponsors/algorand.svg" />
               <Sponsor src="/sponsors/protocol-ai.svg" />
             </SponsorTier>
+            <SponsorTier name="Bronze">
+              <Sponsor src="/sponsors/sandia.png" />
+            </SponsorTier>
           </div>
         </div>
       </div>
