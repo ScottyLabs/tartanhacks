@@ -11,9 +11,9 @@ const Home: NextPage = () => {
     <BaseLayout>
       <Hero />
       <About />
+      <Prizes />
       <FAQs />
       <Sponsors />
-      <Prizes />
     </BaseLayout>
   );
 };
