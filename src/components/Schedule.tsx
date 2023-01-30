@@ -113,8 +113,8 @@ export default function Schedule() {
                 time='4:30pm - 5:30pm'
                 location='McConomy Auditorium'
               />
-              <TopBlock area='a6pm' title='Hacking Begins' time='6pm' />
-              <TopBlock area='c6pm' title='Hacking Ends' time='6pm' />
+              <TopBlock area='a530pm' title='Hacking Begins' time='5:30pm' />
+              <TopBlock area='c530pm' title='Hacking Ends' time='5:30pm' />
               <Block
                 area='a6pm2'
                 title='Team Formation Mixer'
