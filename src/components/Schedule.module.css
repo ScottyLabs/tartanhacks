@@ -1,0 +1,54 @@
+.grid {
+  grid-auto-columns: minmax(0, 1fr);
+  grid-template-areas:
+    'feb3    feb3    feb4   feb4'
+    'a10am   a10am   c10am  c10am'
+    'a10am   a10am   c12pm  c12pm'
+    'a10am   a10am   c1pm   c1pm'
+    'a10am   a10am   c2pm   c2pm'
+    'a3pm    a3pm    c3pm   c3pm'
+    'a430pm  a430pm  c3pm   c3pm'
+    'a530pm  a530pm  c530pm c530pm'
+    'a6pm2   a6pm2   c6pm2  c6pm2'
+    'a7pm    b7pm    c7pm   c7pm'
+    'a8pm    a8pm    c8pm   c8pm'
+    'a8pm    a8pm    c830pm c830pm'
+    'a9pm    a9pm    c830pm c830pm'
+    'a9pm    a9pm    c930pm c930pm'
+    'a9pm    a9pm    c10pm  c10pm'
+    'a9pm    a9pm    c10pm  c10pm'
+    'a1130pm a1130pm c10pm  c10pm';
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-areas:
+      'feb3    feb3'
+      'a3pm    a3pm'
+      'a430pm  a430pm'
+      'a530pm  a530pm'
+      'a6pm2   a6pm2'
+      'a7pm    b7pm'
+      'a8pm    a8pm'
+      'a8pm    a8pm'
+      'a9pm    a9pm'
+      'a9pm    a9pm'
+      'a9pm    a9pm'
+      'a9pm    a9pm'
+      'a1130pm a1130pm'
+      'feb4   feb4'
+      'c10am  c10am'
+      'c12pm  c12pm'
+      'c1pm   c1pm'
+      'c2pm   c2pm'
+      'c530pm c530pm'
+      'c6pm2  c6pm2'
+      'c7pm   c7pm'
+      'c830pm c830pm'
+      'c830pm c830pm'
+      'c930pm c930pm'
+      'c10pm  c10pm'
+      'c10pm  c10pm'
+      'c10pm  c10pm';
+  }
+}

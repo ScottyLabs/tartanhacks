@@ -1,0 +1,19 @@
+[
+  {
+    "relation": ["delegate_permission/common.get_login_creds"],
+    "target": {
+      "namespace": "web",
+      "site": "https://tartanhacks.com"
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.get_login_creds"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.scottylabs.thdapp",
+      "sha256_cert_fingerprints": [
+        "A4:4C:CB:57:1D:9F:E6:64:4F:6E:30:A0:E5:7F:74:43:C4:A6:93:35:6F:2F:07:10:E1:3D:4A:71:10:59:61:56"
+      ]
+    }
+  }
+]

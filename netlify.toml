@@ -3,3 +3,9 @@
   to = "/apple-app-site-association"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/.well-known/assetlinks.json"
+  to = "/assetlinks.json"
+  status = 200
+  force = true
