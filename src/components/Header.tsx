@@ -19,6 +19,7 @@ export default function Header() {
         <div className='space-x-8 text-lg flex items-center'>
           <HeaderLink name='About' href='#about' />
           <HeaderLink name='Schedule' href='#schedule' />
+          <HeaderLink name='Prizes' href='#prizes' />
           <HeaderLink name='FAQ' href='#faq' />
           <HeaderLink name='Sponsors' href='#sponsors' />
         </div>
