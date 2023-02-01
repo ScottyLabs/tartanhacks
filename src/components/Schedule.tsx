@@ -124,8 +124,8 @@ export default function Schedule() {
               <Block
                 area="c6pm2"
                 title="Dinner"
-                time="6pm - 7pm"
-                location="Rangos Ballroom"
+                time="5:30pm - 6pm"
+                location="Connan"
               />
               <Block
                 area="a7pm"
@@ -142,7 +142,7 @@ export default function Schedule() {
               <Block
                 area="c7pm"
                 title="Judging"
-                time="7pm - 8pm"
+                time="6pm - 8pm"
                 location="Rangos Ballroom"
               />
               <Block
