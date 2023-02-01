@@ -87,7 +87,7 @@ export default function Schedule() {
                 area="c12pm"
                 title="Talk with Jasmine Lawrence"
                 time="12pm - 1pm"
-                location="Virtual"
+                location="McConomy Auditorium"
               />
               <Block
                 area="c1pm"
@@ -99,7 +99,7 @@ export default function Schedule() {
                 area="c2pm"
                 title="Q&A with Mike and Nehal"
                 time="2pm - 3pm"
-                location="Virtual"
+                location="McConomy Auditorium"
               />
               <TopBlock
                 area="a3pm"
