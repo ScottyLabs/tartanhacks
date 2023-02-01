@@ -76,7 +76,7 @@ Awarded to the team that took the biggest gamble while not meeting its goals… 
             <Prize
               name='DFA Impact Prize'
               description='TODO'
-              prize='Entry into DFA Impact, Tote Bags, Mushroom Kits'
+              prize='Entry into DFA Impact, Tote Bags, Herb Kits'
             />
             <Prize
               name='Spiciest Meme'
