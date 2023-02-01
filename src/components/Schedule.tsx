@@ -125,7 +125,7 @@ export default function Schedule() {
                 area="c6pm2"
                 title="Dinner"
                 time="5:30pm - 6pm"
-                location="Connan"
+                location="Connan Room"
               />
               <Block
                 area="a7pm"
