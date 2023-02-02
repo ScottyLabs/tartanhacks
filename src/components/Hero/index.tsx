@@ -2,6 +2,9 @@ import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import Jumbotron from '../../svg/Jumbotron';
 import TiledBackground from '../../svg/TiledBackground';
+
+import Image from 'next/image';
+import Link from 'next/link';
 import styles from './index.module.scss';
 
 export function RegisterButton({ className }: { className?: string }) {
@@ -30,7 +33,6 @@ export function RegisterButton({ className }: { className?: string }) {
 export default function Hero() {
   return (
     <div className='h-screen'>
-      {/* TODO: Use grid? */}
       <div className='flex h-screen flex-col justify-center'>
         <TiledBackground />
         <div className='text-beige m-auto pb-10'>
@@ -40,6 +42,18 @@ export default function Hero() {
           <RegisterButton
             className={clsx(styles.registerButton, 'mt-10 shadow-2xl')}
           />
+          <div className='mt-10 flex max-w-6xl gap-x-4 flex-col sm:flex-row items-center justify-center'>
+            <div className='cursor-pointer'>
+              <Link href='https://play.google.com/store/apps/details?id=org.scottylabs.thdapp&pli=1'>
+                <Image src='/svg/google-play-badge.svg' height={60} width={180}/>
+              </Link>
+            </div>
+            <div className='cursor-pointer'>
+              <Link href='https://apps.apple.com/us/app/tartanhacks-dashboard/id1556362423'>
+                <Image src='/svg/app-store.svg' height={60} width={160} />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
