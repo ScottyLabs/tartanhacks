@@ -39,18 +39,19 @@ export default function About() {
             <Prize
               name="Most Disruptive: Technology"
               description="Most significant technological innovation that disrupts the status quo."
-              prize="4 × TBD"
+              prize="4 × Mini Projector"
             />
             <Prize
               name="Most Disruptive: Product"
               description="Most significant product/business model innovation that disrupts the status quo."
-              prize="4 × TBD"
+              prize="4 × Photo Printer"
             />
             <Prize
               name="Best use of Algorand"
               description="Best use of the Algorand protocol."
-              prize="4 × TBD"
+              prize="$1000 worth of ALGO"
             />
+
             <Prize
               name="Sandia National Labs Award"
               description="Sponsored by Sandia."
@@ -62,10 +63,15 @@ export default function About() {
               prize="4 × Amazon Echo Dot"
             />
             <Prize
+              name="Best use of GCP"
+              description="Best use of Google Cloud Platform."
+              prize="4 × TBD"
+            />
+            <Prize
               name="First Penguin Prize"
               description={`Inspired by Randy Pausch's The Last Lecture: “Experience is what you get when you don’t get what you wanted. And it can be the most valuable thing you have to offer.”
 Awarded to the team that took the biggest gamble while not meeting its goals… a prize for ‘glorious failure’.`}
-              prize="4 × TBD"
+              prize="4 × Penguin Plushies"
               className="row-span-2"
             />
             <Prize
@@ -74,8 +80,8 @@ Awarded to the team that took the biggest gamble while not meeting its goals… 
               prize="4 × The Design of Everyday Things"
             />
             <Prize
-              name="DFA Impact Prize"
-              description=""
+              name="Design for America (DFA) Impact Prize"
+              description="Best social impact project."
               prize="Entry into DFA Impact, Tote Bags, Herb Kits"
             />
             <Prize
