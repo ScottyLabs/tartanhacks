@@ -42,6 +42,16 @@ export default function Sponsors() {
             <SponsorTier name="Bronze">
               <Sponsor src="/sponsors/sandia.png" />
             </SponsorTier>
+            <SponsorTier name="In Kind">
+              <Sponsor src="/sponsors/gcp.png" />
+              <Sponsor src="/sponsors/wolfram.png" />
+            </SponsorTier>
+            <SponsorTier name="Partners">
+              <Sponsor src="/partners/dfa.png" />
+              <Sponsor src="/partners/cmubtg.png" />
+              <Sponsor src="/partners/chess.png" />
+              <Sponsor src="/partners/roboclub.png" />
+            </SponsorTier>
           </div>
         </div>
       </div>
