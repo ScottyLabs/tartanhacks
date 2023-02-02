@@ -51,6 +51,7 @@ export default function About() {
               description="Best use of the Algorand protocol."
               prize="4 × TBD"
             />
+
             <Prize
               name="Sandia National Labs Award"
               description="Sponsored by Sandia."
@@ -60,6 +61,11 @@ export default function About() {
               name="Best use of AI"
               description="Best use of AI."
               prize="4 × Amazon Echo Dot"
+            />
+            <Prize
+              name="Best use of GCP"
+              description="Best use of Google Cloud Platform."
+              prize="4 × TBD"
             />
             <Prize
               name="First Penguin Prize"
@@ -74,8 +80,8 @@ Awarded to the team that took the biggest gamble while not meeting its goals… 
               prize="4 × The Design of Everyday Things"
             />
             <Prize
-              name="DFA Impact Prize"
-              description=""
+              name="Design for America (DFA) Impact Prize"
+              description="Best social impact project."
               prize="Entry into DFA Impact, Tote Bags, Herb Kits"
             />
             <Prize
