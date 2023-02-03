@@ -68,6 +68,11 @@ export default function About() {
               prize="4 × TBD"
             />
             <Prize
+              name="Wolfram Research Top 5 Teams"
+              description="Awarded to the top 5 teams."
+              prize="A year of Wolfram|One Personal Edition + one-year subscription to Wolfram|Alpha Pro"
+            />
+            <Prize
               name="First Penguin Prize"
               description={`Inspired by Randy Pausch's The Last Lecture: “Experience is what you get when you don’t get what you wanted. And it can be the most valuable thing you have to offer.”
 Awarded to the team that took the biggest gamble while not meeting its goals… a prize for ‘glorious failure’.`}
