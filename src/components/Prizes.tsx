@@ -77,7 +77,7 @@ Awarded to the team that took the biggest gamble while not meeting its goals… 
             <Prize
               name="Best Design Hack"
               description="Best product design."
-              prize="4 × The Design of Everyday Things"
+              prize="4 × A Dictionary of Color Combinations"
             />
             <Prize
               name="Design for America (DFA) Impact Prize"
