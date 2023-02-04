@@ -87,7 +87,7 @@ export default function Schedule() {
                 area="c12pm"
                 title="Talk with Jasmine Lawrence"
                 time="12pm - 1pm"
-                location="Virtual"
+                location="McConomy Auditorium"
               />
               <Block
                 area="c1pm"
@@ -99,7 +99,7 @@ export default function Schedule() {
                 area="c2pm"
                 title="Q&A with Mike and Nehal"
                 time="2pm - 3pm"
-                location="Virtual"
+                location="McConomy Auditorium"
               />
               <TopBlock
                 area="a3pm"
@@ -122,10 +122,10 @@ export default function Schedule() {
                 location="Connan Room"
               />
               <Block
-                area="c6pm2"
+                area="c530pm2"
                 title="Dinner"
-                time="6pm - 7pm"
-                location="Rangos Ballroom"
+                time="5:30pm - 6pm"
+                location="Connan Room"
               />
               <Block
                 area="a7pm"
@@ -140,7 +140,7 @@ export default function Schedule() {
                 location="Connan"
               />
               <Block
-                area="c7pm"
+                area="c6pm"
                 title="Judging"
                 time="6:30pm - 8pm"
                 location="Rangos Ballroom"
