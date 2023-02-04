@@ -114,7 +114,7 @@ export default function Schedule() {
                 location="McConomy Auditorium"
               />
               <TopBlock area="a530pm" title="Hacking Begins" time="5:30pm" />
-              <TopBlock area="c530pm" title="Hacking Ends" time="5:30pm" />
+              <TopBlock area="c530pm" title="Hacking Ends" time="6:00pm" />
               <Block
                 area="a6pm2"
                 title="Team Formation Mixer"
@@ -142,7 +142,7 @@ export default function Schedule() {
               <Block
                 area="c7pm"
                 title="Judging"
-                time="7pm - 8pm"
+                time="6:30pm - 8pm"
                 location="Rangos Ballroom"
               />
               <Block
