@@ -1,18 +1,17 @@
-interface Winner {
+export interface Project {
   name: string;
   description: string;
-  slides: string;
-  github: string;
+  slides?: string;
+  github?: string;
   video?: string;
 }
 
-const WinnerData: Winner[] = [
+const topProjectData: Project[] = [
   {
     name: 'TAI',
     description: 'AI-powered Teaching Assistant for Educational Videos',
     slides:
       'https://docs.google.com/presentation/d/12V-STIFkj668yf1604c8dGNef_cwo0KRGigVFxMv2gs/edit?usp=sharing',
-    github: 'https://github.com/luca-borletti/tai',
   },
   {
     name: 'Empathy',
@@ -34,7 +33,6 @@ const WinnerData: Winner[] = [
     description:
       'A system that can be installed in a workshop or makerspace to keep track of items which are frequently moved around or misplaced, by fusing together feeds from all the security cameras in the space.',
     slides: 'https://docs.google.com/presentation/d/1NwAjrDARyAxVVb2QHTSwX7x5QAcS9GYVS4W5yq_Lih0/edit?usp=sharing',
-    github: 'https://github.com/thetaspirit/robolunkheads',
   },
   {
     name: 'SpotiPond',
@@ -44,4 +42,4 @@ const WinnerData: Winner[] = [
     video: 'https://drive.google.com/file/d/1ZgMJpgyArFsZvXSl5N2xyGcuUvviURwj/view?usp=sharing'
   },
 ];
-export default WinnerData;
+export default topProjectData;
