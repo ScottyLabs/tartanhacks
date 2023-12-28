@@ -9,3 +9,9 @@
   to = "/assetlinks.json"
   status = 200
   force = true
+
+[[redirects]]
+    from = "/*"
+    to = "https://register.tartanhacks.com"
+    status = 301
+    force = true
