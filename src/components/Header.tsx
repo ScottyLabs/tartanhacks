@@ -1,29 +1,37 @@
 import Link from 'next/link';
 import Logo from '../../public/svg/logo.svg';
 
-function HeaderLink({ name, href }: { name: string; href: string }) {
+function HeaderLink({ name, href, underlineColor }: { name: string; href: string, underlineColor: string }) {
   return (
     <Link href={href} scroll={false}>
-      <span className="hover:text-yellow cursor-pointer">{name}</span>
+      <span className={`cursor-pointer hover:underline ${underlineColor} decoration-8 underline-offset-8`}>{name}</span>
     </Link>
   );
 }
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-30 w-full bg-black text-beige pt-6 pb-4 hidden md:block">
-      <div className="flex flex-row justify-between text-xl max-w-7xl m-auto">
-        <div>
-          <Logo className="leading-4 h-6 mr-4" />
+    <header className="sticky top-0 z-30 w-full bg-black text-white pt-6 pb-4 hidden md:block">
+      <div className="flex flex-row justify-between text-xl mr-12 ml-8">
+        <div className='cursor-pointer'>
+          <Link href='/'>
+            <Logo />
+          </Link>
         </div>
-        <div className="space-x-8 text-lg flex items-center">
-          <HeaderLink name="About" href="#about" />
-          <HeaderLink name="Top Projects" href="#top_projects" />
-          <HeaderLink name="Schedule" href="#schedule" />
-          <HeaderLink name="Speakers" href="#speakers" />
-          <HeaderLink name="Prizes" href="#prizes" />
-          <HeaderLink name="FAQ" href="#faq" />
-          <HeaderLink name="Sponsors" href="#sponsors" />
+        <div className="space-x-16 text-lg flex items-center">
+          {
+          //<HeaderLink name="About" href="#about" />
+          }
+          <HeaderLink name="FAQ" href="/faq" underlineColor='decoration-purple'/>
+          <HeaderLink name="Top Projects" href="/projects" underlineColor='decoration-blue'/>
+          {
+            //<HeaderLink name="Schedule" href="#schedule" />
+          }
+          <HeaderLink name="Speakers" href="/speakers" underlineColor='decoration-pink'/>
+          <HeaderLink name="Prizes" href="/prizes" underlineColor='decoration-yellow'/>
+          {
+          //<HeaderLink name="Sponsors" href="#sponsors" />
+          }
         </div>
       </div>
     </header>
