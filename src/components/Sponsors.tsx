@@ -30,32 +30,12 @@ export function SponsorTier({
 
 export default function Sponsors() {
   return (
-    <section className="py-16" id="sponsors">
-      <div className="flex">
-        <div className="text-beige m-auto">
-          <h3 className="text-2xl mb-4 text-center text-yellow">Sponsors</h3>
-          <div className="space-y-12">
-            <SponsorTier name="Gold">
-              <Sponsor src="/sponsors/algorand.svg" />
-              <Sponsor src="/sponsors/protocol-ai.svg" />
-            </SponsorTier>
-            <SponsorTier name="Bronze">
-              <Sponsor src="/sponsors/sandia.png" />
-              <Sponsor src="/sponsors/quine.svg" />
-            </SponsorTier>
-            <SponsorTier name="In Kind">
-              <Sponsor src="/sponsors/gcp.png" />
-              <Sponsor src="/sponsors/wolfram.png" />
-            </SponsorTier>
-            <SponsorTier name="Partners">
-              <Sponsor src="/partners/dfa.png" />
-              <Sponsor src="/partners/cmubtg.png" />
-              <Sponsor src="/partners/chess.png" />
-              <Sponsor src="/partners/roboclub.png" />
-            </SponsorTier>
-          </div>
-        </div>
-      </div>
+    <section
+      className="py-16 text-white m-auto font-bold text-center w-2/3"
+      id="sponsors"
+    >
+      <h1 className="text-6xl mb-24">Sponsors</h1>
+      <p className="text-4xl font-title">...Coming Soon...</p>
     </section>
   );
 }

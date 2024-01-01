@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import Jumbotron from '../../svg/Jumbotron';
-import TiledBackground from '../../svg/TiledBackground';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -22,8 +21,8 @@ export function RegisterButton({ className }: { className?: string }) {
     <div className={clsx(className, 'text-beige flex justify-center')}>
       <a href={registerLink} target='_blank' rel='noopener noreferrer'>
         <div
-          className='border-2 border-black py-3 px-6 text-2xl font-medium bg-yellow text-black rounded-xl cursor-pointer hover:bg-black hover:text-yellow hover:border-yellow'>
-          Join the Waitlist
+          className='border-2 border-black py-3 px-6 text-2xl font-medium bg-pink text-black rounded-xl cursor-pointer hover:bg-black hover:text-pink hover:border-pink'>
+          Register Now!
         </div>
       </a>
     </div>
@@ -34,10 +33,9 @@ export default function Hero() {
   return (
     <div className='h-screen'>
       <div className='flex h-screen flex-col justify-center'>
-        <TiledBackground />
-        <div className='text-beige m-auto pb-10'>
+        <div className='text-beige m-auto'>
           <Jumbotron
-            className={clsx(styles.jumbotron, 'w-[80vw] lg:w-[40vw] ')}
+            className='w-[80vw] lg:w-[40vw] '
           />
           <RegisterButton
             className={clsx(styles.registerButton, 'mt-10 shadow-2xl')}

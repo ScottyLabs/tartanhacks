@@ -1,18 +1,16 @@
 export default function About() {
-  const aboutContent = `
-  TartanHacks is the largest hackathon at Carnegie Mellon! ⭐ Organized by ScottyLabs, it's a 24-hour hackathon where participants from all over the country create innovative projects. This year, TartanHacks 2023 - Disruption is coming Feb 3-4, 2023 and is bigger than ever with completely in-person events, workshops, and talks with a lineup of sponsors, prizes, and swag that will cause quite the disruption 😎
-  Come on over to hack, learn new concepts through our workshops, and meet other hackers! ✨
-  `;
+  const tartanhacks = `TartanHacks`
+  const aboutContent = `is the largest Hackathon in Pittsburgh! Organized by ScottyLabs, it's a 24-hour hackathon where participants from all over the country create innovative projects. This year, we are happy to be fully in person again! Come on over to hack, learn from our workshops and incredible speakers, and meet other hackers!`;
+
+  const details = `Feb 2nd-3rd @ Carnegie Mellon University!`
 
   return (
-    <section className="py-16" id="about">
+    <section className="py-16 border-t-4 border-b-4 w-2/3 m-auto" id="about">
       <div className="flex">
-        <div className="text-beige m-auto flex flex-col md:flex-row px-6">
-          <h3 className="text-2xl mb-4 md:mr-8 text-yellow text-center md:text-left">
-            About
-          </h3>
-          <div className="max-w-xl text-lg">
-            <p>{aboutContent}</p>
+        <div className="text-white m-auto flex flex-col md:flex-row px-6">
+          <div className="max-w-2xl text-lg text-center">
+              <p className="text-xl"><span className="font-title">TartanHacks</span> {aboutContent}</p>
+            <p className="mt-5 font-bold text-xl">{details}</p>
           </div>
         </div>
       </div>

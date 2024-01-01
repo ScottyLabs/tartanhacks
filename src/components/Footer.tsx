@@ -15,7 +15,7 @@ function FooterLink({ text, href }: { text: string; href: string }) {
 
 export default function Footer() {
   return (
-    <footer className="pb-3 z-30 w-full flex flex-col items-center justify-center text-beige">
+    <footer className="pb-3 z-30 w-full flex flex-col items-center justify-center text-pink">
       <span>
         <FooterLink text="Contact us" href="mailto://hello@scottylabs.org" />
       </span>

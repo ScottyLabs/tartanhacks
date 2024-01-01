@@ -8,19 +8,17 @@ import BaseLayout from '../src/layouts/BaseLayout';
 import Sponsors from '../src/components/Sponsors';
 import Speakers from '../src/components/Speakers';
 import TopProjects from '../src/components/TopProjects';
+import Theme from '../src/components/Theme';
 
 const Home: NextPage = () => {
   return (
-    <BaseLayout>
+    <>
       <Hero />
       <About />
-      <TopProjects />
+      <Theme />
       <Schedule />
-      <Speakers />
-      <Prizes />
-      <FAQs />
       <Sponsors />
-    </BaseLayout>
+    </>
   );
 };
 
