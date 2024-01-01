@@ -16,8 +16,8 @@ export default function BaseLayout({ children, className }: Props) {
   return (
     <>
       <Head>
-        <title>TartanHacks 2023 | Feb 3-4, 2023</title>
-        <meta name="title" content="TartanHacks 2023 | Feb 3-4, 2023" />
+        <title>TartanHacks 2024 | Feb 2-3, 2024</title>
+        <meta name="title" content="TartanHacks 2024 | Feb 2-3, 2024" />
         <meta
           name="description"
           content="TartanHacks is Carnegie Mellon's largest hackathon! It is a 24-hour hackathon where participants from all over the country create innovative projects."
@@ -25,7 +25,7 @@ export default function BaseLayout({ children, className }: Props) {
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://tartanhacks.com/" />
-        <meta property="og:title" content="TartanHacks 2023 | Feb 3-4, 2023" />
+        <meta property="og:title" content="TartanHacks 2024 | Feb 2-3, 2024" />
         <meta
           property="og:description"
           content="TartanHacks is Carnegie Mellon's largest hackathon! It is a 24-hour hackathon where participants from all over the country create innovative projects."
@@ -39,7 +39,7 @@ export default function BaseLayout({ children, className }: Props) {
         <meta property="twitter:url" content="https://tartanhacks.com/" />
         <meta
           property="twitter:title"
-          content="TartanHacks 2023 | Feb 3-4, 2023"
+          content="TartanHacks 2024 | Feb 2-3, 2024"
         />
         <meta
           property="twitter:description"
@@ -49,7 +49,7 @@ export default function BaseLayout({ children, className }: Props) {
           property="twitter:image"
           content="https://tartanhacks.com/cover-photo-2023.png"
         />
-        <link rel="icon" href="https://tartanhacks.com/favicon.png" />
+        <link rel="icon" href="favicon.png" />
       </Head>
       <div>
         <Header />
