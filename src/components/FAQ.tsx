@@ -1,18 +1,40 @@
-import { Disclosure, Transition } from '@headlessui/react';
+import { Disclosure } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
+import StrokeYellow from '../../public/svg/stroke-yellow.svg';
+import StrokePink from '../../public/svg/stroke-pink.svg';
+import StrokePurple from '../../public/svg/stroke-purple.svg';
+import StrokeBlue from '../../public/svg/stroke-blue.svg';
 
 function FAQDisclosure({
   question,
   answer,
+  idx,
 }: {
   question: string;
   answer: string;
+  idx: number;
 }) {
+  let key = idx % 4;
+  let stroke: React.ReactNode;
+  switch (key) {
+    case 0:
+      stroke = <StrokeYellow />; 
+      break;
+    case 1:
+      stroke = <StrokePink />;
+      break;
+    case 2:
+      stroke = <StrokePurple />;
+      break;
+    case 3:
+      stroke = <StrokeBlue />;
+      break;
+  }
   return (
     <Disclosure>
       {({ open }) => (
         <>
-          <Disclosure.Button className="flex w-full justify-between rounded-lg px-4 pt-3 pb-1 text-left text-md hover:text-yellow">
+          <Disclosure.Button className="flex w-full justify-between px-4 pt-3 pb-4 text-left text-md hover:text-yellow text-lg font-bold border-t-2">
             <span>{question}</span>
             <ChevronUpIcon
               className={`${
@@ -20,8 +42,9 @@ function FAQDisclosure({
               } h-5 w-5 text-purple-500`}
             />
           </Disclosure.Button>
-          <Disclosure.Panel className="px-4 pb-2 text-sm text-gray-400 max-w-3xl">
-            {answer}
+          <Disclosure.Panel className="px-4 pb-2 text-white max-w-3xl flex flex-row items-center">
+            <p className='mr-8 max-w-xl'>{answer}</p>
+            {stroke}
           </Disclosure.Panel>
         </>
       )}
@@ -76,14 +99,6 @@ function FAQList() {
       a: `We expect that everyone who registers can get in. However, sometimes more hackers sign up than we can admit. Once registration closes, hackers are accepted on a rolling basis. You will be notified via email about your registration status.`,
     },
     {
-      q: `I got in, but a few of my team members were put on the waitlist. Will they be able to participate?`,
-      a: `Hackers are accepted individually, so we are unable to guarantee that all members of your team will get in. However, if they're on the waitlist, there's still hope! See the next question.`,
-    },
-    {
-      q: `Is there a way to get off the waitlist?`,
-      a: 'We will be letting hackers off the waitlist on a first-come, first-serve basis on the day of the event. Historically, many people have gotten off the waitlist.',
-    },
-    {
       q: 'Are we limited to software projects or are hardware projects allowed?',
       a: `Hardware projects are absolutely allowed!`,
     },
@@ -95,8 +110,8 @@ function FAQList() {
 
   return (
     <div className="w-full">
-      {FAQs.map(({ q, a }) => (
-        <FAQDisclosure key={q} question={q} answer={a} />
+      {FAQs.map(({ q, a }, idx) => (
+        <FAQDisclosure key={idx} question={q} answer={a} idx={idx} />
       ))}
     </div>
   );
@@ -105,11 +120,8 @@ function FAQList() {
 export default function FAQs() {
   return (
     <div className="py-16 pb-40" id="faq">
-      <div className="text-beige m-auto">
-        <h3 className="text-2xl mb-4 text-center text-yellow">FAQs</h3>
-        <div className="max-w-4xl m-auto">
-          <FAQList />
-        </div>
+      <div className="max-w-4xl m-auto">
+        <FAQList />
       </div>
     </div>
   );
