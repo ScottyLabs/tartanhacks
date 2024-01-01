@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: Comba;
+    font-weight: 400;
+    src: local("Comba"), url("../fonts/combatest-boldultrawide.otf") format("opentype");
+  }
+}
+
 html,
 body {
   min-height: 100vh;
