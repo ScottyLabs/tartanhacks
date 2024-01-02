@@ -1,6 +1,6 @@
 export default function About() {
   const tartanhacks = `TartanHacks`
-  const aboutContent = `is the largest Hackathon in Pittsburgh! Organized by ScottyLabs, it's a 24-hour hackathon where participants from all over the country create innovative projects. This year, we are happy to be fully in person again! Come on over to hack, learn from our workshops and incredible speakers, and meet other hackers!`;
+  const aboutContent = `is the largest Hackathon at CMU! Organized by ScottyLabs, it's a 24-hour hackathon where participants from all over the country create innovative projects. This year, we are happy to be fully in person again! Come on over to hack, learn from our workshops and incredible speakers, and meet other hackers!`;
 
   const details = `Feb 2nd-3rd @ Carnegie Mellon University!`
 

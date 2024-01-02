@@ -31,15 +31,17 @@ export function RegisterButton({ className }: { className?: string }) {
 
 export default function Hero() {
   return (
-      <div className='flex flex-col justify-center'>
-        <div className='text-beige m-auto'>
+        <div className='min-h-screen w-full'>
           <Jumbotron
-            className='w-[80vw] lg:w-[40vw] '
+            className='w-[80vw] lg:w-[60vw] mx-auto'
           />
+            <div className='text-white text-center'>
+            <p className="font-bold text-2xl ">CMU&apos;s Largest Hackathon</p>
+            <p className="text-xl ">Feb 2—3, 2024</p>
+            </div>
           <RegisterButton
             className={clsx(styles.registerButton, 'mt-10 mb-4')}
           />
         </div>
-      </div>
   );
 }

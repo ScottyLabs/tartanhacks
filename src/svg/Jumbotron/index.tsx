@@ -6,7 +6,7 @@ export default function Jumbotron({ className }: JumbotronProps): JSX.Element {
   return (
     <svg
       width="1233"
-      height="588"
+      height="388"
       viewBox="0 0 1233 588"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
