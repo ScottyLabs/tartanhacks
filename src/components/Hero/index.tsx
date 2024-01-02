@@ -31,14 +31,13 @@ export function RegisterButton({ className }: { className?: string }) {
 
 export default function Hero() {
   return (
-    <div className='h-screen'>
-      <div className='flex h-screen flex-col justify-center'>
+      <div className='flex flex-col justify-center'>
         <div className='text-beige m-auto'>
           <Jumbotron
             className='w-[80vw] lg:w-[40vw] '
           />
           <RegisterButton
-            className={clsx(styles.registerButton, 'mt-10 shadow-2xl')}
+            className={clsx(styles.registerButton, 'mt-10')}
           />
           <div className='mt-10 flex max-w-6xl gap-x-4 flex-col sm:flex-row items-center justify-center'>
             <div className='cursor-pointer'>
@@ -54,6 +53,5 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </div>
   );
 }

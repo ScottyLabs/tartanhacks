@@ -1,4 +1,7 @@
-export default function Amplify() {
+interface AmplifyProps {
+  className?: string;
+}
+export default function Amplify({ className }: AmplifyProps) {
   return (
     <svg
       width="720"
@@ -6,7 +9,7 @@ export default function Amplify() {
       viewBox="0 0 720 308"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="m-auto"
+      className={className}
     >
       <path
         fillRule="evenodd"

@@ -30,11 +30,12 @@ function FAQDisclosure({
       stroke = <StrokeBlue />;
       break;
   }
+  const hoverColor = idx % 2 ? 'hover:text-pink' : 'hover:text-yellow'
   return (
     <Disclosure>
       {({ open }) => (
         <>
-          <Disclosure.Button className="flex w-full justify-between px-4 pt-3 pb-4 text-left text-md hover:text-yellow text-lg font-bold border-t-2">
+          <Disclosure.Button className={`flex w-full justify-between px-4 pt-3 pb-4 text-left text-md ${hoverColor} text-lg font-bold border-t-2`}>
             <span>{question}</span>
             <ChevronUpIcon
               className={`${
@@ -44,7 +45,9 @@ function FAQDisclosure({
           </Disclosure.Button>
           <Disclosure.Panel className="px-4 pb-2 text-white max-w-3xl flex flex-row items-center">
             <p className='mr-8 max-w-xl'>{answer}</p>
+            <div className='hidden md:block'>
             {stroke}
+            </div>
           </Disclosure.Panel>
         </>
       )}

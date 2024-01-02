@@ -9,7 +9,7 @@ export default function About() {
       <div className="flex">
         <div className="text-white m-auto flex flex-col md:flex-row px-6">
           <div className="max-w-2xl text-lg text-center">
-              <p className="text-xl"><span className="font-title">TartanHacks</span> {aboutContent}</p>
+              <p className="text-lg md:text-xl"><span className="font-title">TartanHacks</span> {aboutContent}</p>
             <p className="mt-5 font-bold text-xl">{details}</p>
           </div>
         </div>

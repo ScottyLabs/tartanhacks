@@ -1,4 +1,7 @@
-export default function ComingSoon() {
+interface ComingSoonProps {
+  className?: string
+}
+export default function ComingSoon({ className }: ComingSoonProps) {
   return (
     <svg
       width="1326"
@@ -6,6 +9,7 @@ export default function ComingSoon() {
       viewBox="0 0 1326 824"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <rect width="1326" height="824" fill="#1B1818" />
       <path
