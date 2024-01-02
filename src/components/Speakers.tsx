@@ -28,6 +28,8 @@ function Speaker({
 
 export default function Speakers() {
   return (
+    /**
+     * 
     <div className="py-16" id="speakers">
       <div className="flex">
         <div className="text-beige m-auto">
@@ -55,5 +57,10 @@ export default function Speakers() {
         </div>
       </div>
     </div>
+     */
+    <section className="py-16 text-white m-auto font-bold text-center border-b-4 w-2/3" id="speakers">
+    <h1 className='text-6xl mb-24'>Speakers</h1>
+    <p className='text-4xl font-title'>...Coming Soon...</p>
+    </section>
   );
 }

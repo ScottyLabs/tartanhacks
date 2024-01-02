@@ -16,8 +16,12 @@ const Home: NextPage = () => {
       <Hero />
       <About />
       <Theme />
+      <FAQs />
       <Schedule />
       <Sponsors />
+      <Speakers />
+      <Prizes />
+      <TopProjects />
     </>
   );
 };

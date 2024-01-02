@@ -18,7 +18,7 @@ function FAQDisclosure({
   let stroke: React.ReactNode;
   switch (key) {
     case 0:
-      stroke = <StrokeYellow />; 
+      stroke = <StrokeYellow />;
       break;
     case 1:
       stroke = <StrokePink />;
@@ -30,12 +30,14 @@ function FAQDisclosure({
       stroke = <StrokeBlue />;
       break;
   }
-  const hoverColor = idx % 2 ? 'hover:text-pink' : 'hover:text-yellow'
+  const hoverColor = idx % 2 ? 'hover:text-pink' : 'hover:text-yellow';
   return (
     <Disclosure>
       {({ open }) => (
         <>
-          <Disclosure.Button className={`flex w-full justify-between px-4 pt-3 pb-4 text-left text-md ${hoverColor} text-lg font-bold border-t-2`}>
+          <Disclosure.Button
+            className={`flex w-full justify-between px-4 pt-3 pb-4 text-left text-md ${hoverColor} text-lg font-bold border-t-2`}
+          >
             <span>{question}</span>
             <ChevronUpIcon
               className={`${
@@ -44,10 +46,8 @@ function FAQDisclosure({
             />
           </Disclosure.Button>
           <Disclosure.Panel className="px-4 pb-2 text-white max-w-3xl flex flex-row items-center">
-            <p className='mr-8 max-w-xl'>{answer}</p>
-            <div className='hidden md:block'>
-            {stroke}
-            </div>
+            <p className="mr-8 max-w-xl">{answer}</p>
+            <div className="hidden md:block">{stroke}</div>
           </Disclosure.Panel>
         </>
       )}
@@ -122,10 +122,13 @@ function FAQList() {
 
 export default function FAQs() {
   return (
-    <div className="py-16 pb-40" id="faq">
-      <div className="max-w-4xl m-auto">
-        <FAQList />
+    <section className="w-2/3 m-auto text-white border-b-4 pt-36" id='faq'>
+    <h1 className='text-6xl mb-24 text-center mt-12'>FAQs</h1>
+      <div className="py-16" id="faq">
+        <div className="max-w-4xl m-auto">
+          <FAQList />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

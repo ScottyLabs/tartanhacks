@@ -26,6 +26,8 @@ function Prize({
 
 export default function About() {
   return (
+    /**
+     * 
     <div className="py-16" id="prizes">
       <div className="flex">
         <div className="text-beige m-auto">
@@ -98,5 +100,10 @@ Awarded to the team that took the biggest gamble while not meeting its goals… 
         </div>
       </div>
     </div>
+     */
+    <section className="py-16 text-white m-auto font-bold text-center border-b-4 w-2/3" id="prizes">
+    <h1 className='text-6xl mb-24'>Prizes</h1>
+    <p className='text-4xl font-title'>...Coming Soon...</p>
+    </section>
   );
 }

@@ -40,6 +40,8 @@ function Block({
 }
 
 export default function TopProjects() {
+  /**
+   * 
   return (
     <section className="py-16" id="top_projects">
       <div className="py-16 pb-40" id="top_projects">
@@ -56,7 +58,6 @@ export default function TopProjects() {
             </p>
           </div>
           <div className="max-w-4xl m-auto">
-            {/* For more flexibility, can use grid-template-areas */}
             <div className={`grid gap-x-2 gap-y-2 ${styles.grid}`}>
             {
               topProjectData.map(
@@ -74,4 +75,12 @@ export default function TopProjects() {
       </div>
     </section>
   );
+   */
+  return (
+
+    <section className="py-16 text-white m-auto font-bold text-center w-2/3" id="projects">
+    <h1 className='text-6xl mb-24'>Top Projects</h1>
+    <p className='text-4xl font-title'>...Coming Soon...</p>
+    </section>
+  )
 }

@@ -31,7 +31,7 @@ export function RegisterButton({ className }: { className?: string }) {
 
 export default function Hero() {
   return (
-        <div className='min-h-screen w-full'>
+        <div className='min-h-screen w-full -mb-36'>
           <Jumbotron
             className='w-[80vw] lg:w-[60vw] mx-auto'
           />

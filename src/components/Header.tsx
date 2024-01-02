@@ -33,29 +33,32 @@ export default function Header() {
           onMouseEnter={() => setIconHover(true)}
           onMouseLeave={() => setIconHover(false)}
         >
-          <Link href="/">
-          {
-            iconHover ? <LogoActive /> : <LogoInactive />
-          }
-          </Link>
+          <Link href="/">{iconHover ? <LogoActive /> : <LogoInactive />}</Link>
         </div>
         <div className="space-x-16 text-lg flex items-center">
-          {
-            //<HeaderLink name="About" href="#about" />
-          }
+          <HeaderLink
+            name="About"
+            href='#about'
+            underlineColor='decoration-yellow'
+          />
+          <HeaderLink
+            name="Theme"
+            href='#theme'
+            underlineColor='decoration-pink'
+          />
           <HeaderLink
             name="FAQ"
-            href="/faq"
+            href="#faq"
             underlineColor="decoration-purple"
           />
+          {
+            /**
+             * 
           <HeaderLink
             name="Top Projects"
             href="/projects"
             underlineColor="decoration-blue"
           />
-          {
-            //<HeaderLink name="Schedule" href="#schedule" />
-          }
           <HeaderLink
             name="Speakers"
             href="/speakers"
@@ -66,7 +69,8 @@ export default function Header() {
             href="/prizes"
             underlineColor="decoration-yellow"
           />
-          {
+             */
+            //<HeaderLink name="Schedule" href="#schedule" />
             //<HeaderLink name="Sponsors" href="#sponsors" />
           }
         </div>

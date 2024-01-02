@@ -5,8 +5,9 @@ export default function About() {
   const details = `Feb 2nd-3rd @ Carnegie Mellon University!`
 
   return (
-    <section className="py-16 border-t-4 border-b-4 w-2/3 m-auto" id="about">
-      <div className="flex">
+    <>
+    <section className="pt-36 w-2/3 m-auto" id="about">
+      <div className="flex py-12 border-t-4 border-b-4 -mb-36">
         <div className="text-white m-auto flex flex-col md:flex-row px-6">
           <div className="max-w-2xl text-lg text-center">
               <p className="text-lg md:text-xl"><span className="font-title">TartanHacks</span> {aboutContent}</p>
@@ -15,5 +16,6 @@ export default function About() {
         </div>
       </div>
     </section>
+    </>
   );
 }
