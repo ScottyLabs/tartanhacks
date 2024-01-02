@@ -39,14 +39,36 @@ export default function Speakers() {
             the spectrum of mathematics, education, and healthcare, all around
             the world. He has pioneered innovations ranging from a scalable way
             to{' '}
-            <a className="underline" href="https://live.poshenloh.com/">
+            <a
+              className="underline"
+              target="_blank"
+              rel="noreferrer"
+              href="https://live.poshenloh.com/"
+            >
               learn challenging math live online
             </a>
             at comparable engagement to live-streaming entertainment, to a new
-            way to control pandemics by leveraging self-interest. He has earned
-            academic distinctions ranging from an International Mathematical
-            Olympiad silver medal to the United States Presidential Early Career
-            Award for Scientists and Engineers.
+            way to
+            <a
+              className="underline"
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.straitstimes.com/tech/tech-news/us-prof-keen-to-work-with-spore-on-app-that-warns-users-before-they-are-exposed-to"
+            >
+              control pandemics by leveraging self-interest
+            </a>
+            . He has earned academic distinctions ranging from an International
+            Mathematical Olympiad silver medal to the
+            <a
+              className="underline"
+              target="_blank"
+              rel="noreferrer"
+              href="https://trumpwhitehouse.archives.gov/briefings-statements/president-donald-j-trump-announces-recipients-presidential-early-career-award-scientists-engineers/"
+            >
+              United States Presidential Early Career Award for Scientists and
+              Engineers
+            </a>
+            .
           </p>
         </div>
       </div>
