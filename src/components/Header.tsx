@@ -38,13 +38,13 @@ export default function Header() {
         <div className="space-x-16 text-lg flex items-center">
           <HeaderLink
             name="About"
-            href='#about'
-            underlineColor='decoration-yellow'
+            href="#about"
+            underlineColor="decoration-yellow"
           />
           <HeaderLink
             name="Theme"
-            href='#theme'
-            underlineColor='decoration-pink'
+            href="#theme"
+            underlineColor="decoration-pink"
           />
           <HeaderLink
             name="FAQ"
