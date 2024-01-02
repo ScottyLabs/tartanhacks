@@ -1,5 +1,8 @@
 import React from 'react';
 
+import SponsorsTitle from '../svg/SponsorsTitle';
+import Image from 'next/image';
+
 export function Sponsor({ src }: { src: string }) {
   return (
     <img
@@ -34,8 +37,17 @@ export default function Sponsors() {
       className="py-16 text-white m-auto font-bold text-center w-2/3 border-b-4"
       id="sponsors"
     >
-      <h1 className="text-6xl mb-24">Sponsors</h1>
-      <p className="text-4xl font-title">...Coming Soon...</p>
+      <div className="w-full mx-auto">
+        <SponsorsTitle />
+      </div>
+      <div className="w-full relative h-32">
+        <Image
+          src="/sponsors/pls.png"
+          objectFit="contain"
+          layout="fill"
+          alt="pls"
+        />
+      </div>
     </section>
   );
 }
