@@ -37,20 +37,8 @@ export default function Hero() {
             className='w-[80vw] lg:w-[40vw] '
           />
           <RegisterButton
-            className={clsx(styles.registerButton, 'mt-10')}
+            className={clsx(styles.registerButton, 'mt-10 mb-4')}
           />
-          <div className='mt-10 flex max-w-6xl gap-x-4 flex-col sm:flex-row items-center justify-center'>
-            <div className='cursor-pointer'>
-              <Link href='https://play.google.com/store/apps/details?id=org.scottylabs.thdapp&pli=1'>
-                <Image src='/svg/google-play-badge.svg' height={60} width={180}/>
-              </Link>
-            </div>
-            <div className='cursor-pointer'>
-              <Link href='https://apps.apple.com/us/app/tartanhacks-dashboard/id1556362423'>
-                <Image src='/svg/app-store.svg' height={60} width={160} />
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
   );

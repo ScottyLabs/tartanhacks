@@ -32,7 +32,7 @@ export default function BaseLayout({ children, className }: Props) {
         />
         <meta
           property="og:image"
-          content="https://tartanhacks.com/cover-photo-2023.png"
+          content="https://tartanhacks.com/cover-photo-2024.png"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -47,7 +47,7 @@ export default function BaseLayout({ children, className }: Props) {
         />
         <meta
           property="twitter:image"
-          content="https://tartanhacks.com/cover-photo-2023.png"
+          content="https://tartanhacks.com/cover-photo-2024.png"
         />
         <link rel="icon" href="favicon.png" />
       </Head>
