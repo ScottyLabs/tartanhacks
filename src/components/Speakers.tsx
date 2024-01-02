@@ -1,66 +1,95 @@
 import Image from 'next/image';
-
-function Speaker({
-  imageUrl,
-  name,
-  subtitle,
-  description,
-}: {
-  imageUrl: string;
-  name: string;
-  subtitle: string;
-  description: string;
-}) {
-  return (
-    <div className="flex-col items-center md:flex-row flex md:items-start px-4">
-      <img
-        className="mb-2 md:mb-0 mr-5 w-36 flex-none rounded"
-        src={imageUrl}
-      />
-      <div>
-        <h4 className="text-xl text-blue">{name}</h4>
-        <h5 className="text-lg mb-1">{subtitle}</h5>
-        <p className="text-sm text-gray-400">{description}</p>
-      </div>
-    </div>
-  );
-}
+import React from 'react';
+import SemiCircle from '../svg/SemiCircle';
+import RoundHills from '../svg/RoundHills';
+import SpikyHills from '../svg/SpikyHills';
+import Lines from '../svg/Lines';
+import SpeakersTitle from '../svg/SpeakersTitle';
 
 export default function Speakers() {
   return (
-    /**
-     * 
-    <div className="py-16" id="speakers">
-      <div className="flex">
-        <div className="text-beige m-auto">
-          <h3 className="text-2xl mb-4 text-center text-yellow">Speakers</h3>
-          <div className="max-w-2xl space-y-12 py-8">
-            <Speaker
-              imageUrl="/speakers/mike.jpg"
-              name="Mike Darweesh"
-              subtitle="Co-Founder of Google Hangouts"
-              description={`Michael Darweesh is an experienced software professional. He worked with Microsoft as a team lead on Mac Office and Windows DRM. Later, he joined the Mars Space Flight Facility to make mapping software for the rovers program. Then, he joined Google and co-founded the Hangouts team. His Pittsburgh startup experience includes two projects: Legalsifter, which brings ML to legal document processing, and Icebird Financial Corporation. Now, he mentors Pittsburgh talent and companies such as Gridwise and the Pittsburgh Knights. When he's not at the computer, he is playing with his cats, enjoying some pizza, or watching some hockey!`}
-            />
-            <Speaker
-              imageUrl="/speakers/nehal.png"
-              name="Nehal Gajjar"
-              subtitle="CEO and Founder of iMetalx"
-              description={`Nehal Gajjar is CEO and Founder of iMetalx, an innovative aerospace firm that develops deep tech solutions for defense. She has raised $20M+ in non-dilutive funding and has built three profitable startups. She holds a Bachelor's in Aerospace Engineering from Georgia Tech and an MBA in Finance and Strategy from CMU. Her expertise spans advanced technologies in aerospace, software, and renewable energy industries and she has led breakthrough innovations with the US Space Force, USAF, Siemens, Lockheed Martin, and Pratt Whitney. She enjoys competitive sailing, mountain biking, and martial arts in her spare time.`}
-            />
-            <Speaker
-              imageUrl="/speakers/jasmine.jpg"
-              name="Jasmine Lawrence"
-              subtitle="Senior Product Manager at Everyday Robots"
-              description={`Jasmine Lawrence is a Senior Product Manager at Everyday Robots, where they are building a new type of learning robot that can learn by itself to help with (almost) anything. Prior to this, she has worked at Facebook, Softbank Robotics America, and Microsoft. At 13, Jasmine founded EDEN BodyWorks to meet the need for affordable, natural hair and body care products that really work. Jasmine earned her Bachelor's in CS from Georgia Tech and her Master's in Human-Centered Design and Engineering at the University of Washington. She’s been featured in news outlets such as the New York Times, the Oprah Winfrey Show, on the Forbes 30 under 30, and on Inc Magazine’s 2021 Female Founders list. Outside of work Jasmine is a poet, mentor, STEM advocate, and Advisory Board Member for the Network for Teaching Entrepreneurship.`}
-            />
+    <section
+      className="py-16 text-white m-auto font-bold flex flex-col gap-24 text-center border-b-4 w-2/3"
+      id="speakers"
+    >
+      <div className="w-full mx-auto">
+        <SpeakersTitle />
+      </div>
+      <div className="flex-col md:flex-row flex gap-12 md:gap-24">
+        <div className="overflow-visible flex-none w-full md:max-w-[196px]">
+          <div className="relative">
+            <div className="-z-10 relative w-full">
+              <img src="/speakers/po.jpg" alt="Po Shen Loh" />
+            </div>
+            <div className="absolute top-[-80px] left-[-60px]">
+              <RoundHills />
+            </div>
+            <div className="absolute top-[-40px] ">
+              <SemiCircle />
+            </div>
           </div>
         </div>
+        <div className="flex-0 text-left">
+          <h2 className="text-3xl font-extrabold font-sans">Po Shen Loh</h2>
+          <p className="text-yellow font-thin leading-5 text-sm">
+            Professor @ CMU, Head Coach @ USA International Math Olympiad Team
+          </p>
+          <p className="font-thin mt-6">
+            Po-Shen Loh is a social entrepreneur and inventor, working across
+            the spectrum of mathematics, education, and healthcare, all around
+            the world. He has pioneered innovations ranging from a scalable way
+            to{' '}
+            <a className="underline" href="https://live.poshenloh.com/">
+              learn challenging math live online
+            </a>
+            at comparable engagement to live-streaming entertainment, to a new
+            way to control pandemics by leveraging self-interest. He has earned
+            academic distinctions ranging from an International Mathematical
+            Olympiad silver medal to the United States Presidential Early Career
+            Award for Scientists and Engineers.
+          </p>
+        </div>
       </div>
-    </div>
-     */
-    <section className="py-16 text-white m-auto font-bold text-center border-b-4 w-2/3" id="speakers">
-    <h1 className='text-6xl mb-24'>Speakers</h1>
-    <p className='text-4xl font-title'>...Coming Soon...</p>
+      <div className="flex-col md:flex-row flex gap-12 md:gap-24">
+        <div className="overflow-visible flex-none w-full md:max-w-[196px]">
+          <div className="relative">
+            <div className="-z-10 relative w-full">
+              <img src="/speakers/yaser.jpg" alt="Yaser Sheikh" />
+            </div>
+            <div className="absolute top-[-20px] right-[-70px]">
+              <SpikyHills />
+            </div>
+            <div className="absolute bottom-[-80px] right-[-100px]">
+              <Lines />
+            </div>
+          </div>
+        </div>
+        <div className="flex-0 text-left">
+          <h2 className="text-3xl font-extrabold font-sans">Yaser Sheikh</h2>
+          <p className="text-pink font-thin leading-5 text-sm">
+            VP of Research @ Meta, Founding Director of Meta Reality Lab,
+            Pittsburgh
+          </p>
+          <p className="font-thin mt-6">
+            Yaser Sheikh is devoted to achieving photorealistic social
+            interactions in augmented and virtual reality. He is a consulting
+            professor at the Robotics Institute, CMU, where he directed the
+            Perceptual Computing Lab producing OpenPose and the Panoptic Studio.
+            His research broadly focuses on machine perception and rendering of
+            social behavior, spanning sub disciplines in computer vision,
+            computer graphics, and machine learning. He has served as an
+            associate editor for the IEEE Transactions on Pattern Analysis and
+            Machine Intelligence (PAMI) and has regularly served as a senior
+            program committee member for SIGGRAPH, CVPR, and ICCV. His research
+            has been featured by various news and media outlets including The
+            New York Times, BBC, CBS, WIRED, and The Verge. With colleagues and
+            students, he has won the Hillman  Fellowship (2004), Honda
+            Initiation Award (2010), Popular Science’s &quot;Best of What’s
+            New&apos; Award  (2014), as well as several conference best paper
+            and demo awards (CVPR, ECCV, WACV, ICML).
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
