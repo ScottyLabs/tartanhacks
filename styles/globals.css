@@ -8,6 +8,11 @@
     font-weight: 400;
     src: local("Comba"), url("../fonts/combatest-boldultrawide.otf") format("opentype");
   }
+  @font-face {
+    font-family: Futura;
+    font-weight: 400;
+    src: local("Futura"), url("../fonts/futura-bk-book.ttf") format("truetype");
+  }
 }
 
 html,
