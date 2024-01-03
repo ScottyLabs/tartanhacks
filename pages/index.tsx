@@ -15,12 +15,12 @@ const Home: NextPage = () => {
       <Hero />
       <About />
       <Theme />
-      <Schedule />
-      <Sponsors />
       <Speakers />
+      <Sponsors />
       <FAQs />
+      <Schedule />
       <Prizes />
-      <TopProjects />
+      {/** <TopProjects /> */}
     </div>
   );
 };
