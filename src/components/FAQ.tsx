@@ -79,7 +79,7 @@ function FAQList() {
     },
     {
       q: `I'm a graduate student. Can I still participate?`,
-      a: `Unfortunately, graduate students cannot participate. TartanHacks is currently limited to undergraduate students only.`,
+      a: `Yes! Graduate students are welcome to particpate this year.`,
     },
     {
       q: 'Are non-CMU students allowed to attend?',
