@@ -99,7 +99,7 @@ function FAQList() {
     },
     {
       q: 'Does everyone who registers get to participate at TartanHacks?',
-      a: `We expect that everyone who registers can get in. However, sometimes more hackers sign up than we can admit. Once registration closes, hackers are accepted on a rolling basis. You will be notified via email about your registration status.`,
+      a: `We expect that everyone who registers can get in. However, sometimes more hackers sign up than we can admit. Hackers are accepted on a rolling basis until the CMU and Pittsburgh deadline of January 26 and national deadline of January 19. You will be notified via email about your registration status.`,
     },
     {
       q: 'Are we limited to software projects or are hardware projects allowed?',
