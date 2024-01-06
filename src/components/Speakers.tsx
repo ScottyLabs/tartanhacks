@@ -46,9 +46,9 @@ export default function Speakers() {
               href="https://live.poshenloh.com/"
             >
               learn challenging math live online
-            </a>
+            </a>{' '}
             at comparable engagement to live-streaming entertainment, to a new
-            way to
+            way to{' '}
             <a
               className="underline"
               target="_blank"
@@ -58,7 +58,7 @@ export default function Speakers() {
               control pandemics by leveraging self-interest
             </a>
             . He has earned academic distinctions ranging from an International
-            Mathematical Olympiad silver medal to the
+            Mathematical Olympiad silver medal to the{' '}
             <a
               className="underline"
               target="_blank"
@@ -105,9 +105,9 @@ export default function Speakers() {
             program committee member for SIGGRAPH, CVPR, and ICCV. His research
             has been featured by various news and media outlets including The
             New York Times, BBC, CBS, WIRED, and The Verge. With colleagues and
-            students, he has won the Hillman  Fellowship (2004), Honda
+            students, he has won the Hillman Fellowship (2004), Honda
             Initiation Award (2010), Popular Science’s &quot;Best of What’s
-            New&apos; Award  (2014), as well as several conference best paper
+            New&apos; Award (2014), as well as several conference best paper
             and demo awards (CVPR, ECCV, WACV, ICML).
           </p>
         </div>
