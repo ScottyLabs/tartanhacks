@@ -34,7 +34,7 @@ export function SponsorTier({
 export default function Sponsors() {
   return (
     <section
-      className="pb-16 pt-36 text-white m-auto font-bold text-center w-2/3 border-b-4"
+      className="pb-16 pt-48 -mb-36 border-b-4 w-2/3 m-auto flex flex-col gap-24"
       id="sponsors"
     >
       <div className="w-full mx-auto">

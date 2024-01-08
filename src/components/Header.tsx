@@ -47,35 +47,30 @@ export default function Header() {
             underlineColor="decoration-pink"
           />
           <HeaderLink
+            name="Schedule"
+            href="#schedule"
+            underlineColor="decoration-blue"
+          />
+          <HeaderLink
             name="Speakers"
             href="#speakers"
+            underlineColor="decoration-purple"
+          />
+          <HeaderLink
+            name="Prizes"
+            href="#prizes"
             underlineColor="decoration-blue"
           />
           <HeaderLink
             name="Sponsors"
             href="#sponsors"
-            underlineColor="decoration-purple"
+            underlineColor="decoration-yellow"
           />
           <HeaderLink
             name="FAQs"
             href="#faq"
-            underlineColor="decoration-yellow"
+            underlineColor="decoration-pink"
           />
-          {
-            /**
-             * 
-          <HeaderLink
-            name="Top Projects"
-            href="/projects"
-            underlineColor="decoration-blue"
-          />
-          <HeaderLink
-            name="Prizes"
-            href="/prizes"
-            underlineColor="decoration-yellow"
-          />
-             */
-          }
         </div>
       </div>
     </header>

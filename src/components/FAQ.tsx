@@ -122,9 +122,9 @@ function FAQList() {
 
 export default function FAQs() {
   return (
-    <section className="w-2/3 m-auto text-white border-b-4 pt-36" id='faq'>
-    <h1 className='text-6xl mb-24 text-center mt-12'>FAQs</h1>
-      <div className="py-16" id="faq">
+    <section className="pb-16 pt-48 w-2/3 m-auto flex flex-col gap-24 text-white" id='faq'>
+    <h1 className='text-6xl text-center'>FAQs</h1>
+      <div id="faq">
         <div className="max-w-4xl m-auto">
           <FAQList />
         </div>
