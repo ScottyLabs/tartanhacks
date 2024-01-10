@@ -15,7 +15,7 @@ function Prize({
 }) {
   return (
     <div
-      className={`border-4 border-white p-4 rounded-lg flex flex-col justify-between h-fit min-h-[8rem] ${className}`}
+      className={`border-4 border-white p-4 rounded-lg flex flex-col justify-between h-fit min-h-[8rem] lg:min-h-0 ${className}`}
     >
       <Disclosure>
         {({ open }) => (
