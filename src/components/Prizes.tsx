@@ -1,3 +1,7 @@
+import { Disclosure } from '@headlessui/react';
+import PrizesTitle from '../svg/Prizes';
+import { ChevronUpIcon } from '@heroicons/react/20/solid';
+
 function Prize({
   name,
   description,
@@ -11,99 +15,112 @@ function Prize({
 }) {
   return (
     <div
-      className={`border-2 border-gray-700 p-4 rounded-lg flex flex-col justify-between ${className}`}
+      className={`border-4 border-white p-4 rounded-lg flex flex-col justify-between h-fit min-h-[8rem] ${className}`}
     >
-      <div>
-        <h3 className="text-lg text-blue">{name}</h3>
-        <p>{description}</p>
-      </div>
-      <div className="">
-        <p className="text-sm mt-2 text-right">{prize}</p>
+      <Disclosure>
+        {({ open }) => (
+          <>
+            <Disclosure.Button
+              className={`flex w-full justify-between px-4 pt-3 pb-4 text-center text-md text-lg font-bold my-auto`}
+            >
+              <h3 className="text-lg text-white font-bold w-full">{name}</h3>
+              <ChevronUpIcon
+                className={`${
+                  open ? 'rotate-180 transform' : ''
+                } h-5 w-5 text-purple-500`}
+              />
+            </Disclosure.Button>
+            <Disclosure.Panel className="px-4 pb-2 text-white max-w-3xl flex flex-col gap-8 items-center">
+              <p>{description}</p>
+              {/**
+                <p className="font-bold text-center mb-4">Prize: {prize}</p>
+                 * 
+                 */}
+            </Disclosure.Panel>
+          </>
+        )}
+      </Disclosure>
+    </div>
+  );
+}
+
+function PrizeGroup({
+  title,
+  children,
+}: {
+  title?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex flex-col gap-4">
+      {title && (
+        <h1 className="text-2xl text-white font-bold text-center font-title">
+          {title}
+        </h1>
+      )}
+      <div className="grid sm:grid-cols-2 gap-x-4 gap-y-4 w-full">
+        {children}
       </div>
     </div>
   );
 }
 
-export default function About() {
+export default function Prizes() {
   return (
-    /**
-     * 
-    <div className="py-16" id="prizes">
-      <div className="flex">
-        <div className="text-beige m-auto">
-          <h3 className="text-2xl mb-4 text-center text-yellow">Prizes</h3>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-4 max-w-6xl">
-            <Prize
-              name="Scott Krulcik Grand Prize"
-              description="Most impressive hack at TartanHacks 2023"
-              prize="$2000"
-            />
-            <Prize
-              name="Most Disruptive: Technology"
-              description="Most significant technological innovation that disrupts the status quo."
-              prize="4 × Mini Projector"
-            />
-            <Prize
-              name="Most Disruptive: Product"
-              description="Most significant product/business model innovation that disrupts the status quo."
-              prize="4 × Photo Printer"
-            />
-            <Prize
-              name="Best use of Algorand"
-              description="Best use of the Algorand protocol."
-              prize="$1000 worth of ALGO"
-            />
-
-            <Prize
-              name="Sandia National Labs Award"
-              description="Sponsored by Sandia."
-              prize="4 × Wireless Headphones"
-            />
-            <Prize
-              name="Best use of AI"
-              description="Best use of AI."
-              prize="4 × Amazon Echo Dot"
-            />
-            <Prize
-              name="Best use of GCP"
-              description="Best use of Google Cloud Platform."
-              prize="4 × TBD"
-            />
-            <Prize
-              name="Wolfram Research Top 5 Teams"
-              description="Awarded to the top 5 teams."
-              prize="A year of Wolfram|One Personal Edition + one-year subscription to Wolfram|Alpha Pro"
-            />
-            <Prize
-              name="First Penguin Prize"
-              description={`Inspired by Randy Pausch's The Last Lecture: “Experience is what you get when you don’t get what you wanted. And it can be the most valuable thing you have to offer.”
+    <section
+      className="flex flex-col pb-16 pt-48 -mb-36 border-b-4 w-2/3 m-auto gap-24 text-white"
+      id="prizes"
+    >
+      <PrizesTitle className="m-auto w-full" />
+      <PrizeGroup title="ScottyLabs Prizes">
+        <Prize
+          name="Scott Krulcik Grand Prize"
+          description="Most impressive hack at TartanHacks 2024"
+          prize="TBD"
+        />
+        <Prize
+          name="First Penguin"
+          description={`Inspired by Randy Pausch's The Last Lecture: “Experience is what you get when you don’t get what you wanted. And it can be the most valuable thing you have to offer.”
 Awarded to the team that took the biggest gamble while not meeting its goals… a prize for ‘glorious failure’.`}
-              prize="4 × Penguin Plushies"
-              className="row-span-2"
-            />
-            <Prize
-              name="Best Design Hack"
-              description="Best product design."
-              prize="4 × A Dictionary of Color Combinations"
-            />
-            <Prize
-              name="Design for America (DFA) Impact Prize"
-              description="Best social impact project."
-              prize="Entry into DFA Impact, Tote Bags, Herb Kits"
-            />
-            <Prize
-              name="Spiciest Meme"
-              description="Spiciest meme in the #memes Discord channel."
-              prize="What do you meme? card game"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-     */
-    <section className="py-16 text-white m-auto font-bold text-center border-b-4 w-2/3" id="prizes">
-    <h1 className='text-6xl mb-24'>Prizes</h1>
-    <p className='text-4xl font-title'>...Coming Soon...</p>
+          prize="TBD"
+        />
+        <Prize
+          name="Raffle"
+          description="Join TartanHacks for a chance to win a raffle prize!"
+          prize="TBD"
+        />
+        <Prize
+          name="Spiciest Meme"
+          description="Spiciest meme in the #memes Discord channel."
+          prize="What  you meme? card game"
+        />
+        <Prize
+          name="Best Use of AI"
+          description="Best use of AI."
+          prize="TBD"
+        />
+        <Prize
+          name="Top 5"
+          description="Awarded to the top 5 teams."
+          prize="TBD"
+        />
+      </PrizeGroup>
+      <PrizeGroup title="Theme Prizes">
+        <Prize
+          name="Butterfly Effect"
+          description="Most significant product/business model introducing change that leads to significant societal impact"
+          prize="TBD"
+        />
+        <Prize
+          name="Blossoming Technology"
+          description="Most significant innovation that makes use of emerging, groundbreaking technology"
+          prize="TBD"
+        />
+      </PrizeGroup>
+      <PrizeGroup title="External Prizes">
+        <Prize name="Club Sponsored" description="Additional prizes sponsored by CMU clubs" prize="TBD" />
+        <Prize name="Corporate Sponsored" description="Additional prizes from our sponsors" prize="TBD" />
+      </PrizeGroup>
     </section>
   );
 }

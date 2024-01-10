@@ -26,7 +26,7 @@ function HeaderLink({
 export default function Header() {
   const [iconHover, setIconHover] = useState(false);
   return (
-    <header className="sticky top-0 z-30 w-full bg-black text-white pt-6 pb-4 hidden md:block">
+    <header className="sticky top-0 z-30 w-full bg-black text-white pt-6 pb-4 hidden lg:block">
       <div className="flex flex-row justify-between text-xl mr-12 ml-8">
         <div
           className="cursor-pointer"
