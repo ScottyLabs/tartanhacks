@@ -67,6 +67,11 @@ export default function Header() {
             underlineColor="decoration-yellow"
           />
           <HeaderLink
+            name="Partners"
+            href="#partners"
+            underlineColor="decoration-purple"
+          />
+          <HeaderLink
             name="FAQs"
             href="#faq"
             underlineColor="decoration-pink"

@@ -6,8 +6,8 @@ import Prizes from '../src/components/Prizes';
 import Schedule from '../src/components/Schedule';
 import Sponsors from '../src/components/Sponsors';
 import Speakers from '../src/components/Speakers';
-import TopProjects from '../src/components/TopProjects';
 import Theme from '../src/components/Theme';
+import Partners from '../src/components/Partners';
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +19,7 @@ const Home: NextPage = () => {
       <Speakers />
       <Prizes />
       <Sponsors />
+      <Partners />
       <FAQs />
       {/** <TopProjects /> */}
     </div>
