@@ -78,7 +78,7 @@ const sponsors: (SponsorProps & { key: string })[] = [
   {
     name: 'Wolfram',
     tier: 'bronze',
-    logo: '/sponsors/wolfram.png',
+    logo: '/sponsors/wolfram_white.png',
     key: 'wolfram',
     link: 'https://wolfram.com',
     cols: 12,
