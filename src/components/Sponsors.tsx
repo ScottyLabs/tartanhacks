@@ -64,7 +64,7 @@ const sponsors: (SponsorProps & { key: string })[] = [
     tier: 'platinum',
     logo: '/sponsors/pls.png',
     key: 'pls',
-    link: 'https://pls.com',
+    link: 'https://www.plslogistics.com/',
     cols: 12,
   },
   {

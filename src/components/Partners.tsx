@@ -1,6 +1,5 @@
 import React from 'react';
 
-import SponsorsTitle from '../svg/SponsorsTitle';
 import PartnersTitle from '../svg/PartnersTitle';
 
 type PartnerProps = {
