@@ -94,7 +94,7 @@ export default function Sponsors() {
       <div className="w-full mx-auto">
         <SponsorsTitle />
       </div>
-      <div className="grid grid-cols-12 gap-8">
+      <div className="grid grid-cols-12 gap-y-8">
         {sponsors.map((props) => (
           <Sponsor {...props} key={props.key} />
         ))}
