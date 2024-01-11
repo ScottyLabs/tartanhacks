@@ -37,7 +37,7 @@ export function Sponsor(props: SponsorProps) {
   return (
     <div
       className={clsx(
-        'w-full relative',
+        'w-full',
         props.cols === 3
           ? 'col-span-3'
           : props.cols === 4
@@ -49,15 +49,11 @@ export function Sponsor(props: SponsorProps) {
           : undefined
       )}
     >
-      <a
-        href={props.link}
-        target="_blank"
-        rel="noreferrer"
-        className="absolute inset-0"
-      />
-      <div className="w-full flex justify-center border-2 rounded-md h-40 p-8 relative">
-        <img src={props.logo} className="object-contain" alt={props.name} />
-      </div>
+      <a href={props.link} target="_blank" rel="noreferrer">
+        <div className="w-full flex justify-center border-2 rounded-md h-40 p-8 relative">
+          <img src={props.logo} className="object-contain" alt={props.name} />
+        </div>
+      </a>
     </div>
   );
 }

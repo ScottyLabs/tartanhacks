@@ -11,16 +11,12 @@ type PartnerProps = {
 
 function Partner(props: PartnerProps) {
   return (
-    <div className="w-full relative">
-      <a
-        href={props.link}
-        target="_blank"
-        rel="noreferrer"
-        className="absolute inset-0"
-      />
-      <div className="w-full flex justify-center border-2 rounded-md h-40 p-8 relative">
-        <img src={props.logo} className="object-contain" alt={props.name} />
-      </div>
+    <div className="w-full">
+      <a href={props.link} target="_blank" rel="noreferrer">
+        <div className="w-full flex justify-center border-2 rounded-md h-40 p-8 relative">
+          <img src={props.logo} className="object-contain" alt={props.name} />
+        </div>
+      </a>
     </div>
   );
 }
