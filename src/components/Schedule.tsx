@@ -47,19 +47,24 @@ export default function Schedule() {
         <Day date="Feb 2.">
           <Block
             title="Check In Begins + Sponsorship Expo"
-            time="3:45 - 4:30 PM"
+            time="3:45 PM"
             location="Connan"
+          />
+          <Block
+            title="Please arrive by this time"
+            time="4:00 PM"
+            location="McConomy"
           />
           <Block
             title="Opening Ceremony"
             time="4:30 - 5:30 PM"
-            location="McConomy (Please arrive by 4:00)"
+            location="McConomy"
           />
-          <HackingBeginsCell className="-mt-[8%] -mb-[12%] z-10 w-[129%] -ml-[12%] relative" />
+          <HackingBeginsCell className="-mt-[8%] lg:-mt-[6%] -mb-[12%] z-10 w-[129%] -ml-[12%] relative" />
           <Block
             title="Team Formation Mixer"
             time="5:30 - 6:30 PM"
-            location="McConomy"
+            location="Danforth"
           />
           <Block
             title="Dinner"
@@ -69,41 +74,41 @@ export default function Schedule() {
           <Block
             title="Po-Shen Loh Talk"
             time="7:30 - 8:30 PM"
-            location="Rangos"
+            location="Danforth"
           />
           <Block
-            title="Karaoke + Midnight Snack"
+            title="Hacker Activity + Karaoke + Midnight Snack"
             time="11:30 PM - 2:00 AM"
-            location="Connan"
+            location=""
           />
         </Day>
         <div className='h-[1px] opacity-50 bg-white w-full my-4' />
         <Day date="Feb 3.">
           <Block
             title="Breakfast"
-            time="9:30 - 10:30 AM"
-            location="Connan"
+            time="10:00 - 10:30 AM"
+            location="Rangos"
           />
           <Block
             title="Yaser Sheikh Talk"
             time="10:30 - 11:30 AM"
-            location="Connan"
+            location="Danforth"
           />
           <Block
             title="Lunch"
-            time="1:00 - 2:00 PM"
-            location="Connan"
+            time="12:30 - 1:30 PM"
+            location="Rangos"
           />
           <HackingEndsCell className="-mt-[10%] -mb-[12%] z-10 w-[132%] -ml-[13%] relative" />
           <Block
             title="Judging Expo"
             time="5:30 - 6:30 PM"
-            location="Connan"
+            location="Rangos"
           />
           <Block
             title="Dinner"
             time="6:30 - 7:30 PM"
-            location="PMW"
+            location="Rangos"
           />
           <Block
             title="Closing Ceremony"
