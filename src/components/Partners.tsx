@@ -31,7 +31,7 @@ const partners: (PartnerProps & { key: string })[] = [
     name: 'GSA',
     logo: '/partners/gsa.png',
     key: 'gsa',
-    link: 'https://www.gsa.gov/',
+    link: 'https://www.cmu.edu/stugov/gsa/about-the-gsa/index.html',
   },
 ];
 
