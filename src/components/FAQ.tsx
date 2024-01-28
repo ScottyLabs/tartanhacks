@@ -86,6 +86,10 @@ function FAQList() {
       a: 'Absolutely! Just sign up :)',
     },
     {
+      q: 'Is housing provided for participants?',
+      a: 'Unfortunately, we are unable to provide housing for participants. If you are a non-CMU student, you should arrange your own housing.'
+    },
+    {
       q: 'Can I register with a team?',
       a: `You have to sign up as an individual for the event, and we'll have you specify your team later on. Don't worry, if you already have a team chosen you'll still be able to work with them during event.`,
     },
