@@ -57,14 +57,19 @@ export default function Schedule() {
           />
           <Block
             title="Opening Ceremony"
-            time="4:30 - 5:30 PM"
+            time="4:30 - 5:15 PM"
+            location="McConomy"
+          />
+          <Block
+            title="PLS tech talk"
+            time="5:15 - 5:30 PM"
             location="McConomy"
           />
           <HackingBeginsCell className="-mt-[8%] lg:-mt-[6%] -mb-[12%] z-10 w-[129%] -ml-[12%] relative" />
           <Block
             title="Team Formation Mixer"
             time="5:30 - 6:30 PM"
-            location="Danforth"
+            location="Rangos"
           />
           <Block
             title="Dinner"
@@ -74,6 +79,11 @@ export default function Schedule() {
           <Block
             title="Po-Shen Loh Talk"
             time="7:30 - 8:30 PM"
+            location="Danforth"
+          />
+          <Block
+            title="RoboClub Talk"
+            time="9:00 - 9:30 PM"
             location="Danforth"
           />
           <Block
@@ -95,9 +105,19 @@ export default function Schedule() {
             location="Danforth"
           />
           <Block
+            title="Ripple Talk"
+            time="12:00 - 1:00 PM"
+            location="Danforth"
+          />
+          <Block
             title="Lunch"
             time="12:30 - 1:30 PM"
             location="Rangos"
+          />
+          <Block
+            title="PLS Workshop"
+            time="2:00 - 3:00 PM"
+            location="Danforth"
           />
           <HackingEndsCell className="-mt-[10%] -mb-[12%] z-10 w-[132%] -ml-[13%] relative" />
           <Block
