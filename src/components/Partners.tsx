@@ -33,6 +33,12 @@ const partners: (PartnerProps & { key: string })[] = [
     key: 'gsa',
     link: 'https://www.cmu.edu/stugov/gsa/about-the-gsa/index.html',
   },
+  {
+    name: 'RoboClub',
+    logo: '/partners/roboclub.png',
+    key: 'roboclub',
+    link: 'https://roboticsclub.org/',
+  },
 ];
 
 export default function Partners() {
