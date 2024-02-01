@@ -120,7 +120,7 @@ Awarded to the team that took the biggest gamble while not meeting its goals… 
       <PrizeGroup title="External Prizes">
         <Prize name="PLS Freight Shipping Optimization" description="Prizes from our sponsor PLS for the most comprehensive solution that leverages technology to 
         mitigate risks associated with weather-related disruptions, road construction, and other external factors affecting freight shipping" prize="TBD" />
-        <Prize name="Ripple XRP Ledger: The On-chain Finance Challenge" description="Prizes from sponsor Ripple for Best Incorporation of the XRP Ledger" prize="TBD" />
+        <Prize name="Ripple XRP Ledger Finance Challenge" description="Prizes from sponsor Ripple for Best Incorporation of the XRP Ledger" prize="TBD" />
         <Prize name="Club Sponsored" description="Additional prizes sponsored by CMU clubs" prize="TBD" />
       </PrizeGroup>
     </section>
