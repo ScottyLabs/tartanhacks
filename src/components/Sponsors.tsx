@@ -84,6 +84,14 @@ const sponsors: (SponsorProps & { key: string })[] = [
     cols: 12,
   },
   {
+    name: 'Codédex',
+    tier: 'bronze',
+    logo: '/sponsors/codedex.png',
+    key: 'codédex',
+    link: 'https://codedex.io',
+    cols: 12,
+  },
+  {
     name: 'Wolfram',
     tier: 'bronze',
     logo: '/sponsors/wolfram_white.png',
