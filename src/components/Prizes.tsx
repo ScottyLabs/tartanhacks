@@ -118,8 +118,11 @@ Awarded to the team that took the biggest gamble while not meeting its goals… 
         />
       </PrizeGroup>
       <PrizeGroup title="External Prizes">
+        <Prize name="PLS Logistics Prize" description="Prize from our sponsor PLS for the most comprehensive solution that leverages technology to 
+        mitigate risks associated with weather-related disruptions, road construction, and other external factors affecting freight shipping" prize="Apple AirPods Max" />
+        <Prize name="Ripple XRP Ledger Prize" description="XRP Ledger: The On-chain Finance Challenge Prize for best implementation of the XRP Ledger in the following areas for 
+        innovation: Payments, Decentralized Finance, and Revolutionizing Money" prize="TBD" />
         <Prize name="Club Sponsored" description="Additional prizes sponsored by CMU clubs" prize="TBD" />
-        <Prize name="Corporate Sponsored" description="Additional prizes from our sponsors" prize="TBD" />
       </PrizeGroup>
     </section>
   );
