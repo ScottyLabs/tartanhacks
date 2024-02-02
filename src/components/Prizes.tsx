@@ -1,16 +1,19 @@
 import { Disclosure } from '@headlessui/react';
 import PrizesTitle from '../svg/Prizes';
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
+import Link from 'next/link';
 
 function Prize({
   name,
   description,
   prize,
+  link,
   className,
 }: {
   name: string;
   description: string;
   prize: string;
+  link?: string;
   className?: string;
 }) {
   return (
@@ -32,10 +35,11 @@ function Prize({
             </Disclosure.Button>
             <Disclosure.Panel className="px-4 pb-2 text-white max-w-3xl flex flex-col gap-8 items-center">
               <p>{description}</p>
-              {/**
-                <p className="font-bold text-center mb-4">Prize: {prize}</p>
-                 * 
-                 */}
+              {link && (
+                <div className='underline text-yellow'>
+                <Link href={link}>For details about the prize, click here</Link>
+                </div>
+              )}
             </Disclosure.Panel>
           </>
         )}
@@ -118,11 +122,25 @@ Awarded to the team that took the biggest gamble while not meeting its goals… 
         />
       </PrizeGroup>
       <PrizeGroup title="External Prizes">
-        <Prize name="PLS Logistics Prize" description="Prize from our sponsor PLS for the most comprehensive solution that leverages technology to 
-        mitigate risks associated with weather-related disruptions, road construction, and other external factors affecting freight shipping" prize="Apple AirPods Max" />
-        <Prize name="Ripple XRP Ledger Prize" description="XRP Ledger: The On-chain Finance Challenge Prize for best implementation of the XRP Ledger in the following areas for 
-        innovation: Payments, Decentralized Finance, and Revolutionizing Money" prize="TBD" />
-        <Prize name="Club Sponsored" description="Additional prizes sponsored by CMU clubs" prize="TBD" />
+        <Prize
+          name="PLS Logistics Prize"
+          description="Prize from our sponsor PLS for the most comprehensive solution that leverages technology to 
+        mitigate risks associated with weather-related disruptions, road construction, and other external factors affecting freight shipping"
+          prize="Apple AirPods Max"
+          link="https://docs.google.com/document/d/1R0OLhDFP579rHmZbeqbRUwubJVcteHE6-eH5xXzZzkw/edit#heading=h.xgsf0gx8mwm4"
+        />
+        <Prize
+          name="Ripple XRP Ledger Prize"
+          description="XRP Ledger: The On-chain Finance Challenge Prize for best implementation of the XRP Ledger in the following areas for 
+        innovation: Payments, Decentralized Finance, and Revolutionizing Money"
+          prize="TBD"
+          link='https://docs.google.com/document/d/1R0OLhDFP579rHmZbeqbRUwubJVcteHE6-eH5xXzZzkw/edit#heading=h.lc39eb3ryt5l'
+        />
+        <Prize
+          name="Club Sponsored"
+          description="Additional prizes sponsored by CMU clubs"
+          prize="TBD"
+        />
       </PrizeGroup>
     </section>
   );
