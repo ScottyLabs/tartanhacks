@@ -61,7 +61,7 @@ export default function Schedule() {
             location="McConomy"
           />
           <Block
-            title="PLS tech talk"
+            title="PLS Tech Talk"
             time="5:15 - 5:30 PM"
             location="McConomy"
           />
