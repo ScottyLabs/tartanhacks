@@ -9,7 +9,7 @@ import SpeakersTitle from '../svg/SpeakersTitle';
 export default function Speakers() {
   return (
     <section
-      className="pb-16 pt-48 text-white m-auto font-bold flex flex-col gap-24 text-center border-b-4 w-2/3 -mt-36"
+      className="pb-16 pt-48 text-white m-auto font-bold flex flex-col gap-24 text-center border-b-4 w-2/3 -mb-36"
       id="speakers"
     >
       <div className="w-full mx-auto">
@@ -46,7 +46,7 @@ export default function Speakers() {
               href="https://live.poshenloh.com/"
             >
               learn challenging math live online
-            </a>
+            </a>{' '}
             at comparable engagement to live-streaming entertainment, to a new
             way to{' '}
             <a

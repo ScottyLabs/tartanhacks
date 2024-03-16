@@ -26,7 +26,7 @@ function HeaderLink({
 export default function Header() {
   const [iconHover, setIconHover] = useState(false);
   return (
-    <header className="sticky top-0 z-30 w-full bg-black text-white pt-6 pb-4 hidden md:block">
+    <header className="sticky top-0 z-30 w-full bg-black text-white pt-6 pb-4 hidden lg:block">
       <div className="flex flex-row justify-between text-xl mr-12 ml-8">
         <div
           className="cursor-pointer"
@@ -47,35 +47,35 @@ export default function Header() {
             underlineColor="decoration-pink"
           />
           <HeaderLink
+            name="Schedule"
+            href="#schedule"
+            underlineColor="decoration-blue"
+          />
+          <HeaderLink
             name="Speakers"
             href="#speakers"
+            underlineColor="decoration-purple"
+          />
+          <HeaderLink
+            name="Prizes"
+            href="#prizes"
             underlineColor="decoration-blue"
           />
           <HeaderLink
             name="Sponsors"
             href="#sponsors"
+            underlineColor="decoration-yellow"
+          />
+          <HeaderLink
+            name="Partners"
+            href="#partners"
             underlineColor="decoration-purple"
           />
           <HeaderLink
             name="FAQs"
             href="#faq"
-            underlineColor="decoration-yellow"
+            underlineColor="decoration-pink"
           />
-          {
-            /**
-             * 
-          <HeaderLink
-            name="Top Projects"
-            href="/projects"
-            underlineColor="decoration-blue"
-          />
-          <HeaderLink
-            name="Prizes"
-            href="/prizes"
-            underlineColor="decoration-yellow"
-          />
-             */
-          }
         </div>
       </div>
     </header>

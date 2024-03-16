@@ -86,6 +86,10 @@ function FAQList() {
       a: 'Absolutely! Just sign up :)',
     },
     {
+      q: 'Is housing provided for participants?',
+      a: 'Unfortunately, we are unable to provide housing for participants. If you are a non-CMU student, you should arrange your own housing.'
+    },
+    {
       q: 'Can I register with a team?',
       a: `You have to sign up as an individual for the event, and we'll have you specify your team later on. Don't worry, if you already have a team chosen you'll still be able to work with them during event.`,
     },
@@ -99,7 +103,7 @@ function FAQList() {
     },
     {
       q: 'Does everyone who registers get to participate at TartanHacks?',
-      a: `We expect that everyone who registers can get in. However, sometimes more hackers sign up than we can admit. Once registration closes, hackers are accepted on a rolling basis. You will be notified via email about your registration status.`,
+      a: `We expect that everyone who registers can get in. However, sometimes more hackers sign up than we can admit. Hackers are accepted on a rolling basis until the CMU and Pittsburgh deadline of January 26 and national deadline of January 19. You will be notified via email about your registration status.`,
     },
     {
       q: 'Are we limited to software projects or are hardware projects allowed?',
@@ -122,9 +126,9 @@ function FAQList() {
 
 export default function FAQs() {
   return (
-    <section className="w-2/3 m-auto text-white border-b-4 pt-36" id='faq'>
-    <h1 className='text-6xl mb-24 text-center mt-12'>FAQs</h1>
-      <div className="py-16" id="faq">
+    <section className="pb-16 pt-48 w-2/3 m-auto flex flex-col gap-24 text-white" id='faq'>
+    <h1 className='text-6xl text-center font-title'>FAQs</h1>
+      <div id="faq">
         <div className="max-w-4xl m-auto">
           <FAQList />
         </div>
