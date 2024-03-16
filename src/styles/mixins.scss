@@ -6,19 +6,19 @@ $breakpoint-md: 769px;
 $breakpoint-lg: 1200px;
 
 @mixin up($screen) {
-  @media (min-width: $screen) {
-    @content;
-  }
+	@media (min-width: $screen) {
+		@content;
+	}
 }
 
 @mixin down($screen) {
-  @media (max-width: $screen) {
-    @content;
-  }
+	@media (max-width: $screen) {
+		@content;
+	}
 }
 
 @mixin between($min-width, $max-width) {
-  @media (min-width: $min-width) and (max-width: $max-width) {
-    @content;
-  }
+	@media (min-width: $min-width) and (max-width: $max-width) {
+		@content;
+	}
 }
