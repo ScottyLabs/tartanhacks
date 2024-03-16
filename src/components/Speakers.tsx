@@ -106,8 +106,8 @@ export default function Speakers() {
             has been featured by various news and media outlets including The
             New York Times, BBC, CBS, WIRED, and The Verge. With colleagues and
             students, he has won the Hillman Fellowship (2004), Honda
-            Initiation Award (2010), Popular Science’s &quot;Best of What’s
-            New&apos; Award (2014), as well as several conference best paper
+            Initiation Award (2010), Popular Science&apos;s &quot;Best of What&apos;s
+            New Award (2014), as well as several conference best paper
             and demo awards (CVPR, ECCV, WACV, ICML).
           </p>
         </div>
