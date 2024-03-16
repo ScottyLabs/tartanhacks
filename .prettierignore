@@ -1,4 +1,11 @@
-src/styles/variables.scss
+# Ignore artifacts:
+build
+dist
+coverage
 .next/
-node_modules/
-*.svg
+.vscode/
+
+*.json
+*.config.ts
+*.node.json
+.github

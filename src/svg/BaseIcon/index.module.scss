@@ -2,25 +2,25 @@
 @import '~/styles/mixins.scss';
 
 %baseSvgIconContainer {
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  position: relative;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	position: relative;
 }
 
 .svgIconContainer {
-  @extend %baseSvgIconContainer;
+	@extend %baseSvgIconContainer;
 }
 
 .svgIconDebug {
-  @extend %baseSvgIconContainer;
-  border: 1px solid black;
-  svg {
-    border: 1px solid yellow;
-  }
+	@extend %baseSvgIconContainer;
+	border: 1px solid black;
+	svg {
+		border: 1px solid yellow;
+	}
 }
 
 .svgIconContainer:after {
-  display: block;
-  content: '';
+	display: block;
+	content: '';
 }

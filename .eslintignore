@@ -1,0 +1,16 @@
+# .eslintignore
+*.json
+*.rc
+*.config.ts
+*.node.json
+.eslint*
+.prettier*
+.vscode/*
+.next/*
+.settings.json
+.gitignore
+.gitattributes
+/node_modules
+/build
+/dist
+/tests
