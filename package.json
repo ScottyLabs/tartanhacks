@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "bunx eslint src",
     "lint-fix": "bunx eslint --fix src",
-    "format": "prettier --write src"
+    "format": "bunx prettier --write src"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
