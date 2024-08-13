@@ -17,8 +17,8 @@ export default function BaseLayout({ children, className }: Props) {
 	return (
 		<>
 			<Head>
-				<title>TartanHacks 2024 | Feb 2-3, 2024</title>
-				<meta name="title" content="TartanHacks 2024 | Feb 2-3, 2024" />
+				<title>TartanHacks 2025 | Feb 7-8, 2025</title>
+				<meta name="title" content="TartanHacks 2025 | Feb 7-8, 2025" />
 				<meta
 					name="description"
 					content="TartanHacks is Carnegie Mellon's largest hackathon! It is a 24-hour hackathon where participants from all over the country create innovative projects."
@@ -28,7 +28,7 @@ export default function BaseLayout({ children, className }: Props) {
 				<meta property="og:url" content="https://tartanhacks.com/" />
 				<meta
 					property="og:title"
-					content="TartanHacks 2024 | Feb 2-3, 2024"
+					content="TartanHacks 2025 | Feb 7-8, 2025"
 				/>
 				<meta
 					property="og:description"
@@ -46,7 +46,7 @@ export default function BaseLayout({ children, className }: Props) {
 				/>
 				<meta
 					property="twitter:title"
-					content="TartanHacks 2024 | Feb 2-3, 2024"
+					content="TartanHacks 2025 | Feb 7-8, 2025"
 				/>
 				<meta
 					property="twitter:description"

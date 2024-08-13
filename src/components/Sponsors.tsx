@@ -107,17 +107,15 @@ const sponsors: (SponsorProps & { key: string })[] = [
 export default function Sponsors() {
 	return (
 		<section
-			className="pb-16 pt-48 -mb-36 border-b-4 w-2/3 m-auto flex flex-col gap-24"
+			className="pb-16 pt-48 -mb-36 border-b-4 w-2/3 m-auto flex flex-col gap-10"
 			id="sponsors"
 		>
 			<div className="w-full mx-auto">
 				<SponsorsTitle />
 			</div>
-			<div className="grid grid-cols-12 gap-y-8">
-				{sponsors.map((props) => (
-					<Sponsor {...props} key={props.key} />
-				))}
-			</div>
+			<h1 className="mt-16 text-center text-white text-3xl md:text-3xl font-bold gap-1">
+				Coming soon!
+			</h1>
 		</section>
 	);
 }

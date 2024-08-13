@@ -75,76 +75,17 @@ function PrizeGroup({
 export default function Prizes() {
 	return (
 		<section
-			className="flex flex-col pb-16 pt-48 -mb-36 border-b-4 w-2/3 m-auto gap-24 text-white"
+			className="flex flex-col pb-16 pt-48 -mb-36 border-b-4 w-2/3 m-auto gap-1` text-white"
 			id="prizes"
 		>
 			<PrizesTitle className="m-auto w-full" />
-			<PrizeGroup title="ScottyLabs Prizes">
-				<Prize
-					name="Scott Krulcik Grand Prize"
-					description="Most impressive hack at TartanHacks 2024"
-					prize="TBD"
-				/>
-				<Prize
-					name="First Penguin"
-					description={`Inspired by Randy Pausch's The Last Lecture: “Experience is what you get when you don’t get what you wanted. And it can be the most valuable thing you have to offer.”
-Awarded to the team that took the biggest gamble while not meeting its goals… a prize for ‘glorious failure’.`}
-					prize="TBD"
-				/>
-				<Prize
-					name="Raffle"
-					description="Join TartanHacks for a chance to win a raffle prize!"
-					prize="TBD"
-				/>
-				<Prize
-					name="Spiciest Meme"
-					description="Spiciest meme in the #memes Discord channel."
-					prize="What  you meme? card game"
-				/>
-				<Prize
-					name="Best Use of AI"
-					description="Best use of AI."
-					prize="TBD"
-				/>
-				<Prize
-					name="Top 5"
-					description="Awarded to the top 5 teams."
-					prize="TBD"
-				/>
-			</PrizeGroup>
-			<PrizeGroup title="Theme Prizes">
-				<Prize
-					name="Butterfly Effect"
-					description="Most significant product/business model introducing change that leads to significant societal impact"
-					prize="TBD"
-				/>
-				<Prize
-					name="Blossoming Technology"
-					description="Most significant innovation that makes use of emerging, groundbreaking technology"
-					prize="TBD"
-				/>
-			</PrizeGroup>
-			<PrizeGroup title="External Prizes">
-				<Prize
-					name="PLS Logistics Prize"
-					description="Prize from our sponsor PLS for the most comprehensive solution that leverages technology to 
-        mitigate risks associated with weather-related disruptions, road construction, and other external factors affecting freight shipping"
-					prize="Apple AirPods Max"
-					link="https://docs.google.com/document/d/1R0OLhDFP579rHmZbeqbRUwubJVcteHE6-eH5xXzZzkw/edit#heading=h.xgsf0gx8mwm4"
-				/>
-				<Prize
-					name="Ripple XRP Ledger Prize"
-					description="XRP Ledger: The On-chain Finance Challenge Prize for best implementation of the XRP Ledger in the following areas for 
-        innovation: Payments, Decentralized Finance, and Revolutionizing Money"
-					prize="TBD"
-					link="https://docs.google.com/document/d/1R0OLhDFP579rHmZbeqbRUwubJVcteHE6-eH5xXzZzkw/edit#heading=h.lc39eb3ryt5l"
-				/>
-				<Prize
-					name="Club Sponsored"
-					description="Additional prizes sponsored by CMU clubs"
-					prize="TBD"
-				/>
-			</PrizeGroup>
+			<h1 className="mt-16 text-center text-white text-3xl md:text-3xl font-bold gap-1">
+				To be announced soon!
+			</h1>
+			<h1 className="font-thin mt-6">
+				Our prizes take a wide range, and in previous years have included: "Scott Krulcik Grand
+				Prize" (Most Impressive Hack), "Spiciest Meme", "Best Use of AI", and other external prizes provided by our sponsors!
+			</h1>
 		</section>
 	);
 }
