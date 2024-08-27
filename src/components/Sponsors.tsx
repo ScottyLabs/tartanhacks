@@ -114,8 +114,12 @@ export default function Sponsors() {
 				<SponsorsTitle />
 			</div>
 			<h1 className="mt-16 text-center text-white text-3xl md:text-3xl font-bold gap-1">
-				Coming soon!
+				Coming soon!			
 			</h1>
+			<p className="max-w-2xl m-auto mb-12 text-white">
+				ScottyLab's operations and events thrive thanks to the generous support of our amazing sponsors. If you are interested in sponsoring us next year, please drop us an email at hello@scottylabs.org!
+			</p>
+
 		</section>
 	);
 }
