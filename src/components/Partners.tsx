@@ -57,9 +57,7 @@ export default function Partners() {
 				<PartnersTitle />
 			</div>
 			<div className="grid grid-cols-1 gap-8">
-				{partners.map((props) => (
-					<Partner {...props} key={props.key} />
-				))}
+				
 			</div>
 		</section>
 	);

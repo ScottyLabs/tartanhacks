@@ -9,12 +9,15 @@ import SpeakersTitle from '../svg/SpeakersTitle';
 export default function Speakers() {
 	return (
 		<section
-			className="pb-16 pt-48 text-white m-auto font-bold flex flex-col gap-24 text-center border-b-4 w-2/3 -mb-36"
+			className="pb-16 pt-48 text-white m-auto font-bold flex flex-col gap-10 text-center border-b-4 w-2/3 -mb-36"
 			id="speakers"
 		>
 			<div className="w-full mx-auto">
 				<SpeakersTitle />
 			</div>
+			<h1 className="mt-16 text-center text-white text-3xl md:text-3xl font-bold gap-16 md:gap-24">
+				Coming soon...Take a look at 2024&apos;s!
+			</h1>
 			<div className="flex-col md:flex-row flex gap-12 md:gap-24">
 				<div className="overflow-visible flex-none w-full md:max-w-[196px]">
 					<div className="relative">

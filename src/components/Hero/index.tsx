@@ -6,7 +6,7 @@ import styles from './index.module.scss';
 
 export function RegisterButton({ className }: { className?: string }) {
 	const router = useRouter();
-	let registerLink = `https://register.tartanhacks.com/register`;
+	let registerLink = `https://docs.google.com/forms/d/1l_pvU08U1kjfUameWTHmxIB_Yrwe-SsOKuHosKv6XJE/edit`;
 	if (
 		'utm_source' in router.query &&
 		'utm_medium' in router.query &&
@@ -19,7 +19,7 @@ export function RegisterButton({ className }: { className?: string }) {
 		<div className={clsx(className, 'text-beige flex justify-center')}>
 			<a href={registerLink} target="_blank" rel="noopener noreferrer">
 				<div className="border-2 border-black py-3 px-6 text-2xl font-medium bg-pink text-black rounded-xl cursor-pointer hover:bg-black hover:text-pink hover:border-pink">
-					Register Now!
+					Pre-register Now!
 				</div>
 			</a>
 		</div>
@@ -34,7 +34,7 @@ export default function Hero() {
 				<p className="font-bold text-2xl ">
 					CMU&apos;s Largest Hackathon
 				</p>
-				<p className="text-xl ">Feb 2—3, 2024</p>
+				<p className="text-xl ">Feb 7—8, 2025</p>
 			</div>
 			<RegisterButton
 				className={clsx(styles.registerButton, 'mt-10 mb-4')}

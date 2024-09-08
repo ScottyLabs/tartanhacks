@@ -1,7 +1,7 @@
 export default function About() {
 	const aboutContent = `is the largest Hackathon at CMU! Organized by ScottyLabs, it's a 24-hour hackathon where participants from all over the country create innovative projects. This year, we are happy to be fully in person again! Come on over to hack, learn from our workshops and incredible speakers, and meet other hackers!`;
 
-	const details = `Feb 2nd-3rd @ Carnegie Mellon University!`;
+	const details = `Feb 7th-8th @ Carnegie Mellon University!`;
 
 	return (
 		<section className="pt-36 w-2/3 m-auto" id="about">
