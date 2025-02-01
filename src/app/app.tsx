@@ -1,11 +1,11 @@
-import { Header } from "../components/header";
+import { Header } from "../components/Header";
 import { Hero } from "../components/hero";
-import { Theme } from "../components/theme";
+import { Theme } from "../components/Theme";
 import { Desc } from "../components/desc";
-import { Schedule } from "../components/schedule";
-import { Speakers } from "../components/speakers";
-import { Prizes } from "../components/prizes";
-import { Sponsors } from "../components/sponsors";
+import { Schedule } from "../components/Schedule";
+import { Speakers } from "../components/Speakers";
+import { Prizes } from "../components/Prizes";
+import { Sponsors } from "../components/Sponsors";
 import { Faqs } from "../components/faqs";
 import { MLH } from "../components/mlh";
 
