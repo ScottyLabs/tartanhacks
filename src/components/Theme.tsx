@@ -1,24 +1,25 @@
-import Amplify from '../svg/Amplify';
-
-export default function Theme() {
-	return (
-		<section
-			className="w-2/3 text-center text-white m-auto border-b-4 text-lg md:text-xl pt-36 -mb-36"
-			id="theme"
-		>
-			<h1 className="mt-16 text-xl md:text-6xl font-bold">
-				Our previous theme...
-			</h1>
-			<div className="m-auto mt-16 mb-12">
-				<Amplify />
-			</div>
-			<h1 className="mt-16 text-xl md:text-3xl font-bold">
-				TartanHacks 2024:
-			</h1>
-			<p className="max-w-2xl m-auto mb-12">
-				Think bigger and bolder, and let your small ideas amplify
-				exponentially!
-			</p>
-		</section>
-	);
+export function Theme() {
+  return (
+    <section
+      className="flex flex-col text-center text-white text-xl py-24 items-center"
+      id="theme"
+    >
+        <h3 className="mt-16 text-4xl md:text-5xl font-bold z-30">
+          This year's theme is...
+        </h3>
+        <h1 className="mt-8 px-10 uppercase font-basteleur text-5xl md:text-8xl z-30">
+          Changing Tides
+        </h1>
+      <div className="w-2/3 md:w-1/2 z-30">
+        <p className="mt-12">
+          Take your most swashbuckling of crewmates along as you steer your team toward waters unknown!
+        </p>
+        <p className="mt-8">
+          For 24 hours, you are out on the open ocean. There is a stir in the wind… something brewing. All will be
+          uprooted and start anew. Let the waves wash away everything that came before, leaving you with nothing but your
+          ingenuity and companions as you search for hidden treasure!
+        </p>
+      </div>
+    </section>
+  );
 }
