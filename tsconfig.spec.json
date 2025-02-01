@@ -11,6 +11,7 @@
       "@nx/react/typings/cssmodule.d.ts",
       "@nx/react/typings/image.d.ts"
     ]
+    
   },
   "include": [
     "vite.config.ts",
