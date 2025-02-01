@@ -1,7 +1,7 @@
 /// <reference types='vitest' />
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { nxCopyAssetsPlugin } from "@nx/vite/plugins/nx-copy-assets.plugin";
+// import { nxCopyAssetsPlugin } from "@nx/vite/plugins/nx-copy-assets.plugin";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
@@ -18,7 +18,7 @@ export default defineConfig({
   plugins: [
     react(),
     // nxViteTsPaths(),
-    nxCopyAssetsPlugin(["*.md"]),
+    // nxCopyAssetsPlugin(["*.md"]),
     tsconfigPaths({
       root: ".",
     }),
@@ -29,7 +29,7 @@ export default defineConfig({
   //  plugins: [ nxViteTsPaths() ],
   // },
   build: {
-    outDir: "../../dist/landing",
+    outDir: "dist",
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {

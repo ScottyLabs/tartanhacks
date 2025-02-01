@@ -1,13 +1,30 @@
 {
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    
+    "lib": ["DOM", "DOM.Iterable", "ES2022", "ESNext"],
     "jsx": "react-jsx",
-    "allowJs": false,
-    "checkJs": false,
-    "esModuleInterop": false,
+    "types": ["vite/client", "vitest"], 
+    "rootDir": ".",
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "sourceMap": true,
+    "declaration": true,
+    "incremental": true,
+    "disableSourceOfProjectReferenceRedirect": true,
     "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "target": "ESNext",
     "strict": true,
-    "types": ["vite/client", "vitest"]
+    "noUncheckedIndexedAccess": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
   },
   "files": [],
   "include": [],
@@ -19,5 +36,5 @@
       "path": "./tsconfig.spec.json"
     }
   ],
-  "extends": "../../tsconfig.base.json"
+  "exclude": ["node_modules", "tmp"],
 }
