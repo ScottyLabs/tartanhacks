@@ -31,7 +31,7 @@ export function Schedule() {
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center row-span-3">6:00 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10 bg-blue border-blue">
-            <img className="absolute invisible lg:visible size-36 -mt-10 -ml-7" src="/hacking_swirl.png" alt="hackingSwirl" />
+            <img className="absolute invisible xl:visible size-36 -mt-10 -ml-7" src="/hacking_swirl.png" alt="hackingSwirl" />
             <p className="font-bold">HACKING STARTS</p>
             <p className="">Rangos/PMW</p>
           </div>
@@ -119,7 +119,7 @@ export function Schedule() {
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center row-span-2">6:00 PM</div>
           <div className="relative rounded-sm border-[1px] py-3 px-10 bg-blue border-blue">
-            <img className="absolute invisible lg:visible right-1 size-36 -mt-14 -ml-7 rotate-180" src="/hacking_swirl.png" alt="hackingSwirl" />
+            <img className="absolute invisible xl:visible right-1 size-36 -mt-14 -ml-7 rotate-180" src="/hacking_swirl.png" alt="hackingSwirl" />
             <p className="font-bold">SUBMISSION DEADLINE</p>
           </div>
           <div className="rounded-sm border-[1px] py-3 px-10">
