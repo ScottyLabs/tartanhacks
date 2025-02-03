@@ -10,58 +10,62 @@ export function Schedule() {
       </h1>
       <div className="text-white text-center font-sfpro pt-8 z-30 mx-10 w-3/4 md:w-2/3">
         <div className="grid grid-cols-[30px_1fr_2fr] md:grid-cols-[50px_1fr_2fr] gap-4">
-          <h2 className="text-md font-bold font-basteleur row-span-11">FRI</h2>
-          <div className="border-[1px] p-2 flex items-center justify-center row-span-2">4:00 PM</div>
+          <h2 className="text-md font-bold font-basteleur row-span-12">FRI</h2>
+          <div className="border-[1px] p-2 flex items-center justify-center row-span-3">4:00 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">Check In Begins + Sponsorship Expo</p>
+            <p className="font-bold">Check In Begins</p>
             <p className="">Connan</p>
           </div>
           <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">Team Formation Mixer</p>
+            <p className="font-bold">Sponsorship Expo</p>
+            <p className="">Connan</p>
+          </div>
+          <div className="rounded-sm border-[1px] py-3 px-10">
+            <p className="font-bold">Team Formation</p>
             <p className="">McConomy</p>
           </div>
-          <div className="border-[1px] p-2 flex items-center justify-center">4:30 PM</div>
+          <div className="border-[1px] p-2 flex items-center justify-center">5:00 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Opening Ceremony</p>
             <p className="">McConomy (Please arrive by 4:00)</p>
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center row-span-3">6:00 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10 bg-blue border-blue">
-            <img className="absolute size-14 -mt-3 -ml-9 md:size-36 md:-mt-10 md:-ml-7" src="/hacking_swirl.png" alt="hackingSwirl" />
-            <p className="font-bold">Hacking Begins</p>
-            <p className="">McConomy</p>
+            <img className="absolute invisible lg:visible size-36 -mt-10 -ml-7" src="/hacking_swirl.png" alt="hackingSwirl" />
+            <p className="font-bold">HACKING STARTS</p>
+            <p className="">Rangos/PMW</p>
           </div>
           <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">AppLovin Talk</p>
+            <p className="font-bold">Workshop: Roboclub</p>
             <p className="">Danforth</p>
           </div>
           <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">Roboclub Workshop</p>
+            <p className="font-bold">Sponsor Event: AppLovin (Tech Talk/Networking)</p>
             <p className="">Connan</p>
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center">7:00 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">Story Protocol Talk</p>
-            <p className="">Connan</p>
+            <p className="font-bold">Sponsor event: Ripple</p>
+            <p className="">Danforth</p>
+          </div>
+          <div className="border-[1px] p-2 flex items-center justify-center">8:00 PM</div>
+          <div className="rounded-sm border-[1px] py-3 px-10">
+            <p className="font-bold">Story Protocol</p>
+            <p className="">Danforth</p>
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center">7:30 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Dinner</p>
             <p className="">Rangos</p>
           </div>
-          <div className="border-[1px] p-2 flex items-center justify-center">8:00 PM</div>
-          <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">Ripple Talk</p>
-            <p className="">Danforth</p>
-          </div>
           <div className="border-[1px] p-2 flex items-center justify-center">8:30 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">Telora Fellowship Talk</p>
-            <p className="">Danforth</p>
+            <p className="font-bold">Sponsor Event: Telora Fellowship</p>
+            <p className="">Connan</p>
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center">9:30 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">Oracle Talk</p>
+            <p className="font-bold">Sponsor Event: Oracle</p>
             <p className="">Danforth</p>
           </div>
         </div>
@@ -69,16 +73,21 @@ export function Schedule() {
 
       <div className="text-white text-center font-sfpro pt-8 z-30 mx-10 w-3/4 md:w-2/3 mt-8">
         <div className="grid grid-cols-[30px_1fr_2fr] md:grid-cols-[50px_1fr_2fr] gap-4">
-          <h2 className="text-md font-bold font-basteleur row-span-12">SAT</h2>
+          <h2 className="text-md font-bold font-basteleur row-[span_14]">SAT</h2>
           <div className="border-[1px] p-2 flex items-center justify-center">12:00 AM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Trivia + Midnight Snack</p>
             <p className="">Connan</p>
           </div>
+          <div className="border-[1px] p-2 flex items-center justify-center">12:30 AM</div>
+          <div className="rounded-sm border-[1px] py-3 px-10">
+            <p className="font-bold">Karaoke</p>
+            <p className="">Connan</p>
+          </div>
           <div className="border-[1px] p-2 flex items-center justify-center">9:00 AM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">AppLovin Yoga</p>
-            <p className="">Activities Room</p>
+            <p className="font-bold">AppLovin Yoga/Stretch</p>
+            <p className="">Danforth</p>
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center">10:00 AM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
@@ -87,14 +96,18 @@ export function Schedule() {
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center row-span-2">11:00 AM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">AppLovin Recruiting Event</p>
+            <p className="font-bold">Sponsor Event: AppLovin (Recruiting)</p>
             <p className="">Connan</p>
           </div>
           <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">Quantum Computing Club Workshop</p>
+            <p className="font-bold">Workshop: Quantum Computing Club</p>
             <p className="">Danforth</p>
           </div>
-          <div className="border-[1px] p-2 flex items-center justify-center">12:00 PM</div>
+          <div className="border-[1px] p-2 flex items-center justify-center row-span-2">12:00 PM</div>
+          <div className="rounded-sm border-[1px] py-3 px-10">
+            <p className="font-bold">Snack Drop</p>
+            <p className="">Rangos/PMW</p>
+          </div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Zico Kolter Speaker Series</p>
             <p className="">Danforth</p>
@@ -106,18 +119,17 @@ export function Schedule() {
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center row-span-2">6:00 PM</div>
           <div className="relative rounded-sm border-[1px] py-3 px-10 bg-blue border-blue">
-            <img className="absolute right-1 size-14 md:size-36 md:-mt-14 md:-ml-7 rotate-180" src="/hacking_swirl.png" alt="hackingSwirl" />
-            <p className="font-bold">Hacking Ends</p>
-            <p className="">Connan</p>
+            <img className="absolute invisible lg:visible right-1 size-36 -mt-14 -ml-7 rotate-180" src="/hacking_swirl.png" alt="hackingSwirl" />
+            <p className="font-bold">SUBMISSION DEADLINE</p>
           </div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Dinner + Performances</p>
-            <p className="">Rangos</p>
+            <p className="">Danforth + Rangos</p>
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center">7:00 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Judging Expo</p>
-            <p className="">Connan</p>
+            <p className="">Rangos/PMW</p>
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center">8:30 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
