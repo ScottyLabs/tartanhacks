@@ -25,6 +25,7 @@ export function Sponsors() {
         <img src="/sponsors/cylab.svg" alt="jane" className="px-4 md:px-8 w-24 md:w-52 my-2 md:my-4" />
         <img src="/sponsors/roboclub.svg" alt="roboclub" className="px-4 md:px-8 w-24 md:w-52 my-2 md:my-4" />
         <img src="/sponsors/hrt.svg" alt="hrt" className="px-4 md:px-8 w-24 md:w-52 my-2 md:my-4" />
+        <img src="/sponsors/perplexity.svg" alt="perplexity" className="px-4 md:px-8 w-24 md:w-52 my-2 md:my-4" />
       </div>
     </section>
   );
