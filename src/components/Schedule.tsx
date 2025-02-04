@@ -22,12 +22,12 @@ export function Schedule() {
           </div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Team Formation</p>
-            <p className="">McConomy</p>
+            <p className="">Kirr (Black Chairs)</p>
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center">5:00 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Opening Ceremony</p>
-            <p className="">McConomy (Please arrive by 4:00)</p>
+            <p className="">McConomy</p>
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center row-span-3">6:00 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10 bg-blue border-blue">
