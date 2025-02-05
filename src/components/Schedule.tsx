@@ -10,7 +10,7 @@ export function Schedule() {
       </h1>
       <div className="text-white text-center font-sfpro pt-8 z-30 mx-10 w-3/4 md:w-2/3">
         <div className="grid grid-cols-[30px_1fr_2fr] md:grid-cols-[50px_1fr_2fr] gap-4">
-          <h2 className="text-md font-bold font-basteleur row-span-12">FRI</h2>
+          <h2 className="text-md font-bold font-basteleur row-[span_13]">FRI</h2>
           <div className="border-[1px] p-2 flex items-center justify-center row-span-3">4:00 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Check In Begins</p>
@@ -68,12 +68,17 @@ export function Schedule() {
             <p className="font-bold">Sponsor Event: Oracle</p>
             <p className="">Danforth</p>
           </div>
+          <div className="border-[1px] p-2 flex items-center justify-center">10:30 PM</div>
+          <div className="rounded-sm border-[1px] py-3 px-10">
+            <p className="font-bold">MLH Event: Gen AI Workshop</p>
+            <p className="">Connan</p>
+          </div>
         </div>
       </div>
 
       <div className="text-white text-center font-sfpro pt-8 z-30 mx-10 w-3/4 md:w-2/3 mt-8">
         <div className="grid grid-cols-[30px_1fr_2fr] md:grid-cols-[50px_1fr_2fr] gap-4">
-          <h2 className="text-md font-bold font-basteleur row-[span_14]">SAT</h2>
+          <h2 className="text-md font-bold font-basteleur row-[span_16]">SAT</h2>
           <div className="border-[1px] p-2 flex items-center justify-center">12:00 AM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Trivia + Midnight Snack</p>
@@ -84,15 +89,19 @@ export function Schedule() {
             <p className="font-bold">Karaoke</p>
             <p className="">Connan</p>
           </div>
-          <div className="border-[1px] p-2 flex items-center justify-center">9:00 AM</div>
+          <div className="border-[1px] p-2 flex items-center justify-center row-span-2">9:00 AM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">AppLovin Yoga/Stretch</p>
             <p className="">Danforth</p>
           </div>
-          <div className="border-[1px] p-2 flex items-center justify-center">10:00 AM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Breakfast</p>
             <p className="">Rangos</p>
+          </div>
+          <div className="border-[1px] p-2 flex items-center justify-center">10:00 AM</div>
+          <div className="rounded-sm border-[1px] py-3 px-10">
+            <p className="font-bold">MLH Event: Bob Ross Painting</p>
+            <p className="">Connan</p>
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center row-span-2">11:00 AM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
@@ -117,14 +126,18 @@ export function Schedule() {
             <p className="font-bold">Lunch</p>
             <p className="">Rangos</p>
           </div>
-          <div className="border-[1px] p-2 flex items-center justify-center row-span-2">6:00 PM</div>
+          <div className="border-[1px] p-2 flex items-center justify-center row-span-3">6:00 PM</div>
           <div className="relative rounded-sm border-[1px] py-3 px-10 bg-blue border-blue">
             <img className="absolute invisible xl:visible right-1 size-36 -mt-14 -ml-7 rotate-180" src="/hacking_swirl.png" alt="hackingSwirl" />
             <p className="font-bold">SUBMISSION DEADLINE</p>
           </div>
           <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">Dinner + Performances</p>
-            <p className="">Danforth + Rangos</p>
+            <p className="font-bold">Dinner</p>
+            <p className="">Danforth</p>
+          </div>
+          <div className="rounded-sm border-[1px] py-3 px-10">
+            <p className="font-bold">Performances</p>
+            <p className="">Rangos</p>
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center">7:00 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
