@@ -9,7 +9,11 @@ export function Hero() {
       <div className="text-white text-center mt-8 font-thin font-futura z-30">
         <div className="flex flex-col md:flex-row items-center justify-center">
           <h2 className="text-xl md:text-2xl">Presented by ScottyLabs and</h2>
-          <img src="/sponsors/applovin.svg" alt="applovin" className="px-10 w-56 md:w-64 -mx-8" />
+          <img
+            src="/sponsors/applovin.svg"
+            alt="applovin"
+            className="px-10 w-56 md:w-64 -mx-8"
+          />
         </div>
         <p className="text-xl">Feb 7 — 8, 2025</p>
       </div>

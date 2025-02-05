@@ -12,9 +12,9 @@ export function RegisterButton() {
     params.has("utm_campaign")
   ) {
     registerLink = `${registerLink}?utm_source=${params.get(
-      "utm_source",
+      "utm_source"
     )}&utm_medium=${params.get("utm_medium")}&utm_campaign=${params.get(
-      "utm_campaign",
+      "utm_campaign"
     )}`;
   }
 

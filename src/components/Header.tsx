@@ -44,7 +44,11 @@ export function Header() {
         >
           ☰
         </button>
-        <div className={`flex absolute right-6 md:right-8 lg:right-0 top-20 md:top-24 space-y-2 lg:space-y-0 lg:top-0 lg:relative lg:space-x-16 text-lg flex-col justify-center lg:flex-row items-center lg:flex ${isMenuOpen ? "block" : "hidden"}`}>
+        <div
+          className={`flex absolute right-6 md:right-8 lg:right-0 top-20 md:top-24 space-y-2 lg:space-y-0 lg:top-0 lg:relative lg:space-x-16 text-lg flex-col justify-center lg:flex-row items-center lg:flex ${
+            isMenuOpen ? "block" : "hidden"
+          }`}
+        >
           <HeaderLink
             name="About"
             href="#about"

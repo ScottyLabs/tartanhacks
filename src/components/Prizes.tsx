@@ -9,12 +9,8 @@ export function Prizes() {
         Prizes
       </h1>
       <div className="text-white text-center text-xl font-sfpro w-2/3 md:w-1/2 pt-8 z-30">
-        <b className="font-bold">
-          Grand Prize: $2,000
-        </b>
-        <p>
-          More prizes to be announced!
-        </p>
+        <b className="font-bold">Grand Prize: $2,000</b>
+        <p>More prizes to be announced!</p>
       </div>
     </section>
   );

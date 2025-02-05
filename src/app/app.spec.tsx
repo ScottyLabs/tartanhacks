@@ -8,7 +8,7 @@ describe("App", () => {
     const { baseElement } = render(
       <BrowserRouter>
         <App />
-      </BrowserRouter>,
+      </BrowserRouter>
     );
     expect(baseElement).toBeTruthy();
   });
