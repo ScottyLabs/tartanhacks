@@ -48,15 +48,15 @@ export function Schedule() {
             <p className="font-bold">Sponsor event: Ripple</p>
             <p className="">Danforth</p>
           </div>
-          <div className="border-[1px] p-2 flex items-center justify-center">8:00 PM</div>
-          <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">Story Protocol</p>
-            <p className="">Danforth</p>
-          </div>
           <div className="border-[1px] p-2 flex items-center justify-center">7:30 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Dinner</p>
             <p className="">Rangos</p>
+          </div>
+          <div className="border-[1px] p-2 flex items-center justify-center">8:00 PM</div>
+          <div className="rounded-sm border-[1px] py-3 px-10">
+            <p className="font-bold">Sponsor Event: Story Protocol</p>
+            <p className="">Danforth</p>
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center">8:30 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
