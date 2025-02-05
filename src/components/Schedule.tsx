@@ -78,7 +78,7 @@ export function Schedule() {
 
       <div className="text-white text-center font-sfpro pt-8 z-30 mx-10 w-3/4 md:w-2/3 mt-8">
         <div className="grid grid-cols-[30px_1fr_2fr] md:grid-cols-[50px_1fr_2fr] gap-4">
-          <h2 className="text-md font-bold font-basteleur row-[span_16]">SAT</h2>
+          <h2 className="text-md font-bold font-basteleur row-[span_15]">SAT</h2>
           <div className="border-[1px] p-2 flex items-center justify-center">12:00 AM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Trivia + Midnight Snack</p>
@@ -112,11 +112,7 @@ export function Schedule() {
             <p className="font-bold">Workshop: Quantum Computing Club</p>
             <p className="">Danforth</p>
           </div>
-          <div className="border-[1px] p-2 flex items-center justify-center row-span-2">12:00 PM</div>
-          <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">Snack Drop</p>
-            <p className="">Rangos/PMW</p>
-          </div>
+          <div className="border-[1px] p-2 flex items-center justify-center">12:00 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Zico Kolter Speaker Series</p>
             <p className="">Danforth</p>
