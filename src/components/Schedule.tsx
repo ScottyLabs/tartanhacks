@@ -78,7 +78,7 @@ export function Schedule() {
 
       <div className="text-white text-center font-sfpro pt-8 z-30 mx-10 w-3/4 md:w-2/3 mt-8">
         <div className="grid grid-cols-[30px_1fr_2fr] md:grid-cols-[50px_1fr_2fr] gap-4">
-          <h2 className="text-md font-bold font-basteleur row-[span_15]">SAT</h2>
+          <h2 className="text-md font-bold font-basteleur row-[span_16]">SAT</h2>
           <div className="border-[1px] p-2 flex items-center justify-center">12:00 AM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Trivia + Midnight Snack</p>
@@ -122,7 +122,7 @@ export function Schedule() {
             <p className="font-bold">Lunch</p>
             <p className="">Rangos</p>
           </div>
-          <div className="border-[1px] p-2 flex items-center justify-center row-span-3">6:00 PM</div>
+          <div className="border-[1px] p-2 flex items-center justify-center row-span-4">6:00 PM</div>
           <div className="relative rounded-sm border-[1px] py-3 px-10 bg-blue border-blue">
             <img className="absolute invisible xl:visible right-1 size-36 -mt-14 -ml-7 rotate-180" src="/hacking_swirl.png" alt="hackingSwirl" />
             <p className="font-bold">SUBMISSION DEADLINE</p>
@@ -134,6 +134,10 @@ export function Schedule() {
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Performances</p>
             <p className="">Rangos</p>
+          </div>
+          <div className="rounded-sm border-[1px] py-3 px-10">
+            <p className="font-bold">Judge Onboarding</p>
+            <p className="">Connan</p>
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center">7:00 PM</div>
           <div className="rounded-sm border-[1px] py-3 px-10">
