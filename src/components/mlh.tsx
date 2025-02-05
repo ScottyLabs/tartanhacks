@@ -2,7 +2,7 @@ export function MLH() {
   return (
     <section
       className="flex flex-col justify-center items-center pb-24"
-      id="prizes"
+      id="mlh"
     >
       <hr className="h-px my-8 w-3/4 md:w-2/3 bg-white border-0" />
       <a
