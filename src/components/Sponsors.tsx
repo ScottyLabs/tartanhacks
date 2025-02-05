@@ -10,7 +10,7 @@ export function Sponsors() {
       </h1>
       <img src="/sponsors/applovin.svg" alt="applovin" className="px-4 md:px-8 pt-24 pb-4 md:max-w-5xl" />
       <div className="flex flex-wrap w-full justify-center items-center py-4 12 z-30">
-        <img src="/sponsors/storyprotocol.svg" alt="hrt" className="px-4 md:px-8 w-48 md:w-80 my-4" />
+        <img src="/sponsors/story.svg" alt="hrt" className="px-4 md:px-8 w-48 md:w-80 my-4" />
         <img src="/sponsors/ripple.svg" alt="sandia" className="px-4 md:px-8 w-48 md:w-80 mt-4" />
       </div>
       <div className="flex flex-wrap w-full justify-center items-center 12 z-30">
