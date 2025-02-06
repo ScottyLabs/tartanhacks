@@ -6,18 +6,24 @@ export function Hero() {
       <div className="z-30">
         <img src="/tartanhacks.svg" alt="tartanhacks" className="px-10" />
       </div>
-      <div className="text-white text-center mt-8 font-thin font-futura z-30">
-        <div className="flex flex-col md:flex-row items-center justify-center">
-          <h2 className="text-xl md:text-2xl">Presented by ScottyLabs and</h2>
+
+      <div className="mt-6 lg:mt-12 text-md lg:text-xl">Presented by...</div>
+
+      <div className="text-center flex z-30 items-center mt-4 lg:mt-8 justify-center gap-2 lg:gap-6">
+        <span className="text-2xl lg:text-5xl font-bold">ScottyLabs</span>
+        <span className="text-sm lg:text-xl">&</span>
+        <span>
           <img
             src="/sponsors/applovin.svg"
             alt="applovin"
-            className="px-10 w-56 md:w-64 -mx-8"
+            className="w-40 lg:w-64"
           />
-        </div>
-        <p className="text-xl">Feb 7 — 8, 2025</p>
+        </span>
       </div>
-      <div className="mt-10">
+
+      <p className="mt-4 lg:mt-8 text-md lg:text-xl">Feb 7 — 8, 2025</p>
+
+      <div className="mt-5 lg:mt-10">
         <RegisterButton />
       </div>
     </section>
