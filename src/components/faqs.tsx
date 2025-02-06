@@ -1,31 +1,17 @@
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from "@headlessui/react";
-import { ChevronUpIcon } from "@heroicons/react/20/solid";
-import clsx from "clsx";
-function FAQDisclosure({
-  question,
-  answer,
-}: {
-  question: string;
-  answer: string;
-}) {
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
+import { ChevronUpIcon } from '@heroicons/react/20/solid';
+import clsx from 'clsx';
+
+function FAQDisclosure({ question, answer }: { question: string; answer: string }) {
   return (
     <Disclosure>
       {({ open }) => (
         <>
-          <DisclosureButton className="flex w-full justify-between px-4 pt-3 pb-4 text-left text-md text-lg font-bold border-t-2 z-30">
+          <DisclosureButton className="text-md z-30 flex w-full justify-between border-t-2 px-4 pb-4 pt-3 text-left text-lg font-bold">
             <span>{question}</span>
-            <ChevronUpIcon
-              className={clsx(
-                open ? "rotate-180 transform" : "",
-                "h-5 w-5 text-purple-500"
-              )}
-            />
+            <ChevronUpIcon className={clsx(open ? 'rotate-180 transform' : '', 'text-purple-500 h-5 w-5')} />
           </DisclosureButton>
-          <DisclosurePanel className="px-4 pb-4 text-white max-w-3xl flex flex-row items-center text-left">
+          <DisclosurePanel className="flex max-w-3xl flex-row items-center px-4 pb-4 text-left text-white">
             <p className="mr-8 text-sm">{answer}</p>
           </DisclosurePanel>
         </>
@@ -55,7 +41,7 @@ function FAQList() {
         We will also offer workshops during the event so you can get started with new frameworks.`,
     },
     {
-      q: "Is TartanHacks open to first-year students?",
+      q: 'Is TartanHacks open to first-year students?',
       a: `Yes! We welcome students of all skill levels to participate. First-year students and first-time hackers have always been part of TartanHacks; we would love to see you at the event! We also award specific prizes for beginner hackers.`,
     },
     {
@@ -63,36 +49,36 @@ function FAQList() {
       a: `All undergraduate AND graduate students from accredited colleges and universities are welcome to participate!`,
     },
     {
-      q: "Is housing provided for participants?",
-      a: "Unfortunately, we are unable to provide housing for participants. Students who stay up through the entire night will be allowed to continue hacking in the Cohon University Center. However, we do encourage participants to sleep as needed. Due to fire safety concerns, participants may not sleep in hallways or on the floor of the Cohon University Center. All non-CMU student, should otherwise arrange their own housing for the night of Friday, February 7th, 2025.",
+      q: 'Is housing provided for participants?',
+      a: 'Unfortunately, we are unable to provide housing for participants. Students who stay up through the entire night will be allowed to continue hacking in the Cohon University Center. However, we do encourage participants to sleep as needed. Due to fire safety concerns, participants may not sleep in hallways or on the floor of the Cohon University Center. All non-CMU student, should otherwise arrange their own housing for the night of Friday, February 7th, 2025.',
     },
     {
-      q: "Can I register with a team?",
-      a: "All participants will be required to register for TartanHacks as individuals, but there will be an opportunity to specify your team members before the event starts. If you already have a team chosen, you will be able to work with them.",
+      q: 'Can I register with a team?',
+      a: 'All participants will be required to register for TartanHacks as individuals, but there will be an opportunity to specify your team members before the event starts. If you already have a team chosen, you will be able to work with them.',
     },
     {
       q: `If I don't have a team before the event, can I still participate?`,
       a: `Absolutely! We'll have a team mixer after the opening ceremony to help you meet new hackers.`,
     },
     {
-      q: "How many people can we have per team?",
+      q: 'How many people can we have per team?',
       a: `Teams may have no more than 4 participants. Teammates are not strictly necessary, as students are allowed to participate as individuals.`,
     },
     {
-      q: "Does everyone who register get to participate at TartanHacks?",
+      q: 'Does everyone who register get to participate at TartanHacks?',
       a: `All CMU students are guaranteed admission. We expect that all registered from outside of CMU will be accepted, but we occasionally have more sign up than we can accommodate.
         External registration closes on Friday, January 24th. Students from outside CMU will be notified via email about their admission status by Wednesday, January 29th.`,
     },
     {
-      q: "Are we limited to software projects or are hardware projects allowed?",
+      q: 'Are we limited to software projects or are hardware projects allowed?',
       a: `Hardware projects are absolutely allowed! However, be conscious of the amount of space that you need for the Judging Expo, as we can only guarantee so much room on each table for one team.`,
     },
     {
-      q: "What resources will be provided to participants?",
+      q: 'What resources will be provided to participants?',
       a: `A thorough participant guide (Google Doc and PDF) will be made available on the TartanHacks website at least one week before the event.`,
     },
     {
-      q: "Will there be food?",
+      q: 'Will there be food?',
       a: `Yes!! There will be several meals provided, at no cost to participants including a Friday dinner, Midnight sweet treat, and breakfast, lunch, and dinner on Saturday. We will offer vegan, vegetarian, gluten-free, halal and kosher options for those with dietary restrictions.
       Refreshments such as bottled water, coffee, and energy drinks will also be offered in limited quantity.`,
     },
@@ -109,15 +95,10 @@ function FAQList() {
 
 export function Faqs() {
   return (
-    <section
-      className="flex flex-col justify-center items-center pb-24"
-      id="faqs"
-    >
-      <hr className="h-px my-8 w-3/4 md:w-2/3 bg-white border-0" />
-      <h1 className="mt-24 px-10 uppercase font-basteleur text-5xl md:text-8xl z-30">
-        FAQS
-      </h1>
-      <div className="text-white text-center text-xl font-sfpro w-3/4 md:w-2/3 pt-10 z-30">
+    <section className="flex flex-col items-center justify-center pb-24" id="faqs">
+      <hr className="my-8 h-px w-3/4 border-0 bg-white md:w-2/3" />
+      <h1 className="z-30 mt-24 px-10 font-basteleur text-5xl uppercase md:text-8xl">FAQS</h1>
+      <div className="z-30 w-3/4 pt-10 text-center font-sfpro text-xl text-white md:w-2/3">
         <FAQList />
       </div>
     </section>

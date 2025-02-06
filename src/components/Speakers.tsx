@@ -1,25 +1,18 @@
 export function Speakers() {
   return (
-    <section
-      className="relative flex flex-col justify-center items-center pb-24 z-40"
-      id="speakers"
-    >
-      <hr className="h-px my-8 w-3/4 md:w-2/3 bg-white border-0" />
-      <h1 className="mt-24 px-10 uppercase font-basteleur text-5xl md:text-8xl z-30">
-        Speakers
-      </h1>
-      <div className="text-white text-center text-xl font-sfpro w-3/4 md:w-2/3 pt-8 z-30">
-        <div className="flex flex-col md:flex-row md:space-x-8 items-center">
-          <div className="flex flex-col basis-1/2 py-8">
+    <section className="relative z-40 flex flex-col items-center justify-center pb-24" id="speakers">
+      {/*<div className="absolute w-full h-full bg-[url('/compass2.svg')] bg-no-repeat bg-right-top z-30"></div>*/}
+      <hr className="my-8 h-px w-3/4 border-0 bg-white md:w-2/3" />
+      <h1 className="z-30 mt-24 px-10 font-basteleur text-5xl uppercase md:text-8xl">Speakers</h1>
+      <div className="z-30 w-3/4 pt-8 text-center font-sfpro text-xl text-white md:w-2/3">
+        <div className="flex flex-col items-center md:flex-row md:space-x-8">
+          <div className="flex basis-1/2 flex-col py-8">
             <a href="https://zicokolter.com">
               <img alt="zicokolter" src="/speakers/zicokolter.jpg"></img>
             </a>
           </div>
-          <div className="flex flex-col basis-1/2 text-center md:text-left">
-            <a
-              href="https://zicokolter.com"
-              className="text-7xl font-basteleur pb-2 uppercase"
-            >
+          <div className="flex basis-1/2 flex-col text-center md:text-left">
+            <a href="https://zicokolter.com" className="pb-2 font-basteleur text-7xl uppercase">
               Zico Kolter
             </a>
             <h2>Professor, Director of Machine Learning Department @ CMU</h2>

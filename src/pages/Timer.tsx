@@ -2,9 +2,7 @@ import { useEffect, useState } from 'react';
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'https://backend.tartanhacks.com/schedule';
 
-const IGNORED_EVENTS = [
-  "HACKING STARTS",
-];
+const IGNORED_EVENTS = ['HACKING STARTS'];
 
 interface Event {
   name: string;
@@ -89,10 +87,7 @@ export default function Timer() {
         continue;
       }
 
-      if (
-        currentTime >= startTime &&
-        currentTime <= endTime
-      ) {
+      if (currentTime >= startTime && currentTime <= endTime) {
         currentEvents.push({ name, location, startTime, endTime });
       }
     }
@@ -110,16 +105,18 @@ export default function Timer() {
   }, [remainingTimeString, currentEvents]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen font-sfpro z-50">
-      <b className="text-5xl text-green z-50 uppercase">
+    <div className="z-50 flex h-screen flex-col items-center justify-center font-sfpro">
+      <b className="text-green z-50 text-5xl uppercase">
         {nextBigEvent} {started ? 'ENDS' : 'STARTS'} IN
       </b>
-      <b className="text-7xl text-white pt-8 z-50">{remainingTimeString}</b>
-      <b className="text-4xl text-green pt-16 pb-4 z-50">HAPPENING NOW</b>
+      <b className="z-50 pt-8 text-7xl text-white">{remainingTimeString}</b>
+      <b className="text-green z-50 pb-4 pt-16 text-4xl">HAPPENING NOW</b>
       {currentEvents.map((event) => (
-        <b key={event.name} className="text-2xl z-50">{event.name} @ {event.location}</b>
+        <b key={event.name} className="z-50 text-2xl">
+          {event.name} @ {event.location}
+        </b>
       ))}
-      {currentEvents.length === 0 && <b className="text-2xl z-50">-</b>}
+      {currentEvents.length === 0 && <b className="z-50 text-2xl">-</b>}
     </div>
   );
 }
