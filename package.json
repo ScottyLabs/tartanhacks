@@ -5,7 +5,8 @@
     "prepare": "husky",
     "format": "prettier src --write",
     "preinstall": "npx only-allow pnpm",
-    "build": "vite build"
+    "build": "vite build",
+    "dev": "vite"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
