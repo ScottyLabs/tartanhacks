@@ -164,7 +164,7 @@ export function Schedule() {
             <p className="font-bold">Lunch</p>
             <p className="">Rangos</p>
           </div>
-          <div className="border-[1px] p-2 flex items-center justify-center row-span-4">
+          <div className="border-[1px] p-2 flex items-center justify-center row-span-3">
             6:00 PM
           </div>
           <div className="relative rounded-sm border-[1px] py-3 px-10 bg-blue border-blue">
@@ -182,10 +182,6 @@ export function Schedule() {
           <div className="rounded-sm border-[1px] py-3 px-10">
             <p className="font-bold">Performances</p>
             <p className="">Rangos</p>
-          </div>
-          <div className="rounded-sm border-[1px] py-3 px-10">
-            <p className="font-bold">Judge Onboarding</p>
-            <p className="">Connan</p>
           </div>
           <div className="border-[1px] p-2 flex items-center justify-center">
             7:00 PM
