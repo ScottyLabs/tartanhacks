@@ -5,7 +5,7 @@ export function Desc() {
       id="about"
     >
       <hr className="h-px my-8 w-3/4 md:w-2/3 bg-white border-0 z-30" />
-      <div className="text-white text-center text-xl font-sfpro w-2/3 md:w-1/2 z-30">
+      <div className="text-white text-center text-2xl w-2/3 md:w-1/2 z-30">
         <p>
           <span className="uppercase font-basteleur">Tartanhacks </span>
           is the largest Hackathon in Pittsburgh! Organized by ScottyLabs, it's

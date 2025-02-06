@@ -4,7 +4,7 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/20/solid";
-
+import clsx from "clsx";
 function FAQDisclosure({
   question,
   answer,
@@ -16,14 +16,13 @@ function FAQDisclosure({
     <Disclosure>
       {({ open }) => (
         <>
-          <DisclosureButton
-            className={`flex w-full justify-between px-4 pt-3 pb-4 text-left text-md text-lg font-bold border-t-2 z-30`}
-          >
+          <DisclosureButton className="flex w-full justify-between px-4 pt-3 pb-4 text-left text-md text-lg font-bold border-t-2 z-30">
             <span>{question}</span>
             <ChevronUpIcon
-              className={`${
-                open ? "rotate-180 transform" : ""
-              } h-5 w-5 text-purple-500`}
+              className={clsx(
+                open ? "rotate-180 transform" : "",
+                "h-5 w-5 text-purple-500"
+              )}
             />
           </DisclosureButton>
           <DisclosurePanel className="px-4 pb-4 text-white max-w-3xl flex flex-row items-center text-left">
