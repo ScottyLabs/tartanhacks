@@ -6,6 +6,21 @@ import {
 import { ChevronUpIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
 
+function GrandPrize({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="text-center p-6 bg-contain bg-no-repeat bg-center bg-[url('/prize.svg')]">
+      <h2 className="font-bold text-2xl lg:text-3xl">{title}</h2>
+      <p className="text-3xl lg:text-4xl font-basteleur">{description}</p>
+    </div>
+  );
+}
+
 function PrizeDisclosure({
   title,
   description,
@@ -100,56 +115,25 @@ export function Prizes() {
       id="prizes"
     >
       <hr className="h-px my-8 w-3/4 md:w-2/3 bg-white border-0" />
-      <h1 className="mt-24 px-10 uppercase font-basteleur text-5xl md:text-8xl z-30">
+      <h1 className="mt-24 px-10 uppercase font-basteleur text-6xl md:text-8xl z-30">
         Prizes
       </h1>
 
-      <h1 className="mt-24 px-10 uppercase font-basteleur text-xl md:text-3xl z-30">
-        ScottyLabs
-      </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-3 w-full items-center gap-4 z-30 px-10 pt-10 text-sfpro">
-        <div
-          className="text-center p-4"
-          style={{
-            backgroundImage: "url('/prize.svg')",
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <h2 className="font-bold text-lg">Scott Krulcik Grand Prize</h2>
-          <p className="text-lg font-basteleur">$5,000</p>
+      <div className="w-full px-4 mt-16">
+        <div className="text-white font-basteleur text-4xl mb-8 text-center">
+          ScottyLabs
         </div>
-        <div
-          className="text-center p-4"
-          style={{
-            backgroundImage: "url('/prize.svg')",
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <h2 className="font-bold text-lg">2nd Place Overall</h2>
-          <p className="text-lg font-basteleur">$2,000</p>
-        </div>
-        <div
-          className="text-center p-4"
-          style={{
-            backgroundImage: "url('/prize.svg')",
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <h2 className="font-bold text-lg">3rd Place Overall</h2>
-          <p className="text-lg font-basteleur">$1,000</p>
+        <div className="grid grid-cols-1 gap-4 lg:gap-0 lg:grid-cols-3 items-center w-full max-w-8xl mx-auto">
+          <GrandPrize title="Scott Krulcik Grand Prize" description="$5,000" />
+          <GrandPrize title="2nd Place Overall" description="$2,000" />
+          <GrandPrize title="3rd Place Overall" description="$1,000" />
         </div>
       </div>
 
       {/* Themed Prizes */}
       <div className="w-full max-w-4xl px-4 mt-12">
         <div className="text-white font-basteleur text-4xl mb-8 text-center">
-          Themed Prizes
+          Themed
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {themedPrizes.map((prize) => (
@@ -167,7 +151,7 @@ export function Prizes() {
       {/* AppLovin Prizes */}
       <div className="w-full max-w-4xl px-4 mt-12">
         <div className="text-white font-basteleur text-4xl mb-8 text-center">
-          AppLovin Prizes
+          AppLovin
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {appLovinPrizes.map((prize) => (
@@ -185,7 +169,7 @@ export function Prizes() {
       {/* External Prizes */}
       <div className="w-full max-w-4xl px-4 mt-12">
         <div className="text-white font-basteleur text-4xl mb-8 text-center">
-          External Prizes
+          External
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {externalPrizes.map((prize) => (
