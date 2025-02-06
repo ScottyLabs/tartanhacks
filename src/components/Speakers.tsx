@@ -1,7 +1,6 @@
 export function Speakers() {
   return (
     <section className="relative z-40 flex flex-col items-center justify-center pb-24" id="speakers">
-      {/*<div className="absolute w-full h-full bg-[url('/compass2.svg')] bg-no-repeat bg-right-top z-30"></div>*/}
       <hr className="my-8 h-px w-3/4 border-0 bg-white md:w-2/3" />
       <h1 className="z-30 mt-24 px-10 font-basteleur text-5xl uppercase md:text-8xl">Speakers</h1>
       <div className="z-30 w-3/4 pt-8 text-center font-sfpro text-xl text-white md:w-2/3">

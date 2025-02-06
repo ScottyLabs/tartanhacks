@@ -17,7 +17,6 @@ export default function Home() {
       <Desc />
       <Theme />
       <Schedule />
-      <div className="absolute z-20 h-full w-full bg-[url('/compass2.svg')] bg-right-top bg-no-repeat"></div>
       <Speakers />
       <MLH />
       <Prizes />
