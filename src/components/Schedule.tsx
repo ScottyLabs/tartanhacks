@@ -1,9 +1,10 @@
 export function Schedule() {
   return (
     <section
-      className="flex flex-col justify-center items-center pb-24"
+      className="relative flex flex-col justify-center items-center pb-24"
       id="schedule"
     >
+      <div className="absolute left-0 w-full h-full bg-[url('/compass1.svg')] bg-no-repeat bg-left-top"></div>
       <hr className="h-px my-8 w-3/4 md:w-2/3 bg-white border-0" />
       <h1 className="mt-24 px-10 uppercase font-basteleur text-5xl md:text-8xl z-30">
         Schedule

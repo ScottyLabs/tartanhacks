@@ -31,7 +31,7 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 w-full py-6 backdrop-blur z-40">
+    <header className="fixed top-0 w-full py-6 backdrop-blur z-50">
       <div className="flex flex-row justify-between text-xl mr-12 ml-8">
         <div className="cursor-pointer w-1/6">
           <a href="/">
@@ -56,15 +56,9 @@ export function Header() {
             onClick={toggleMenu}
           />
           <HeaderLink
-            name="Theme"
-            href="#theme"
-            underlineColor="decoration-white"
-            onClick={toggleMenu}
-          />
-          <HeaderLink
-            name="Sponsors"
-            href="#sponsors"
-            underlineColor="decoration-blue"
+            name="Schedule"
+            href="#schedule"
+            underlineColor="decoration-pink"
             onClick={toggleMenu}
           />
           <HeaderLink
@@ -80,9 +74,9 @@ export function Header() {
             onClick={toggleMenu}
           />
           <HeaderLink
-            name="Schedule"
-            href="#schedule"
-            underlineColor="decoration-pink"
+            name="Sponsors"
+            href="#sponsors"
+            underlineColor="decoration-blue"
             onClick={toggleMenu}
           />
           <HeaderLink

@@ -4,7 +4,7 @@ export function MLH() {
       className="flex flex-col justify-center items-center pb-24"
       id="mlh"
     >
-      <hr className="h-px my-8 w-3/4 md:w-2/3 bg-white border-0" />
+      <hr className="h-px my-8 w-3/4 md:w-2/3 bg-white border-0 z-30" />
       <a
         className="flex flex-col items-center mt-24 z-30"
         href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=blue"

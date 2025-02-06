@@ -10,18 +10,19 @@ import { Schedule } from "../components/Schedule";
 import { Faqs } from "../components/faqs";
 
 export default function Home() {
-  return (
-    <div className="font-futura">
-      <Header />
-      <Hero />
-      <Desc />
-      <Theme />
-      <Sponsors />
+	return (
+		<div>
+			<Header />
+			<Hero />
+			<Desc />
+			<Theme />
+			<Schedule />
+      <div className="absolute w-full h-full bg-[url('/compass2.svg')] bg-no-repeat bg-right-top z-20"></div>
       <Speakers />
-      <MLH />
-      <Prizes />
-      <Schedule />
-      <Faqs />
-    </div>
-  );
+			<MLH />
+			<Prizes />
+			<Sponsors />
+			<Faqs />
+		</div>
+	);
 }
