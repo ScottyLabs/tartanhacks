@@ -1,13 +1,13 @@
-import { Desc } from "../components/desc";
-import { Faqs } from "../components/faqs";
-import { Header } from "../components/Header";
-import { Hero } from "../components/hero";
-import { MLH } from "../components/mlh";
-import { Prizes } from "../components/Prizes";
-import { Schedule } from "../components/Schedule";
-import { Speakers } from "../components/Speakers";
-import { Sponsors } from "../components/Sponsors";
-import { Theme } from "../components/Theme";
+import { Desc } from '../components/desc';
+import { Faqs } from '../components/faqs';
+import { Header } from '../components/Header';
+import { Hero } from '../components/hero';
+import { MLH } from '../components/mlh';
+import { Prizes } from '../components/Prizes';
+import { Schedule } from '../components/Schedule';
+import { Speakers } from '../components/Speakers';
+import { Sponsors } from '../components/Sponsors';
+import { Theme } from '../components/Theme';
 
 export default function Home() {
   return (
