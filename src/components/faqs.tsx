@@ -82,6 +82,10 @@ function FAQList() {
       a: `Yes!! There will be several meals provided, at no cost to participants including a Friday dinner, Midnight sweet treat, and breakfast, lunch, and dinner on Saturday. We will offer vegan, vegetarian, gluten-free, halal and kosher options for those with dietary restrictions.
       Refreshments such as bottled water, coffee, and energy drinks will also be offered in limited quantity.`,
     },
+    {
+      q: 'My Android device is not compatible with the dashboard app. What should I do?',
+      a: `You can either use the web version of the dashboard, or try the APK available here: https://drive.google.com/file/d/1l2GzUEyRYgiNyHPfeWrm2MwIxd_sLa5c/view?usp=sharing`,
+    }
   ];
 
   return (
