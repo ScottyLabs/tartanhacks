@@ -13,6 +13,7 @@ export function Sponsors() {
         <img src="/sponsors/oracle.svg" alt="oracle" className="my-4 w-36 px-4 md:w-64 md:px-8" />
         <img src="/sponsors/sandia.svg" alt="sandia" className="my-4 w-36 px-4 md:w-64 md:px-8" />
         <img src="/sponsors/bloomberg.svg" alt="bloomberg" className="my-4 w-36 px-4 md:w-64 md:px-8" />
+        <img src="/sponsors/contrario.png" alt="contrario" className="my-4 w-36 px-4 md:w-64 md:px-8" />
       </div>
       <div className="12 z-30 flex w-full flex-wrap items-center justify-center px-10">
         <img src="/sponsors/stripe.svg" alt="stripe" className="my-2 w-24 px-4 md:my-4 md:w-52 md:px-8" />
