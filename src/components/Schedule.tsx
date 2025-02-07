@@ -84,9 +84,13 @@ export function Schedule() {
             <div className="col-span-2 flex items-center justify-center bg-[#3A5FF3] p-2 font-basteleur text-lg">
               Saturday, Feb. 8
             </div>
-            <div className="flex items-center justify-center border-[1px] p-2">12:00 AM</div>
+            <div className="flex items-center justify-center border-[1px] p-2 row-span-2">12:00 AM</div>
             <div className="rounded-sm border-[1px] px-10 py-3">
-              <p className="font-bold">Trivia + Midnight Snack</p>
+              <p className="font-bold">Midnight Snack (Sponsored by AppLovin)</p>
+              <p className="">Connan</p>
+            </div>
+            <div className="rounded-sm border-[1px] px-10 py-3">
+              <p className="font-bold">Trivia</p>
               <p className="">Connan</p>
             </div>
             <div className="flex items-center justify-center border-[1px] p-2">12:30 AM</div>
@@ -149,9 +153,13 @@ export function Schedule() {
               <p className="font-bold">Judging Expo</p>
               <p className="">Rangos/PMW</p>
             </div>
-            <div className="flex items-center justify-center border-[1px] p-2">8:30 PM</div>
+            <div className="flex items-center justify-center border-[1px] p-2 row-span-2">8:30 PM</div>
             <div className="rounded-sm border-[1px] px-10 py-3">
-              <p className="font-bold">Merch + Boba</p>
+              <p className="font-bold">Boba (Sponsored by AppLovin)</p>
+              <p className="">Connan</p>
+            </div>
+            <div className="rounded-sm border-[1px] px-10 py-3">
+              <p className="font-bold">Merch</p>
               <p className="">Connan</p>
             </div>
             <div className="flex items-center justify-center border-[1px] p-2">9:00 PM</div>
