@@ -7,7 +7,7 @@ export function Hero() {
         <img src="/tartanhacks.svg" alt="tartanhacks" className="px-10" />
       </div>
 
-      <div className="text-md mt-6 lg:mt-12 lg:text-xl">Presented by...</div>
+      <div className="text-md mt-6 lg:mt-12 lg:text-xl z-30">Presented by...</div>
 
       <div className="z-30 mt-4 flex items-center justify-center gap-2 text-center lg:mt-8 lg:gap-6">
         <span className="text-2xl font-bold lg:text-5xl">ScottyLabs</span>
