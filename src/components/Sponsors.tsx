@@ -14,18 +14,15 @@ export function Sponsors() {
         <img src="/sponsors/sandia.svg" alt="sandia" className="my-4 w-36 px-4 md:w-64 md:px-8" />
         <img src="/sponsors/bloomberg.svg" alt="bloomberg" className="my-4 w-36 px-4 md:w-64 md:px-8" />
       </div>
-      <div className="12 z-30 flex w-full flex-wrap items-center justify-center">
+      <div className="12 z-30 flex w-full flex-wrap items-center justify-center px-10">
         <img src="/sponsors/stripe.svg" alt="stripe" className="my-2 w-24 px-4 md:my-4 md:w-52 md:px-8" />
         <img src="/sponsors/jane.svg" alt="jane" className="my-2 w-24 px-4 md:my-4 md:w-52 md:px-8" />
         <img src="/sponsors/cylab.svg" alt="jane" className="my-2 w-24 px-4 md:my-4 md:w-52 md:px-8" />
         <img src="/sponsors/roboclub.svg" alt="roboclub" className="my-2 w-24 px-4 md:my-4 md:w-52 md:px-8" />
         <img src="/sponsors/hrt.svg" alt="hrt" className="my-2 w-24 px-4 md:my-4 md:w-52 md:px-8" />
-        <img
-          src="/sponsors/perplexity.svg"
-          alt="perplexity"
-          className="my-2 w-24 px-4 md:my-4 md:w-52 md:px-8"
-        />
+        <img src="/sponsors/perplexity.svg" alt="perplexity" className="my-2 w-24 px-4 md:my-4 md:w-52 md:px-8" />
         <img src="/sponsors/qcclub.svg" alt="qcclub" className="my-2 w-24 px-4 md:my-4 md:w-52 md:px-8" />
+        <img src="/sponsors/warp.svg" alt="warp" className="my-2 w-24 px-4 md:my-4 md:w-52 md:px-8" />
       </div>
     </section>
   );
