@@ -76,12 +76,7 @@ export function Schedule() {
               <p className="font-bold">MLH Event: Gen AI Workshop</p>
               <p className="">Connan</p>
             </div>
-          </div>
-        </div>
-
-        <div className="z-30 mx-10 mt-8 w-3/4 pt-8 text-center font-sfpro text-white md:w-2/3">
-          <div className="grid grid-cols-[1fr_2fr] gap-4">
-            <div className="col-span-2 flex items-center justify-center bg-[#3A5FF3] p-2 font-basteleur text-lg">
+            <div className="col-span-2 flex items-center justify-center bg-[#3A5FF3] p-2 mt-12 font-basteleur text-lg">
               Saturday, Feb. 8
             </div>
             <div className="flex items-center justify-center border-[1px] p-2 row-span-2">12:00 AM</div>
