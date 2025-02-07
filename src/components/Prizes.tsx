@@ -77,13 +77,37 @@ const appLovinPrizes = [
 
 const externalPrizes = [
   {
-    title: 'Club Sponsored Prize',
-    description: 'Details to be announced',
+    title: 'Story Prize*',
+    description: 'The top projects that creatively integrate Story to push the boundaries of decentralized intellectual property (IP). Whether through AI agents, content licensing, new monetization models, or novel ownership mechanisms, submissions should demonstrate how Story’s infrastructure can enable meaningful IP transactions on-chain.',
   },
   {
-    title: 'Corporate Sponsored Prize',
-    description: 'Details to be announced',
+    title: 'XRP Ledger Challenge*',
+    description: 'Awarded by Ripple to the most fundamentally new application of the XRPL, delivering an innovative, scalable, and cost-effective fintech solution',
   },
+  {
+    title: 'Best Use of AI by powered Reach Capital*',
+    description: 'Reach Capital invests in the next generation of founders and technical talent, and they want you to use AI to transform the future of learning, health, and work. Build a project that impacts one (or all!) of these areas.',
+  },
+  {
+    title: 'Best Use of Gen AI*',
+    description: 'Think outside the box and integrate cutting-edge AI models to create innovative solutions with real-world impact. Utilize publicly available Generative AI APIs (like those from OpenAI, Anthropic, Hugging Face, Llama, IBM Watson, or Google Gemini) to develop a unique and functional application.',
+  },
+  {
+    title: 'Best Domain Name from GoDaddy Registry*',
+    description: 'GoDaddy Registry is giving you everything you need to be the best hacker no matter where you are. Register your domain name with GoDaddy Registry for a chance to win some amazing prizes!',
+  },
+  {
+    title: 'Best AI Application Built with Cloudflare*',
+    description: 'With Cloudflare, you’ll have all the building blocks to create a full-stack application; from C3 (create Cloudflare command line) instance deployment to object storage. You can even run GenAI (LLMs, text to image, Voice to text etc..) in the cloud and leverage your AI functionality via API requests using Cloudlfare’s Workers AI! Enjoy Cloudflare’s generous free tier to get started at no cost! This weekend, we want you to build an AI Application utilizing Cloudflare’s numerous services.',
+  },
+  {
+    title: 'Quantum Track*',
+    description: 'Infuse a quantum-inspired element into their projects! Whether you’re adding a quantum touch to your favorite app or preparing your system for the era of quantum hardware, we want you to push beyond the constraints of classical computing models and explore new possibilities.',
+  },
+  {
+    title: 'Best Use of Computer Vision',
+    description: 'Give computers the gift of sight and the power to act! The computer vision prize track challenges you to develop intelligent systems that can transform sight into action. Think beyond simple recognition – create applications that use computer vision to drive real-world responses, whether it\'s a PID-based gimbal controller tracking detected objects, an autonomous navigation system, or another exciting project that bridges perception and action. Projects will be judged on a combination of novelty, usability, and technical implementation. While leveraging existing libraries and code is encouraged, we\'re particularly interested in creative applications of computer vision. Work hard, go fast, and don’t be afraid to fail; there’s beauty in the struggle.',
+  }
 ];
 
 export function Prizes() {
@@ -115,7 +139,7 @@ export function Prizes() {
 
       {/* AppLovin Prizes */}
       <div className="mt-12 w-full max-w-4xl px-4">
-        <div className="mb-8 text-center font-basteleur text-4xl text-white">AppLovin</div>
+        <div className="mb-8 text-center font-basteleur text-4xl text-white">AppLovin*</div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {appLovinPrizes.map((prize) => (
             <div className="z-30 col-span-1">
@@ -135,6 +159,11 @@ export function Prizes() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Disclaimer for attending required talks */}
+      <div className="mt-24 w-full max-w-4xl px-4">
+        <div className="-mb-4 text-center font-basteleur text-lg text-white">*Prize requires attendance at specific sponsor talk to be eligible</div>
       </div>
     </section>
   );
