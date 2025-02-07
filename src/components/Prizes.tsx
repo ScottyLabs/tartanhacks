@@ -40,38 +40,38 @@ function PrizeDisclosure({ title, description }: { title: string; description: s
 const themedPrizes = [
   {
     title: 'Making Waves',
-    description: 'Most innovative and impactful project overall.',
+    description: 'Most significant product/business model introducing change that leads to significant societal impact.',
   },
   {
     title: 'Deepest Diver',
-    description: 'Best technical achievement or deep-dive into complex technology.',
+    description: 'Most significant innovation that makes use of emerging, groundbreaking technology.',
   },
   {
     title: 'Against the Current',
-    description: 'Most creative or unique approach to solving a problem.',
+    description: 'Most significant innovation that does not use AI.',
   },
   {
     title: 'School of Fish',
-    description: 'Best collaboration and teamwork demonstrated in a project.',
+    description: 'Most significant innovation in Edtech.',
   },
   {
     title: 'Save the Turtles',
-    description: 'Best sustainability or environmental impact focused project.',
+    description: 'Most significant innovation in sustainability.',
   },
 ];
 
 const appLovinPrizes = [
   {
     title: 'Best Content Creation Hack - First Place',
-    description: 'First place prize for the most innovative content creation tool or platform.',
+    description: 'Simplifying Content Creation: Creating content, especially advertising and marketing content, is time consuming and resource intensive. Build a tool to help users create or generate content faster! Personalized Content: Creating content for large audiences can sometimes feel impersonal to viewers. Explore ways to dynamically personalize content to make it more engaging and relevant to each individual. Interactive Content: Text, audio, and video are traditional content formats that require no interaction. Reimagine current media by making them engaging and responsive to user input.',
   },
   {
     title: 'Best Content Creation Hack - Second Place',
-    description: 'Second place prize for outstanding content creation solutions.',
+    description: 'Second place prize for outstanding content creation solutions (See description for first place).',
   },
   {
     title: 'Best Content Creation Hack - Third Place',
-    description: 'Third place prize for creative content creation projects.',
+    description: 'Third place prize for creative content creation projects (see description for first place).',
   },
 ];
 
@@ -162,8 +162,8 @@ export function Prizes() {
       </div>
 
       {/* Disclaimer for attending required talks */}
-      <div className="mt-24 w-full max-w-4xl px-4">
-        <div className="-mb-4 text-center font-basteleur text-lg text-white">*Prize requires attendance at specific sponsor talk to be eligible</div>
+      <div className="mt-24 w-full max-w-4xl px-8">
+        <div className="-mb-4 text-center font-basteleur text-lg text-white">*Prize requires attendance at specific sponsor talk to be eligible (see hacker guide)</div>
       </div>
     </section>
   );
