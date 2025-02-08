@@ -68,6 +68,7 @@ export default function Timer() {
   };
 
   const fetchSchedule = async () => {
+    console.log('Fetching schedule...');
     try {
       const response = await fetch(BACKEND_URL);
       const data = await response.json();
@@ -96,6 +97,11 @@ export default function Timer() {
 
   useEffect(() => {
     fetchSchedule().then();
+    setRemainingTime(getRemainingTime());
+    setCurrentEvents(getCurrentEvents());
+  }, []);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setRemainingTime(getRemainingTime());
       setCurrentEvents(getCurrentEvents());
