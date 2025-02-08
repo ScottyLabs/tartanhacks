@@ -93,11 +93,12 @@ export function Schedule() {
               <p className="font-bold">Karaoke</p>
               <p className="">Connan</p>
             </div>
-            <div className="row-span-2 flex items-center justify-center border-[1px] p-2">9:00 AM</div>
+            <div className="flex items-center justify-center border-[1px] p-2">9:00 AM</div>
             <div className="rounded-sm border-[1px] px-10 py-3">
               <p className="font-bold">AppLovin Yoga/Stretch</p>
               <p className="">Danforth</p>
             </div>
+            <div className="flex items-center justify-center border-[1px] p-2">9:30 AM</div>
             <div className="rounded-sm border-[1px] px-10 py-3">
               <p className="font-bold">Breakfast</p>
               <p className="">Rangos</p>
