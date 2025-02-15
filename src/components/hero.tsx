@@ -10,8 +10,10 @@ export function Hero() {
       <div className="text-md mt-6 lg:mt-12 lg:text-xl z-30 md:hidden">Presented by...</div>
 
       <div className="z-30 mt-4 flex items-center justify-center gap-2 text-center lg:mt-8 lg:gap-6">
-        <div className="hidden md:inline md:text-2xl font-bold lg:inline lg:text-5xl">Presented by</div>
-        <span className="text-2xl font-bold lg:text-5xl">ScottyLabs</span>
+        <span className="text-2xl font-bold lg:text-5xl">
+        <div className="hidden md:inline md:text-2xl font-bold lg:inline lg:text-5xl">Presented by{' '}</div>
+          ScottyLabs
+        </span>
         <img src="/dog.svg" alt="dog" className="w-8 lg:w-10" />
         <span className="text-2xl font-bold lg:text-5xl">&</span>
         <span>
