@@ -18,7 +18,6 @@ export function Speakers() {
             <h2>Board Member @ OpenAI</h2>
           </div>
         </div>
-        <p className="pt-8">Other speakers to be announced!</p>
       </div>
     </section>
   );
