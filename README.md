@@ -1,6 +1,6 @@
 # TartanHacks Website
 
-Promotional website for TartanHacks, Pittsburgh and CMU's largest hackathon!
+Promotional website for TartanHacks 2024, Pittsburgh and CMU's largest hackathon!
 
 ## Getting Started
 
